@@ -1,38 +1,159 @@
+<!--
+***GREETINGS VOYEURIST FRIEND!***
+
+Thank you for taking your time to check my source code.
+I hope you find something useful. 
+
+This humble website was hand coded after the realization that using Wordpress for the sole purpose of creating my portfolio was a total overkill.
+
+Being a designer, my coding skills may be considered below average for any friendly dev, but let be honest, your designing skills suck too.
+
+The portfolio itself is in beta stage. It mainly works. I am still trying to shave off as many dependencies and lines of crappy code as possible. 
+ -->
 <!DOCTYPE html>
-<html>
-
+<html >
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
-  <title>leaflet-storymap</title>
-  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
-  <!-- load jQuery  -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <!-- load Font-Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <!-- Load leaflet.extra-markers from local directory -->
-  <script src="markers/leaflet.extra-markers.min.js"></script>
-  <link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Ignacio Azzi - UX Designer</title>
+
+  <link rel=stylesheet href='css/bootstrap-min_old.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Droid+Serif|Bitter|Source+Sans+Pro:400,600,700" rel="stylesheet">
 </head>
-
 <body>
-  <div id="title" class="title-text">
-    <h3>Insert your title here</h3>
-    <small>Scroll <i class="fa fa-chevron-down"></i></small>
-  </div>
-
-  <div id="narration">
-    <div id="contents">
-      <div id="space-at-the-top" class="space-at-the-top"></div>
+  <nav id="site-navigation" class="main-navigation nav-visible" role="navigation">
+    <div class="container nav-bar">
+      <div class="row">
+        <div class="module left">
+          <a href="index.html">
+            <p class="site-title"> <b>Ignacio Azzi</b>
+              UX Designer
+            </p>
+          </a>
+        </div>
+        <div class="module right">
+          <a class="" href="Ignacio_Azzi-Resume.pdf">Resume</a>
+          <a class="" href="Ignacio_Azzi-Resume.pdf">Contact me</a>
+        </div>
+        <!--end of module group--> </div>
     </div>
+  </nav>
+
+  <section class="intro aligner">
+    <div class="container">
+      <div class="col-xs-12  col-sm-4 visible-xs">
+        <div class="" style="text-align:center">
+          <img class="img-circle my-photo" alt="" src="img/photo.jpeg"></div>
+      </div>
+      <div class="col-sm-6 vcenter">
+        <header>
+          <p class="intro_name">I am Ignacio Azzi</p>
+          <p class="intro_position mt0">UX/UI Designer</p>
+        </header>
+        <div class="intro_text">
+          <p>
+            I´ve been working as a <b>UX/UI Designer</b>
+            since 2012, and as a Graphic Designer for a bit longer.
+          </p>
+          <p>
+            My job is to design the best way for users to fulfill their needs through their interaction with digital interfaces: Holding stakeholders meetings, writing user stories, creating user flows and wireframes.
+          </p>
+          <p>
+            On the other hand, I am also interested in the research field.
+          </p>
+          <p>
+            <b>Lets have a look at my portfolio :)</b>
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-4 hidden-xs vcenter">
+        <img class="img-circle intro_photo img-full" alt="" src="img/photo.jpeg"></div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="container">
+      <div class="row">
+        <header class="col-md-8 col-md-offset-2 text-center">
+          <h2>Projects I have worked on</h2>
+          <h4>They are eager to be read, analyzed and praised</h4>
+        </header>
+      </div>
+
+      <div id="projects-list" class="row">
+        <script type="text/handlebars-template" id="projects-js">
+              <div class="container">
+                {{#projects}}
+                <div class="row project-item {{company}}" href="{{url}}">
+                  <div class="project-text col-xs-5 col-xs-offset-1">
+                    <h3 class="project-title">{{company}}</h3>
+                    <p class="bold company-description">{{company-description}}</p>
+                    <p class="project-description">My role: {{project-description}}</p>
+                    <a class="btn btn-strike" href="{{url}}">Check {{company}} project</a>
+                  </div>
+                  <div class="col-xs-4">
+                    <img src="{{bg-img}}" class="img-full img-rounded"></div>
+                </div>
+                {{/projects}}
+                </div>
+                <div class="behance">
+                  <header class="col-md-8 col-md-offset-2 text-center">
+                  <h2>Still hungry 🍔? </h2>
+                    <h4>More projects are being collected and uploaded as soon as finished.<br> If you are into Graphic Design you may want to <a class="" href="http://behance.net/ignacioazzi">check my Behance profile</a>
+                    </h4>
+                </div>
+              </section>
+            </script>
+      </div>
+    </div>
+  </section>
+
+  <div id="process">
+    
   </div>
 
-  <div id="map"></div>
+  <!-- Homepage portfolio -->
 
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/handlebars-template" id="handlebars-template">
+          <section class="mini-section">
+            <div class="container">
+              <header class="col-md-12 text-center">
+                <h2>How I work</h2>
+                <h4>What is my design process?</h4>
+              </header>
+            </div>
+          </section>
+          <!-- Description of how I work -->
+          {{#sections}}
+          <section class="description" id="{{title}}">
+            <div class="container">
+              <div class="col-sm-8 col-sm-offset-2">
+                <header class="mini-header">
+                  <h3 class="bold">{{{title}}}</h3>
+                  <h4 class="">{{subtitle}}</h4>
+                  </header class="mini-header">
+                  {{{text}}}
+                </p>
+              </div>
+            </div>
+          </section>
+          {{/sections}}
+</script>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js'></script>
+  <script src="js/index.js"></script>
+
+  <script>
+$(window).bind('mousewheel', function(event) {
+            if (event.originalEvent.wheelDelta >= 0) {
+             $("nav").addClass("nav-visible").removeClass("nav-hidden");
+           }
+           else {
+            $("nav").addClass("nav-hidden").removeClass("nav-visible");
+          }
+        });
+</script>
 </body>
 </html>
