@@ -1,8 +1,10 @@
 	$(document).ready(function(){
 		$('.slider').slick({
 			dots: true,
-		});
+      lazyload: progressive,
+      	});
 	});
+
 
 
 $(".slider").click(function() {

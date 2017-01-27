@@ -210,23 +210,32 @@ div#projects {
     position: relative;
     z-index: 1;
     padding: 0;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     border-top: 1px solid #eee;
-    padding-top: 4rem;
-
+    padding: 4rem 2rem;
 }
 .project-item:first-of-type{
     border-top-width: 0px;
 }
 .project-item:hover {
     transition: .3s all;
-    background: white;
+    background: #ecebeb;
 }
 
 .project-item .tooltip {
 opacity: 0;
 transition: .5s opacity;
 }
+
+.project-img {
+    margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+    .project btn {
+   margin: 0 auto
+    }
+    
 
 .project-item:hover .tooltip {
 opacity: 1;
@@ -252,6 +261,17 @@ border-radius: 7px;
     height: 70%;
     bottom: 0;
     content: " ";
+}
+
+
+.project-btn {
+    text-align: center;
+}
+
+@media only screen and (min-width: 767px) {
+.project-btn {
+    text-align: left;
+}
 }
 
 .project-description {
@@ -298,3 +318,37 @@ border-radius: 7px;
     vertical-align: middle;
     float: none;
 }
+
+
+
+ /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+  .text-md-left { text-align: left; }
+  .text-md-right { text-align: right; }
+  .text-md-center { text-align: center; }
+  .text-md-justify { text-align: justify; }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+    }
