@@ -469,6 +469,9 @@ h6 {
 	font-weight: 700;
 }
 
+.text-center{
+	text-align: center;
+}
 @media all and (max-width: 767px) {
 
 }
@@ -612,7 +615,7 @@ footer {padding: 72px 0;}
 .background-image-holder.fadeIn {opacity: 1;}
 .btn,.button {font-family:"PT Sans", "Arial", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;
 border: 2px solid #745cf9;
-padding: 0 26px;
+padding: 20px 26px;
 min-width: 150px;
 line-height: 36px;
 font-size: 12px;
