@@ -63,7 +63,7 @@ The portfolio itself is in beta stage. It mainly works. I am still trying to sha
             On the other hand, I am also interested in the research field.
           </p>
           <p>
-            <b>Lets have a look at my portfolio :)</b>
+            <a id="havealook" class="btn btn-lg">Lets have a look at my portfolio :)</a>
           </p>
         </div>
       </div>
@@ -85,7 +85,7 @@ The portfolio itself is in beta stage. It mainly works. I am still trying to sha
         <script type="text/handlebars-template" id="projects-js">
               <div class="container">
                 {{#projects}}
-                <div class="project-item {{company}}" href="{{url}}">
+                <div class="project-item {{company}} " href="{{url}}">
                 <div class="row">
                   <div class="project-text col-sm-5 col-sm-offset-1">
                     <h3 class="project-title">{{company}}</h3>
@@ -98,10 +98,8 @@ The portfolio itself is in beta stage. It mainly works. I am still trying to sha
                     </div>
                   </div>
                   <div class="row">
-                  <div class="col-sm-offset-1 text-center">
-                  <div class="col-sm-offset-1 text-center">
+                  <div class="col-sm-offset-1 col-sm-12">
                 <a class=" btn btn-strike" href="{{url}}">Check {{company}} project</a>
-                    </div>
                     </div>
                 </div>
                 {{/projects}}
@@ -163,6 +161,14 @@ $(window).bind('mousewheel', function(event) {
             $("nav").addClass("nav-hidden").removeClass("nav-visible");
           }
         });
+
+
+$("#havealook").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".projects").offset().top * 1
+    }, 600);
+});
+
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -5,7 +5,7 @@
 	});
 
 
-	$(".slider").click(function() {
+$(".slider").click(function() {
 		$("nav").addClass("nav-hidden").removeClass("nav-visible");
     $('html, body').animate({
         scrollTop: $(".slider").offset().top * 1

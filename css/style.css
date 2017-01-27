@@ -642,7 +642,7 @@ margin-bottom: 24px;
 	line-height: 51px;
 	min-width: 200px;
 	font-size: 13px;
-	padding: 0px 10px;
+	padding: 20 10px;
 	box-sizing: content-box;
 }
 .btn-sm {
@@ -1931,7 +1931,7 @@ header.entry-header {margin-top: 3em;}
 			padding-top: 8em
 		}
 		.subsection, section{
-			padding: 1em 1em;
+			padding: 1em 0em;
 			margin: 1em 0em;
 		}
 
@@ -1945,7 +1945,7 @@ header.entry-header {margin-top: 3em;}
 	@media only screen and (min-width : 768px) {
 
 		.subsection, section{
-			padding: 3em 3em;
+			padding: 3em 0em;
 			margin: 0em 0em;
 		}
 
