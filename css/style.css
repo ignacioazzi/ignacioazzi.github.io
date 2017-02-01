@@ -2050,6 +2050,13 @@ background:white;
 
 
 body.bg-dark {
-    background: #eee;
-    padding-bottom: 3em;
+    background: #fafafa;
+    padding-bottom: 7em;
+}
+
+.container-shadow{
+	box-shadow: 0px 0px 50px #a9a9a9;
+    width: auto;
+    display: inline-block;
+    border: 1px solid #dcdcdc;
 }
