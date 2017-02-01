@@ -2047,3 +2047,9 @@ background:white;
 	display: block;
 	margin: 0 auto;
 }
+
+
+body.bg-dark {
+    background: #222;
+    padding-bottom: 3em;
+}
