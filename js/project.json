@@ -1,0 +1,32 @@
+"Educabilia": [
+    {
+      "url":"educabilia_1.jpg",
+      "img-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
+      "title":"Pick me!",
+      "bg-img":"img/covers/covers-02.png"},
+      {
+        "url":"educabilia_1.jpg",
+        "img-description":"Redesign main sections include home page, landing pages, detail pages. Design from scratch a map section.",
+        "title":"Pick me!",
+        "bg-img":"img/covers/covers-03.jpg"},
+        {
+          "url":"educabilia_1.jpg",
+          "img-description":"To interview gamers users to decide whether there was a feasible business model where millennials would be encouraged to save and invest. Then, based on the info collected, to help ideate that product",
+          "title":"Pick me!",
+          "bg-img":"img/covers/covers-01.png"},
+          {
+            "url":"educabilia_1.jpg",
+            "img-description":"To propose a new UI to solve legibility issues and better highlight most relevant information like flight number, dates, and price.",
+            "title":"Pick me!",
+            "bg-img":"img/covers/covers-06.png"},
+            {
+              "url":"educabilia_1.jpg",
+              "img-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
+              "title":"Pick me!",
+              "bg-img":"img/covers/covers-05.png"},
+              {
+                "url":"educabilia_1.jpg",
+                "img-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
+                "title":"Pick me!",
+                "bg-img":"img/covers/covers-04.png"}
+                ]

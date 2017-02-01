@@ -2,3 +2,10 @@ autosave.html
 ara.html
 educabilia.html
 lan.html
+*.otf
+New Layout/Fonts/Roboto-Bold.ttf
+*.ai
+New Layout/Fonts/Roboto-Medium.ttf
+*.ttf
+New Layout/Links/Galaxy_S7.psd
+js/educabilia.json

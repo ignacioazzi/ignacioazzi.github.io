@@ -1935,7 +1935,7 @@ header.entry-header {margin-top: 3em;}
 	@media only screen and (min-width : 768px) {
 
 		.subsection, section{
-			padding: 3em 0em;
+			padding: 3em 1em;
 			margin: 0em 0em;
 		}
 
@@ -2021,6 +2021,7 @@ nav .btn,
 }
 .nav-hidden {
     opacity: .1;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.16);
     background: transparent;
 }
 
@@ -2030,16 +2031,19 @@ background:white;
 
 }
 
-
-
 .text-center-xs {
     text-align: center;
 }
-
-
 
 .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+
+.img-full{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
