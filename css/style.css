@@ -2052,11 +2052,13 @@ background:white;
 body.bg-dark {
     background: #fafafa;
     padding-bottom: 7em;
+    text-align: center;
 }
 
 .container-shadow{
-	box-shadow: 0px 0px 50px #a9a9a9;
-    width: auto;
-    display: inline-block;
-    border: 1px solid #dcdcdc;
+	box-shadow: 0px 0px 50px #dcdcdc;
+	/* width: auto; */
+	display: inline-block;
+	border: 1px solid #dcdcdc;
+	margin: 0 auto;
 }
