@@ -2055,10 +2055,41 @@ body.bg-dark {
     text-align: center;
 }
 
+body.bg-dark.lan {
+    background: #12275B;
+}
+
+
 .container-shadow{
-	box-shadow: 0px 0px 50px #dcdcdc;
+	box-shadow: 0px 0px 50px rgba(220, 220, 220, 0.29);
 	/* width: auto; */
 	display: inline-block;
 	border: 1px solid #dcdcdc;
 	margin: 0 auto;
+	border-radius: 0 0 5px 5px;
+	overflow-y: auto;
+}
+
+.lan .container-shadow{
+	box-shadow: none;
+	/* width: auto; */
+	display: inline-block;
+	border: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container-shadow.darker {
+    width: 100%;
+    background: #0d1f50;
+}
+
+.thanks_container{
+	margin-top: 20em;
+	margin-bottom: 5em;
+}
+
+.thanks_container img{
+	max-width: 30%;
+	opacity: .9;
 }
