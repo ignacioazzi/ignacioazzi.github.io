@@ -1591,7 +1591,7 @@ a.active {color: black!important;}
 	text-align: center;
 	position: relative;
 }
-#main,div {transition: .1s width ease-in-out;}
+#main,div {/* transition: .1s width ease-in-out; */}
 .portfolio-item article,.portfolio-item {min-height: 260px;}
 .portfolio-item article {
 	width: 100%;
@@ -2087,7 +2087,9 @@ body.bg-dark.ara {
 	border: none;
 	margin: 0 auto;
 	width: 100%;
-	background: #1d275b;
+	background: #12275b;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 

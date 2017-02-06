@@ -12,155 +12,172 @@
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Source+Sans+Pro:300,400,600" rel="stylesheet">
 	<style>
 
-.before_after_container h1{
-  font-family : Source Sans Pro;
-  font-size : 4em;
-  color : #5BD0F7;
-  font-weight: 300;
-  margin-top: 4em;
-}
-p.lead{
-  font-family : Source Sans Pro;
-  font-size : 22px;
-  line-height : 1.5em;
-  font-weight: 3;
-  color : #FFFFFF;
-width: 75%;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 3em;
-}
+		.before_after_container h1{
+			font-family : Source Sans Pro;
+			font-size : 4em;
+			color : #5BD0F7;
+			font-weight: 300;
+			margin-top: 4em;
+		}
+		p.lead{
+			font-family : Source Sans Pro;
+			font-size : 22px;
+			line-height : 1.5em;
+			font-weight: 3;
+			color : #FFFFFF;
+			width: 75%;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 3em;
+		}
 
 
-.switch{
-  color: white;
-  font-family: "Source Sans Pro";
-  border: 2px solid #5BD0F7;
-  border-radius: 7px;
-  padding: 10px 15px;
-  display: inline-block;
-  font-size: 14px;
-  position: fixed;
-  bottom:20px;
-  left:-120px;
-  opacity: .4;
-    cursor:pointer;
-z-index: 12;
-   transition: 1.4s all;
-   background: rgba(18, 39, 91, 0.61);
-   	transition-delay: .5s
+		.switch{
+			color: white;
+			font-family: "Source Sans Pro";
+			border: 2px solid #5BD0F7;
+			border-radius: 7px;
+			padding: 10px 15px;
+			display: inline-block;
+			font-size: 14px;
+			position: fixed;
+			bottom:20px;
+			left:-120px;
+			opacity: .4;
+			cursor:pointer;
+			z-index: 12;
+			transition: 1.4s all;
+			background: rgba(18, 39, 91, 0.61);
+			transition-delay: .5s
 
-}
+		}
 
-.before_after_container:hover .switch{
-	left: 20px;
-	transition-delay: 0s;
-	   transition: .8s all;
-	   opacity: 1;
+		.before_after_container:hover .switch{
+			left: 20px;
+			transition-delay: 0s;
+			transition: .8s all;
+			opacity: 1;
 
-} 
+		} 
 
-.switch_before, .switch_after{
-  display: inline-block;
-  text-transform: uppercase;
- opacity: .3;
-  transition: .3s opacity;
-}
+		.switch_before, .switch_after{
+			display: inline-block;
+			text-transform: uppercase;
+			opacity: .3;
+			transition: .3s opacity;
+		}
 
-.switch_before{
-  margin-right: 10px;
-}
+		.switch_before{
+			margin-right: 10px;
+		}
 
-.active{
-  opacity: 1;
-  color:#5BD0F7;
-}
+		.active{
+			opacity: 1;
+			color:#5BD0F7;
+		}
 
- .img-container img{
-   position: absolute;
-   left: 0;
-   right: 0;
-   margin: auto;
-   opacity: 1;
-     transition: 1s opacity;
-}
+		.img-container img{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			opacity: 1;
+			transition: 1s opacity;
+		}
 
-.img-container{
- position: relative;
-     height: 254vh;
+		.img-container{
+			position: relative;
+			height: 254vh;
+transition: .8s height;
+		}
 
-}
-
-.img-container .img-hidden{
- opacity: 0;
-}
+		.img-container .img-hidden{
+			opacity: 0;
+		}
 
 
 	</style>
-<body class="bg-dark lan">
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div class="container nav-bar">
-			<div class="row">
-				<div class="module left">
-					<a href="index.html">
-						<h1 class="site-title"> <b>Ignacio Azzi</b>
-							User Experience Designer
-						</h1>
-					</a>
+	<body class="bg-dark lan">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="container nav-bar">
+				<div class="row">
+					<div class="module left">
+						<a href="index.html">
+							<h1 class="site-title"> <b>Ignacio Azzi</b>
+								User Experience Designer
+							</h1>
+						</a>
+					</div>
+					<!--end of module group-->
 				</div>
-				<!--end of module group-->
 			</div>
-		</div>
-	</nav>
-	<div class="container-shadow">
-		<img class="img-full" src="img/lan/lan.png" alt="">
-		</div>
-	<div class="container-shadow darker skew">
-		<img class="img-full" src="img/lan/lan_1.png" alt="">
-		</div>
-	<div class="container-shadow">
-		<div class="before_after_container">
-			<div class="switch">
-				<div class="switch_before active">Before</div>
-
-				<div class="switch_after">After</div>
-			</div>
-						<img src="img/lan/lan_1b.png" alt="">
-
-			<div class="img-container">
-				<img class="img-full" src="img/lan/lan_old_full.png" alt="" />
-				<img class="img-full img-hidden" src="img/lan/lan_new_full.png" alt="" />
-			</div>
-		</div>
+		</nav>
+		<div class="container-shadow">
+			<img class="img-full" src="img/lan/lan.png" alt="">
 		</div>
 		<div class="container-shadow darker skew">
-		<img class="img-full" src="img/lan/lan_2.png" alt="">
-		<img class="img-full" src="img/lan/lan_3.png" alt="">
+			<img class="img-full" src="img/lan/lan_1.png" alt="">
+		</div>
+		<div class="container-shadow">
+			<div class="before_after_container">
+				<div class="switch">
+					<div class="switch_before active">Before</div>
+
+					<div class="switch_after">After</div>
+				</div>
+				<img class="img-full" src="img/lan/lan_1b.png" alt="">
+
+				<div class="img-container">
+					<img id="img-before" class="img-full" src="img/lan/lan_before_full.png" alt="" />
+					<img id="img-after" class="img-full img-hidden" src="img/lan/lan_after_full.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="container-shadow darker skew">
+			<img class="img-full" src="img/lan/lan_2.png" alt="">
+			<img class="img-full" src="img/lan/lan_3.png" alt="">
 		</div>
 		<div class="container-shadow lighter skew-up">
-		<img class="img-full" src="img/lan/lan_4.png" alt="">
-		<img class="img-full" src="img/lan/lan_5.png" alt="">
-	<div class="thanks_container">
-		<img src="img/thank_you_dark.png " alt=""></div>
-		</div>
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			<img class="img-full" src="img/lan/lan_4.png" alt="">
+			<img class="img-full" src="img/lan/lan_5.png" alt="">
+			<div class="thanks_container">
+				<img src="img/thank_you_dark.png " alt=""></div>
+			</div>
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-91032335-1', 'auto');
-  ga('send', 'pageview');
+				ga('create', 'UA-91032335-1', 'auto');
+				ga('send', 'pageview');
 
-</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			</script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- 			<script src="js/script.js"></script>
+ -->			<script>
+				$(".switch").click(function(){
+					$(".switch_before, .switch_after").toggleClass("active");
+					$(".img-container img").toggleClass("img-hidden");
+				});
 
-	<script src="js/script.js"></script>
-	<script>
-	$(".switch").click(function(){
-  $(".switch_before, .switch_after").toggleClass("active");
-  $(".img-container img").toggleClass("img-hidden");
-})
-</script>
-</body>
-</html>
+				function resize_comparison_container(){
+					var ba_container = $(".img-container");
+					var b_img = $("#img-before");
+					var b_img_height = 0.9 * parseInt(b_img.css("height"));
+					ba_container.css("height",b_img_height);
+					console.log(b_img_height)
+				};
+
+				resize_comparison_container();
+				
+			$(window).resize(function() {
+  				  clearTimeout(window.resizedFinished);
+   				 window.resizedFinished = setTimeout(function(){
+     		   resize_comparison_container();
+    }, 200);
+});
+		
+			</script>
+		</body>
+		</html>
