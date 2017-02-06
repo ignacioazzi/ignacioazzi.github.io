@@ -2051,7 +2051,7 @@ background:white;
 
 body.bg-dark {
     background: #fafafa;
-    padding-bottom: 7em;
+    padding-bottom: 0px;
     text-align: center;
 }
 
@@ -2066,9 +2066,10 @@ body.bg-dark.lan {
 	display: inline-block;
 	border: 1px solid #dcdcdc;
 	margin: 0 auto;
-	border-radius: 0 0 5px 5px;
+	border-radius: 0px;
 	overflow-y: auto;
 }
+
 
 .lan .container-shadow{
 	box-shadow: none;
@@ -2077,12 +2078,29 @@ body.bg-dark.lan {
 	border: none;
 	margin: 0 auto;
 	width: 100%;
+	background: #12275b;
 }
 
-.container-shadow.darker {
+
+.lan .container-shadow.darker {
     width: 100%;
-    background: #0d1f50;
+    background: #091b46;
+    margin: -1% 0%;
 }
+
+.lan .container-shadow.lighter {
+    background: #dee8f7;
+}
+
+.lan nav#site-navigation {
+    background: rgba(9, 27, 70, 0.18);
+}
+
+.lan nav#site-navigation h1, 
+.lan nav#site-navigation h1, b {
+color:white
+}
+
 
 .thanks_container{
 	margin-top: 20em;
@@ -2092,4 +2110,16 @@ body.bg-dark.lan {
 .thanks_container img{
 	max-width: 30%;
 	opacity: .9;
+}
+
+.skew{
+	clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+	margin: -6% 0!important;
+	padding: 6% 0;
+}
+
+.skew-up{
+	clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+	margin: -6% 0!important;
+	padding: 6% 0;
 }
