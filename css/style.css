@@ -2053,6 +2053,7 @@ body.bg-dark {
     background: #fafafa;
     padding-bottom: 0px;
     text-align: center;
+    /* padding-top: 0px; */
 }
 
 body.bg-dark.lan {
@@ -2094,6 +2095,7 @@ body.bg-dark.lan {
 
 .lan nav#site-navigation {
     background: rgba(9, 27, 70, 0.18);
+    border-bottom: 1px solid rgba(230, 230, 230, 0.22);
 }
 
 .lan nav#site-navigation h1, 
