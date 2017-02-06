@@ -613,7 +613,7 @@ footer {padding: 72px 0;}
 }
 .background-image-holder img {display: none;}
 .background-image-holder.fadeIn {opacity: 1;}
-.btn,.button {font-family:"PT Sans", "Arial", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;border: 2px solid #745cf9;padding: 11px 26px;min-width: 150px;line-height: 36px;font-size: 12px;font-weight: 700;text-transform: uppercase;letter-spacing: 1px;border-radius: 0;color: #745cf9;text-align: center;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;margin-right: 8px;margin-bottom: 24px;}
+.btn,.button {font-family:"PT Sans", "Arial", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;border: 2px solid #745cf9;padding: 11px 26px;min-width: 150px;line-height: 36px;font-size: 12px;font-weight: 700;text-transform: uppercase;letter-spacing: 1px;border-radius: 0;color: #745cf9;text-align: center;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;margin-right: 8px;margin-bottom: 24px;white-space: nowrap;}
 .btn:last-child,.btn:last-of-type {margin-right: 0;}
 .btn:hover,.button:hover {
 	background: #745cf9;
@@ -2109,9 +2109,7 @@ body.bg-dark.ara {
 }
 
 .lan nav#site-navigation h1, 
-.lan nav#site-navigation h1, b {
-color:white
-}
+.lan nav#site-navigation h1, b {/* color:white */}
 
 
 .thanks_container{
