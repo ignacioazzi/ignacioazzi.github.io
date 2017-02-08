@@ -1,0 +1,27 @@
+/*Colors*/
+
+.purple {
+	background-color: #2e1059;
+}
+.purple_light {
+	background-color: #eff3f5;
+}
+
+.light-text{
+	font-weight: 300!important;
+}
+
+.white-text{
+	color:white!important;
+}
+.lan_bg-dark-blue {
+	background: #091b46;
+}
+
+.lan-dark-blue{
+	color: #091b46!important
+}
+
+.lan_bg-light-blue {
+	background: #dee8f7;
+}

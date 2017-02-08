@@ -88,7 +88,7 @@
 		.img-container{
 			position: relative;
 			height: 254vh;
-transition: .8s height;
+			transition: .8s height;
 		}
 
 		.img-container .img-hidden{
@@ -155,29 +155,29 @@ transition: .8s height;
 			</script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- 			<script src="js/script.js"></script>
- -->			<script>
-				$(".switch").click(function(){
-					$(".switch_before, .switch_after").toggleClass("active");
-					$(".img-container img").toggleClass("img-hidden");
-				});
-
-				function resize_comparison_container(){
-					var ba_container = $(".img-container");
-					var b_img = $("#img-before");
-					var b_img_height = 0.9 * parseInt(b_img.css("height"));
-					ba_container.css("height",b_img_height);
-					console.log(b_img_height)
-				};
-
-				resize_comparison_container();
-				
-			$(window).resize(function() {
-  				  clearTimeout(window.resizedFinished);
-   				 window.resizedFinished = setTimeout(function(){
-     		   resize_comparison_container();
-    }, 200);
+-->			<script>
+$(".switch").click(function(){
+	$(".switch_before, .switch_after").toggleClass("active");
+	$(".img-container img").toggleClass("img-hidden");
 });
-		
-			</script>
-		</body>
-		</html>
+
+function resize_comparison_container(){
+	var ba_container = $(".img-container");
+	var b_img = $("#img-before");
+	var b_img_height = 0.9 * parseInt(b_img.css("height"));
+	ba_container.css("height",b_img_height);
+	console.log(b_img_height)
+};
+
+resize_comparison_container();
+
+$(window).resize(function() {
+	clearTimeout(window.resizedFinished);
+	window.resizedFinished = setTimeout(function(){
+		resize_comparison_container();
+	}, 100);
+});
+
+</script>
+</body>
+</html>
