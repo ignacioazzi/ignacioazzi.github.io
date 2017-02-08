@@ -25,3 +25,96 @@
 .lan_bg-light-blue {
 	background: #dee8f7;
 }
+
+.bg_cyan{
+	background-color: #dcf1f7;
+}
+.lan h1, .lan h2, .lan h3, .cyan {
+	color: #5bd0f7;
+}
+
+
+
+.col-sm-4.col-sm-offset-2 {}
+
+.tt_bg-dark-purple {
+	background: #2e1059;
+}
+
+.tt_bg-dark-purple-2 {
+	background: #3d0f82
+}
+
+.tt-dark-purple-2 {
+	color: #3d0f82
+}
+
+.tt nav#site-navigation {
+	background: rgba(79, 77, 82, 0.24);
+}
+
+.tt nav#site-navigation h1, .tt nav#site-navigation h1{
+	color: white;
+
+}
+
+.edu-blue{
+	color : #4D61E1;
+}
+
+.edu-light-blue{
+	color:#f6f6fd;
+}
+.edu_bg-blue{
+	background-color: #4D61E1;
+}
+
+.edu_bg-light-blue{
+	background-color:#f6f6fd;
+}
+
+.edu_gradient{
+	background: rgba(77,97,225,1);
+	background: -moz-linear-gradient(top, rgba(77,97,225,1) 0%, rgba(105,64,142,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(77,97,225,1)), color-stop(100%, rgba(105,64,142,1)));
+	background: -webkit-linear-gradient(top, rgba(77,97,225,1) 0%, rgba(105,64,142,1) 100%);
+	background: -o-linear-gradient(top, rgba(77,97,225,1) 0%, rgba(105,64,142,1) 100%);
+	background: -ms-linear-gradient(top, rgba(77,97,225,1) 0%, rgba(105,64,142,1) 100%);
+	background: linear-gradient(to bottom, rgba(77,97,225,1) 0%, rgba(105,64,142,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d61e1', endColorstr='#69408e', GradientType=0 );
+}
+.row.overlay_layer {
+	position: relative;
+	bottom: 30vh;
+	margin-bottom: -20vh;
+}
+
+
+.row.overlay_layer:before {
+	width: 100%;
+	height: 100%;
+	background: red;
+	position: absolute;
+	display: block;
+	bottom: 5vh;#f0f8ff
+	background: rgba(240, 248, 255,1);
+	background: -moz-linear-gradient(top, rgba(240, 248, 255,0) 0%, rgba(240, 248, 255,1) 80%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(240, 248, 255,0)), color-stop(80%, rgba(240, 248, 255,1)));
+	background: -webkit-linear-gradient(top, rgba(240, 248, 255,0) 0%, rgba(240, 248, 255,1) 80%);
+	background: -o-linear-gradient(top, rgba(240, 248, 255,0) 0%, rgba(240, 248, 255,1) 80%);
+	background: -ms-linear-gradient(top, rgba(240, 248, 255,0) 0%, rgba(240, 248, 255,1) 80%);
+	background: linear-gradient(to bottom, rgba(240, 248, 255,0) 0%, rgba(240, 248, 255,1) 80%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
+
+section.task_creation {
+	background: aliceblue;
+}
+
+
+.bg_grid {
+	background-image: url("../img/grid_black.png");
+	background-repeat: round;
+	background-size: 8.333333333%;
+}

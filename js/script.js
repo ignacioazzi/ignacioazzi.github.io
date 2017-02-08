@@ -1,18 +1,18 @@
-	$(document).ready(function(){
-		$('.slider').slick({
-			dots: true,
-      adaptiveHeight: true
-      	});
-	});
+// 	$(document).ready(function(){
+// 		$('.slider').slick({
+// 			dots: true,
+//       adaptiveHeight: true
+//       	});
+// 	});
 
 
 
-$(".slider").click(function() {
-		$("nav").addClass("nav-hidden").removeClass("nav-visible");
-    $('html, body').animate({
-        scrollTop: $(".slider").offset().top * 1
-    }, 600);
-});
+// $(".slider").click(function() {
+// 		$("nav").addClass("nav-hidden").removeClass("nav-visible");
+//     $('html, body').animate({
+//         scrollTop: $(".slider").offset().top * 1
+//     }, 600);
+// });
 
 
 $(window).bind('mousewheel', function(event) {
