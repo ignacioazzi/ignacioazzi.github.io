@@ -1,0 +1,630 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"js",
+				"script.js"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tas",
+				"task_card .png\tw:912 h:610"
+			],
+			[
+				"c",
+				"class\tAttr"
+			],
+			[
+				"col",
+				"colmc\tcolumn-count"
+			],
+			[
+				"iti",
+				"itinerary_old.png\tw:1080 h:359"
+			],
+			[
+				"transi",
+				"transition-delay"
+			],
+			[
+				"tra",
+				"transition-delay"
+			],
+			[
+				"transf",
+				"transform-origin"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"ted",
+				"text-decoration-line"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"f",
+				"function"
+			],
+			[
+				"before_",
+				"before_img_height"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"mx",
+				"max-width"
+			],
+			[
+				"transitio",
+				"transition-delay"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"educa",
+				"educabilia.pdf"
+			],
+			[
+				"edu",
+				"educabilia_full.png\tw:600 h:3608"
+			],
+			[
+				"Te",
+				"Teamtask2.png\tw:1600 h:6144"
+			],
+			[
+				"tea",
+				"Teamtask1.png\tw:1600 h:4918"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"bb",
+				"border-bottom"
+			],
+			[
+				"ed",
+				"educabilia_6.png\tw:1600 h:1200"
+			],
+			[
+				"bg",
+				"bgi\tbackground-image: url(${0});"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"auto",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"tag fol",
+				"Tag: Auto-Format Tags on Selection"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"tag",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"preti",
+				"Preferences: Settings"
+			],
+			[
+				"instla",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Decrement Number by 0.1"
+			],
+			[
+				"css",
+				"Run CSScomb"
+			],
+			[
+				"local",
+				"Local History: Browse"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"repos",
+				"Package Control: Add Repository"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			]
+		],
+		"width": 440.0
+	},
+	"console":
+	{
+		"height": 164.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io"
+	],
+	"file_history":
+	[
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/educabilia_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/js/script.js",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/teamtask_v3.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/css/colors.css",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/lan_v3.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/lan_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/css/details.css",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/css/style.css",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/img/ara/index.css",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/css/index.css",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/ara_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/img/ara/ara.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/ara.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/img/ara/index.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/lan_v2_with_menu.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/teamtask_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/script.js",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/teamtask_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/presidio_v2.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/presidio_v2.html",
+		"/C/Users/Chino/Google Drive/ignacioazzi.github.io/lan.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/style.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/bootstrap-min.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/educabilia_v2.html",
+		"/C/Users/Chino/Desktop/Toptal/Toptal/Educabilia/ai2html-output/Educabilia-Portfolio---NEW---test.html",
+		"/C/Users/Chino/Desktop/Toptal/Toptal/Educabilia/ai2html-output/style.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/lan_v2.html",
+		"/C/Users/Chino/Desktop/ai2html.js",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/teamtask.html",
+		"/C/Users/Chino/AppData/Local/Temp/ai14859717902.tmp/preview.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/teamtask_v3.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/teamtaskv2.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/presidio.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/Lan.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/index.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/js/script.js",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/index.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/educabilia_noslider.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/Autosave.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/educabilia.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/js/educabilia.json",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/Ara.html",
+		"/C/Users/Chino/Desktop/Pagina_v2/Pagina/css/index.css",
+		"/C/Users/Chino/Desktop/Pagina_v2/Pagina/css/style.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/script.js",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/style.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/Educabilia.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/ara.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/slick.css",
+		"/C/Users/Chino/Desktop/Pagina/Ara.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/autosave.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/lan.html",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/bootstrap-min_old.css",
+		"/C/Users/Chino/Desktop/ignacioazzi.github.io/css/style-cleaned.css",
+		"/C/Users/Chino/Desktop/Pagina/css/index.css",
+		"/C/Users/Chino/Desktop/Pagina/css/new.css",
+		"/C/Users/Chino/Desktop/Pagina/css/style.css",
+		"/C/Users/Chino/Desktop/Pagina/css/bootstrap-min.css",
+		"/C/Users/Chino/Desktop/Pagina/index.html",
+		"/C/Users/Chino/Desktop/Pagina/js/script.js",
+		"/C/Users/Chino/Desktop/Pagina/Autosave.html",
+		"/C/Users/Chino/Desktop/Pagina/presidio.html",
+		"/C/Users/Chino/Desktop/Pagina/teamtask.html",
+		"/C/Users/Chino/Desktop/Pagina/Educabilia.html",
+		"/C/Users/Chino/Desktop/Pagina/css/projects.json",
+		"/C/Users/Chino/Desktop/Pagina/css/slick.css",
+		"/C/Users/Chino/Desktop/Pagina/Lan.html",
+		"/C/Users/Chino/Desktop/Pagina/indexv2.html",
+		"/C/Users/Chino/Desktop/Pagina/js/index.js",
+		"/C/Users/Chino/Desktop/Pagina/css/slick-theme.css",
+		"/C/Users/Chino/Desktop/Pagina/style.css",
+		"/C/Users/Chino/Desktop/Pagina/new.css",
+		"/C/Users/Chino/Desktop/Pagina/css/indexv2.css",
+		"/C/Users/Chino/Desktop/Pagina/slick-theme.css",
+		"/C/Users/Chino/Desktop/Pagina/index - copia.html",
+		"/C/Users/Chino/Desktop/Pagina/index.css",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Local History/settings/LocalHistory.sublime-settings",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/new.css",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/slick-theme.css",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/presidio.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/Lan.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/Ara.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/Autosave.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/Educabilia.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/teamtask.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/index.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/style.css",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/css/slick-theme.css",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Tag/Tag Package.sublime-settings",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/User/Tag Package.sublime-settings",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Normalize Indentation/Normalize Indentation.sublime-settings",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/User/View In Browser.sublime-settings",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Normalize Indentation/Default (Windows).sublime-keymap",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/ara.html",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/js/index.js",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/index.css",
+		"/C/Users/Chino/Downloads/handlebars-js-demo 2/handlebars-js-demo/css/style.css",
+		"/C/Users/Chino/Desktop/resize.js",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/css/index.css",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/Default (Windows).sublime-keymap",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/inc/css/bootstrap-min.css",
+		"/C/Users/Chino/AppData/Roaming/Sublime Text 3/Packages/Goto-CSS-Declaration/Default (Windows).sublime-keymap",
+		"/C/Users/Chino/Desktop/wordpress/wordpress/htdocs/wp-content/themes/shapely/layout_base-cleaned.css"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 121.0,
+		"where_history":
+		[
+			"<open files>\t,<open folders>",
+			"<open files>\t",
+			"<open files>",
+			"*.html,C:\\Users\\Chino\\Desktop\\ignacioazzi.github.io\t,<open folders>",
+			"*.html,C:\\Users\\Chino\\Desktop\\ignacioazzi.github.io\t",
+			"*.html,C:\\Users\\Chino\\Desktop\\ignacioazzi.github.io",
+			"*.html",
+			"*.css",
+			"<current file>,<open folders>",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"div",
+			"l-sm-4",
+			"sm",
+			"xs",
+			"md",
+			"left",
+			"sm",
+			"xs",
+			"md",
+			"lan",
+			"md",
+			"h4",
+			"sm",
+			"md",
+			"48",
+			".",
+			"- ",
+			"p>",
+			"p",
+			"3",
+			"center",
+			"header",
+			".png",
+			"md",
+			"255,255,255",
+			"48",
+			"img-center",
+			"strong",
+			"ol-md-3",
+			"text-center",
+			"col-md-3",
+			"60",
+			"100",
+			"1%",
+			"0%",
+			"100%",
+			"class=\"\"",
+			"col",
+			"src=\"",
+			"img",
+			"col-md-3",
+			"1",
+			"3 col-md-of",
+			"src",
+			"-3",
+			"col-md-3",
+			"sm",
+			"hidden-sm",
+			"arrow",
+			"md-4",
+			"d-3",
+			"-4",
+			"mb24",
+			"96",
+			"smaller",
+			"<p>",
+			"img-",
+			"md",
+			"white-text",
+			"c=\"\"",
+			"=\"\"",
+			"\"\"",
+			"comparison",
+			"thanks_container",
+			"Ccol-sm-3 col-offset-sm-0",
+			">col-sm-3 col-offset-sm-0",
+			"col-offset-0",
+			"\"col-md-8 \"",
+			"col-md-2",
+			"col-md-8 col-md-offset-1",
+			"img class=\"",
+			"img class=",
+			"img class=\"",
+			"div",
+			"row",
+			"ze",
+			"svg",
+			"col-md-2",
+			"col-md-offset-1",
+			"class=\"b\"",
+			"class=\"b",
+			"col-md-3",
+			"col-md-9",
+			"col-md-3",
+			"mg src=",
+			"<b>",
+			"leady",
+			"mb",
+			"mb96",
+			"row",
+			"<br> <br>",
+			"<h2 c",
+			"<h1",
+			"h4",
+			"clip",
+			"<h2>",
+			"h2",
+			"md",
+			"col-md-offset-3",
+			"id='g-ai0-",
+			"<p class='letter'",
+			"g-aiPstyle0",
+			"g-Sin-t_tulo-1-Mesa_de_trabajo_1",
+			"g-Capa_1",
+			"g-aiAbs",
+			"ol",
+			"<br>",
+			"d-8",
+			"md-4",
+			"md-9",
+			"col-md-3",
+			"col",
+			"row",
+			"container",
+			"text",
+			"shadow",
+			"section",
+			"p",
+			"b",
+			"h4",
+			"img src=\"",
+			"md",
+			"<h3>",
+			"Lorem ipsum.",
+			"<im",
+			"img",
+			"fun()",
+			"fun"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"1.1",
+			"<div id=\"primary\" class=\"col-md-8 col-md-offset-2 mb-xs-24 no-sidebar\">",
+			"fade:false",
+			"  <link href=\"https://fonts.googleapis.com/css?family=Droid+Serif|Bitter|Source+Sans+Pro:400,600,700\" rel=\"stylesheet\">\n",
+			"<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n\n  ga('create', 'UA-91032335-1', 'auto');\n  ga('send', 'pageview');\n\n  <link href=\"https://fonts.googleapis.com/css?family=Droid+Serif|Bitter|Source+Sans+Pro:400,600,700\" rel=\"stylesheet\">\n",
+			"<script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n\n  ga('create', 'UA-91032335-1', 'auto');\n  ga('send', 'pageview');\n\n</script></body>",
+			"</body>",
+			"<head>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+			"https://cdn.jsdelivr.net",
+			"width=\"1280\" height=\"960\"",
+			"",
+			"  <nav id=\"site-navigation\" class=\"main-navigation nav-visible\" role=\"navigation\">\n    <div class=\"container nav-bar\">\n      <div class=\"row\">\n        <div class=\"module left\">\n          <a href=\"index.html\">\n            <p class=\"site-title\"> <b>Ignacio Azzi</b>\n              UX Designer\n            </p>\n          </a>\n        </div>\n        <div class=\"module right\">\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Resume</a>\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Contact me</a>\n        </div>\n        <!--end of module group--> </div>\n    </div>\nhref=\"css/new.css\"",
+			"  <nav id=\"site-navigation\" class=\"main-navigation nav-visible\" role=\"navigation\">\n    <div class=\"container nav-bar\">\n      <div class=\"row\">\n        <div class=\"module left\">\n          <a href=\"index.html\">\n            <p class=\"site-title\"> <b>Ignacio Azzi</b>\n              UX Designer\n            </p>\n          </a>\n        </div>\n        <div class=\"module right\">\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Resume</a>\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Contact me</a>\n        </div>\n        <!--end of module group--> </div>\n    </div>\nhref=\"css/style.css\"",
+			"  <nav id=\"site-navigation\" class=\"main-navigation nav-visible\" role=\"navigation\">\n    <div class=\"container nav-bar\">\n      <div class=\"row\">\n        <div class=\"module left\">\n          <a href=\"index.html\">\n            <p class=\"site-title\"> <b>Ignacio Azzi</b>\n              UX Designer\n            </p>\n          </a>\n        </div>\n        <div class=\"module right\">\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Resume</a>\n          <a class=\"\" href=\"Ignacio_Azzi-Resume.pdf\">Contact me</a>\n        </div>\n        <!--end of module group--> </div>\n    </div>\n  </nav>",
+			"process",
+			"intro",
+			"<script src=\"js/script.js\"></script>",
+			"",
+			"\t<link rel=\"stylesheet\" href=\"css/slick.css\"></head>\n",
+			"",
+			"href=\"css",
+			"",
+			"fade: true,",
+			"dots: true,\nfade: true,"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\Chino\\Google Drive\\ignacioazzi.github.io"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 237.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

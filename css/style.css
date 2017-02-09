@@ -35,10 +35,10 @@ h1 {
 small {font-size: 80%;}
 img {
 	border: 0;
-	/* max-width: 100%; */
+	width: auto;
 	height: auto;
 	cursor: pointer;
-	max-width: 100%;
+	max-width: 100%
 }
 img.size-full {box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.00);
 }
@@ -152,8 +152,11 @@ html {
 *,*:before,*:after {box-sizing: inherit;}
 blockquote:before,blockquote:after,q:before,q:after {display: none;}
 blockquote,q {quotes:"" "";}
-ul,ol {margin: 0 0 1.5em 1em;}
-ul {list-style: disc;}
+ul,ol {margin: 0 0 1.5em 0em;
+padding-left: 0;}
+ul {list-style: none;
+	margin-top: 1em;
+}
 ol {list-style: decimal;}
 li > ul,li > ol {
 	margin-bottom: 0;
@@ -433,7 +436,7 @@ figure.gallery-item:hover .wp-caption-text {
 	top: 50%;
 	z-index: 2;
 }
-h1,h2,h3,h4,h5,h6,p,ul,ol,table,blockquote,input,textarea {
+h1,h2,h3,h4,h5,h6,p,ol,table,blockquote,input,textarea {
 	margin-bottom: 24px;
 	margin-top: 0;
 	padding: 0;
