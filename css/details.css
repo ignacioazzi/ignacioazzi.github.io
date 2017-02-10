@@ -31,12 +31,10 @@ header {
 }
 
 header p{
-	text-align: justify;
+	/* text-align: justify; */
 }
 
-header .lead, header .leady{
-	text-align: center;
-}
+
 
 
 img {
@@ -338,6 +336,10 @@ h2 {
 	padding-bottom: 0;
 }
 
+.pb256 {
+	padding-bottom: 256px;
+}
+
 
 .mb24 {
 	margin-bottom: 24px;
@@ -377,4 +379,15 @@ h2 {
 
 .educabilia h2 {
     font-weight: bold;
+}
+
+
+.row-table {
+	display: table;
+}
+
+.col-table {
+	float: none;
+	display: table-cell;
+	vertical-align: bottom;
 }
