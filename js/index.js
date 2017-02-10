@@ -10,42 +10,42 @@
       "project-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
       "url":"ara.html",
       "tooltip":"Pick me!",
-      "bg-img":"img/covers/covers-02.png"},
+      "bg_img":"img/covers/covers-02.png"},
       {
         "company": "Presidio National Park",
         "company-description":"National Park in San Francisco, California who was looking to completely redesign its website.",
         "project-description":"Redesign main sections include home page, landing pages, detail pages. Design from scratch a map section.",
         "url":"presidio.html",
         "tooltip":"Pick me!",
-        "bg-img":"img/covers/covers-03.jpg"},
+        "bg_img":"img/covers/covers-03.jpg"},
         {
           "company": "AutoSave",
           "company-description":"Research and  business model ideation to encourage millennials to improve their saving habits through the aid of gaming.",
           "project-description":"To interview gamers users to decide whether there was a feasible business model where millennials would be encouraged to save and invest. Then, based on the info collected, to help ideate that product",
           "url":"autosave.html",
           "tooltip":"Pick me!",
-          "bg-img":"img/covers/covers-01.png"},
+          "bg_img":"img/covers/covers-01.png"},
           {
             "company": "LAN",
             "company-description":"LAN Airlines is the flag carrier of Chile, and one of the largest airlines in Latin America.",
             "project-description":"To propose a new UI to solve legibility issues and better highlight most relevant information like flight number, dates, and price.",
             "url":"lan.html",
             "tooltip":"Pick me!",
-            "bg-img":"img/covers/covers-06.png"},
+            "bg_img":"img/covers/covers-06.png"},
             {
               "company": "TeamTask",
               "company-description":"Task management for small projects made simple in the form of an  Android app.",
               "project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
               "url":"teamtask.html",
               "tooltip":"Pick me!",
-              "bg-img":"img/covers/covers-05.png"},
+              "bg_img":"img/covers/covers-05.png"},
               {
                 "company": "Educabilia",
                 "company-description":"Biggest e-learning platform in Latin America selling online and presential courses",
                 "project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
                 "url":"educabilia.html",
                 "tooltip":"Pick me!",
-                "bg-img":"img/covers/covers-04.png"}
+                "bg_img":"img/covers/covers-04.png"}
                 ]
               }
               $projects.html(projectsCompile(projectsData));

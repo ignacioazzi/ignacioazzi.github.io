@@ -187,14 +187,14 @@ span.number {
 	color: cyan;
 }
 
-.light-text{
+.light_text{
 	font-weight: 300!important;
 }
 p.col3{
 	-moz-column-count: 3;
 	-o-column-count: 3;
 }
-.lan_bg-dark-blue {
+.lan_bg_dark_blue {
 	background: #091b46;;
 }
 
