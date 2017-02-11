@@ -84,7 +84,7 @@ section h3 {
 
 /*Alignment rules*/
 
-.text-center {
+.tac {
 	text-align: center;
 }
 
@@ -109,10 +109,10 @@ div {
 }
 
 /*Image classes*/
-.img-center {
+.img_center {
 	margin: 0 auto;
 }
-.img-right {
+.img_right {
 	margin-right: 15px;
 	margin-left: auto;
 	max-width: 100%;
@@ -121,7 +121,7 @@ div {
 	margin-bottom: 2em;
 }
 
-.img-full{
+.img_full{
 	max-width: 100%;
 }
 
@@ -151,9 +151,6 @@ div {
 }
 .row.slide {
 	margin-bottom: 13em;
-}
-.row.slide.slide_small {
-	margin: 12em -15px;
 }
 
 span.number {

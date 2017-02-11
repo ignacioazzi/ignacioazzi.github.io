@@ -152,10 +152,11 @@ html {
 *,*:before,*:after {box-sizing: inherit;}
 blockquote:before,blockquote:after,q:before,q:after {display: none;}
 blockquote,q {quotes:"" "";}
-ul,ol {margin: 0 0 1.5em 0em;
-padding-left: 0;}
-ul {list-style: none;
-	margin-top: 1em;
+ul,ol {margin: 0 0 1.5em 1em;padding-left: 0;}
+ul {
+	/* list-style: none; */
+	margin-top: 2em;
+	margin-bottom: 3em;
 }
 ol {list-style: decimal;}
 li > ul,li > ol {
@@ -473,7 +474,7 @@ h6 {
 	font-weight: 700;
 }
 
-.text-center{
+.tac{
 	text-align: center;
 }
 @media all and (max-width: 767px) {
@@ -495,7 +496,7 @@ p,span {
 }
 p, li {
 	/* font-weight: 400; */
-	line-height: 169%;
+	line-height: 2em;
 	color: #040404;
 	vertical-align: top;
 	font-size: 17px;
@@ -544,7 +545,7 @@ a:hover {
 	color: #5d47d7;
 	text-decoration: none;
 }
-.number {font-family:"Lato","Helvetica Neue", Helvetica, Arial, sans-serif;}
+
 
 @media all and (max-width: 767px) {
 
@@ -616,10 +617,10 @@ footer {padding: 72px 0;}
 }
 .background-image-holder img {display: none;}
 .background-image-holder.fadeIn {opacity: 1;}
-.btn,.button {font-family:"PT Sans", "Arial", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;border: 2px solid #745cf9;padding: 11px 26px;min-width: 150px;line-height: 36px;font-size: 12px;font-weight: 700;text-transform: uppercase;letter-spacing: 1px;border-radius: 0;color: #745cf9;text-align: center;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;margin-right: 8px;margin-bottom: 24px;white-space: nowrap;}
+.btn,.button {font-family:"PT Sans", "Arial", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;border: 2px solid #5a6ce3;padding: 11px 26px;min-width: 150px;line-height: 36px;font-size: 12px;font-weight: 700;text-transform: uppercase;letter-spacing: 1px;border-radius: 0;color: #745cf9;text-align: center;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;margin-right: 8px;margin-bottom: 24px;white-space: nowrap;}
 .btn:last-child,.btn:last-of-type {margin-right: 0;}
-.btn:hover,.button:hover {
-	background: #745cf9;
+.btn:hover,.button:hover, .btn_active {
+	background: #5a6ce3;
 	color: #fff;
 	.project-item: hover {
 	/* background: whitesmoke; */  }
@@ -2034,7 +2035,7 @@ section{border: none}
 
 			}
 
-			.text-center-xs {
+			.tac-xs {
 				text-align: center;
 			}
 
@@ -2044,7 +2045,7 @@ section{border: none}
 				float: none;
 			}
 
-			.img-full{
+			.img_full{
 				max-width: 100%;
 				height: auto;
 				display: block;

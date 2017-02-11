@@ -30,8 +30,8 @@
 .bg_cyan{
 	background-color: #dcf1f7;
 }
-.lan h1, .lan h2, .lan h3, .cyan {
-	color: #5bd0f7;
+.lan h1, .cyan, p.cyan {
+	color: #5bd0f7!important;
 }
 
 
@@ -60,7 +60,7 @@
 }
 
 .edu_blue{
-	color : #4D61E1;
+	color: #4D61E1!important;
 }
 
 .edu_light_blue{
@@ -79,7 +79,7 @@
 }
 
 .edu_purple{
-	color:#68408f
+	color:#68408f;
 }
 
 .edu_gradient{
@@ -127,5 +127,15 @@ section.task_creation {
 	background-repeat: round;
 	background-size: 8.333333333%;
 }
-.shadow-blue{
+
+.shadow {
+	box-shadow: 0px 40px 80px rgba(31, 29, 29, 0.28);
+}
+
+.shadow_light {
+	box-shadow: 0px 30px 80px rgba(31, 29, 29, 0.1);
+}
+
+
+.shadow_blue{
 	box-shadow: 0px 40px 60px rgb(235, 237, 249)}

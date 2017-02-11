@@ -26,14 +26,16 @@ overflow-y: visible;
 }
 
 header {
-	text-align: center;
-	margin: 128px 0px;
+	margin: 128px auto;
 }
 
-header p{
-	/* text-align: justify; */
+header .leady, header .lead {
 }
 
+
+header h2, header h3 {
+    text-align: center;
+}
 
 
 
@@ -41,6 +43,11 @@ img {
 	display: block;
 }
 
+
+.h25{
+	font-size: 40px;
+	font-weight: 400;
+}
 
 h3 {
 	font-size: 50px;
@@ -95,7 +102,7 @@ p.white, h3.white {
 }
 
 
-u {
+u, a {
 	text-decoration: none;
 	border-bottom: 2px solid #5669e1;
 }
@@ -110,9 +117,10 @@ section {
 section h3 {
 	font-family: Source Sans Pro;
 	font-size: 32px;
-	color: #4D61E1;
+	/* color: #4D61E1; */
 	font-weight: 300;
 	margin-top: 0px;
+	/* text-align: center; */
 }
 
 
@@ -125,6 +133,10 @@ section h3 {
 .quiet, .quiet p{
 	line-height: 2em;
 	opacity: .9;
+}
+
+.quieter{
+	opacity: .6;
 }
 
 
@@ -174,17 +186,17 @@ div {
 }
 
 
-.img-center {
+.img_center {
 	margin: 0 auto;
 }
 
 
-img.img-left {
+img.img_left {
 }
 
 
-.img-right {
-	margin-right: 15px;
+.img_right {
+	margin-right: 0;
 	margin-left: auto;
 	position: relative;
 	left: 30px;
@@ -192,23 +204,9 @@ img.img-left {
 }
 
 
-.img-full {
+.img_full {
 	max-width: 100%;
-}
-
-
-.shadow {
-	box-shadow: 0px 40px 80px rgba(31, 29, 29, 0.28);
-}
-
-
-.row.slide {
-	margin-bottom: 6em;
-}
-
-
-.row.slide {
-	margin-bottom: 6em;
+	/* max-width: none; */
 }
 
 
@@ -222,16 +220,22 @@ img.img-left {
 .slide_text {
 	padding: 0px 1% 0px 1%;
 	position: relative;
+	/* margin: 0 auto; */
+	/* display: block; */
+	/* float: none; */
+	text-align: left;
 }
 
 
 .row.slide {
-	margin-bottom: 13em;
+	padding-bottom: 3em;
+	padding-top: 4em;
 }
 
 
-.row.slide.slide_small {
-	margin: 12em -15px;
+.slide_small {
+	margin: 3em -15px;
+	/* margin-bottom: 0px; */
 }
 
 
@@ -249,7 +253,7 @@ span.number {
 	position: absolute;
 	color: white;
 	margin-right: 13px;
-	top: 15px;
+	top: 10px;
 	left: -60px;
 	font-weight: bold;
 	border: -1px solid white;
@@ -326,10 +330,7 @@ h2 {
 }
 
 
-.col-md-1.arrow {
-	margin-top: 25%;
-	padding: 0px;
-}
+
 
 
 .pb0 {
@@ -390,4 +391,28 @@ h2 {
 	float: none;
 	display: table-cell;
 	vertical-align: bottom;
+}
+
+.arrow {
+    margin: 3em 0px 3em 14%;
+    margin-left: 14%;
+    width: 60%;
+    opacity: .2;
+    /* margin-top: -65px; */
+}
+
+img.arrow_90 {
+	margin: 2em 14% 4em;
+	width: 9px;
+}
+.arrow_down {
+	width: 36%;
+}
+
+
+.row.slide:nth-child(even) {
+    /* background: #fafafa; */
+}
+.mini_header {
+	margin: 64px 0px
 }

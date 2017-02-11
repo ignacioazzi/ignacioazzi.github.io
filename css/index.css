@@ -68,7 +68,7 @@ div {
     transition: .4s width;
 }
 
-.img-full {
+.img_full {
     width: 100%;
     height: auto;
 }
