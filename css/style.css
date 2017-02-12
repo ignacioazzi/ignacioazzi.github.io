@@ -28,9 +28,13 @@ b,strong {
 	/* color: black; */
 }
 h1 {
-	font-size: 57px;
+	font-size: 60px;
 	margin: 0.67em 0;
 	line-height: 64px;
+}
+
+h1.small_text{
+	font-size: 80px;
 }
 small {font-size: 80%;}
 img {

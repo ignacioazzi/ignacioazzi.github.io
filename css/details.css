@@ -58,10 +58,10 @@ h3 {
 
 
 h4 {
-	font-size: 40px;
-	opacity: .8;
-	font-weight: 300;
-}
+	font-size: 1.1em;
+	margin-top: 2em;
+	margin-bottom: .5em;
+	}
 
 
 h3, h4 {
@@ -116,9 +116,9 @@ section {
 
 section h3 {
 	font-family: Source Sans Pro;
-	font-size: 32px;
+	font-size: 30px;
 	/* color: #4D61E1; */
-	font-weight: 300;
+	/* font-weight: 300; */
 	margin-top: 0px;
 	/* text-align: center; */
 }
@@ -415,4 +415,17 @@ img.arrow_90 {
 }
 .mini_header {
 	margin: 64px 0px
+}
+
+.tal, .tal h2, .tal h3 {
+ text-align: left;
+}
+
+.yellow {
+	color: #f4c900
+}
+
+.img_rounded {
+	border-radius: 5px;
+	overflow: hidden;
 }

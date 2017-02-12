@@ -11,8 +11,8 @@
 	font-weight: 300!important;
 }
 
-.white_text, .white_text  *{
-	color:white!important;
+.white_text, .white_text h1,  .white_text h2,  .white_text h3,  .white_text p,  .white_text li {
+	color: white;
 }
 
 .lan_bg_dark_blue {
@@ -139,3 +139,8 @@ section.task_creation {
 
 .shadow_blue{
 	box-shadow: 0px 40px 60px rgb(235, 237, 249)}
+
+
+.teal {
+    background: #2e3b42;
+}
