@@ -12,9 +12,9 @@ body {
 }
 
 @media (min-width: 1600px) {
-    .container {
-    width: 1450px;
-}
+	.container {
+		width: 1450px;
+	}
 }
 
 .col-center{
@@ -22,11 +22,12 @@ body {
 	float: none;
 }
 .oyv{
-overflow-y: visible;	
+	overflow-y: visible;	
 }
 
 header {
 	margin: 128px auto;
+	text-align: center;
 }
 
 header .leady, header .lead {
@@ -34,7 +35,7 @@ header .leady, header .lead {
 
 
 header h2, header h3 {
-    text-align: center;
+	text-align: center;
 }
 
 
@@ -61,7 +62,7 @@ h4 {
 	font-size: 1.1em;
 	margin-top: 2em;
 	margin-bottom: .5em;
-	}
+}
 
 
 h3, h4 {
@@ -379,7 +380,7 @@ h2 {
 }
 
 .educabilia h2 {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
@@ -394,11 +395,11 @@ h2 {
 }
 
 .arrow {
-    margin: 3em 0px 3em 14%;
-    margin-left: 14%;
-    width: 60%;
-    opacity: .2;
-    /* margin-top: -65px; */
+	margin: 3em 0px 3em 14%;
+	margin-left: 14%;
+	width: 60%;
+	opacity: .2;
+	/* margin-top: -65px; */
 }
 
 img.arrow_90 {
@@ -411,14 +412,14 @@ img.arrow_90 {
 
 
 .row.slide:nth-child(even) {
-    /* background: #fafafa; */
+	/* background: #fafafa; */
 }
 .mini_header {
 	margin: 64px 0px
 }
 
 .tal, .tal h2, .tal h3 {
- text-align: left;
+	text-align: left;
 }
 
 .yellow {
