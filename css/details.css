@@ -11,11 +11,7 @@ body {
 	line-height: 1.8em;
 }
 
-@media (min-width: 1600px) {
-	.container {
-		width: 1450px;
-	}
-}
+
 
 .col-center{
 	margin: 0 auto;
@@ -263,7 +259,7 @@ span.number {
 
 
 .overview p, .overview li {
-	color: #444;
+	/* color: #444; */
 }
 
 
@@ -331,12 +327,6 @@ h2 {
 }
 
 
-
-
-
-.pb0 {
-	padding-bottom: 0;
-}
 
 .pb256 {
 	padding-bottom: 256px;
