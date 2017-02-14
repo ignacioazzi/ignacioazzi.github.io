@@ -481,8 +481,9 @@ h6 {
 .tac{
 	text-align: center;
 }
-@media all and (max-width: 767px) {
 
+.tac img, img.tac{
+	margin: 0 auto;
 }
 
 .uppercase {
