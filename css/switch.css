@@ -1,0 +1,34 @@
+
+.switch{
+  color: white;
+  font-family: "Source Sans Pro";
+  border: 2px solid #5BD0F7;
+  border-radius: 7px;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 14px;
+  position: fixed;
+  bottom:20px;
+  left:20px;
+  cursor:pointer;
+  z-index: 12;
+  transition: .3s opacity;
+  background: rgba(18, 39, 91, 0.61);
+}
+
+
+
+.switch_before, .switch_after{
+  display: inline-block;
+  text-transform: uppercase;
+  opacity: .3;
+  transition: .3s opacity;
+}
+
+.switch_before{
+  margin-right: 10px;
+}
+.active{
+  opacity: 1;
+  color:#5BD0F7;
+}
