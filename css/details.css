@@ -112,12 +112,8 @@ section {
 
 
 section h3 {
-	font-family: Source Sans Pro;
 	font-size: 30px;
-	/* color: #4D61E1; */
-	/* font-weight: 300; */
 	margin-top: 0px;
-	/* text-align: center; */
 }
 
 
@@ -217,9 +213,6 @@ img.img_left {
 .slide_text {
 	padding: 0px 1% 0px 1%;
 	position: relative;
-	/* margin: 0 auto; */
-	/* display: block; */
-	/* float: none; */
 	text-align: left;
 }
 
@@ -232,7 +225,6 @@ img.img_left {
 
 .slide_small {
 	margin: 3em -15px;
-	/* margin-bottom: 0px; */
 }
 
 
@@ -303,7 +295,6 @@ h2 {
 	font-size: 60px;
 	font-weight: 300;
 	line-height: 55px;
-	/* word-break: break-word; */
 	margin-top: 0;
 }
 
@@ -402,7 +393,6 @@ img.arrow_90 {
 
 
 .row.slide:nth-child(even) {
-	/* background: #fafafa; */
 }
 .mini_header {
 	margin: 64px 0px
