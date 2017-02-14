@@ -11,7 +11,7 @@
 	font-weight: 300!important;
 }
 
-.white_text, .white_text h1, .white_text.leady, .white.leady,  .white_text h2,  .white_text h3,  .white_text p, .white_text p.lead, .white_text p.leady, .white_text li {
+.white_text, .white_text h1, .white_text.leady, .white_text.lead,  .white_text h2,  .white_text h3,  .white_text p, .white_text p.lead, .white_text p.leady, .white_text li {
 	color: white;
 }
 
