@@ -58,9 +58,9 @@
 	}
 
 </style>
-<body class="bg_dark lan">
+<body class="bg_dark">
 
-	<section class="hero pb0 lan_blue">
+	<section class="hero pb0 lan">
 		<div class="section_bg" style="background-image: url(./img/planes.jpg);"></div>
 
 		<div class="col-sm-8 col-center" >
@@ -89,7 +89,7 @@
 			</p>
 		</div>
 	</section>
-	<section class="comparison">
+	<section class="comparison lan">
 		<header>
 			<h2 class="tac light_text cyan">Full size before/after comparison</h2>
 			<p class="white_text leady light_text">
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="itinerary skew lan white_text">
+		<section class="itinerary skew lan_bg_dark_blue white_text">
 			<div class="section_bg" style="opacity:.1; background-image: url("http://www.weraddicted.com/wp-content/uploads/2017/01/964000-airport.jpg")"></div>
 
 			<div class="container-fluid">
@@ -141,7 +141,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="fight_date skew-bottom">
+			<section class="fight_date skew-bottom lan">
 				<header>
 					<h2 class="tac light_text cyan">Choose flight date</h2>
 				</header>
@@ -211,6 +211,7 @@
 										ba_container.css("height",b_img_height);
 										console.log(b_img_height)
 									};
+									resize_comparison_container();
 
 
 									$(window).resize(function() {

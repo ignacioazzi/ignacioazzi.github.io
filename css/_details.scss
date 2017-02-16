@@ -96,6 +96,7 @@ ol li b {
 	clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 	margin: -128px 0!important;
 	padding: 256px 0;
+	z-index: 20;
 }
 
 .mini_section.skew {
@@ -114,7 +115,7 @@ ol li b {
 	padding-bottom: 256px;
 }
 
-
+@media only screen and (min-width: 992px) {
 .row-table {
 	display: table;
 }
@@ -122,6 +123,7 @@ ol li b {
 	float: none;
 	display: table-cell;
 	vertical-align: bottom;
+}
 }
 
 .arrow {
