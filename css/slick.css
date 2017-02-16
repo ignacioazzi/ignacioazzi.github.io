@@ -81,6 +81,9 @@ body{
 
 .previous, .next {background: none;border:none;margin: auto;text-align: center;/* height: 50px; */text-transform: uppercase;}
 
+.previous:focus, .next:focus{
+	outline:transparent
+} 
 .arrow_absolute img{
 	display: inline-block;
 }
