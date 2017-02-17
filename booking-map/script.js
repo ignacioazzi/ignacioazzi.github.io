@@ -52,7 +52,7 @@ function initMap() {
 					});
 
 					//          var source = $('<a>', {
-					//            text: feature.properties['source-credit'],
+					//            text: fefature.properties['source-credit'],
 					//            href: feature.properties['source-link'],
 					//            target: "_blank",
 					//            class: 'source'
@@ -87,7 +87,7 @@ function initMap() {
 					var number_review = $('<p class="number_review">Según <b>	7901</b> comentarios de huéspedes reales</p>',
 																{class: 'number_review'});
 
-					var button = $('<a class="btn">Mostrar precios</a>', {
+					var button = $('<a target="_blank" href="http://www.booking.com/hotel/fr/generator-paris.es-ar.html" class="btn">Mostrar precios</a>', {
 						class: 'btn'
 					});
 
