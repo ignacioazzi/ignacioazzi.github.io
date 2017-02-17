@@ -1,0 +1,270 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 1,
+				"chapter": "Generator Paris",
+				"zoom": 17,
+				"description": "El Generator Paris es un hostal de diseño situado en el animado distrito 10º de París. Dispone de conexión WiFi gratuita y cuenta con una zona de salón elegante con sala de juegos.",
+				"review": "Muy bien",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/855/85527254.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34562393,
+					48.851514
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 2,
+				"chapter": "Est Hotel",
+				"zoom": 17,
+				"description": "El Est Hotel está situado en el centro, cerca de las estaciones de tren de Gare de l'Est y Gare du Nord. Ofrece una propiedad económico y un servicio atento. Las habitaciones incluyen TV y baño.",
+				"review": "Bien",
+				"address": "Cerca del subte",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/407/40706103.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34286667,
+					48.851536
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 3,
+				"chapter": "District République",
+				"zoom": 17,
+				"description": "El District République se encuentra en París, a 500 metros de la plaza de la República y del canal Saint-Martin. El hotel ofrece habitaciones con baño privado, TV y conexión WiFi gratuita.",
+				"review": "Fabuloso",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/407/40706103.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.350966930389404,
+					48.850625
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 4,
+				"chapter": "Holiday Inn Paris Gare de l'Est",
+				"zoom": 17,
+				"description": "El hotel Holiday Inn Paris Gare de l'Est se encuentra enfrente de la estación de tren y subte Gare de l'Est, que proporciona acceso directo a lugares de interés como Saint-Michel y el Barrio Latino.",
+				"review": "Bien",
+				"address": "Cerca del subte",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/580/58048676.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3465251,
+					48.855531
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 5,
+				"chapter": "Campanile Paris 11 - Bastille - Le Marais",
+				"zoom": 17,
+				"description": "El Campanile Paris 11 goza de una ubicación céntrica a sólo 500 metros de la famosa Place de la Bastille.",
+				"review": "Muy bien",
+				"address": "République - 10º distrito",
+				"image": "https://r-ec.bstatic.com/images/hotel/square200/597/59765935.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3515677452087402,
+					48.855884
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 6,
+				"chapter": "St Christopher's Inn Paris - Gare du Nord",
+				"zoom": 17,
+				"description": "El St Christopher's Inn Paris está situado en el centro de París, a solo 200 metros de la estación de tren Gare du Nord, y ofrece 3 bares, un salón de relax con futbolín y un cibercafé.",
+				"review": "Muy bien",
+				"address": "Cerca del subte",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/272/27217062.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3423087,
+					48.853547
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 7,
+				"chapter": "Les Piaules",
+				"zoom": 17,
+				"description": "Les Piaules es un hostel de París con solárium y WiFi gratuita situado cerca de la popular zona de Belleville. Hay cafetería en el establecimiento. Los baños son compartidos y tienen ducha y aseo.",
+				"review": "Fabuloso",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/288/28860449.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34502313,
+					48.855044				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 8,
+				"chapter": "St Christopher's Inn Paris - Canal",
+				"zoom": 17,
+				"description": "Este hostel galardonado ofrece conexión WiFi gratuita y se encuentra en París, junto al Bassin de la Villete y a 350 metros de la estación de subte de Crimé.",
+				"review": "Muy bien",
+				"address": "Cerca del subte",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/855/85527254.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34691147,
+					48.8524966
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 9,
+				"chapter": "Enjoy Hostel",
+				"zoom": 17,
+				"description": "Este hostel pequeño se encuentra en el barrio principalmente residencial de Montparnasse, a solo 550 metros de la estación de subte Alesia.",
+				"review": "Bien",
+				"address": "Bastilla - 11º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/407/40706103.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34921813,
+					48.851140
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 10,
+				"chapter": "Perfect Hotel & Hostel",
+				"zoom": 17,
+				"description": "El Perfect Hotel & Hostel se encuentra en el distrito 9º de París, a 15 minutos a pie del Moulin Rouge y a solo 5 minutos a pie de la estación de subte de Anvers.",
+				"review": "Bien",
+				"address": "Cerca del subte",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/407/40706103.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3439288,
+					48.8526305
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 11,
+				"chapter": "Hôtel Richard",
+				"zoom": 17,
+				"description": "Este hotel económico se encuentra en el centro de París, a solo 200 metros de la estación de subte Voltaire. Se proporciona WiFi gratuita en todas las habitaciones.",
+				"review": "Muy bien",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/580/58048676.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34638578,
+					48.8537734
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 12,
+				"chapter": "Hipotel Paris Belleville Gare de l'Est",
+				"zoom": 17,
+				"description": "Este hotel goza de una ubicación ideal cerca de la plaza de la República y de la plaza del Colonel Fabien.",
+				"review": "Bien",
+				"address": "Cerca del subte",
+				"image": "https://r-ec.bstatic.com/images/hotel/square200/597/59765935.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3490250,
+					48.854451
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 13,
+				"chapter": "Jacobs Inn Hostel",
+				"zoom": 17,
+				"description": "El Jacobs Inn Hostel se encuentra en París, a 5 minutos a pie de la estación Gare du Nord y frente a la estación de subte Barbes Rochechouart. Ofrece WiFi gratuita.",
+				"review": "Bien",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/272/27217062.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.34771705,
+					48.854366
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 14,
+				"chapter": "Vintage Hostel Gare du Nord",
+				"zoom": 17,
+				"description": "Este hostel con aire acondicionado se encuentra en el distrito IX, a solo 500 metros de la estación de tren de Gare du Nord y a 15 minutos a pie del Moulin Rouge.",
+				"review": "Muy bien",
+				"address": "République - 10º distrito",
+				"image": "https://q-ec.bstatic.com/images/hotel/square200/288/28860449.jpg"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					2.3500442504882812,
+					48.853406
+				]
+			}
+		}
+	]
+}

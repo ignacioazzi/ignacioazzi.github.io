@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+  <title>leaflet-storymap</title>
+  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
+  <script src="leaflet.js"></script>
+  <!-- load jQuery  -->
+  <!-- load Font-Awesome -->
+  <!-- Load leaflet.extra-markers from local directory -->
+  <script src="markers/leaflet.extra-markers.min.js"></script>
+  <link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="header">
+	 <img class="fl" src="img/logo.png" alt="">
+
+ 	<img class="fr" src="img/header.png" alt="">
+ </div>
+
+  <div id="narration">
+		<div id="space-at-the-top" class="space-at-the-top tabs">
+			<span id="tab_search" class="" >Search</span><span id="tab_contents" class="active">List</span>
+		</div>
+		<div id="search" class="tab invisible">
+		 <img src="img/search.png" alt="">
+		 <button id="btn_search">Search</button>
+		 <img src="img/filters.png" id="filters" alt="">
+	
+   </div>
+			<div id="contents" class="tab ">
+       </div>
+		<div class="overlay">
+			<div class="loading"><img src="img/loading.gif" alt="">
+				Wait an instant while results are loaded...</div>
+		</div>
+  </div>
+
+  <div id="map"></div>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="script.js"></script>
+<script>
+	
+	$(".overlay").hide();
+
+	$("#btn_search, #filters").click(function(){
+		$(".overlay").fadeIn(400).delay(800).fadeOut(400)
+	});
+	
+	$(".leaflet-marker-icon").click(function(){
+		$(this).addClass("active")
+	});
+	
+	$(".tabs span").click(function(){
+		$(".tabs span").toggleClass("active");
+		$(".tab").toggleClass("invisible");
+	})
+	
+$(document).ready(function(){
+	$('div#container1').trigger( "click" );
+})
+
+	
+	</script>
+</body>
+</html>
