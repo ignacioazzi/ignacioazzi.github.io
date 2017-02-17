@@ -304,12 +304,17 @@ p.rooms img:last-of-type{
 	position: relative;
 }
 
+.fl,.fr{
+	position:absolute;
+	top: 0
+}
+
 .fl {
-	float: left;
+	left: 20px;
 }
 
 .fr {
-	float: right;
+	right:20px;
 }
 
 #btn_search {
