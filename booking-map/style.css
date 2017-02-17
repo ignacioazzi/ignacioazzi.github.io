@@ -10,7 +10,7 @@ body {
 #map {
 	position: absolute;
 	right: 0;
-	width: calc(100% - 370px);
+	width: calc(100% - 386px);
 	height: 96vh;
 	z-index: 1;
 	top: 45px;
@@ -35,7 +35,7 @@ body {
 }
 #narration {
 	position: absolute;
-	width: 371px;
+	width: 386px;
 	/* min-width: 182px; */
 	left: 0px;
 	height: 100vh;
@@ -61,13 +61,13 @@ body {
 	background: #febb02;
 	position: fixed;
 	top: 45px;
-	width: 371px;
+	width: 386px;
 	z-index: 200;
 	line-height: 40px;
 	display: inline-block;
 	text-align: center;
 	color: black;
-}
+	box-shadow: 0px 10px 20px rgba(0,0,0,.2)}
 
 
 .space-at-the-top span{
@@ -160,7 +160,7 @@ p.old_price {
 .text {
 	padding: 0px;
 	padding-left: 15px;
-	width: 235px;
+	width: 234px;
 }
 .title-text {
 	font-weight: bold;
@@ -201,6 +201,7 @@ div.image-container.inFocus {
 	opacity: 8.;
 	/* background-color: #f5f5f5; */
 	box-shadow: 0px 0px 50px rgba(159, 92, 15, 0.2);
+	moz-box-shadow: 0px 0px 50px rgba(159, 92, 15, 0.2);
 	position:relative;
 	border-bottom: 2px solid #ff8600;
 	border-top: 2px solid #ff8600;
@@ -222,6 +223,7 @@ div.image-container.inFocus {
 	box-shadow: 0px 0px 5px #ccc;
 	display: inline-block;
 	float:right;
+	text-decoration: none;
 }
 
 .people_looking {
@@ -247,6 +249,12 @@ div.image-container.inFocus {
     width: 5px;
     height: 5px;
     background-color:#fafafa;
+}
+
+::-moz-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color:#fafafa;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -300,8 +308,10 @@ p.rooms img:last-of-type{
 	background: #febb02;
 	/* text-align: right; */
 	/* margin-top: 80px; */
-	padding-top: 100px;
+	/*! padding-top: 100px; */
 	position: relative;
+	top: 85px;
+	width: 100%;
 }
 
 .fl,.fr{
