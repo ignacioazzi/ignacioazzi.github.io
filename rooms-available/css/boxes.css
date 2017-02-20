@@ -39,12 +39,13 @@ h1.fixed {
 	font-size: 21px;
 	line-height: 44px;
 	padding-left: 47px;
-	padding: 10px 20px 14px 47px;
+	padding: 10px 20px 14px 0px;
 	margin-top: 0px;
 	/* margin-bottom: -47px; */
 }
 .title.stick .fixed {
     padding-right: 0px;
+    padding-left: 19px;
 }
 
 

@@ -1,13 +1,5 @@
 // filter functions
 var filterFns = {
-	greaterThan50: function() {
-		var number = $(this).find('.number').text();
-		return parseInt( number, 10 ) > 50;
-	},
-	even: function() {
-		var number = $(this).find('.number').text();
-		return parseInt( number, 10 ) % 2 === 0;
-	}
 };
 
 // store filter for each group
@@ -42,6 +34,9 @@ var $grid = $('.grid').isotope({
 
 
 $('.filters').on( 'click', '.button', function() {
+	$('html, body').animate({
+		scrollTop: 1504}, 200);
+	$grid.isotope();
 	var $this = $(this);
 	// get group key
 	var $buttonGroup = $this.parents('.button-group');
@@ -49,7 +44,14 @@ $('.filters').on( 'click', '.button', function() {
 	// set filter for group
 	filters[ filterGroup ] = $this.attr('data-filter');
 	// arrange, and use filter fn
-	$grid.isotope();
+
+	var el = $(".detail_view");
+var position = el.position(); //cache the position
+var right = $(window).width() - position.left - el.width();
+var bottom = $(window).height() - position.top - el.height();
+
+
+
 });
 
 // change is-checked class on buttons

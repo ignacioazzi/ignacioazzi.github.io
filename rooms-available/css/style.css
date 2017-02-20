@@ -5,11 +5,12 @@ body {
 }
 
 .container {
-	width: 1170px;
+	width: 1160px;
 	margin: 0 auto;
 	padding-bottom: 200px;
 	text-align: left;
 	position: relative;
+	left: 15px;
 }
 
 .header{
@@ -25,10 +26,10 @@ body {
 }
 
 .main_content, .title {
-	width: 872px;
+	width: 842px;
 	padding: 0px;
 	display: inline-block;
-	padding-left: 51px;
+	padding-left: 6px;
 	/* margin-left: 265px; */
 	position: relative;
 	margin-right: 0px;
@@ -36,7 +37,7 @@ body {
 }
 
 .stick + .main_content, .title.stick {
-	margin-left: 248px;
+	margin-left: 267px;
 	padding-right: 0px;
 }
 
@@ -45,7 +46,7 @@ body {
 	margin-right:0px;
 	margin-left: auto;
 	/* padding-right: 20px; */
-	padding-left: 7px;
+	/* padding-left: 7px; */
 	margin-top: 28px;
 }
 
@@ -171,7 +172,7 @@ body.2 .rooms {
 }
 
 .sidebar.filters {
-	width: 244px;
+	width: 267px;
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
@@ -243,7 +244,7 @@ body.2 .rooms {
 	line-height: 40px;
 	padding-left: 10px;
 	/* padding: 10px 11px; */
-	width: 264px;
+	width: 110%;
 	margin: 0px -10px;
 }
 
