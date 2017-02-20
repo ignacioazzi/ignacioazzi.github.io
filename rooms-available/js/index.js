@@ -44,11 +44,15 @@ $('.filters').on( 'click', '.button', function() {
 	// set filter for group
 	filters[ filterGroup ] = $this.attr('data-filter');
 	// arrange, and use filter fn
-
-	var el = $(".detail_view");
-var position = el.position(); //cache the position
-var right = $(window).width() - position.left - el.width();
-var bottom = $(window).height() - position.top - el.height();
+	var elems = $grid.isotope('getFilteredItemElements')
+	var elems_shown = (elems.length);
+	if (elems.length == 1){
+		$(".rooms_word").text('room');
+	} else{
+		$(".rooms_word").text('rooms')	
+	}
+	//$(".results").fadeIn();
+	//$(".results_amount").text(elems_shown)
 
 
 
