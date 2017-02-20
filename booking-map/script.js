@@ -12,8 +12,9 @@ function initMap() {
 	var map = L.map('map', {
 		center: [0, 0],
 		zoom: 4,
+		
 	});
-
+	map.keyboard.disable()
 
 
 	// This displays a base layer map (other options available)

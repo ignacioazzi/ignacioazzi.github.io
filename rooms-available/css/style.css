@@ -1,0 +1,258 @@
+* {/* box-sizing: border-box; */}
+
+body {
+	font-family: sans-serif;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+	padding-bottom: 200px;
+	text-align: left;
+	position: relative;
+}
+
+.header{
+	height: 47px;
+	background-color: #003580;
+	padding: 0px 20px;
+	position: static;
+	width: 100vw;
+	top: 0;
+	z-index: 3;
+	left: 0;
+	overflow: hidden;
+}
+
+.main_content, .title {
+	width: 891px;
+	padding: 0px;
+	display: inline-block;
+	padding-left: 51px;
+	/* margin-left: 265px; */
+	position: relative;
+	margin-right: 0px;
+	transition: .3s margin-right;
+}
+
+.stick + .main_content, .title.stick {
+	margin-left: 248px;
+}
+
+.title{
+	display:block;
+	margin-right:0px;
+	margin-left: auto;
+	/* padding-right: 20px; */
+	padding-left: 7px;
+}
+
+/* ---- button ---- */
+
+.button {
+	display: inline-block;
+	padding: 0px 12px;
+	/* margin-bottom: 10px; */
+	background: #EEE;
+	border: none;
+	border-radius: 2px;
+	/* background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) ); */
+	color: #222;
+	font-family: sans-serif;
+	/* font-size: 16px; */
+	text-shadow: 0 1px white;
+	cursor: pointer;
+}
+
+.btn-primary{
+	background-color: #28F;
+	border: none;
+	position: relative;
+}
+
+.button:active,
+.button.is-checked {
+	background-color: #28F;
+}
+
+
+.label{
+	float: left;
+	color: black;
+	font-size: inherit;
+	height: 31px;
+	display: inline-block;
+	line-height: 28px;
+	padding: 0px 13px 6px 0px;
+	/* vertical-align: middle; */
+	box-sizing: content-box;
+	font-weight: normal;
+}
+
+.sidebar.sticky {
+	float: none;
+	position: fixed;
+	top: 20px;
+	z-index: 6;
+	left: auto;
+}
+
+
+.button:hover {
+	background-color: #8CF;
+	text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+	color: #222;
+}
+
+.button:active,
+.button.is-checked {
+	background-color: #28F!important;
+	color: white!important;
+	text-shadow: snow;
+}
+
+.sidebar .boolean button.button.is-checked {
+	color: white;
+	text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+	border: 1px solid #28F;
+}
+
+.button:active {
+	/* box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8); */
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.filters {
+	font-size: 15px;
+	line-height: 32px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-top: 102px;
+}
+
+.button-group {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: top;
+	/* line-height: 44px; */
+	margin: 0px 20px 0px 0px;
+}
+
+.button-group .button {
+	float: left;
+	border-radius: 0;
+	margin-left: 0;
+	margin-right: 1px;
+}
+
+.button-group button:first-of-type {border-radius: 4px 0 0 4px;}
+.button-group button:last-of-type {border-radius: 0 4px 4px 0;}
+
+body.2 .sidebar, body.2 .container {
+	display: inline-block;
+	text-align: left
+}
+
+body.2 {
+	text-align: center
+}
+
+body.2 .rooms {
+	padding-left: 30px;
+}
+
+.sidebar.filters {
+	width: 244px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	border: 1px solid #0898ff;
+	padding: 0px 10px;
+	/* margin-top: 71px; */
+	margin-top: 0px;
+	/* position: fixed; */
+	top: 59px;
+	transition: .5s all;
+	/* position: relative; */
+	background: white;
+	overflow: hidden;
+}
+
+.sidebar .label {
+	display: block;
+	float: none;
+	text-align: left;
+	color: #003580;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 0 0px;
+	line-height: inherit;
+	/* color: #0898ff; */
+}
+
+.label:before{content: "\f0d7";font-size:11px;margin-right: 5px;color:#ff5e00;transform: scaleY(.1);font-family: "FontAwesome";}
+
+.sidebar .button-group {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.sidebar button.button {
+	display: inline-block;
+	float: none;
+	background: none: /* color: #0898ff; */;
+	background: white;
+	color: #0898ff;
+	color: color: #0898ff;
+	font-size: 13px;
+	text-shadow: none;
+	border: 1px solid #0898ff;
+	margin: 0px -6px 0px 0px;
+	position: relative;
+	left: 2px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.sidebar .boolean button.button {
+	display: inline-block;
+	margin-right: -5px;
+	border: 1px solid #ddd;
+	background: #eee;
+}
+
+.sidebar .boolean button.is-checked {
+	background: #0898ff;
+}
+
+.filter_by {
+	background: #5cb9ff;
+	color: #ffffff;
+	font-size: 16px;
+	/* font-weight: bold; */
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	/* padding: 10px 11px; */
+	width: 264px;
+	margin: 0px -10px;
+}
+
+
+/* clear fix */
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* ---- .element-item ---- */
+
+

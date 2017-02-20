@@ -1,0 +1,384 @@
+body{
+	padding: 0px;
+	font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	overflow-y: scroll;
+}
+
+body,p,select,a,button{
+	font-size: 16px;
+}
+img.detail_view {
+	display: block;
+	margin: 0 auto;
+	height: auto;
+}
+
+
+.stick {
+	margin-top: 0 !important;
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+h1{
+	font-weight: 400;
+	/* margin-bottom: 1em; */
+	color: #003580;
+}
+
+h1.fixed {
+	background: gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+	background: linear-gradient(to bottom, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.9) 100%);
+	background: background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	box-sizing: border-box;
+	text-align: left;
+	font-size: 21px;
+	line-height: 44px;
+	padding-left: 47px;
+	padding: 10px 9px 4px 47px;
+	margin-top: 0px;
+	/* margin-bottom: -47px; */
+}
+
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+
+.rooms {
+	/* margin-left: -15px; */
+	margin-top: -6px;
+}
+
+.strong{
+	font-weight: bold;
+}
+.rooms ul{
+	padding: 0;
+}
+
+.rooms ul{
+	list-style-type: none;
+}
+.rooms .element-item {
+	vertical-align: top;
+	/* height: 190px; */
+	/* overflow: hidden; */
+	padding: 0p;
+	padding: 6px;
+	margin-right: -3px;
+	border-radius: 0px;
+	font-size: 14px;
+	/* display: table; */
+}
+
+.multiple_prices {
+	width: 100%;
+}
+
+.multiple_prices .layout {
+	width: 50%;
+	overflow-x:hidden;
+	border-right: 1px solid #ccc;
+	padding-right: 9px;
+}
+
+
+.info_container{
+	border: 1px solid #c7c7c7;
+	padding: 10px 15px;
+	padding: 10px 15px;
+	min-height: 411px;
+	color:  #003580;
+	box-shadow: none;
+	transition: .5s box-shadow;
+	text-align: left;
+	border-radius: 1px;
+}
+
+.info_container:hover {
+	/* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12); */
+}
+
+.item_selected{
+	border: 1px solid #5cb9ff;
+	/* background: rgba(240, 248, 255, 0.42); */
+}
+
+.rooms p{
+	margin: 0em 0;
+}
+
+.features {
+	text-align: justify;
+	display: block;
+	width: 350px;
+	position: relative;
+	height: 104px;
+}
+
+.features:before {
+	width: 110%;
+	background: rgba(240, 248, 255, 0.51);
+	top: -11px;
+	content: " ";
+	position: absolute;
+	left: -5%;
+	height: 65px;
+	z-index: -1;
+	white-space: nowrap
+}
+
+.features:after{
+	content: '';
+	width: 100%; 
+	display: inline-block;
+}
+
+
+.info_bit:nth-of-type(-n+4) {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 12px;
+	width: 77px;
+	height: 40px;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: 23px;
+	/* border-right: 1px solid #eee; */
+	/* background: aliceblue; */
+	white-space: nowrap;
+}
+
+span.separator:nth-child(-n+6) {
+	width: 1px;
+	height: 42px;
+	display: inline-block;
+	/* background: red; */
+	content: " ";
+	border-right: 1px solid;
+	opacity: .1;
+}
+
+
+.info_bit:nth-of-type(5):before{
+	/* content: "Also:"; */
+	display:inline-block;
+	font-weight:bold;
+	margin: 5px 10px 8px 0px;
+}
+
+
+.info_bit:nth-of-type(n+5) {
+	display: inline-block;
+	width: 45%;
+	/* background:red; */
+	text-align:;
+	text-transform: capitalize;
+	margin-bottom: -43px;
+	font-size: 12px;
+}
+
+.info_bit:nth-of-type(n+5) .bit_icon {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 17px;
+}
+
+.info_bit:last-of-type{
+	border:none;
+}
+
+.bit_icon {
+	text-align: center;
+	font-size: 19px;
+	font-weight: bold;
+	/* color: black; */
+	/* box-shadow: 0 0 black; */
+}
+
+
+label {
+	font-weight: normal;
+	line-height: 9px;
+	width: 46%;
+	display: inline;
+	margin-bottom: .1em;
+	padding: 3px 5px;
+	transition: .2s background;
+}
+
+.sidebar label{
+	margin: 0px;
+	cursor: pointer;
+}
+
+.sidebar label:hover{
+	background: #5cb9ff;
+	color:white;
+}
+
+.bed_false .choose {
+	display: none;
+
+}
+
+.bed_true .no_choose {
+	display: none;
+}
+
+.info_container label + .info_container label label {
+	margin-left: 10px;
+	display:inline-block
+}
+
+
+
+input[type=checkbox], input[type=radio]{
+	margin-right: 4px;
+	position:relative;
+	bottom: -1px;
+}
+.beds {
+	background: 1px #f5f5f5;
+	padding: 5px 10px;
+	border-radius: 4px;
+	margin: 0px 0px;
+	margin-top: -5px;
+}
+
+p.room_name {
+	color: rgb(8, 152, 255);
+	font-size: 19px;
+	min-height: 50px;
+	/* font-weight: bolder; */
+	border-bottom: s;
+	margin-top: 5px;
+}
+
+.breakfast, .quantity{
+	display: inline-block;
+	margin-right: 10px;
+}
+.prices{
+	/* text-align: right; */
+	border-top: 1px solid #eee;
+	margin-top: 10px;
+	/* line-height: 29px; */
+	padding-top: 10px;
+}
+
+.prices_details{
+	text-align: left;
+	font-size: 12px;
+	height: 81px;
+}
+
+.rooms_qty{
+	border-top: 1px solid #eee;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	text-align: right;
+}
+.fl{
+	float: left;
+	position: relative;
+	top: 3px;
+}
+
+.fr{
+	float: right;
+}
+.red{
+	color:red;
+}
+.old_price{
+	text-decoration: line-through;
+	color:  rgb(0, 53, 128);
+	font-size: 16px;
+}
+
+.new_price, select, .old_price, .discount{
+	margin-left: 15px;
+	float: right;
+}
+
+span.discount {
+	border: 1px solid red;
+	color: red;
+	border-radius: 3px;
+	padding: 2px 4px;
+	/* float: right; */
+}
+
+
+.new_price{
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+}
+.green {
+	font-weight: bold;
+	color: #0ab21b;
+	font-size: 13px;
+}
+.free_cancelation {
+	margin-bottom: 4px;
+}
+
+select{
+	min-width: 50px;
+	/* padding: 5px; */
+}
+
+span.inline_label {
+	/* border-left: 1px solid #ccc; */
+	padding-left: 9px;
+	margin-left: 4px;
+	height: 24px;
+	/* padding-top: 6px; */
+	display: inline-block;
+}
+
+.selecting:before {
+	width: 100px;
+	height: 100px;
+	/* background: rgba(255, 0, 0, 0.3); */
+	border: 2px solid #2288ff;
+	position: absolute;
+	left: 0;
+	right:0;
+	border-radius: 50%;
+	/* right: 50%; */
+	top: 0px;
+	bottom: 0;
+	margin: auto;
+	content: " ";
+	z-index: -1;
+	position: absolute;
+	-webkit-animation: pulsate 1s ease-out;
+	-webkit-animation-iteration-count: 2;
+	opacity: 0.0;
+}
+
+
+@-webkit-keyframes pulsate {
+	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+	50% {opacity: 1.0;}
+	100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.price_selected, .rooms_selected {
+	font-size: 17px;
+	margin-right: 20px;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Isotope - filtering</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/boxes.css">
+	<link rel="stylesheet" href="css/2.css">
+
+
+  
+</head>
+
+<body class="2">
+	<div class="filters sidebar">
+	<h2 class="filter_by">Filter by</h2>
+		<div data-filter-group="family" class="button-group boolean filters-button-group">
+			<span class="label">Private room</span>
+			<button class="button is-checked" data-filter=".fam_yes, .fam_no">Any</button>
+
+			<button class="button" data-filter=".fam_yes">Yes</button>
+			<button class="button" data-filter=".fam_no">No</button>
+		</div>
+
+		<div data-filter-group="female" class="button-group boolean filters-button-group ">
+			<span class="label">Femaly only</span>
+			<button class="button" data-filter=".fem_true">Yes</button>
+			<button class="button" data-filter=".fem_false">No</button>
+		</div>
+		
+		<div data-filter-group="breakfast" class="button-group boolean filters-button-group">
+			<span class="label">Breakfast</span>
+			<button class="button" data-filter=".breakfast_false">Yes</button>
+			<button class="button" data-filter=".breakfast_true">Included</button>
+			<button class="button" data-filter=".breakfast_false">No</button>
+		</div>
+		
+		<div data-filter-group="ameninites" class="button-group  filters-button-group">
+			<span class="label">Perks</span>
+			<button class="button">Own bathroom</button>
+			<button class="button">TV</button>
+			<button class="button">Free WiFi</button>
+			<button class="button">Air Conditioned</button>
+			<button class="button">Free cancellation</button>
+
+		</div>
+
+	
+	</div>
+	
+	<div class="container">
+   <h1 class="fixed">Available Rooms <button class="btn btn-lg btn-primary fr">I will reserve</button></h1>
+
+
+		<script id="mustacheTempalte_a" type="text/template">
+
+	<div class="rooms">
+		<div class="grid">
+			{{#shows}}
+			<div class="element-item col-xs-6  bed_{{choose_bed}} {{quantity}} fem_{{female_only}} fam_{{family}} breakfast_{{breakfast}}" refundable="{{refundable}}" price="{{price}}"">
+			<div class="info_container">
+				<p class="room_name">{{name}}</p>
+
+				<div class="features">
+				<div class="info_bit"><div class="bit_icon">  {{quantity}} </i></div> Max capacity </div>
+				<div class="info_bit"><div class="bit_icon">  <i class="fa fa-home" aria-hidden="true"></i></div>  Private room </div>
+				<div class="info_bit"><div class="bit_icon">  <i class="fa fa-female" aria-hidden="true"></i></div> Fem only </div>
+								<div class="info_bit"><div class="bit_icon">  <i class="fa fa-coffee" aria-hidden="true"></i></div> Included </div>
+
+		</div>
+			<div class="beds">
+			<div class="no_choose">
+			<b>You will sleep in:</b> <br>
+		<label for="bed"><i class="fa fa-bed" aria-hidden="true"></i> 1 bunk bed</label>
+			</div>
+			<div class="choose">
+			<b>Choose your bed</b> <br>
+		<label for="bed"><input name="bed" type="radio">1 large double bed</label>
+		<label for="bed"><input name="bed" type="radio">2 single beds</label>
+			</div>
+			</div>
+				<div class="prices cf">
+				<span class="fl"> Price for 5 nights</span>
+					<div>
+					<span class="old_price"> $	 {{old_price}}</span>
+					<span class="new_price"> $ {{price}} </span>
+					</div>
+			</div>
+			<div class="prices prices_details cf">
+<b>Included</b> in price: 10 % VAT <br><b>Not Included</b> in price: € 0.83 City tax per person per night.
+			</div>
+			
+				<div class="rooms_qty">
+						<span class="red fl">In high demand - Only {{quantity}} rooms left</span>	
+					<span class="inline_label">Qty:</span>	
+
+					<select name="" id="">
+						<option value="">0</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+		</select>
+		</div>
+		</div>
+		</div>
+			{{/shows}}
+		</div>
+
+		</div>
+	</script>
+	<div class="target-output" data-template-chosen="a"></div>
+	</div>
+	</div>
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script src="js/data.js"></script>
+<script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+
+    <script src="js/index.js"></script>
+    
+    <script>
+	$("select").change(function(){
+		$(this).parents(".info_container").toggleClass("item_selected")
+			})
+	</script>
+
+</body>
+</html>
