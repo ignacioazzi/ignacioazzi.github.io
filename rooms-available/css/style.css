@@ -25,7 +25,7 @@ body {
 }
 
 .main_content, .title {
-	width: 869px;
+	width: 872px;
 	padding: 0px;
 	display: inline-block;
 	padding-left: 51px;
@@ -37,6 +37,7 @@ body {
 
 .stick + .main_content, .title.stick {
 	margin-left: 248px;
+	padding-right: 0px;
 }
 
 .title{

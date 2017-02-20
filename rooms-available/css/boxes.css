@@ -21,7 +21,7 @@ img.detail_view {
 	position: fixed;
 	top: 0;
 	z-index: 10000;
-	border-radius: 0 0 0.5em 0.5em;
+	/* border-radius: 0 0 0.5em 0.5em; */
 }
 
 h1{
@@ -39,9 +39,12 @@ h1.fixed {
 	font-size: 21px;
 	line-height: 44px;
 	padding-left: 47px;
-	padding: 10px 20px 4px 47px;
+	padding: 10px 20px 14px 47px;
 	margin-top: 0px;
 	/* margin-bottom: -47px; */
+}
+.title.stick .fixed {
+    padding-right: 0px;
 }
 
 
