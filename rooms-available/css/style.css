@@ -2,6 +2,7 @@
 
 body {
 	font-family: sans-serif;
+	overflow-x: hidden
 }
 
 .container {
@@ -25,20 +26,20 @@ body {
 	overflow: hidden;
 }
 
-.main_content, .title {
+.main_content, .title, .below {
 	width: 842px;
 	padding: 0px;
 	display: inline-block;
-	padding-left: 6px;
+	padding-left: 15px;
 	/* margin-left: 265px; */
 	position: relative;
 	margin-right: 0px;
 	transition: .3s margin-right;
 }
 
-.stick + .main_content, .title.stick {
-	margin-left: 267px;
-	padding-right: 0px;
+.stick + .main_content, .title.stick, .stick ~ .below {
+	margin-left: 277px;
+	/* padding-right: 0px; */
 }
 
 .title{
@@ -46,7 +47,7 @@ body {
 	margin-right:0px;
 	margin-left: auto;
 	/* padding-right: 20px; */
-	/* padding-left: 7px; */
+	padding-left: 0px;
 	margin-top: 28px;
 }
 
@@ -182,7 +183,7 @@ body.2 .rooms {
 	margin-top: 0px;
 	/* position: fixed; */
 	top: 59px;
-	transition: .5s all;
+	/* transition: .5s all; */
 	/* position: relative; */
 	background: white;
 	overflow: hidden;

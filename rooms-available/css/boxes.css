@@ -39,7 +39,7 @@ h1.fixed {
 	font-size: 21px;
 	line-height: 44px;
 	padding-left: 47px;
-	padding: 10px 20px 14px 0px;
+	padding: 10px 20px 6px 0px;
 	margin-top: 0px;
 	/* margin-bottom: -47px; */
 }
@@ -100,7 +100,7 @@ h1.fixed {
 .info_container{
 	border: 1px solid #c7c7c7;
 	padding: 10px 15px;
-	padding: 10px 15px;
+	padding: 6px 14px;
 	min-height: 411px;
 	color:  #003580;
 	box-shadow: none;
@@ -116,6 +116,8 @@ h1.fixed {
 .item_selected{
 	border: 1px solid #5cb9ff;
 	/* background: rgba(240, 248, 255, 0.42); */
+	z-index: 2;
+	position: relative;
 }
 
 .rooms p{
@@ -127,7 +129,7 @@ h1.fixed {
 	display: block;
 	width: 350px;
 	position: relative;
-	height: 104px;
+	height: 102px;
 }
 
 .features:before {
@@ -208,6 +210,7 @@ span.separator:nth-child(-n+6) {
 	font-weight: bold;
 	/* color: black; */
 	/* box-shadow: 0 0 black; */
+	height: 27px;
 }
 
 
