@@ -1,0 +1,249 @@
+html, body{
+	background: rgb(241, 245, 248);
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+.container{
+	font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	width: 1100px;
+	margin: 0 auto;
+	padding: 100px 0 200px	;
+}
+
+.header{
+	width: 100%;
+	background-image: url(img/header.png);
+	background-size: cover;
+	height: 700px;
+	background-position: center bottom;
+}
+.col-md-4{
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	box-sizing: border-box;
+	margin: 1%;
+}
+
+section.aliceblue {
+	background: #e9f0fa;
+}
+
+
+h2{
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0;
+	font-size: 24px;
+	color: #003580;
+	margin-bottom: 0px;
+}
+
+
+.destination{
+	width: 100%;
+	padding-bottom: 80%;
+	background: #333;
+	position: relative;
+	margin:  0 0 ;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: bottom;
+	box-shadow: none;
+	transition: .5s box-shadow;
+	cursor:pointer
+}
+
+.destination:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	content: "";
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,27,66,0)),to(rgba(0,27,66,0.75)));
+	z-index: 1;
+}
+
+
+
+.paris{
+	background-image: url("img/paris.jpg");
+}
+
+.madrid{
+	background-image: url("img/madrid.jpg");
+}
+
+.newyork{
+	background-image: url("img/newyork.jpg");
+}
+
+.seoul{
+	background-image: url("img/seoul.jpg");
+}
+
+.barcelona{
+	background-image: url("img/barcelona.jpg");
+}
+
+.hongkong{
+	background-image: url("img/hongkong.jpg");
+}
+
+.mendoza{
+	background-image: url("img/mendoza.jpg");
+}
+
+.niagara{
+	background-image: url("img/niagara.jpg");
+}
+
+.interlaken{
+	background-image: url("img/interlaken.jpg");
+}
+
+
+
+
+
+
+
+.destination_info{
+	color: #fff;
+	padding: 50px 0 0 0;
+	text-shadow: 0 0 8px rgba(0,27,66,0.8);
+	position: absolute;
+	left:10px;
+	bottom:10px;
+	z-index: 2;
+	text-shadow: 0px 5px 10px black;	
+}
+
+.destination_name {
+	font-weight: normal;
+	margin: 0;
+	font-size: 2.1em;
+
+}
+
+
+.friends_name, .match_reason{
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.match_reason:before {
+	background: #03ac03;
+	display: inline-block;
+	border-radius: 50%;
+	content: " ";
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+}
+
+
+
+.reviews {
+	background: white;
+	padding: 0px;
+	font-size: 1em;
+	color: #222;
+	overflow: hidden;
+	text-align: center;
+	min-height: 285px;
+	position: relative;
+
+}
+.review{
+	padding: 1.5em 10px;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+	transition: .4s background;
+}
+
+.review:last-of-type{
+	padding: 1.5em 10px;
+	text-align: left;
+	border-bottom: 0px solid #eee;
+	transition: .4s background
+}
+
+
+.review_text {
+	width: calc(100% - 43px);
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 5px;
+	-webkit-line-clamp: 2;
+	display: -webkit-inline-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.friend_face {
+	display: inline-block;
+	position: relative;
+	/* top: 20px; */
+	z-index: 2;
+	vertical-align: top;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+}
+
+
+
+.friend_face img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+}
+
+.friend_face_smaller{
+	height: 20px;
+}
+.friend_face_smaller img {
+	width: 20px;
+	height: 20px;
+}
+
+
+.btn {
+	margin: 20px auto;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 0px 45px;
+	line-height: 34px;
+	font-size: 13px;
+	border: 0;
+	color: #fff;
+	background-color: #0898ff;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	box-sizing: content-box;
+	width: 180px;
+}
+
+.reviews .btn{
+	position: absolute;
+	bottom: 00px;
+	left: 0;
+	right: 0;
+	width: 50%;
+
+}
+.secondary {
+	border: 1px solid #0898ff;
+	background: none;
+	color: #0898ff;
+}
+
+

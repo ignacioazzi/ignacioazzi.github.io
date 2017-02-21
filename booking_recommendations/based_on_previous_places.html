@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Booking.com: Destination Finder</title>
+		<link rel="stylesheet" href="style.css">
+		
+		<style>	
+			.fwl{
+				font-weight: 400;
+			}
+			h2 + h2 {
+				margin-top: 1em;
+			}
+			
+		
+		</style>
+		
+		<link rel="shortcut icon" href="http://q-ec.bstatic.com/static/img/b25logo/favicon/ebc77706da3aae4aee7b05dadf182390f0d26d11.ico">
+	</head>
+	<body>
+
+
+
+
+		<div class="header"></div>
+		<div class="container">
+			<h2 class="fwl">Recommendations based on your previous visits</h2>
+			<h2 >Amsterdam</h2>
+			<div class="col-md-4">
+				<div class="destination madrid">
+					<div class="destination_info">
+						<div class="destination_name">Madrid</div>
+						<div class="match_reason">Both have great museums</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination paris">
+					<div class="destination_info">
+						<div class="destination_name">Paris</div>
+						<div class="match_reason">Both have beautiful gardens</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination barcelona">
+					<div class="destination_info">
+						<div class="destination_name">Barcelona</div>
+						<div class="match_reason">Both have awesome night life</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<h2 >Tokio</h2>
+			<div class="col-md-4">
+				<div class="destination seoul">
+					<div class="destination_info">
+						<div class="destination_name">Seoul</div>
+						<div class="match_reason">Both are millenary cities</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination hongkong">
+					<div class="destination_info">
+						<div class="destination_name">Hong Kong</div>
+						<div class="match_reason">Both have tallest skyscrapres</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination newyork">
+					<div class="destination_info">
+						<div class="destination_name">New York</div>
+						<div class="match_reason">Joe and Jill stayed here</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+
+			<h2>Iguazu</h2>
+			<div class="col-md-4">
+				<div class="destination niagara">
+					<div class="destination_info">
+						<div class="destination_name">Niagara Falls</div>
+						<div class="match_reason">Both have beautiful falls</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination interlaken">
+					<div class="destination_info">
+						<div class="destination_name">Interlaken</div>
+						<div class="match_reason">Both offer great sport options</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="destination mendoza">
+					<div class="destination_info">
+						<div class="destination_name">Mendoza</div>
+						<div class="match_reason">Both are great Argentinian cities</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn" id="see_more">See More</button>
+			<div class="more"></div>
+		</div>
+			<section class="aliceblue">
+			<div class="container">
+			<img style="" src="img/bottom_1.png" alt="">
+				</div>
+			</section>
+		</div>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		<script>
+			$("#see_more").click(function(){
+				$(".col-md-4").clone().appendTo(".more").hide().fadeIn();
+				$("body").animate(
+					$(this).scroll($(".more").offset.top)
+				)
+			})
+		</script>
+	</body>
+
+
+</html>

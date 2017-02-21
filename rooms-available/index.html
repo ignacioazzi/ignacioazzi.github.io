@@ -10,285 +10,283 @@
 
 	<body class="2">
 		<div class="header">
-			<img src="header.jpg" alt="">
-		</div>
-		<img src="detail_view.jpg" class="detail_view" alt="">
+			<img src="header.jpg" alt=""></div>
+			<img src="detail_view.jpg" class="detail_view" alt="">
+			
+			<div class="container">
+				<div id="sticky-anchor"></div>
+				<div  class="title">
+					<!--MAIN CONTAINER-->
+					<h1 class="fixed">
+						Availability
 
+						<div class="fr">
+							<span style="font-size: 17px" class="fl results"> Showing <span class="results_amount strong"></span> <span class="rooms_word"></span></span>
 
-		<div class="container">
-			<div id="sticky-anchor"></div>
-			<div  class="title">
-				<!--MAIN CONTAINER-->
-				<h1 class="fixed">
-					Availability
-					<div class="fr">
-						<div class="rooms_selected fl">
-							<span class="rooms_selected_number strong"></span>
-							rooms selected:
+							<div class="rooms_selected fl">
+								<span class="rooms_selected_number strong"></span>
+								rooms selected:
+							</div>
+							<div class="price_selected fl">
+								$
+								<span class="price_selected_number strong"></span>
+							</div>
+							<a href="checkout.html" class="btn btn-lg btn-primary fr">I will reserve</a>
 						</div>
-						<div class="price_selected fl">
-							$
-							<span class="price_selected_number strong"></span>
+					</h1>
+				</div>
+
+				<!--	SIDEBAR-->
+				<div  class="filters sidebar">
+					<h2 class="filter_by">Filter by</h2>
+					<div class="ui-group">
+						<span class="label">Room privacy</span>
+						<div class="button-group js-radio-button-group" data-filter-group="size">
+							<button class="button  any" data-filter="">Any</button>
+							<button class="button" data-filter=".private_private">Private</button>
+							<button class="button" data-filter=".private_Shared">Shared</button>
 						</div>
-						<button class="btn btn-lg btn-primary fr">I will reserve</button>
 					</div>
-				</h1>
-			</div>
-
-			<!--	SIDEBAR-->
-			<div  class="filters sidebar">
-				<h2 class="filter_by">Filter by</h2>
-				<div class="ui-group">
-					<span class="label">Room privacy</span>
-					<div class="button-group js-radio-button-group" data-filter-group="size">
-						<button class="button  any" data-filter="">Any</button>
-						<button class="button" data-filter=".private_private">Private</button>
-						<button class="button" data-filter=".private_Shared">Shared</button>
+					
+					<div class="ui-group">
+						<span class="label">Femaly only rooms</span>
+						<div class="button-group js-radio-button-group" data-filter-group="female">
+							<button class="button  any" data-filter="">Any</button>
+							<button class="button" data-filter=".fem_true">Femaly only</button>
+							<button class="button" data-filter=".fem_false">Mixed</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Femaly only rooms</span>
-					<div class="button-group js-radio-button-group" data-filter-group="female">
-						<button class="button  any" data-filter="">Any</button>
-						<button class="button" data-filter=".fem_true">Femaly only</button>
-						<button class="button" data-filter=".fem_false">Mixed</button>
+					
+					<div class="ui-group">
+						<span class="label">Bathroom</span>
+						<div class="button-group js-radio-button-group" data-filter-group="bathroom">
+							<button class="button" data-filter="">Any</button>
+							<button class="button" data-filter=".bath_true">Private</button>
+							<button class="button" data-filter=".bath_false">Shared</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Bathroom</span>
-					<div class="button-group js-radio-button-group" data-filter-group="bathroom">
-						<button class="button" data-filter="">Any</button>
-						<button class="button" data-filter=".bath_true">Private</button>
-						<button class="button" data-filter=".bath_false">Shared</button>
+					
+					<div class="ui-group">
+						<span class="label">Breakfast</span>
+						<div class="button-group js-radio-button-group" data-filter-group="breakfast">
+							<button class="button" data-filter="">Any</button>
+							<button class="button" data-filter=".breakfast_true">Included</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Breakfast</span>
-					<div class="button-group js-radio-button-group" data-filter-group="breakfast">
-						<button class="button" data-filter="">Any</button>
-						<button class="button" data-filter=".breakfast_true">Included</button>
+					
+					<div class="ui-group">
+						<span class="label">Available spaces</span>
+						<div class="button-group js-radio-button-group" data-filter-group="availables">
+							<button class="button" data-filter="">Any</button>
+							<button class="button" data-filter=".qt_1, .qt_2, .qt_3">1-3</button>
+							<button class="button" data-filter=".qt_4, .qt_5, .qt_6">4-6</button>
+							<button class="button" data-filter=".qt_7, .qt_8, .qt_9,  .qt_10,  .qt_11,  .qt_12">7-12</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Available spaces</span>
-					<div class="button-group js-radio-button-group" data-filter-group="availables">
-						<button class="button" data-filter="">Any</button>
-						<button class="button" data-filter=".qt_1, .qt_2, .qt_3">1-3</button>
-						<button class="button" data-filter=".qt_4, .qt_5, .qt_6">4-6</button>
-						<button class="button" data-filter=".qt_7, .qt_8, .qt_9,  .qt_10,  .qt_11,  .qt_12">7-12</button>
+					
+					<div class="ui-group">
+						<span class="label">Wifi</span>
+						<div class="button-group js-radio-button-group" data-filter-group="wifi">
+							<button class="button" data-filter="">Any</button>
+							<button class="button" data-filter=".wifi_true">Free</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Wifi</span>
-					<div class="button-group js-radio-button-group" data-filter-group="wifi">
-						<button class="button" data-filter="">Any</button>
-						<button class="button" data-filter=".wifi_true">Free</button>
+					
+					<div class="ui-group">
+						<span class="label">Cancellation</span>
+						<div class="button-group js-radio-button-group" data-filter-group="cancellation">
+							<button class="button" data-filter="">Any</button>
+							
+							<button class="button" data-filter=".refundable_false">Paid</button>
+							<button class="button" data-filter=".refundable_true">Free</button>
+						</div>
 					</div>
-				</div>
-
-				<div class="ui-group">
-					<span class="label">Cancellation</span>
-					<div class="button-group js-radio-button-group" data-filter-group="cancellation">
-						<button class="button" data-filter="">Any</button>
-
-						<button class="button" data-filter=".refundable_false">Paid</button>
-						<button class="button" data-filter=".refundable_true">Free</button>
+					
+					<div class="ui-group">
+						<span class="label">Payment</span>
+						<div class="button-group js-radio-button-group" data-filter-group="pay_arrive">
+							<button class="button" data-filter="">Any</button>
+							<button class="button" data-filter=":not(.pay_arrive_true)">Now</button>
+							<button class="button" data-filter=".pay_arrive_true">Free</button>
+						</div>
 					</div>
 				</div>
+				
+				<div class="main_content">
+					
+					<script id="mustacheTempalte_a" type="text/template">
 
-				<div class="ui-group">
-					<span class="label">Payment</span>
-					<div class="button-group js-radio-button-group" data-filter-group="pay_arrive">
-						<button class="button" data-filter="">Any</button>
-						<button class="button" data-filter=":not(.pay_arrive_true)">Now</button>
-						<button class="button" data-filter=".pay_arrive_true">Free</button>
-					</div>
-				</div>
-			</div>
-
-
-			<div  class="main_content">
-
-
-				<script id="mustacheTempalte_a" type="text/template">
-
-					<div class="rooms">
-						<div class="grid">
-							{{#shows}}
-							<div class="element-item col-xs-6  qt_{{quantity}} {{class}} bed_{{choose_bed}} fem_{{female_only}} private_{{private}} bath_{{private_bathroom}} breakfast_{{breakfast}} wifi_{{wifi}} refundable_{{refundable}} pay_arrive_{{pay_arrive}}" price="{{price}}">
-								<div class="info_container">
-									<div class="layout">
-										<p class="room_name">{{name}}</p>
-										<!-- Features -->
-										<div class="features">
-											<div class="info_bit available">
-												<div class="bit_icon qty">{{quantity}}</i>
-												</div> Available </div>
+						<div class="rooms">
+							<div class="grid">
+								{{#shows}}
+								<div class="element-item col-xs-6 qt_{{quantity}} {{class}} bed_{{choose_bed}} fem_{{female_only}} private_{{private}} bath_{{private_bathroom}} breakfast_{{breakfast}} wifi_{{wifi}} refundable_{{refundable}} pay_arrive_{{pay_arrive}}" price="{{price}}">
+									<div class="info_container">
+										<div class="layout">
+											<p class="room_name">{{name}}</p>
+											<!-- Features -->
+											<div class="features">
+												<div class="info_bit available">
+													<div class="bit_icon qty">{{quantity}}</i>
+													</div> Available
+												</div>
 												<span class="separator"></span>
 												<div class="info_bit room {{private}}">
 													<div class="bit_icon"> <i class="fa" aria-hidden="true"></i>
-													</div>  {{private}} room </div>
-													<span class="separator"></span>
-													<div class="info_bit icon_fem_{{female_only}}">
-														<div class="bit_icon"> <i class="fa fa-female" aria-hidden="true"></i>
-														</div> <span>Female only</span> </div>
-														<span class="separator"></span>
-														{{#wifi}}<div class="info_bit wifi">
-														<div class="bit_icon">  <i class="fa fa-wifi" aria-hidden="true"></i>
-														</div> Free Wifi </div> <span class="separator"></span>
-														{{/wifi}}
-														{{#private_bathroom}} <div class="info_bit">
-														<div class="bit_icon">  <i class="fa fa-bath" aria-hidden="true"></i>
-														</div> Private Bath </div> <span class="separator"></span>
-														{{/private_bathroom}}
-														{{#breakfast}}<div class="info_bit breakfast">
-														<div class="bit_icon">  <i class="fa fa-coffee" aria-hidden="true"></i>
-														</div>
-														<span>With Breakfast</span> </div>{{/breakfast}}
-													</div>
+													</div> {{private}} room
+												</div>
+												<span class="separator"></span>
+												<div class="info_bit icon_fem_{{female_only}}">
+													<div class="bit_icon"> <i class="fa fa-female" aria-hidden="true"></i>
+													</div> <span>Female only</span>
+												</div>
+												<span class="separator"></span>
+												{{#wifi}}<div class="info_bit wifi">
+												<div class="bit_icon">  <i class="fa fa-wifi" aria-hidden="true"></i></div> Free Wifi
+											</div><span class="separator"></span>
+											{{/wifi}}
+											{{#private_bathroom}}
+											<div class="info_bit">
+												<div class="bit_icon">  <i class="fa fa-bath" aria-hidden="true"></i>
+												</div> Private Bath
+											</div> <span class="separator"></span>
+											{{/private_bathroom}}
+											{{#breakfast}}<div class="info_bit breakfast">
+											<div class="bit_icon">  <i class="fa fa-coffee" aria-hidden="true"></i>
+											</div>
+											<span>With Breakfast</span> </div>{{/breakfast}}
+										</div>
 
-													<!-- Beds -->
-													<div class="beds">
-														<div class="no_choose"> <b>You will sleep in:</b> <br>
-															<label for="bed">
-																<i class="fa fa-bed" aria-hidden="true"></i> 1 bunk bed</label>
-															</div>
-															<div class="choose"> <b>Choose your bed</b> <br>
-																<label for="bed">
-																	<input name="bed" type="radio">1 large double bed</label>
-																	<label for="bed">
-																		<input name="bed" type="radio">2 single beds</label>
-																	</div>
-																</div>
-
-																<!-- Prices -->
-																<div class="prices cf">
-																	<span class="fl strong">Price for 5 nights</span>
-																	<div>
-																		<span class="new_price">$ {{price}} </span>
-																		<span class="old_price"></span>
-																		<span class="discount">20%</span>
-																	</div>
-																</div>
-
-																<!-- Pay when you arrive -->
-																<div class="prices prices_details cf">
-																	{{#pay_arrive}}
-																	<div class="pay_arrive green">
-																		<i class="fa fa-check" aria-hidden="true"></i> Pay when you arrive!
-																	</div>
-																	{{/pay_arrive}}
-
-																	<!-- Free cancelation -->
-																	{{#refundable}}
-																	<div class="free_cancelation green">
-																		<i class="fa fa-check" aria-hidden="true"></i> FREE cancellation before 4 May 2017
-																	</div>
-																	{{/refundable}}
-																	<b>Included</b> in price: 10 % VAT <br>
-																	<b>Not Included</b> in price: € 0.83 City tax per person per night.
-																</div>
-
-																<!-- Rooms -->
-																<div class="rooms_qty">
-																	{{#demand}}	<span class="red fl">In high demand - Only {{quantity}} rooms left</span>	{{/demand}}
-																	<span class="inline_label">Qty:</span>
-
-																	<select name="" id="">
-																		<option value="0">0</option>
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																	</select>
-																</div>
-
-															</div>
-
+										<!-- Beds -->
+										<div class="beds">
+											<div class="no_choose"> <b>You will sleep in:</b> <br>
+												<label for="bed">
+													<i class="fa fa-bed" aria-hidden="true"></i> 1 bunk bed</label>
+												</div>
+												<div class="choose"> <b>Choose your bed</b> <br>
+													<label for="bed">
+														<input name="bed" type="radio">1 large double bed</label>
+														<label for="bed">
+															<input name="bed" type="radio">2 single beds</label>
 														</div>
 													</div>
-													{{/shows}}
+
+													<!-- Prices -->
+													<div class="prices cf">
+														<span class="fl strong">Price for 5 nights</span>
+														<div>
+															<span class="new_price">$ {{price}} </span>
+															<span class="old_price"></span>
+															<span class="discount">20%</span>
+														</div>
+													</div>
+
+													<!-- Pay when you arrive -->
+													<div class="prices prices_details cf">
+														{{#pay_arrive}}
+														<div class="pay_arrive green">
+															<i class="fa fa-check" aria-hidden="true"></i> Pay when you arrive!
+														</div>
+														{{/pay_arrive}}
+
+														<!-- Free cancelation -->
+														{{#refundable}}
+														<div class="free_cancelation green">
+															<i class="fa fa-check" aria-hidden="true"></i> FREE cancellation before 4 May 2017
+														</div>
+														{{/refundable}}
+														<b>Included</b> in price: 10 % VAT <br>
+														<b>Not Included</b> in price: € 0.83 City tax per person per night.
+													</div>
+
+													<!-- Rooms -->
+													<div class="rooms_qty">
+														{{#demand}}	<span class="red fl">In high demand - Only {{quantity}} rooms left</span>	{{/demand}}
+														<span class="inline_label">Qty:</span>
+
+														<select name="" id="">
+															<option value="0">0</option>
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+														</select>
+													</div>
 												</div>
 											</div>
-
 										</div>
-									</script>
-									<div class="target-output" data-template-chosen="a"></div>
+										{{/shows}}
+									</div>
 								</div>
 							</div>
-						</div>
-
-						<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-						<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-						<script src="js/data.js"></script>
-						<script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
-						<script src="js/index.js"></script>
-
-						<script>
-							$(".rooms_selected, .price_selected").hide();
-							$(".sidebar label").prepend('"<i class="fa fa-caret-down" aria-hidden="true"></i>"');
-							$("select").change(function(){
-		//Highlight item when a room has been selected
-		$(this).parents(".info_container").toggleClass("item_selected");
-
-		//Highlights CTA
-		//$(".btn-primary").addClass("selecting");
-		//setTimeout(function(){ $(".btn-primary").removeClass("selecting"); }, 2000);
-
-		//Gets total of rooms selected
-		var rooms_amount = [];
-		$("select").each(function() { rooms_amount.push(parseInt($(this).val())) });
-		var total_rooms=0;
-		for(var i in rooms_amount) { total_rooms += rooms_amount[i]; };
-			$(".rooms_selected_number").text(total_rooms);
-		$(".price_selected_number").text(total_rooms * 7765)
-		if (total_rooms > 0){$(".rooms_selected, .price_selected").fadeIn()} else {$(".rooms_selected, .price_selected").fadeOut()}
-			console.log(total_rooms);
-
-	});
-
-
-
-							$(".old_price").each(function( index ) {
-								var old_price = $(this).siblings(".new_price").text().replace("$","");
-								$(this).text("$" + (old_price * 1.2).toFixed(1))
-							});
-
-
-
-							$(".Shared").find("i").addClass("fa-users");
-							$(".private").find("i").addClass("fa-lock");
-							$(".icon_fem_false").find("i").append('<i class="fa fa-male"></i>');
-							$(".icon_fem_false").find("span").text("Mixed");
-
-
-							function sticky_relocate() {
-								var window_top = $(window).scrollTop();
-								var div_top = $('.container').offset().top;
-								if (window_top > div_top) {
-									$('.sidebar, .title').addClass('stick');
-									$('.sidebar-anchor').height($('.sidebar').outerHeight());
-								} else {
-									$('.sidebar, .title').removeClass('stick');
-									$('#sticky-anchor').height(0);
-								}
-							};
-
-							$(function() {
-								$(window).scroll(sticky_relocate);
-								sticky_relocate();
-							});
-
-							var dir = 1;
-							var MIN_TOP = 200;
-							var MAX_TOP = 350;
-
-
 						</script>
+						<div class="target-output" data-template-chosen="a"></div>
+					</div>
+				</div>
+			</div>
 
-					</body>
-					</html>
+			<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+			<script src="js/data.js"></script>
+			<script src='http://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+			<script src="js/index.js"></script>
+			<script>
+				$(".rooms_selected, .price_selected, .results").hide();
+				$(".sidebar label").prepend('"<i class="fa fa-caret-down" aria-hidden="true"></i>"');
+				$("select").change(function(){
+							//Highlight item when a room has been selected
+							$(this).parents(".info_container").toggleClass("item_selected");
+							
+							//Highlights CTA
+							//$(".btn-primary").addClass("selecting");
+							//setTimeout(function(){ $(".btn-primary").removeClass("selecting"); }, 2000);
+							
+							//Gets total of rooms selected
+							var rooms_amount = [];
+							$("select").each(function() { rooms_amount.push(parseInt($(this).val())) });
+							var total_rooms=0;
+							for(var i in rooms_amount) { total_rooms += rooms_amount[i]; };
+								$(".rooms_selected_number").text(total_rooms);
+							$(".price_selected_number").text(total_rooms * 7765)
+							if (total_rooms > 0){$(".rooms_selected, .price_selected").fadeIn()} else {$(".rooms_selected, .price_selected").fadeOut()}
+								console.log(total_rooms);
+						});
+
+
+				$(".old_price").each(function( index ) {
+					var old_price = $(this).siblings(".new_price").text().replace("$","");
+					$(this).text("$" + (old_price * 1.2).toFixed(1))
+				});
+
+
+
+				$(".Shared").find("i").addClass("fa-users");
+				$(".private").find("i").addClass("fa-lock");
+				$(".icon_fem_false").find("i").append('<i class="fa fa-male"></i>');
+				$(".icon_fem_false").find("span").text("Mixed");
+
+
+
+				function sticky_relocate() {
+					var window_top = $(window).scrollTop();
+					var div_top = $('.container').offset().top;
+					if (window_top > div_top) {
+						$('.sidebar, .title').addClass('stick');
+						$('.sidebar-anchor').height($('.sidebar').outerHeight());
+					} else {
+						$('.sidebar, .title').removeClass('stick');
+						$('#sticky-anchor').height(0);
+					}
+				};
+
+				$(function() {
+					$(window).scroll(sticky_relocate);
+					sticky_relocate();
+				});
+				var dir = 1;
+				var MIN_TOP = 200;
+				var MAX_TOP = 350;
+
+
+			</script>
+
+		</body>
+		</html>

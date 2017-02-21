@@ -1,0 +1,133 @@
+
+   <!DOCTYPE html>
+
+   <html lang="en">
+
+   <head>
+
+       <meta charset="UTF-8">
+
+       <title>Booking</title>
+<link rel="stylesheet" href="style.css">
+   </head>
+
+   <body>
+
+
+
+<div class="header"></div>
+<div class="container">
+<h2>Places where your friends travelled</h2>
+<div class="col-md-4">
+		<div class="destination madrid">
+		<div class="destination_info">
+			<div class="destination_name">Madrid</div>
+			<div class="friends_name">Ale, Jose and Fran stayed here</div>
+			</div>
+		</div>
+<div class="reviews">
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (2).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Jose Maria:</b> Madrid nunca defrauda, lo mejor es ir sin rumbo y dejarse sorprender. 
+	</div>
+	</div>
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (20).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Fran Klein:</b> Demasiados coches, demasiada polución, zonas céntricas demasiado llenas de gente dudosa. 
+	</div>
+	</div>
+		<div class="review ">
+		<div class="friend_face friend_face_smaller"> <img src="img/face (1).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Ale Castells</b> travelled to Madrid in 2015.
+	</div>
+	</div>
+	<a href="" class="btn">See 25 hotels in Madrid</a>
+</div>
+	</div>
+<div class="col-md-4">
+
+		<div class="destination paris">
+		<div class="destination_info">
+			<div class="destination_name">Paris</div>
+			<div class="friends_name">Mark, Justin and Jenny stayed here</div>
+			</div>
+		</div>
+<div class="reviews">
+	<div class="review">
+		<div class="friend_face"> <img src="img/face (11).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Mark Wells:</b> Maravillosa ciudad que te hace sentir como en casa, por su amable gente, variedad en las opciones gastronómicas y de compras. 
+	</div>
+	</div>
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (13).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Justin Long:</b> Madrid nunca defrauda, lo mejor es ir sin rumbo y dejarse sorprender. 
+	</div>
+	</div>
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (14).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Jenny Hens:</b> Demasiados coches, demasiada polución, zonas céntricas demasiado llenas de gente dudosa. 
+	</div>
+	</div>
+	<a href="" class="btn">See 30 hotels in Paris</a>
+
+</div>
+</div>
+<div class="col-md-4">
+
+		<div class="destination newyork">
+			<div class="destination_info">
+			<div class="destination_name">New York</div>
+			<div class="friends_name">Joe and Jill stayed here</div>
+			</div>
+		</div>
+		<div class="reviews">
+	<div class="review">
+		<div class="friend_face"> <img src="img/face (12).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Joe Chan:</b> Maravillosa ciudad que te hace sentir como en casa, por su amable gente, variedad en las opciones gastronómicas y de compras. 
+	</div>
+	</div>
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (9).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Jose Maria:</b> Madrid nunca defrauda, lo mejor es ir sin rumbo y dejarse sorprender. 
+	</div>
+	</div>
+		<div class="review">
+		<div class="friend_face"> <img src="img/face (7).jpg" alt=""></div>
+		<div class="review_text">
+	<b>Robert Junior:</b> Demasiados coches, demasiada polución, zonas céntricas demasiado llenas de gente dudosa. 
+	</div>
+	</div>
+	<a href="" class="btn">See 60 hotels in New York</a>
+
+</div>
+		</div>
+	<button class="btn secondary" id="see_more">See more recommendations</button>
+	<div class="more"></div>
+	</div>
+		 </div>
+		 <section class="aliceblue">
+			 <div class="container">
+				 <img style="" src="img/bottom_1.png" alt="">
+			 </div>
+		 </section>
+		 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+		 $("#see_more").click(function(){
+			 $(".col-md-4").clone().appendTo(".more").hide().fadeIn();
+			 $("body").animate(
+				 $(this).scroll($(".more").offset.top)
+			 )
+		 })
+		 </script>
+   </body>
+
+  
+   </html>
