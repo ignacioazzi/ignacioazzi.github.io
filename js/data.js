@@ -15,7 +15,7 @@ projectsData = {
 		{
 			"company": "Educabilia",
 			"company-description":"Biggest e-learning platform in Latin America selling online and presential courses",
-			"project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
+			"project-description":"UX/UI/Graphic Designer.",
 			"url":"educabilia.html",
 			"tooltip":"Pick me!",
 			"bg_img":"img/covers/covers-04.png"},
@@ -44,7 +44,7 @@ projectsData = {
 					{
 						"company": "Presidio National Park",
 						"company-description":"National Park in San Francisco, California who was looking to completely redesign its website.",
-						"project-description":"Redesign main sections include home page, landing pages, detail pages. Design from scratch a map section.",
+						"project-description":"Redesign main sections including home page, landing pages, detail pages using different research techniques.  Design from scratch a map section.",
 						"url":"presidio.html",
 						"tooltip":"Pick me!",
 						"bg_img":"img/covers/covers-03.jpg"},
