@@ -10,7 +10,7 @@
 			position: relative;
 			width: 1903px;
 			height: 1920px;
-				
+
 		}
 
 		.search_img img{
@@ -28,12 +28,71 @@
 			left: 73.1%;
 			cursor: pointer;
 		}
+
+		.modal {
+			position: absolute;
+			width: 162.5px;
+			background: aliceblue;
+			height: 32.4px;
+			content: " ";
+			padding: 10px 15px 15px;
+			top: 12%;
+			left: 62.1%;
+
+			cursor: pointer;
+			border-radius: 5px;
+			box-shadow: 0px 5px 4px rgba(58, 65, 101, 0.15);
+			border: 1px solid #0898ff;
+			font-size: 14px;
+			color: black;
+			display: none;
+			font-size: 14px;
+			color: #001b42;
+			/* line-height: 22px; */
+			font-weight: 400;
+		}
+		.modal p{
+			margin: 0;
+		}
+
+		.modal:after {
+			width: 10px;
+			height: 10px;
+			border-style: solid;
+			border: 1px solid #0898ff;
+			position: absolute;
+			right: -6px;
+			top: 21px;
+			content: " ";
+			transform: rotate(45deg);
+			border-width: 1px;
+			background: aliceblue;
+			border-left-width: 0;
+			border-bottom-width: 0;
+		}
+
+		a{
+			color:black;
+			text-decoration: none;
+		}
+
+
 	</style>
 </head>
 <body style="overflow-x:hidden; overflow-y:scroll; margin:0; padding:0">
 	<div class="search_img">
 		<img src="initial_search.png" width="1903px" height="1920px" alt="">
 		<a href="index.html" class="map_btn"></a>
+		<div class="modal"><a href="index.html">Searching with the map is now easier, <b>give it a try!</b></a></div>
 	</div>
+	<script src="../rooms-available/js/jquery.min.js">
+	</script>
+	<script>
+		$(".modal").delay(600).fadeIn(600).delay(3000);
+
+		$(".modal").click(function() {
+			
+		});
+	</script>
 </body>
 </html>
