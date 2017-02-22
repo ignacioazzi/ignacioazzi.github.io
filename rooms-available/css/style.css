@@ -42,7 +42,7 @@ body {
 }
 
 .main_content, .title, .below {
-	width: 842px;
+	width: 846px;
 	padding: 0px;
 	display: inline-block;
 	padding-left: 15px;
@@ -55,6 +55,11 @@ body {
 .stick + .main_content, .title.stick, .stick ~ .below {
 	margin-left: 277px;
 	/* padding-right: 0px; */
+}
+
+.main_content.below {
+    margin-left: 267px;
+    margin-top: 80px;
 }
 
 .title{
@@ -202,6 +207,7 @@ body.2 .rooms {
 	/* position: relative; */
 	background: white;
 	overflow: hidden;
+	/* bottom: 2px; */
 }
 
 .sidebar .label {
