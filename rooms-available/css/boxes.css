@@ -111,7 +111,7 @@ h1.fixed {
 	/* background: rgba(240, 248, 255, 0.42); */
 	z-index: 2;
 	position: relative;
-	top: 6px;
+	/* top: 6px; */
 }
 
 .rooms p{
