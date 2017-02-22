@@ -144,7 +144,7 @@
 												{{#breakfast}}<span class="separator"></span><div class="info_bit breakfast">
 												<div class="bit_icon">  <i class="fa fa-coffee" aria-hidden="true"></i>
 												</div>
-												<span>Breakfast Inc.</span> </div>{{/breakfast}}
+												<span>Breakfast</span> </div>{{/breakfast}}
 											</div>
 
 											<!-- Beds -->
@@ -181,7 +181,7 @@
 													{{#genius}}<span class="fl genius ml15"><img src="genius.png" alt=""></span>{{/genius}}
 													{{#good_value}}<div class="fl value ml15"><img src="value.png" alt=""></div>{{/good_value}}
 													<div class="dib tr">
-														<span class="new_price">$ {{price}} </span>
+														<span class="new_price">${{price}}</span>
 														<span class="discount">20%</span>
 														<span class="old_price"></span>
 														<span class="older_price"></span>
@@ -217,7 +217,7 @@
 													{{#genius}}<span class="fl genius ml15"><img src="genius.png" alt=""></span>{{/genius}}
 													<div class="fl value ml15"><img src="value.png" alt=""></div>
 													<div class="dib tr cf">
-														<span class="new_price new_price_2">$ {{price}} </span>
+														<span class="new_price new_price_2">${{price}}</span>
 														<span class="discount">20%</span>
 														<span class="old_price old_price_2"></span>
 														<span class="older_price older_price_2">a</span>
@@ -264,6 +264,8 @@
 							</div>
 						</div>
 						<a href="checkout.html" class="btn btn-lg btn-primary">I will reserve</a>
+						<p style="margin-top: 10px" class="small">Confirmation is immediate
+						</p>
 					</div>
 				</div>
 				<div class="main_content below">
@@ -299,7 +301,7 @@
 			$(".old_price").each(function( index ) {
 				var older_price = $(this).siblings(".new_price").text().replace("$","");
 				var new_price = $(this).siblings(".new_price").text().replace("$","");
-				$(this).text("$" + (new_price * 1.2).toFixed(0));
+				$(this).text("$ " + (new_price * 1.2).toFixed(0));
 				$(this).next().text("$" + (older_price * 1.4).toFixed(0))
 			});
 
@@ -307,8 +309,8 @@
 				var older_price_2 = $(this).siblings(".new_price_2").text().replace("$","");
 				var new_price_2 = $(this).siblings(".new_price_2").text().replace("$","");
 				$(this).text("$" + (new_price_2 * 1.4).toFixed(0));
-				$(this).next().text("$" + (older_price_2 * 1.6).toFixed(0));
-				$(".new_price_2").text("$" + (older_price_2 * 1.1).toFixed(0));
+				$(this).next().text("$ " +(older_price_2 * 1.6).toFixed(0));
+				$(".new_price_2").text("$" +(older_price_2 * 1.1).toFixed(0));
 				
 			});
 

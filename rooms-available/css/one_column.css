@@ -40,9 +40,10 @@ b ~ b {
 }
 .price_selected {
 	margin-top: 2px;
+	margin-bottom: 10px;
 }
 .reserve .btn {
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 .rooms .element-item {
 	width: 647px;
@@ -51,7 +52,7 @@ b ~ b {
 	margin-bottom: 10px;
 }
 .reserve .btn {
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 .stick {
 	top: 30px!important;
