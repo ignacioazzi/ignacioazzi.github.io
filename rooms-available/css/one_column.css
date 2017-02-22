@@ -1,32 +1,27 @@
 
-.info_bit:nth-of-type(-n+7) {
-	display: inline-block;
-	vertical-align: top;
-	font-size: 12px;
-	width: 77px;
-	height: 40px;
-	text-align: center;
-	text-transform: capitalize;
-	margin-bottom: 23px;
-	white-space: nowrap;
-}
-.info_bit:nth-of-type(n+5) .bit_icon {
-	display: block;
-	margin-right: 5px;
-	font-size: 17px;
-}
 .features {
-	width: 98%;
-	height: 65px;
+	width: 100%;
+	height: 75px;
+	padding: 14px 28px;
+	width: 100%;
+	background: rgba(240, 248, 255, 0.51);
+	flex-wrap: wrap;
 }
 .beds {
 	margin-top: 0px;
+	background: none;
+	margin: 0px;
+	padding: 5px 0px;
 }
 .prices.prices_details, .info_container, .rooms_qty {
 	min-height: auto;
 	height: auto;
 	overflow: hidden;
 }
+.rooms_qty {
+    /* float: right; */
+}
+
 br {
 	display: none;
 }
@@ -38,10 +33,9 @@ b ~ b {
 	display: inline-block;
 	padding: 0px 20px;
 	text-align: left;
-	/* top: 20px; */
 }
 .target-output {
-	width: 75%;
+	width: 78%;
 	display: inline-block;
 }
 .price_selected {
@@ -51,23 +45,37 @@ b ~ b {
 	margin-top: 20px;
 }
 .rooms .element-item {
-	width: 100%;
+	width: 647px;
 	padding: 0;
-	margin: 0 -1px -1px	0px;
+	/* margin: 0 -1px -1px	0px; */
+	margin-bottom: 10px;
 }
-
-
 .reserve .btn {
 	margin-top: 20px;
 }
-
 .stick {
-    top: 30px!important;
+	top: 30px!important;
 }
 .default {
-  background-color: #4c7bb2 !important;
-    color: white!important;
-    text-shadow: snow;
-    border-color: #4c7bb2 ;
+	background-color: #4c7bb2 !important;
+	color: white!important;
+	text-shadow: snow;
+	border-color: #4c7bb2;
 }
-
+.info_bit:nth-of-type {
+	/* display: inline-block; */
+	/* vertical-align: top; */
+	font-size: 12px;
+	/* width: 77px; */
+	height: 40px;
+	text-align: center;
+	text-transform: capitalize;
+	/* margin-bottom: 23px; */
+	/* white-space: nowrap; */
+}
+.info_bit:nth-of-type(n+5) .bit_icon {
+	display: block;
+	margin-right: 5px;
+	font-size: 17px;
+	
+}

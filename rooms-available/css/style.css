@@ -14,6 +14,21 @@ body {
 	left: 15px;
 }
 
+.mr5{
+	margin-right: 5px;
+}
+
+.ml5{
+	margin-left: 5px;
+}
+
+.mr15{
+	margin-right: 15px;
+}
+
+.ml15{
+	margin-left: 15px;
+}
 .header{
 	height: 47px;
 	background-color: #003580;
