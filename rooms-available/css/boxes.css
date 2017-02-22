@@ -411,42 +411,42 @@ span.inline_label {
 }
 
 .older_price:after, .old_price:after {
-    content: "?";
-    font-size: 11px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #eca3af;
-    display: inline-block;
-    text-align: center;
-    line-height: 11px;
-    font-weight: bold;
-    color: white;
-    /* margin-left: 3px; */
-    position: relative;
-    bottom: 1px;
-    left: 2px;
-    margin-left: 2px;
-    cursor: pointer;
+	content: "?";
+	font-size: 11px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: #eca3af;
+	display: inline-block;
+	text-align: center;
+	line-height: 11px;
+	font-weight: bold;
+	color: white;
+	/* margin-left: 3px; */
+	position: relative;
+	bottom: 1px;
+	left: 2px;
+	margin-left: 2px;
+	cursor: pointer;
 }
 
 span.discount:after {
-        content: "?";
-    font-size: 11px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #ffd2a2;
-    display: inline-block;
-    text-align: center;
-    line-height: 11px;
-    font-weight: bold;
-    color: white;
-    /* margin-left: 3px; */
-    position: relative;
-    left: 2px;
-    margin: 0px 2px;
-    cursor: pointer;
+	content: "?";
+	font-size: 11px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: #ffd2a2;
+	display: inline-block;
+	text-align: center;
+	line-height: 11px;
+	font-weight: bold;
+	color: white;
+	/* margin-left: 3px; */
+	position: relative;
+	left: 2px;
+	margin: 0px 2px;
+	cursor: pointer;
 }
 
 
@@ -513,4 +513,21 @@ span.discount:after {
 
 .element-item a {;
 	text-decoration: underline;
+}
+
+.sidebar.filters {
+	width: 244px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	border: 1px solid #0898ff;
+	padding: 0px 10px;
+	/* margin-top: 71px; */
+	margin-top: 0px;
+	/* position: fixed; */
+	top: 59px;
+	transition: .5s all;
+	/* position: relative; */
+	background: white;
+	overflow: hidden;
 }

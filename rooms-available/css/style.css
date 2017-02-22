@@ -35,6 +35,10 @@ body {
 	transition: .3s margin-right;
 }
 
+.main_content.below {
+	margin-left: 248px;
+}
+
 .stick + .main_content, .title.stick {
 	margin-left: 248px;
 }
@@ -75,6 +79,13 @@ body {
 	background-color: #28F;
 }
 
+.mr15{
+	margin-right: 15px;
+}
+
+.ml15{
+	margin-left: 15px;
+}
 
 .label{
 	float: left;
