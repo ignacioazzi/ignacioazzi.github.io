@@ -9,15 +9,19 @@ clear: both;
 font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 400;
 color: #000000;
-line-height: 1em;
+line-height: 1.3em;
 position: relative;
 word-wrap: break-word;
 }
 
 p,
 li {
-line-height: 2em;
+line-height: 1.6em;
 vertical-align: top;
+}
+
+li{
+margin-bottom: 1em
 }
 
 h1 {
@@ -37,16 +41,16 @@ font-weight: 400;
 }
 
 h3 {
-font-size: 32px;
+font-size: 30px;
 font-weight: normal;
 }
 
 
-sh4 {
-font-size: 17px;
+h4 {
+font-size: 22px;
 line-height: 32px;
-margin: 1em 0em;
-/* font-weight: bold; */
+margin: 1.5em 0 1em;
+font-weight: bold;
 }
 
 h5 {
@@ -173,7 +177,7 @@ opacity: .8;
 .quiet,
 .quiet p {
 line-height: 2.2em;
-opacity: .8;
+opacity: .95;
 }
 
 .quieter {

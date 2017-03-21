@@ -83,6 +83,10 @@ li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+
+ul.no_disc{
+	list-style-type: none;
+}
 a:hover,
 a:active {
 	outline: 0;
