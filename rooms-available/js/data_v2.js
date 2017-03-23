@@ -8,8 +8,6 @@ var shows = { "shows" : [
 	"name" : "Twin Room with Private Bathroom",
 	"genius" : true,
 	"high_demand": true,
-	"high_demand": true,
-
 	"pay_arrive": true,
 	"choose_bed" : false,
 	"beds": "4 bunk beds",
@@ -34,7 +32,7 @@ var shows = { "shows" : [
 	"air_cond" : true,
 	"private_bathroom" : true,
 	"private" : "Shared",
-	"wifi": true,
+	"wifi": false,
 	"old_price" : "4295",
 	"price" : "3866",
 	"discount" : "21",

@@ -39,8 +39,9 @@ h1.fixed {
 	text-align: left;
 	font-size: 21px;
 	line-height: 44px;
-	padding-left: 47px;
 	padding: 10px 20px 6px 0px;
+	padding-left: 47px;
+
 	margin-top: 0px;
 	/* margin-bottom: -47px; */
 }
@@ -412,42 +413,42 @@ span.inline_label {
 }
 
 .older_price:after, .old_price:after {
-    content: "?";
-    font-size: 11px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #eca3af;
-    display: inline-block;
-    text-align: center;
-    line-height: 11px;
-    font-weight: bold;
-    color: white;
-    /* margin-left: 3px; */
-    position: relative;
-    bottom: 1px;
-    left: 2px;
-    margin-left: 2px;
-    cursor: pointer;
+	content: "?";
+	font-size: 11px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: #eca3af;
+	display: inline-block;
+	text-align: center;
+	line-height: 11px;
+	font-weight: bold;
+	color: white;
+	/* margin-left: 3px; */
+	position: relative;
+	bottom: 1px;
+	left: 2px;
+	margin-left: 2px;
+	cursor: pointer;
 }
 
 span.discount:after {
-        content: "?";
-    font-size: 11px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #ffd2a2;
-    display: inline-block;
-    text-align: center;
-    line-height: 11px;
-    font-weight: bold;
-    color: white;
-    /* margin-left: 3px; */
-    position: relative;
-    left: 2px;
-    margin: 0px 2px;
-    cursor: pointer;
+	content: "?";
+	font-size: 11px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: #ffd2a2;
+	display: inline-block;
+	text-align: center;
+	line-height: 11px;
+	font-weight: bold;
+	color: white;
+	/* margin-left: 3px; */
+	position: relative;
+	left: 2px;
+	margin: 0px 2px;
+	cursor: pointer;
 }
 
 

@@ -35,6 +35,11 @@ body {
 	transition: .3s margin-right;
 }
 
+
+.main_content.below {
+	margin-left: 248px;
+}
+
 .stick + .main_content, .title.stick {
 	margin-left: 248px;
 }
@@ -51,7 +56,7 @@ body {
 
 .button {
 	display: inline-block;
-	padding: 0px 12px;
+	padding: 0px 0px;
 	/* margin-bottom: 10px; */
 	background: #EEE;
 	border: none;
@@ -106,7 +111,7 @@ body {
 
 .button:active,
 .button.is-checked {
-	background-color: #28F!important;
+	background-color: #0ab21b!important;
 	color: white!important;
 	text-shadow: snow;
 }
@@ -192,12 +197,12 @@ body.2 .rooms {
 	color: #003580;
 	font-size: 14px;
 	font-weight: bold;
-	padding: 3px 0 0px;
+	padding: 3px 0 1px 3px;
 	line-height: inherit;
 	/* color: #0898ff; */
 }
 
-.label:before{content: "\f0d7";font-size:11px;margin-right: 5px;color:#ff5e00;transform: scaleY(.1);font-family: "FontAwesome";}
+.label:before{content: "\f0d7";font-size:11px;margin-right: 10px;color:#ff5e00;transform: scaleY(.1);font-family: "FontAwesome";}
 
 .sidebar .button-group {
 	display: block;
@@ -205,7 +210,7 @@ body.2 .rooms {
 }
 
 .sidebar button.button {
-	display: inline-block;
+	display: block;
 	float: none;
 	background: none: /* color: #0898ff; */;
 	background: white;
@@ -213,12 +218,39 @@ body.2 .rooms {
 	color: color: #0898ff;
 	font-size: 13px;
 	text-shadow: none;
-	border: 1px solid #0898ff;
-	margin: 0px -6px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	position: relative;
-	left: 2px;
-	height: 28px;
-	line-height: 28px;
+	height: 29px;
+	line-height: 27px;
+	width: 237px;
+	text-align: left;
+	left: -8px;
+	padding: 0px 8px;
+	outline: none;
+	border-radius: 0;
+
+
+}
+
+
+.sidebar button.button.is-checked:hover {
+	background: red!important;
+}
+
+.sidebar button.button:before {
+	content: "\f096";
+	font-family: "FontAwesome";
+	margin-right: 7px;
+	color: #777;
+	font-size: 14px;
+	position: relative;
+	top: 1px;
+}
+
+.sidebar button.button.is-checked:before {
+	content: "\f046";
+	color: white;
+	margin-right: 5px;
 }
 
 .sidebar .boolean button.button {
@@ -228,8 +260,16 @@ body.2 .rooms {
 	background: #eee;
 }
 
+
+.sidebar button.button span.amount {
+	position: absolute;
+	right: 10px;
+}
+
 .sidebar .boolean button.is-checked {
 	background: #0898ff;
+	outline: none;
+
 }
 
 .filter_by {
@@ -257,9 +297,15 @@ body.2 .rooms {
 
 
 .ml15 {
-    margin-left: 15px;
+	margin-left: 15px;
 }
 
 .mr15 {
-    margin-right: 15px;
+	margin-right: 15px;
+}
+
+
+.sidebar button.button.non_results {
+	pointer-events: none;
+	color: grey;
 }

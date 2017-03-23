@@ -36,14 +36,6 @@ var $grid = $('.grid').isotope({
 $('.filters').on( 'click', '.button', function() {
 	$('html, body').animate({
 		scrollTop: 1504}, 200);
-	$grid.isotope();
-	var $this = $(this);
-	// get group key
-	var $buttonGroup = $this.parents('.button-group');
-	var filterGroup = $buttonGroup.attr('data-filter-group');
-	// set filter for group
-	filters[ filterGroup ] = $this.attr('data-filter');
-	// arrange, and use filter fn
 	var elems = $grid.isotope('getFilteredItemElements')
 	var elems_shown = (elems.length);
 	if (elems.length == 1){
@@ -53,19 +45,55 @@ $('.filters').on( 'click', '.button', function() {
 	}
 	//$(".results").fadeIn();
 	//$(".results_amount").text(elems_shown)
+});
 
+
+var filters = [];
+function toggleArrayItem(a, v) {
+	var i = a.indexOf(v);
+	if (i === -1)
+		a.push(v);
+	else
+		a.splice(i,1);
+}
+
+var $btns = $('.button').click(function() {
+	var filter_value = this.id;
+	$(this).toggleClass('is-checked');
+	toggleArrayItem(filters,"." + filter_value);
+
+	if($(".is-checked").length === 0){
+		console.log("vacio");
+		filters_s = filters.join("");
+		$(".element-item").fadeIn().addClass("visible");
+	}
+	else {
+		filters_s = filters.join("");
+		$(".element-item").fadeOut().removeClass("visible");;
+		$(filters_s).fadeIn(200).addClass("visible");
+	}
+	console.log(filters_s);
+	$grid.isotope('updateSortData').isotope();
+	count_filters();
 
 
 });
 
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-	var $buttonGroup = $( buttonGroup );
-	$buttonGroup.on( 'click', 'button', function() {
-		$buttonGroup.find('.is-checked').removeClass('is-checked');
-		$buttonGroup.find('.default').removeClass('default');
-		$(this).addClass('is-checked');
-	});
-});
+function count_filters(){
+	$(".button").each(function(){
+		var id = this.id;
+		var amount_filter = $('.visible.' + id).length;
+		$(".amount", this).text(amount_filter);
+		console.log();
+		if (amount_filter) {
+			$(this).removeClass("non_results")
+		} else {
+			$(this).addClass("non_results");
+			$(".amount", this).text("-")
+		}
+	})};
+
+	count_filters()
+
 
 
