@@ -291,7 +291,8 @@ p.room_name {
 .prices_details{
 	text-align: left;
 	height: 81px;
-	font-size: 12.6px;
+	font-size: 12.3px;
+	letter-spacing: -.1px;
 }
 
 .rooms_qty{
@@ -455,7 +456,7 @@ span.discount:after {
 
 .item_row{
 	height: 40px;
-	padding: 8px 14px;
+	padding: 8px 9px;
 	margin: 0px;
 	box-sizing: border-box;
 	border-bottom: 1px solid #eee;
