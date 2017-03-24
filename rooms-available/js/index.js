@@ -35,7 +35,7 @@ var $grid = $('.grid').isotope({
 
 $('.filters').on( 'click', '.button', function() {
 	$('html, body').animate({
-		scrollTop: 1504}, 200);
+		scrollTop: 1504}, 800);
 	var elems = $grid.isotope('getFilteredItemElements')
 	var elems_shown = (elems.length);
 	if (elems.length == 1){
@@ -60,6 +60,7 @@ function toggleArrayItem(a, v) {
 var $btns = $('.button').click(function() {
 	var filter_value = this.id;
 	$(this).toggleClass('is-checked');
+	
 	toggleArrayItem(filters,"." + filter_value);
 
 	if($(".is-checked").length === 0){
@@ -69,8 +70,8 @@ var $btns = $('.button').click(function() {
 	}
 	else {
 		filters_s = filters.join("");
-		$(".element-item").fadeOut().removeClass("visible");;
-		$(filters_s).fadeIn(200).addClass("visible");
+		$(".element-item").not(filters_s).fadeOut().removeClass("visible");;
+		$(filters_s).addClass("visible");
 	}
 	console.log(filters_s);
 	$grid.isotope('updateSortData').isotope();
