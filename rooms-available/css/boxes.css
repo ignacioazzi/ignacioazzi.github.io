@@ -127,7 +127,8 @@ h1.fixed {
 	height: 102px;
 	display: -webkit-flex;
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
+	justify-content: space-around;
 }
 
 .features:before {
@@ -150,11 +151,11 @@ h1.fixed {
 }
 
 
-.info_bit:nth-of-type(-n+4) {
+.info_bit:nth-of-type {
 	/* display: inline-block; */
 	vertical-align: top;
 	font-size: 12px;
-	width: 77px;
+	/* width: 77px; */
 	/* height: 40px; */
 	text-align: center;
 	text-transform: capitalize;
@@ -162,9 +163,10 @@ h1.fixed {
 	/* border-right: 1px solid #eee; */
 	/* background: aliceblue; */
 	white-space: nowrap;
+	justify-content: space-around;
 }
 
-span.separator:nth-child(-n+10) {
+span.separator {
 	width: 1px;
 	height: 42px;
 	/* display: inline-block; */
@@ -176,25 +178,7 @@ span.separator:nth-child(-n+10) {
 }
 
 
-.info_bit:nth-of-type(5):before{
-	/* content: "Also:"; */
-	display:inline-block;
-	font-weight:bold;
-	margin: 5px 10px 8px 0px;
-}
-
-
-.info_bit:nth-of-type(n+5) {
-	/* display: inline-block; */
-	/* width: 45%; */
-	/* background:red; */
-	text-align:;
-	text-transform: capitalize;
-	/* margin-bottom: -43px; */
-	font-size: 12px;
-}
-
-.info_bit:nth-of-type(n+5) .bit_icon {
+.info_bit:nth-of-type .bit_icon {
 	display: inline-block;
 	margin-right: 5px;
 	font-size: 17px;
