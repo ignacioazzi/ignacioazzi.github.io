@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+	<title>Booking.com</title>
+	<!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
+	<script src="leaflet.js"></script>
+	<link rel="shortcut icon" href="http://q-ec.bstatic.com/static/img/b25logo/favicon/ebc77706da3aae4aee7b05dadf182390f0d26d11.ico" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<meta name="theme-color" content="#003580">
+
+
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- load jQuery  -->
+	<!-- load Font-Awesome -->
+	<!-- Load leaflet.extra-markers from local directory -->
+	<script src="markers/leaflet.extra-markers.min.js"></script>
+	<link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.header{
+			background: #003580;
+			position: absolute;
+			z-index: 200;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			display: block;
+			color:white;
+			height: 50px;
+			padding-left: 40px;
+			font-weight: bold;
+			line-height: 50px;
+			font-family: "Roboto", sans-serif;
+			box-sizing: border-box;
+		}
+		h2 {
+			font-family: "Segoe UI";
+			position: absolute;
+			left: 187px;
+			font-weight: 400;
+			color: aliceblue;
+			font-size: 16px;
+			top: -3px;
+		}
+
+		.card_overlay {
+			position: absolute;
+			content:"";
+			width: 100%;
+			height: 100%;
+			top:0;
+			left: 0;
+			background: black;
+			z-index: 10;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		14 properties
+	</div>
+	<div id="narration">
+		<div class="card_overlay"></div>
+		<div id="contents" class="tab ">
+		</div>
+	</div>
+
+	<div id="map"><a href="initial_search.html" class="exit_map_view">Exit Map View</a></div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+
+  // Highlights first card and pin
+  $("body").bind("DOMNodeInserted", function() {
+  	$('.image-container').first().addClass("inFocus");
+  	$("i[number=1]").parent().addClass("extra-marker-circle-orange");
+  });
+
+  var id = 1;
+
+  $(".leaflet-marker-icon").click(function(){
+  	$(this).addClass("active")
+  });
+
+  $( ".card_overlay" ).on( "swipeleft", swipeleftHandler );
+  $( ".card_overlay" ).on( "swiperight", swiperightHandler );
+
+  // swipeleftHandler
+  function swipeleftHandler( event ){
+  	var current_scroll = $('#contents').scrollLeft();
+  	var scroll_step = $( document ).width();
+
+
+  	console.log(id + " Left!");
+  	if (id > 0 && id < 14) {
+  		id = id + 1;
+  		$('#contents').animate({
+  			scrollLeft: current_scroll + scroll_step,
+  		}, 200);
+  		$("i").parent().removeClass("extra-marker-circle-orange");
+  		$("i[number=" + id + "]").parent().trigger( "click" ).addClass("extra-marker-circle-orange");
+  	}
+  }
+
+  // swipeRightHandler
+
+  function swiperightHandler( event ){
+  	var current_scroll = $('#contents').scrollLeft();
+  	var scroll_step = $( document ).width();
+
+  	console.log(id+ " Left!");
+  	if (id > 1 && id < 15) {
+  		id = id - 1;
+  		$('#contents').animate({
+  			scrollLeft: current_scroll - scroll_step,
+  		}, 200);
+  		$("i").parent().removeClass("extra-marker-circle-orange");
+  		$("i[number=" + id + "]").parent().trigger( "click" ).addClass("extra-marker-circle-orange");
+  	}
+  }
+
+
+</script>
+</body>
+</html>

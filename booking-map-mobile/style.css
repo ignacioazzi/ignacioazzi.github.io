@@ -1,0 +1,293 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Segoe UI", "Helvetica", sans-serif;
+	color: color: rgb(0, 53, 128);
+	color: rgb(0, 53, 128);
+	overflow:hidden;
+}
+
+#map {
+	position: absolute;
+	right: 0;
+	width: calc(100%);
+	height: 100%;
+	z-index: 1;
+	/* top: 45px; */
+}
+
+#contents {
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+.thumb, .text {
+	vertical-align:top;
+	text-align: left;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.image-container .thumb{
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	border-radius:4px
+}
+
+div.image-container {
+	font: 13px / 15.6px sans-serif;
+	padding: 15px;
+	transition: .5s all;
+	overflow: hidden;
+}
+
+.text {
+	padding: 0px;
+	padding-left: 15px;
+	width: 234px;
+}
+
+
+.price {
+	color: rgb(10, 178, 27);
+	font-weight: bold;
+	font-size: 12px;
+}
+
+p.old_price {
+	text-decoration: line-through;
+	font-size: 15px;
+}
+
+
+.number_review {
+	font: 12px / 13.416px sans-serif;
+	margin: 2px 20px;
+	display: inline-block;
+}
+
+.hotel_name {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: rgb(8, 152, 255);
+	font-size: 18px;
+	line-height:22px;
+	/* display: inline; */
+}
+
+.review {
+	margin:0px;
+	font: 15px / 21.06px sans-serif;
+	font-weight: bold;
+	color: rgb(0, 53, 128);
+	display: inline-block;
+}
+
+
+#icon{
+	width: 20px;
+	height: auto;
+}
+
+.btn {
+	color: white;
+	font-weight: bold;
+	padding: 8px 10px;
+	margin: 0;
+	background-color: #0898ff;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #ccc;
+	display: inline-block;
+	float:right;
+	text-decoration: none;
+}
+
+
+.people_looking {
+	background: rgb(233, 240, 250) none repeat scroll 0% 0% / auto padding-box border-box;
+	border: 1px solid rgb(204, 225, 255);
+	border-radius: 3px 3px 3px 3px;
+	font: 12px / 15.6px sans-serif;
+	color: rgb(119, 119, 119);
+	padding: 5px;
+	display: inline-block;
+	text-align: center;
+	/* margin: 10px 20px; */
+	/* width: calc(100% - 14px); */
+	margin: 8px 0px;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color:#fafafa;
+}
+
+::-moz-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color:#fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color:#d0d0d0;
+}
+
+#icon,.old_price, .price, button{
+	display: inline-block;
+	margin: 0;
+	margin-right: 15px;
+	line-height: 35px;
+	/* vertical-align: middle; */
+}
+
+.prices {
+	text-align: right;
+
+}
+
+p.rooms {
+	line-height: 1.4em;
+	margin:0px 0px 12px;
+	padding: 4px 0px 12px;
+	border-bottom: 1px solid #eee;
+	font-size: 12px;
+}
+
+p.rooms img{
+	margin-right: 4px;
+}
+
+p.rooms img:last-of-type{
+	margin-left:24px;
+}
+
+
+
+.invisible {
+	display: none;
+}
+
+
+.extra-marker-circle-orange:before {
+	width: 100px;
+	height: 100px;
+	/* background: rgba(255, 0, 0, 0.3); */
+	border: 2px solid #FF9800;
+	position: absolute;
+	left: -95%;
+	/* right: 50%; */
+	top: 5px;
+	bottom: 0;
+	margin: auto;
+	content: " ";
+	z-index: -1;
+	display: none;
+	border-radius: 50%;
+	position: absolute;
+	-webkit-animation: pulsate 2s ease-out;
+	-webkit-animation-iteration-count: 2; 
+	opacity: 0
+}
+
+
+@-webkit-keyframes pulsate {
+	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+	50% {opacity: 0.0;}
+	100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+@media (max-width:760px){
+
+	#map {
+		position: absolute;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		top: 00;
+		left: 0;
+		right:0
+	}
+
+	.header, .rooms{
+		display: none;
+	}
+
+
+
+
+	.prices{
+		position: relative;
+		bottom:34px;
+		text-align: left;
+		width: 77%;
+		left: 20%;
+		padding-left: 15px;
+	}
+
+
+	.people_looking, .number_review{
+		/* display: none; */
+	}	
+
+	#narration {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0px;
+		height: 110px;
+		overflow: auto;
+		z-index: 2;
+		background: rgba(254,254,254, 1.0); /* to apply opacity background only. */
+		overflow-y: hidden;
+		white-space:nowrap;
+		box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.28);
+	}
+
+	div.image-container{
+		height: 100%;
+		padding: 8px;
+		overflow: hidden;
+		position: relative;
+		box-sizing: border-box;
+		margin: 0!important;
+		display:inline-block;
+		width:100%;
+		white-space: initial;
+	}
+	.image-container .thumb{
+		width: 20%;
+	}
+
+	.div.image-container.inFocus{
+		border: none;
+		box-shadow: none;
+	}
+	.text{
+		width: 80%;
+	}
+	#contents {
+		width: 100%;
+		margin-top: 0px; /*Adjust if Title header needs more space */
+		height: 100%; /* Adjust to fit max Description length, one setting for all; alternative is 100% */
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+
+	.space-at-the-top {
+		display: none;
+	}
+}
+
+
+.leaflet-top {
+	bottom: 20px;
+	top: auto;
+	right: 10px;
+	left: auto;
+}
