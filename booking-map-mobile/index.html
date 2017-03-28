@@ -75,7 +75,7 @@
 	</div>
 	<div id="narration">
 		<div class="card_overlay"></div>
-		<div id="contents" class="tab ">
+		<div id="contents" class="tab">
 		</div>
 	</div>
 
@@ -99,24 +99,15 @@
 
   $( ".card_overlay" ).on( "swipeleft", swipeleftHandler );
   $( ".card_overlay" ).on( "swiperight", swiperightHandler );
-  $(".btn").on("click", function(){
-  	window.location.href = "http://www.google.com"
-  });
-  $(".hotel_name").on("click", function(){
-  	window.location.href = "http://www.google.com"
-  })
+
   // swipeleftHandler
   function swipeleftHandler( event ){
   	var current_scroll = $('#contents').scrollLeft();
   	var scroll_step = $( document ).width();
-
-
-  	console.log(id + " Left!");
   	if (id > 0 && id < 14) {
   		id = id + 1;
-  		$('#contents').animate({
-  			scrollLeft: current_scroll + scroll_step,
-  		}, 200);
+  		$('#contents').stop(true).animate({
+  			scrollLeft: current_scroll + scroll_step  		}, 200);
   		$("i").parent().removeClass("extra-marker-circle-orange");
   		$("i[number=" + id + "]").parent().trigger( "click" ).addClass("extra-marker-circle-orange");
   	}
@@ -127,12 +118,11 @@
   function swiperightHandler( event ){
   	var current_scroll = $('#contents').scrollLeft();
   	var scroll_step = $( document ).width();
-
-  	console.log(id+ " Right!");
   	if (id > 1 && id < 15) {
   		id = id - 1;
-  		$('#contents').animate({
-  			scrollLeft: current_scroll - scroll_step,
+  		$('#contents').stop(true).animate({
+  			scrollLeft: current_scroll - scroll_step
+
   		}, 200);
   		$("i").parent().removeClass("extra-marker-circle-orange");
   		$("i[number=" + id + "]").parent().trigger( "click" ).addClass("extra-marker-circle-orange");

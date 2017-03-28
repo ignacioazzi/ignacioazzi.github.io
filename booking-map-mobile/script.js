@@ -115,8 +115,6 @@ function initMap() {
 						$("i").parent().removeClass("extra-marker-circle-orange");
 						$("i[number=" + id + "]").parent().addClass("extra-marker-circle-orange");
 						var diff = Math.abs (old_id - id);
-						console.log(diff);
-
 						$('#contents').animate({
 							scrollLeft: scroll,
 						}, 200 );

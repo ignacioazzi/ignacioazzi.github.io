@@ -7,13 +7,11 @@
 	<title>Booking.com</title>
 	<!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.2/dist/leaflet.css"/>
-	<script src="leaflet.js"></script>
 	<link rel="shortcut icon" href="http://q-ec.bstatic.com/static/img/b25logo/favicon/ebc77706da3aae4aee7b05dadf182390f0d26d11.ico" />
 
 	<!-- load jQuery  -->
 	<!-- load Font-Awesome -->
 	<!-- Load leaflet.extra-markers from local directory -->
-	<script src="markers/leaflet.extra-markers.min.js"></script>
 	<link rel="stylesheet" href="markers/leaflet.extra-markers.min.css">
 	<link rel="stylesheet" href="style.css">
 	<style>
@@ -47,39 +45,59 @@
 
 		</div>
 		<div id="contents" class="tab ">
+			<ul class="sorting_options">
+				<li class="active">Top picks</li><li>Lowest price first</li><li>Review score and price</li><li>Stars <i class="fa icon-caret-down"></i></li><li>Distance from city centre</li><li>Review score</li>
+			</ul>
+			<div class="overlay">
+				<div class="loading"><img src="img/loading.gif" alt="">
+					Wait an instant while results are loaded...
+				</div>
+			</div>
 		</div>
 		<div class="overlay">
 			<div class="loading"><img src="img/loading.gif" alt="">
-				Wait an instant while results are loaded...</div>
+				Wait an instant while results are loaded...
 			</div>
 		</div>
+	</div>
 
-		<div id="map"><a href="initial_search.html" class="exit_map_view">Exit Map View</a></div>
-		<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<div id="map"><a href="initial_search.html" class="exit_map_view">Exit Map View</a></div>
+	
+	<script src="leaflet.js"></script>
 
-		<script type="text/javascript" src="script.js"></script>
-		<script>
+	<script src="markers/leaflet.extra-markers.min.js"></script>
 
-			$(".overlay").hide();
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
-			$("#btn_search, #filters").click(function(){
-				$(".overlay").fadeIn(400).delay(800).fadeOut(400)
-			});
+	<script type="text/javascript" src="script.js"></script>
+	<script>
 
-			$(".leaflet-marker-icon").click(function(){
-				$(this).addClass("active")
-			});
+		$(".overlay").hide();
 
-			$(".tabs span").click(function(){
-				$(".tabs span").toggleClass("active");
-				$(".tab").toggleClass("invisible");
-			})
+		$("#btn_search, #filters").click(function(){
+			$(".overlay").fadeIn(300).delay(800).fadeOut(300)
+		});
 
-			$(document).ready(function(){
-				$('div#container1').trigger( "click" );
-			})
+		$(".leaflet-marker-icon").click(function(){
+			$(this).addClass("active")
+		});
+
+		$(".tabs span").click(function(){
+			$(".tabs span").toggleClass("active");
+			$(".tab").toggleClass("invisible");
+		})
+
+		$(document).ready(function(){
+			$('div#container1').trigger( "click" );
+		})
+
+		$(".sorting_options li").click(function() {
+			$(".sorting_options li").removeClass('active');
+			$(this).addClass('active');
+			$(".overlay").fadeIn(300).delay(800).fadeOut(300)
+		});
 
 
-		</script>
-	</body>
-	</html>
+	</script>
+</body>
+</html>

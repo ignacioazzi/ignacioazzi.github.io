@@ -24,7 +24,7 @@ function initMap() {
 
 	// This customizes link to view source code; add your own GitHub repository
 	map.attributionControl
-		.setPrefix('View <a href="http://github.com/jackdougherty/leaflet-storymap" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+	.setPrefix('View <a href="http://github.com/jackdougherty/leaflet-storymap" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 	// This loads the GeoJSON map data file from a local folder
 	$.getJSON('map.geojson', function(data) {
@@ -85,24 +85,24 @@ function initMap() {
 					var price = $('<p class="price">$ '  + random + '</p>');
 
 
-					var number_review = $('<p class="number_review">Según <b>	7901</b> comentarios de huéspedes reales</p>',
-																{class: 'number_review'});
+					var number_review = $('<p class="number_review"><b>	7901</b> reviews</p>',
+						{class: 'number_review'});
 
-					var button = $('<a target="_blank" href="http://www.booking.com/hotel/fr/generator-paris.es-ar.html" class="btn">Mostrar precios</a>', {
+					var button = $('<a target="_blank" href="http://www.booking.com/hotel/fr/generator-paris.es-ar.html" class="btn">Show prices</a>', {
 						class: 'btn'
 					});
 
 					var random_people = Math.floor((Math.random() * 30))					
-					var people_looking  = $('<p class="people_looking">Hay ' + random_people  + ' personas mirando este hotel en este momento</p>', {
+					var people_looking  = $('<p class="people_looking">' + random_people  + ' people are looking at this moment</p>', {
 						class: 'people_looking'
 					});
 
 					var rooms = $('<p class="rooms"> <img id="" width="26px" height="auto" src="img/double.png" alt="" /> Habitación Doble <img id="" width="37px" height="auto" src="img/beds.png" alt="" />  2 camas individuales</p>');
 
 					prices.append(old_price).append(price).append(button);
-					text.append(chapter).append(review).append(number_review);
+					text.append(chapter).append(review).append(number_review).append(people_looking);
 
-					container.append(image).append(text).append(people_looking).append(rooms).append(prices);
+					container.append(image).append(text).append(rooms).append(prices);
 					$('#contents').append(container);
 
 					var i;
@@ -145,7 +145,7 @@ function initMap() {
 						var scroll = (container.height() * (container_id - 1)) ;
 						container.trigger( "click" );
 
-		
+
 
 						$('#contents').animate({
 							scrollTop: scroll 
@@ -156,21 +156,21 @@ function initMap() {
 			}
 		});
 
-		function higlight_both(el){
-			$('.image-container').removeClass("inFocus").addClass("outFocus");
-			$(el).addClass("inFocus").removeClass("outFocus");
-			var id =  $(el).prop("id").slice(9);
-			$(".leaflet-marker-icon").removeClass("extra-marker-circle-orange");
-			$("i[number=" + id + "]").parent().addClass("extra-marker-circle-orange");
-			var scroll = (260 * (parseInt(id) - 2 ))
-			$('#contents').animate({
-				scrollTop: scroll 
-			}, 500);
-		}
+function higlight_both(el){
+	$('.image-container').removeClass("inFocus").addClass("outFocus");
+	$(el).addClass("inFocus").removeClass("outFocus");
+	var id =  $(el).prop("id").slice(9);
+	$(".leaflet-marker-icon").removeClass("extra-marker-circle-orange");
+	$("i[number=" + id + "]").parent().addClass("extra-marker-circle-orange");
+	var scroll = (260 * (parseInt(id) - 2 ))
+	$('#contents').animate({
+		scrollTop: scroll 
+	}, 500);
+}
 
-		$(".image-container").click(function(){
-			higlight_both(this);
-		});
+$(".image-container").click(function(){
+	higlight_both(this);
+});
 
 		//		$(".image-container").mouseenter(function(){
 		//			higlight_both(this);
@@ -179,18 +179,18 @@ function initMap() {
 		$(document).keydown(function(e) {
 			switch(e.which) {
 				case 40: case 39: 
-					var current_highlight = $('.image-container.inFocus');
-					var current_highlight_id = current_highlight.prop("id").slice(9);
-					var next_highlight_id = parseInt(current_highlight_id) + 1;
-					var next_highlight = current_highlight.next();
-					var container_height = $('.image-container.inFocus').height();
-					var scroll = (container_height * (current_highlight_id - 1)) ;
-					console.log(scroll);
+				var current_highlight = $('.image-container.inFocus');
+				var current_highlight_id = current_highlight.prop("id").slice(9);
+				var next_highlight_id = parseInt(current_highlight_id) + 1;
+				var next_highlight = current_highlight.next();
+				var container_height = $('.image-container.inFocus').height();
+				var scroll = (container_height * (current_highlight_id - 1)) ;
+				console.log(scroll);
 
 					//Hightlight container
 					if (current_highlight_id < 14){ 
-					$('.inFocus').removeClass("inFocus").addClass("outFocus");
-					next_highlight.addClass("inFocus").removeClass("outFocus");
+						$('.inFocus').removeClass("inFocus").addClass("outFocus");
+						next_highlight.addClass("inFocus").removeClass("outFocus");
 					//Scroll to container
 
 					$('#contents').animate({
@@ -200,19 +200,19 @@ function initMap() {
 					//Hightlight Pin
 					$(".leaflet-marker-icon").removeClass("extra-marker-circle-orange");
 					$("i[number=" + next_highlight_id + "]").parent().addClass("extra-marker-circle-orange");
-					}
-					break;
+				}
+				break;
 
 				case 38: case 37: 
-					var current_highlight = $('.image-container.inFocus');
-					var current_highlight_id = current_highlight.prop("id").slice(9);
-					var prev_highlight_id = parseInt(current_highlight_id) - 1;
-					var prev_highlight = current_highlight.prev();
-					var container_height = $('.image-container.inFocus').height();
-					var scroll = (container_height * (current_highlight_id - 2)) ;
-					console.log(scroll);
+				var current_highlight = $('.image-container.inFocus');
+				var current_highlight_id = current_highlight.prop("id").slice(9);
+				var prev_highlight_id = parseInt(current_highlight_id) - 1;
+				var prev_highlight = current_highlight.prev();
+				var container_height = $('.image-container.inFocus').height();
+				var scroll = (container_height * (current_highlight_id - 2)) ;
+				console.log(scroll);
 
-					if (current_highlight_id > 1){
+				if (current_highlight_id > 1){
 					//Hightlight container
 
 					$('.inFocus').removeClass("inFocus").addClass("outFocus");
