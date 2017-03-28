@@ -100,9 +100,9 @@ function initMap() {
 					var rooms = $('<p class="rooms"> <img id="" width="26px" height="auto" src="img/double.png" alt="" /> Habitación Doble <img id="" width="37px" height="auto" src="img/beds.png" alt="" />  2 camas individuales</p>');
 
 					prices.append(old_price).append(price).append(button);
-					text.append(chapter).append(review).append(number_review).append(people_looking);
+					text.append(chapter).append(review).append(number_review);
 
-					container.append(image).append(text).append(rooms).append(prices);
+					container.append(image).append(text).append(prices);
 					$('#contents').append(container);
 
 					var i;
