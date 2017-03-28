@@ -74,7 +74,7 @@
 		</div>
 	</div>
 	<div id="narration">
-		<a href="initial_search.html" class="card_overlay"></a>
+		<div class="card_overlay"></div>
 		<div id="contents" class="tab ">
 		</div>
 	</div>
@@ -97,8 +97,8 @@
   	$(this).addClass("active")
   });
 
-  $( "#card_overlay" ).on( "swipeleft", swipeleftHandler );
-  $( "#card_overlay" ).on( "swiperight", swiperightHandler );
+  $( ".card_overlay" ).on( "swipeleft", swipeleftHandler );
+  $( ".card_overlay" ).on( "swiperight", swiperightHandler );
   $(".btn").on("click", function(){
   	window.location.href = "http://www.google.com"
   });
