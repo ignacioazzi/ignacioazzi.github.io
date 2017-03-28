@@ -10,10 +10,9 @@ function initMap() {
 
 	// This creates the Leaflet map with a generic start point, because code at bottom automatically fits bounds to all markers
 	var map = L.map('map', {
-		center: [0, 0],
-		zoom: 4,
-		
+		center: [0, 0]
 	});
+
 	map.keyboard.disable()
 
 
@@ -107,22 +106,20 @@ function initMap() {
 
 
 					layer.on('click', function() {
-
-						$("#search").addClass("invisible").removeClass("visible");
-						$("#contents").addClass("visible").removeClass("invisible");
 						$('.image-container').removeClass("inFocus").addClass("outFocus");
 						container.addClass("inFocus").removeClass("outFocus");
 						var container_id = feature.properties['id'];
 						var scroll = ($( document ).width() * (container_id - 1)) ;
-						container.trigger( "click" );
-						map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], feature.properties['zoom']);
+						var old_id = id;
 						id = container_id;
 						$("i").parent().removeClass("extra-marker-circle-orange");
 						$("i[number=" + id + "]").parent().addClass("extra-marker-circle-orange");
-						console.log(id);
+						var diff = Math.abs (old_id - id);
+						console.log(diff);
+
 						$('#contents').animate({
 							scrollLeft: scroll,
-						}, 200);
+						}, 200 );
 					});
 
 				})(layer, feature.properties);
@@ -134,9 +131,16 @@ function initMap() {
 		map.fitBounds(geojson.getBounds());
 		geojson.addTo(map);
 	});
+	map.on("load", function(){
+
+
+	});
+
 };
 
 
 initMap();
+
+
 
 
