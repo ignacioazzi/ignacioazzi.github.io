@@ -88,7 +88,7 @@ function initMap() {
 					var number_review = $('<p class="number_review"><b>	7901</b> reviews</p>',
 						{class: 'number_review'});
 
-					var button = $('<a target="_blank" href="http://www.booking.com/hotel/fr/generator-paris.es-ar.html" class="btn">Show prices</a>', {
+					var button = $('<a target="_blank" href="http://www.booking.com/hotel/fr/generator-paris.es-ar.html" class="btn">Show rooms</a>', {
 						class: 'btn'
 					});
 
@@ -143,18 +143,19 @@ function initMap() {
 						container.addClass("inFocus").removeClass("outFocus");
 						var container_id = feature.properties['id'];
 						var scroll = (container.height() * (container_id - 1)) ;
-						container.trigger( "click" );
-
-
+						console.log(scroll);
+						$(".leaflet-marker-icon").removeClass("extra-marker-circle-orange");
+						$("i[number=" + container_id + "]").parent().addClass("extra-marker-circle-orange");
 
 						$('#contents').animate({
-							scrollTop: scroll 
-						}, 500);
+							scrollTop: scroll,
+						}, 500, "linear");
 					});
 
 				})(layer, feature.properties);
 			}
 		});
+var container = $(".image-container");
 
 function higlight_both(el){
 	$('.image-container').removeClass("inFocus").addClass("outFocus");
@@ -162,7 +163,7 @@ function higlight_both(el){
 	var id =  $(el).prop("id").slice(9);
 	$(".leaflet-marker-icon").removeClass("extra-marker-circle-orange");
 	$("i[number=" + id + "]").parent().addClass("extra-marker-circle-orange");
-	var scroll = (260 * (parseInt(id) - 2 ))
+	var scroll = (container.height() * (parseInt(id) - 1 ));
 	$('#contents').animate({
 		scrollTop: scroll 
 	}, 500);
@@ -172,20 +173,17 @@ $(".image-container").click(function(){
 	higlight_both(this);
 });
 
-		//		$(".image-container").mouseenter(function(){
-		//			higlight_both(this);
-		//		});
 
-		$(document).keydown(function(e) {
-			switch(e.which) {
-				case 40: case 39: 
-				var current_highlight = $('.image-container.inFocus');
-				var current_highlight_id = current_highlight.prop("id").slice(9);
-				var next_highlight_id = parseInt(current_highlight_id) + 1;
-				var next_highlight = current_highlight.next();
-				var container_height = $('.image-container.inFocus').height();
-				var scroll = (container_height * (current_highlight_id - 1)) ;
-				console.log(scroll);
+$(document).keydown(function(e) {
+	switch(e.which) {
+		case 40: case 39: 
+		var current_highlight = $('.image-container.inFocus');
+		var current_highlight_id = current_highlight.prop("id").slice(9);
+		var next_highlight_id = parseInt(current_highlight_id) + 1;
+		var next_highlight = current_highlight.next();
+		var container_height = $('.image-container.inFocus').height();
+		var scroll = (container_height * (current_highlight_id - 1)) ;
+		console.log(scroll);
 
 					//Hightlight container
 					if (current_highlight_id < 14){ 
@@ -235,10 +233,10 @@ $(".image-container").click(function(){
 		});
 
 
-		$('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
-		map.fitBounds(geojson.getBounds());
-		geojson.addTo(map);
-	});
+$('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+map.fitBounds(geojson.getBounds());
+geojson.addTo(map);
+});
 };
 
 
