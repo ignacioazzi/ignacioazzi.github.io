@@ -56,13 +56,9 @@
 
 		img#room_names {
 		    z-index: 2;
-		    position: relative;
-		    /* left: 1px; */
-		    top: -23px;
-			 -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none; 
+		    position: sticky;
+		    left: 129px;
+		    bottom: 164px;
 		}
 
 		.scroll img {
@@ -77,18 +73,19 @@
 
 		.scroll {
 		    position: relative;
-		    bottom: 522px;
+		    bottom: 69px;
 		    overflow-x: scroll;
 		    white-space: nowrap;
 		    scroll-snap-type: inline;
+		    margin-left: -124px;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
 <img id="header" src="header.png" alt="">
-<img id="room_names" src="room_names.png" alt="">
 <div class="scroll">
+<img id="room_names" src="room_names.png" alt="">
 <img src="row-1-col-1.png" alt="">
 <img src="row-1-col-2.png" alt="">
 <img src="row-1-col-3.png" alt="">
