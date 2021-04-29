@@ -1,0 +1,115 @@
+:root {
+  --col: 20%;
+}
+
+tr {
+    display: inline-block;
+    width:100
+}
+
+th, td {
+    display: block!important;
+}
+
+
+table thead tr:first-of-type{
+    width: 100%!important;
+}
+
+
+tbody {
+    position: absolute;
+    background: white;
+    top: 60px;
+    width: 80%!important;
+    left: var(--col);
+    display: flex;
+    justify-content: flex-start;
+}
+
+table {
+    overflow: hidden;
+}
+
+table {
+    height: 320px;
+}
+
+#main_report_beta_audience table.confranges{
+    position:relative;
+}
+#main_report_beta_audience table.confranges th {
+    width: 100%!important;
+ 
+}
+
+#main_report_beta_audience table.confranges th:nth-child(n+2), table.confranges td:nth-child(n+2){
+    height: 47px!important;
+    /* vertical-align:middle; */
+    display: flex!important;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin:0px;
+}
+
+thead tr:nth-child(3) {
+    width: var(--col);
+}
+
+
+.extra-info toned-down-info {
+    display: block!important;
+}
+
+span.extra-info.toned-down-info {
+    display: block!important;
+    margin: 0px!important;
+}
+
+td > b {
+    display: block;
+}
+
+td {}
+
+//base//
+tbody > tr:first-of-type {
+    width: 41%;
+}
+
+tbody > tr {
+   display:block;
+   flex-grow: 1;
+}
+
+span.btn-group.change-display {
+    /* white-space: nowrap; */
+    /* display: block; */
+}
+
+
+
+#main_report_beta_audience .confidence-interval-display{
+    float:none!important
+}
+
+.ht__widget {
+    height: 20px;
+    line-height: 20px;
+    width: 90%;
+    position: relative;
+}
+
+.ht__status {
+    padding: 0px 8px;
+    position: absolute;
+    right: 0;
+}
+
+.tab-content, iframe, .container, #experiment-page {
+    width: 100%!important;
+    max-width: 100%!important;
+}
+
+
