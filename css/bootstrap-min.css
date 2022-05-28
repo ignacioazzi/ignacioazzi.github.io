@@ -1,1 +1,1639 @@
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}.text-right,.text-right>*{text-align:right!important}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,  monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role=button]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-lg,.visible-md,.visible-sm,.visible-xs{display:none!important}.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}@media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}}@media (max-width:767px){.visible-xs-block{display:block!important}}@media (max-width:767px){.visible-xs-inline{display:inline!important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline!important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline!important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block!important}}@media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}}@media (min-width:1200px){.visible-lg-block{display:block!important}}@media (min-width:1200px){.visible-lg-inline{display:inline!important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}@media (min-width:1200px){.hidden-lg{display:none!important}}.visible-print{display:none!important}@media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}@media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}@media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}@media print{.visible-print-inline-block{display:inline-block!important}}@media print{.hidden-print{display:none!important}}
+/* line 1, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 5, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+body {
+  margin: 0;
+}
+
+/* line 8, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 11, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 15, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 19, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 22, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 26, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.text-right, .text-right > * {
+  text-align: right !important;
+}
+
+/* line 29, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 32, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 35, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 38, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 41, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 45, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 49, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 51, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 57, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 60, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 63, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+img {
+  border: 0;
+}
+
+/* line 66, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 69, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 72, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 78, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 81, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+code, kbd, pre, samp {
+  font-family: monospace,  monospace;
+  font-size: 1em;
+}
+
+/* line 85, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 90, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button {
+  overflow: visible;
+}
+
+/* line 93, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 96, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 100, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 103, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 107, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input {
+  line-height: normal;
+}
+
+/* line 110, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 116, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 119, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 125, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 128, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 133, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 137, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 140, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 143, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 147, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+td, th {
+  padding: 0;
+}
+
+/* line 150, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 155, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 160, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 164, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 171, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 176, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+a {
+  /* color: #337ab7; */
+  text-decoration: none;
+}
+
+/* line 180, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+a:hover, a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+/* line 184, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 188, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+figure {
+  margin: 0;
+}
+
+/* line 191, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 194, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 199, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.img-rounded {
+  border-radius: 6px;
+}
+
+/* line 202, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 215, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* line 217, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* line 223, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 233, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* line 241, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+[role="button"] {
+  cursor: pointer;
+}
+
+/* line 244, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 251, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 255, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 259, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .container {
+    width: 1170px;
+  }
+}
+
+/* line 262, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 268, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* line 272, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 278, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+
+/* line 281, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-12 {
+  width: 100%;
+}
+
+/* line 283, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-11 {
+  width: 91.66666667%;
+}
+
+/* line 285, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-10 {
+  width: 83.33333333%;
+}
+
+/* line 287, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-9 {
+  width: 75%;
+}
+
+/* line 289, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-8 {
+  width: 66.66666667%;
+}
+
+/* line 291, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-7 {
+  width: 58.33333333%;
+}
+
+/* line 293, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-6 {
+  width: 50%;
+}
+
+/* line 295, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-5 {
+  width: 41.66666667%;
+}
+
+/* line 297, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-4 {
+  width: 33.33333333%;
+}
+
+/* line 299, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-3 {
+  width: 25%;
+}
+
+/* line 301, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-2 {
+  width: 16.66666667%;
+}
+
+/* line 303, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-1 {
+  width: 8.33333333%;
+}
+
+/* line 305, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-12 {
+  right: 100%;
+}
+
+/* line 307, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-11 {
+  right: 91.66666667%;
+}
+
+/* line 309, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-10 {
+  right: 83.33333333%;
+}
+
+/* line 311, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-9 {
+  right: 75%;
+}
+
+/* line 313, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-8 {
+  right: 66.66666667%;
+}
+
+/* line 315, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-7 {
+  right: 58.33333333%;
+}
+
+/* line 317, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-6 {
+  right: 50%;
+}
+
+/* line 319, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-5 {
+  right: 41.66666667%;
+}
+
+/* line 321, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-4 {
+  right: 33.33333333%;
+}
+
+/* line 323, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-3 {
+  right: 25%;
+}
+
+/* line 325, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-2 {
+  right: 16.66666667%;
+}
+
+/* line 327, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-1 {
+  right: 8.33333333%;
+}
+
+/* line 329, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-pull-0 {
+  right: auto;
+}
+
+/* line 332, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-12 {
+  left: 100%;
+}
+
+/* line 334, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-11 {
+  left: 91.66666667%;
+}
+
+/* line 336, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-10 {
+  left: 83.33333333%;
+}
+
+/* line 338, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-9 {
+  left: 75%;
+}
+
+/* line 340, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-8 {
+  left: 66.66666667%;
+}
+
+/* line 342, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-7 {
+  left: 58.33333333%;
+}
+
+/* line 344, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-6 {
+  left: 50%;
+}
+
+/* line 346, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-5 {
+  left: 41.66666667%;
+}
+
+/* line 348, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-4 {
+  left: 33.33333333%;
+}
+
+/* line 350, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-3 {
+  left: 25%;
+}
+
+/* line 352, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-2 {
+  left: 16.66666667%;
+}
+
+/* line 354, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-1 {
+  left: 8.33333333%;
+}
+
+/* line 356, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-push-0 {
+  left: auto;
+}
+
+/* line 359, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+
+/* line 361, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+
+/* line 363, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+
+/* line 365, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 367, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+
+/* line 369, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+
+/* line 371, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 373, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+
+/* line 375, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+
+/* line 377, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 379, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+
+/* line 381, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+
+/* line 383, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.col-xs-offset-0 {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 387, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  /* line 390, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-12 {
+    width: 100%;
+  }
+  /* line 392, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  /* line 394, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  /* line 396, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-9 {
+    width: 75%;
+  }
+  /* line 398, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  /* line 400, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  /* line 402, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-6 {
+    width: 50%;
+  }
+  /* line 404, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  /* line 406, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  /* line 408, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-3 {
+    width: 25%;
+  }
+  /* line 410, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  /* line 412, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+  /* line 414, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-12 {
+    right: 100%;
+  }
+  /* line 416, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-11 {
+    right: 91.66666667%;
+  }
+  /* line 418, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-10 {
+    right: 83.33333333%;
+  }
+  /* line 420, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-9 {
+    right: 75%;
+  }
+  /* line 422, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-8 {
+    right: 66.66666667%;
+  }
+  /* line 424, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-7 {
+    right: 58.33333333%;
+  }
+  /* line 426, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-6 {
+    right: 50%;
+  }
+  /* line 428, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-5 {
+    right: 41.66666667%;
+  }
+  /* line 430, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-4 {
+    right: 33.33333333%;
+  }
+  /* line 432, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-3 {
+    right: 25%;
+  }
+  /* line 434, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-2 {
+    right: 16.66666667%;
+  }
+  /* line 436, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-1 {
+    right: 8.33333333%;
+  }
+  /* line 438, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-pull-0 {
+    right: auto;
+  }
+  /* line 441, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-12 {
+    left: 100%;
+  }
+  /* line 443, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-11 {
+    left: 91.66666667%;
+  }
+  /* line 445, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-10 {
+    left: 83.33333333%;
+  }
+  /* line 447, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-9 {
+    left: 75%;
+  }
+  /* line 449, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-8 {
+    left: 66.66666667%;
+  }
+  /* line 451, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-7 {
+    left: 58.33333333%;
+  }
+  /* line 453, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-6 {
+    left: 50%;
+  }
+  /* line 455, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-5 {
+    left: 41.66666667%;
+  }
+  /* line 457, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-4 {
+    left: 33.33333333%;
+  }
+  /* line 459, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-3 {
+    left: 25%;
+  }
+  /* line 461, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-2 {
+    left: 16.66666667%;
+  }
+  /* line 463, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-1 {
+    left: 8.33333333%;
+  }
+  /* line 465, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-push-0 {
+    left: auto;
+  }
+  /* line 468, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+  /* line 470, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  /* line 472, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  /* line 474, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  /* line 476, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  /* line 478, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  /* line 480, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  /* line 482, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  /* line 484, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  /* line 486, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  /* line 488, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  /* line 490, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  /* line 492, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-sm-offset-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 496, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  /* line 499, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+  /* line 501, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  /* line 503, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  /* line 505, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-9 {
+    width: 75%;
+  }
+  /* line 507, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  /* line 509, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  /* line 511, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+  /* line 513, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  /* line 515, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  /* line 517, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+  /* line 519, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  /* line 521, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+  /* line 523, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-12 {
+    right: 100%;
+  }
+  /* line 525, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-11 {
+    right: 91.66666667%;
+  }
+  /* line 527, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-10 {
+    right: 83.33333333%;
+  }
+  /* line 529, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-9 {
+    right: 75%;
+  }
+  /* line 531, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-8 {
+    right: 66.66666667%;
+  }
+  /* line 533, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-7 {
+    right: 58.33333333%;
+  }
+  /* line 535, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-6 {
+    right: 50%;
+  }
+  /* line 537, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-5 {
+    right: 41.66666667%;
+  }
+  /* line 539, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-4 {
+    right: 33.33333333%;
+  }
+  /* line 541, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-3 {
+    right: 25%;
+  }
+  /* line 543, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-2 {
+    right: 16.66666667%;
+  }
+  /* line 545, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-1 {
+    right: 8.33333333%;
+  }
+  /* line 547, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-pull-0 {
+    right: auto;
+  }
+  /* line 550, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-12 {
+    left: 100%;
+  }
+  /* line 552, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-11 {
+    left: 91.66666667%;
+  }
+  /* line 554, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-10 {
+    left: 83.33333333%;
+  }
+  /* line 556, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-9 {
+    left: 75%;
+  }
+  /* line 558, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-8 {
+    left: 66.66666667%;
+  }
+  /* line 560, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-7 {
+    left: 58.33333333%;
+  }
+  /* line 562, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-6 {
+    left: 50%;
+  }
+  /* line 564, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-5 {
+    left: 41.66666667%;
+  }
+  /* line 566, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-4 {
+    left: 33.33333333%;
+  }
+  /* line 568, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-3 {
+    left: 25%;
+  }
+  /* line 570, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-2 {
+    left: 16.66666667%;
+  }
+  /* line 572, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-1 {
+    left: 8.33333333%;
+  }
+  /* line 574, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-push-0 {
+    left: auto;
+  }
+  /* line 577, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+  /* line 579, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  /* line 581, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  /* line 583, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  /* line 585, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  /* line 587, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  /* line 589, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  /* line 591, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  /* line 593, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  /* line 595, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  /* line 597, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  /* line 599, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  /* line 601, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-md-offset-0 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 605, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+  /* line 608, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+  /* line 610, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-11 {
+    width: 91.66666667%;
+  }
+  /* line 612, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-10 {
+    width: 83.33333333%;
+  }
+  /* line 614, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-9 {
+    width: 75%;
+  }
+  /* line 616, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-8 {
+    width: 66.66666667%;
+  }
+  /* line 618, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-7 {
+    width: 58.33333333%;
+  }
+  /* line 620, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+  /* line 622, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-5 {
+    width: 41.66666667%;
+  }
+  /* line 624, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-4 {
+    width: 33.33333333%;
+  }
+  /* line 626, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+  /* line 628, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-2 {
+    width: 16.66666667%;
+  }
+  /* line 630, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-1 {
+    width: 8.33333333%;
+  }
+  /* line 632, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-12 {
+    right: 100%;
+  }
+  /* line 634, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-11 {
+    right: 91.66666667%;
+  }
+  /* line 636, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-10 {
+    right: 83.33333333%;
+  }
+  /* line 638, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-9 {
+    right: 75%;
+  }
+  /* line 640, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-8 {
+    right: 66.66666667%;
+  }
+  /* line 642, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-7 {
+    right: 58.33333333%;
+  }
+  /* line 644, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-6 {
+    right: 50%;
+  }
+  /* line 646, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-5 {
+    right: 41.66666667%;
+  }
+  /* line 648, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-4 {
+    right: 33.33333333%;
+  }
+  /* line 650, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-3 {
+    right: 25%;
+  }
+  /* line 652, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-2 {
+    right: 16.66666667%;
+  }
+  /* line 654, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-1 {
+    right: 8.33333333%;
+  }
+  /* line 656, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-pull-0 {
+    right: auto;
+  }
+  /* line 659, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-12 {
+    left: 100%;
+  }
+  /* line 661, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-11 {
+    left: 91.66666667%;
+  }
+  /* line 663, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-10 {
+    left: 83.33333333%;
+  }
+  /* line 665, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-9 {
+    left: 75%;
+  }
+  /* line 667, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-8 {
+    left: 66.66666667%;
+  }
+  /* line 669, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-7 {
+    left: 58.33333333%;
+  }
+  /* line 671, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-6 {
+    left: 50%;
+  }
+  /* line 673, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-5 {
+    left: 41.66666667%;
+  }
+  /* line 675, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-4 {
+    left: 33.33333333%;
+  }
+  /* line 677, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-3 {
+    left: 25%;
+  }
+  /* line 679, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-2 {
+    left: 16.66666667%;
+  }
+  /* line 681, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-1 {
+    left: 8.33333333%;
+  }
+  /* line 683, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-push-0 {
+    left: auto;
+  }
+  /* line 686, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+  /* line 688, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  /* line 690, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  /* line 692, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  /* line 694, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  /* line 696, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  /* line 698, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  /* line 700, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  /* line 702, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  /* line 704, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  /* line 706, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  /* line 708, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  /* line 710, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .col-lg-offset-0 {
+    margin-left: 0;
+  }
+}
+
+/* line 713, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.clearfix:before, .clearfix:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+/* line 717, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.clearfix:after, .container:after, .container-fluid:after, .row:after {
+  clear: both;
+}
+
+/* line 720, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 725, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.pull-right {
+  float: right !important;
+}
+
+/* line 728, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.pull-left {
+  float: left !important;
+}
+
+/* line 731, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.hide {
+  display: none !important;
+}
+
+/* line 734, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.show {
+  display: block !important;
+}
+
+/* line 737, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 740, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 747, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 750, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.affix {
+  position: fixed;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/* line 756, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
+  display: none !important;
+}
+
+/* line 759, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-xs-block, .visible-xs-inline, .visible-xs-inline-block, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  /* line 763, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-xs {
+    display: block !important;
+  }
+  /* line 766, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  table.visible-xs {
+    display: table !important;
+  }
+  /* line 769, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  tr.visible-xs {
+    display: table-row !important;
+  }
+  /* line 772, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  th.visible-xs, td.visible-xs {
+    display: table-cell !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 776, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-xs-block {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 780, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-xs-inline {
+    display: inline !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 784, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 788, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-sm {
+    display: block !important;
+  }
+  /* line 791, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  table.visible-sm {
+    display: table !important;
+  }
+  /* line 794, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  /* line 797, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  th.visible-sm, td.visible-sm {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 801, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 805, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-sm-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 809, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 813, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-md {
+    display: block !important;
+  }
+  /* line 816, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  table.visible-md {
+    display: table !important;
+  }
+  /* line 819, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  tr.visible-md {
+    display: table-row !important;
+  }
+  /* line 822, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  th.visible-md, td.visible-md {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 826, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 830, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-md-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 834, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 838, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-lg {
+    display: block !important;
+  }
+  /* line 841, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  table.visible-lg {
+    display: table !important;
+  }
+  /* line 844, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  tr.visible-lg {
+    display: table-row !important;
+  }
+  /* line 847, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  th.visible-lg, td.visible-lg {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 851, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-lg-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 855, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-lg-inline {
+    display: inline !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 859, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 863, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 867, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 871, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 875, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+/* line 878, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  /* line 882, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-print {
+    display: block !important;
+  }
+  /* line 885, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  table.visible-print {
+    display: table !important;
+  }
+  /* line 888, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  tr.visible-print {
+    display: table-row !important;
+  }
+  /* line 891, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  th.visible-print, td.visible-print {
+    display: table-cell !important;
+  }
+}
+
+/* line 894, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-print-block {
+  display: none !important;
+}
+
+@media print {
+  /* line 898, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-print-block {
+    display: block !important;
+  }
+}
+
+/* line 901, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-print-inline {
+  display: none !important;
+}
+
+@media print {
+  /* line 905, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-print-inline {
+    display: inline !important;
+  }
+}
+
+/* line 908, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+.visible-print-inline-block {
+  display: none !important;
+}
+
+@media print {
+  /* line 912, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  /* line 916, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/bootstrap-min.scss */
+  .hidden-print {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=bootstrap-min.css.map */

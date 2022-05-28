@@ -4,9 +4,12 @@ margin-top: 0;
 padding: 0;
 }
 
+body, h1, h2, h3, h4, h5, h6{
+font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
 h1, h2, h3, h4, h5, h6 {
 clear: both;
-font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 400;
 color: #000000;
 line-height: 1.3em;
@@ -21,7 +24,7 @@ vertical-align: top;
 }
 
 li{
-margin-bottom: 1em
+margin-bottom: 1em,
 }
 
 h1 {
@@ -170,8 +173,9 @@ color: #5bd0f7!important;
 
 .smaller {
 font-size: .9em;
-line-height: 2em;
+line-height: 1.6em;
 opacity: .8;
+margin-bottom: 2em;	
 }
 
 .quiet,
