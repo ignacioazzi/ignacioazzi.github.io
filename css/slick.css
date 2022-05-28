@@ -235,7 +235,7 @@ body{
 .slider p, .slider li {
 	font-size: 1em;
 	color: white;
-	font-family: Source Sans Pro;
+	font-family: Inter;
 }
 
 .slick-slide:focus {

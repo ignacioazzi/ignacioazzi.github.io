@@ -175,7 +175,7 @@ span.dropdown {
   height: 55px;
   display: inline-block;
   padding: 0px 10px;
-  font-family: "Source Sans Pro";
+  font-family: "Inter";
   font-weight: 600;
   font-size: .9em;
   text-transform: uppercase;
@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6, p, ol {
 
 /* line 7, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 11, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
@@ -508,7 +508,7 @@ h6 {
 
 /* line 72, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 p.lead {
-  font-family: Source Sans Pro;
+  font-family: Inter;
   font-size: 24px;
   line-height: 42px;
   font-weight: 500;
@@ -1020,7 +1020,7 @@ section.task_creation {
 /* line 2, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_switch.scss */
 .switch {
   color: white;
-  font-family: "Source Sans Pro";
+  font-family: "Inter";
   border: 2px solid #5BD0F7;
   border-radius: 7px;
   padding: 10px 15px;
@@ -1203,7 +1203,7 @@ a:hover {
   margin: 6em 0 6em;
   min-height: 80px;
   clear: both;
-  font-family: "Source Sans Pro";
+  font-family: "Inter";
   font-size: 1.1em;
 }
 
