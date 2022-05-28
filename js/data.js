@@ -17,6 +17,12 @@ projectsData = {
 "url":"presidio.html",
 "tooltip":"Pick me!",
 "bg_img":"img/covers/covers-03.jpg"},
+{"company": "Project ARA",
+"company-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
+"project-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
+"url":"ara.html",
+"tooltip":"Pick me!",
+"bg_img":"img/covers/covers-02.png"},
 {
 "company": "AutoSave",
 "company-description":"Research and  business model ideation to encourage millennials to improve their saving habits through the aid of gaming.",
@@ -30,13 +36,8 @@ projectsData = {
 "project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
 "url":"teamtask.html",
 "tooltip":"Pick me!",
-"bg_img":"img/covers/covers-05.png"},
-{"company": "Project ARA",
-"company-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
-"project-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
-"url":"ara.html",
-"tooltip":"Pick me!",
-"bg_img":"img/covers/covers-02.png"},
+"bg_img":"img/covers/covers-05.png"}
+
 // {
 // "company": "LAN",
 // "company-description":"LAN Airlines is the flag carrier of Chile, and one of the largest airlines in Latin America.",
