@@ -84,7 +84,7 @@ position: relative;
 }
 
 .site-title {
-font-weight: 300;
+font-weight: normal;
 }
 
 .nav-bar a {
@@ -146,11 +146,9 @@ span.dropdown {
 height: 55px;
 display: inline-block;
 padding: 0px 10px;
-font-weight: 600;
 font-size: .9em;
 text-transform: uppercase;
 transition: .5s all;
-color: #222;
 cursor: pointer;
 }
 
