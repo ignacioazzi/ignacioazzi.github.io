@@ -17,6 +17,10 @@ nav {
   z-index: 20;
 }
 
+.intro_text {
+    font-size: 22px;
+}
+
 .site-title:hover {
   color: #333;
 }
@@ -378,7 +382,7 @@ img.arrow_90 {
 }
 
 h1, h2, h3, h4, h5, h6, p, ol {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   margin-top: 0;
   padding: 0;
 }

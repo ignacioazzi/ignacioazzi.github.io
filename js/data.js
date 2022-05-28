@@ -12,7 +12,7 @@ projectsData = {
 "bg_img":"img/covers/covers-04.png"},
 {
 "company": "Presidio National Park",
-"company-description":"National Park in San Francisco, California who was looking to completely redesign its website.",
+"company-description":"National Park in San Francisco,  completely redesign its website.",
 "project-description":" Redesign its digital strategy (set a clear objective, understand the target audience, determine the brand’s voice, and more.) to make the park an attractive place to visit for San Francisco people. I worked at the home, Navigation Menu, Landing Pages and detail pages to raise both metrics",
 "url":"presidio.html",
 "tooltip":"Pick me!",
@@ -37,13 +37,13 @@ projectsData = {
 "url":"ara.html",
 "tooltip":"Pick me!",
 "bg_img":"img/covers/covers-02.png"},
-{
-"company": "LAN",
-"company-description":"LAN Airlines is the flag carrier of Chile, and one of the largest airlines in Latin America.",
-"project-description":"To propose a new UI to solve legibility issues and better highlight most relevant information like flight number, dates, and price.",
-"url":"lan.html",
-"tooltip":"Pick me!",
-"bg_img":"img/covers/covers-06.png"},
+// {
+// "company": "LAN",
+// "company-description":"LAN Airlines is the flag carrier of Chile, and one of the largest airlines in Latin America.",
+// "project-description":"To propose a new UI to solve legibility issues and better highlight most relevant information like flight number, dates, and price.",
+// "url":"lan.html",
+// "tooltip":"Pick me!",
+// "bg_img":"img/covers/covers-06.png"},
 ]
 }
 $projects.html(projectsCompile(projectsData));
