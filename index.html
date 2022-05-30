@@ -71,8 +71,18 @@ The portfolio itself is in beta stage so many things are surely broken but do no
         <script type="text/handlebars-template" id="projects-js">
           <div class="container">
             <div class="row row-flex">
+              <div class="col-sm-12 project-item">
+                <img src="img/covers/covers-02.png" class="img_full project-img col-sm-6">
+                <div class="project-text col-sm-6">
+                  <p class="project-title fwb">Booking: Room Customizer</p>
+                  <p class=" company-description">Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.</p>
+                  <a href="rc.html" class="btn btn-strike">Check use case</a>
+                </div>
+              </div>
+
+
               {{#projects}}
-              <a href="{{url}}"> <div class="col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 project-item">
+              <a class="link_container" href="{{url}}"> <div class="{{class}} col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 project-item">
 
                 <img src="{{bg_img}}" class="img_full project-img">
                 <div class="project-text">
@@ -100,74 +110,65 @@ The portfolio itself is in beta stage so many things are surely broken but do no
           <a class="strong" target="_blank" href="mailto:ignacioazzi@gmail.com">   
           ignacioazzi@gmail.com</a></p>
         </header>
-  <!--       <div class="row">
-          <div class="col-md-12 contact_info p0">
-            <div class="tac">
-              <h3><a target="_blank" href="mailto:ignacioazzi@gmail.com">   
-                ignacioazzi@gmail.com</a></h3>
-                <h4 class="quieter">Email</h4>
-              </div>
-            </div>
-          </div> -->
-        </div> 
       </div> 
-    </section>
-    <!-- Homepage portfolio -->
-    <script type="text/handlebars-template" id="handlebars-template">
-      <section class="mini-section">
-        <div class="container">
-          <header class="col-md-12 tac">
-            <h2 class="fwb"> </h2>
-            <h4> </h4>
-          </header>
-        </div>
-      </section>
-      <!-- Description of how I work -->
-      {{#sections}}
-      <section class="description" id="{{title}}">
-        <div class="container">
-
-          <div class="col-sm-8 col-sm-offset-2">
-            <header class="mini-header">
-              <h3 class="fwb">{{{title}}}</h3>
-              <h4 class="">{{subtitle}}</h4>
-            </header class="mini-header">
-            {{{text}}}
-          </p>
-        </div>
+    </div> 
+  </section>
+  <!-- Homepage portfolio -->
+  <script type="text/handlebars-template" id="handlebars-template">
+    <section class="mini-section">
+      <div class="container">
+        <header class="col-md-12 tac">
+          <h2 class="fwb"> </h2>
+          <h4> </h4>
+        </header>
       </div>
     </section>
-    {{/sections}}
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src="js/script.js"></script>
-  <script src='js/handlebars.min.js'></script>
-  <script src="js/data.js"></script>
-  <script>
+
+    {{#sections}}
+    <section class="description" id="{{title}}">
+      <div class="container">
+
+        <div class="col-sm-8 col-sm-offset-2">
+          <header class="mini-header">
+            <h3 class="fwb">{{{title}}}</h3>
+            <h4 class="">{{subtitle}}</h4>
+          </header class="mini-header">
+          {{{text}}}
+        </p>
+      </div>
+    </div>
+  </section>
+  {{/sections}}
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="js/script.js"></script>
+<script src='js/handlebars.min.js'></script>
+<script src="js/data.js"></script>
+<script>
 
 
 
-    $("#havealook").click(function() {
-      $('html, body').animate({
-        scrollTop: $(".projects").offset().top * 1
-      }, 600);
-    });
+  $("#havealook").click(function() {
+    $('html, body').animate({
+      scrollTop: $(".projects").offset().top * 1
+    }, 600);
+  });
 
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-91032335-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  ga('create', 'UA-91032335-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 
 </html>

@@ -1,9 +1,48 @@
+.full-width {
+	background: #f3f4f6;
+	width: 100vw;
+	position: relative;
+	margin: 96px 0px 128px 0px;
+	margin-left: -50vw;
+	left: 50%;
+	padding:6vw;
+
+
+}
+
+.full-width img, .full-width p {
+	margin-left: 0;
+	max-width: 80%!important;
+	background: transparent!important;
+
+}
+
+
+.container_iframe {
+	position: relative;
+	overflow: hidden;
+	padding-top: 90%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
 .mb0 {
 	margin-bottom: 0;
 }
 
 .mb24 {
-	margin-bottom: 24px;
+	margin-bottom: 24px!important;
 }
 
 .mb48 {
@@ -11,15 +50,15 @@
 }
 
 .mb96 {
-	margin-bottom: 96px;
+	margin-bottom: 96px!important;
 }
 
 .mb128 {
-	margin-bottom: 128px;
+	margin-bottom: 128px!important;
 }
 
 .mb256 {
-	margin-bottom: 256px;
+	margin-bottom: 256px!important;
 }
 .p0{
 	padding: 0;
@@ -28,18 +67,26 @@
 	padding-bottom: 0;
 }
 .pb256 {
-	padding-bottom: 256px;
+	padding-bottom: 256px!important;
 }
 
 .mt0 {
 	margin-top: 0;
 }
 
+.mt24 {
+	margin-top: 24px!important;
+}
+
 .mt96 {
-	margin-top: 96px;
+	margin-top: 96px!important;
 }
 
 .mt48 {
-	margin-top: 48px;
+	margin-top: 48px!important;
 }
+
+
+:host{contain: none}
+
 

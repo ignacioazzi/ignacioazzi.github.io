@@ -184,7 +184,7 @@ div#projects {
     margin: 0 auto;
 }
 
-.project-item a {
+a.link_container {
     display: block;
     border-radius: 8px;
     height: 100%;
@@ -195,12 +195,12 @@ div#projects {
     margin-bottom: 2em;
 }
 
-.project-item .btn {
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    padding: 12px;
-}
+// .project-item .btn {
+//     width: 100%;
+//     position: absolute;
+//     bottom: 0px;
+//     padding: 12px;
+// }
 
 .project-text {
     padding: 16px;
