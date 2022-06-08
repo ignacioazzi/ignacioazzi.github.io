@@ -1,7 +1,4 @@
 
-# How to let mobile users easily customize their rooms
-
-
 ### Current situation
 Booking.com is a platform where property owners offer their own accomodations, i.e: Rooms in a hotel. A room may include different bed layouts, have breakfast included in the price or not, allow smoking or not or have other features included as part of a bundle.
 
@@ -10,8 +7,9 @@ Until now, Booking.com's approach to represent these rooms varitions has been to
 In consequence, guests have to face a long room list difficult to navigate, with rooms which price and features are hard to differentiate.
 
 
-![enter image description here](https://raw.githubusercontent.com/ignacioazzi/ignacioazzi.github.io/9255c25079109aa962f9b0634c15d2dbbab5a36b/images/image3.png)
-> We currently need 8 room cards to show the same Junior Suite with minimal differences in what's offered.
+![.](img/rc/cards.png)
+<figcaption class="smallest tac">We currently need 8 room cards to show the same Junior Suite with minimal differences in what's offered</figcaption>
+
 
 <!-- These inefficient room list are formed by room cards. The room card is where we show the most relevant information regarding a room: Name, facilities, prices and discounts.
 -->
@@ -27,66 +25,31 @@ By creating a better and easier way to select rooms, we expected to increase con
 
 Users would also benefit from a shorter and easier to navigate room list, where room differences and prices were easier to understand.
 
-### In summary
+<br>
 
-<div class="highlight">
-	<ol>
-		<li>We wanted to make it easier for users to select and customize their rooms, that meant adding more room preferences.</li>
-		<li>We couldn't do it in the room card as it was complex enough. We needed a different place.</li>
-		<li>We expected that by doing that, we would make room selection easier for user, thus increasing conversion and decreasing cancellation.</li>
-	</ol>
-</div>	
+**In summary:**
+
+<ol>
+	<li>We wanted to make it easier for users to select and customize their rooms, that meant adding more room preferences.</li>
+	<li>We couldn't do it in the room card as it was complex enough. We needed a different place.</li>
+	<li>We expected that by doing that, we would make room selection easier for user, thus increasing conversion and decreasing cancellation.</li>
+</ol>
+
 
 ### First two designs considered
-After some exploration, I reduced the options to two prototypes. We called them Bottom sheet and Full-screen.
 
-
-### Option 1: Bottom sheet design
-
-
-<div class="full-width container_iframe mb96 mt96">
-	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fnode-id%3D686%253A32347" allowfullscreen></iframe>
+#### Design 1: Bottom sheet approach
+<div class="container_iframe full-width mb48" style="padding-top: 75%">
+	<iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fpage-id%3D1498%253A32777%26node-id%3D1498%253A36175%26viewport%3D849%252C555%252C0.3%26scaling%3Dscale-down-width%26starting-point-node-id%3D1498%253A36175" allowfullscreen></iframe>
 </div>
-<!-- 	<div class="row mb48">
-		<div class="col-xs-4">
-			<img src="img/rc/group_1.png" alt="" class="img_full">
-			<p class="smallest mt24">
-			1. Customizable rooms would differentiate from other by its CTA, which read: 'Select and customize'. When tapped, it opened a bottom sheet. </p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/group_2.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				2. There, number of rooms were selected using a stepper. Each room added had its own entry point to customize their preferences. 
-			</p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/group_3.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				3. There, we used radio groups to show the different preferences. When finished, users would tap in Confirm and return to the bottom sheet.
-			</p>
-		</div>
-	</div>
-	<div class="row ">
-		<div class="col-xs-4 col-sm-offset-2">
-			<img src="img/rc/group_4.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				4. After confirming their preferences, users returned to the bottom sheet where they could customize their next room or tap 'Confirm' to continue.
-			</p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/group_5.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				5. Back in the Room list, users would see another overview of their preferences in the room card. In hindsight, two overviews were probably an overkill. After users select all their rooms, they had to tap in 'Reserve' to continue.
-			</p>
-		</div>
-	</div> 
+
+
+
+#### Design 2: Full-screen approach
+
+<div class="container_iframe full-width mb48" style="padding-top: 75%">
+	<iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fpage-id%3D1652%253A43069%26node-id%3D1652%253A43070%26viewport%3D1085%252C577%252C0.25%26scaling%3Dscale-down-width%26starting-point-node-id%3D1652%253A43070" allowfullscreen></iframe>
 </div>
--->
-
-
-
-### Option 2: Full-screen design
-
 
 In Option 2, I decided that guests would customize all the rooms in a single full-screen. Data shows that 90% of reservations are for a single room, 5% are for multiple rooms of the same type and other 5% for rooms of different types, so the possibility of having many rooms to customize was limited.
 
@@ -97,47 +60,6 @@ Nevertheless, we face another problem: The chance of having many preferences to 
 
 In hindsight, I believe my scalability fears were exaggerated, or haven’t being proved right yet: In none of the user research we ran, we found that users don't scroll.
 
-<div class="full-width container_iframe mb96 mt96">
-	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fnode-id%3D686%253A31399" allowfullscreen></iframe>
-</div>
-
-
-<!-- <div class="full-width container_iframe mb96 mt48">
-	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe"  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fpage-id%3D686%253A30469%26node-id%3D686%253A31399%26viewport%3D517%252C497%252C0.23%26scaling%3Dcontain%26hotspot-hints%3D0" allowfullscreen></iframe>
-	<div class="row mb48">
-		<div class="col-xs-4">
-			<img src="img/rc/dropdown_1.png" alt="" class="img_full">
-			<p class="smallest mt24">
-			1. This step is the same as the one in Option 1.</p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/dropdown_2.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				2. Here, users would see all the rooms preference in the same screen. Boolean preferences would be selected using a checkbox.
-			</p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/dropdown_3.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				3. After tapping in a dropdown, a modal would open (bottom sheet in iOS) and users would select their preferences. 
-			</p>
-		</div>
-	</div>
-	<div class="row mb96">
-		<div class="col-xs-4 col-xs-offset-2">
-			<img src="img/rc/dropdown_4.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				4. The same selector worked as an overview, so no extra designed was needed.
-			</p>
-		</div>
-		<div class="col-xs-4">
-			<img src="img/rc/dropdown_5.png" alt="" class="img_full">
-			<p class="smallest mt24">
-				5. As in previous design, users return to room list and they had to tap in 'Reserve' to continue.  
-			</p>
-		</div>
-	</div>
-</div> -->
 
 ### Feedback and Research
 Then, both designs were shared with the team and Designers community: Most of the feedback concerned was regarding how users would react to an extra screen, and whether that extra step would hurt conversion. We only had one preference, so adding another screen felt like an overkill, but we had to start somewhere. 
@@ -164,15 +86,32 @@ We detected no change outside of the acceptable cost bandwidth. So within the bo
 ### Design analysis: What could we improve?
 After experiments are done, it’s crucial to hypothesize which aspects of the design may be hurting the UX and causing the metrics behavior. These are a few of the pain points I found:
 
-1. In both versions, the copy below the ‘Select and customize’ CTA may be overlooked.
+
+<div class="container_iframe full-width mb48" style="padding-top: 75%">
+<!-- 	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fpage-id%3D1652%253A46486%26node-id%3D1652%253A46487%26viewport%3D748%252C-1271%252C0.5%26scaling%3Dscale-down-width%26starting-point-node-id%3D1652%253A46487" allowfullscreen></iframe>
+-->
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fnode-id%3D1034%253A37831" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+<!-- <iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fnode-id%3D1498%253A32777" allowfullscreen></iframe> -->
+
+<!-- <div class="full-width container_iframe mb96 mt96" style="padding-top:56%;">
+	
+	<iframe style="border: 0px solid rgba(0, 0, 0, 0.1);" class="responsive-iframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F7Pc5BjmcqlsBe9zgrgUoz9%2FIgnacio-Azzi---Portfolio%3Fnode-id%3D1034%253A37830" allowfullscreen></iframe> -->
+
+
+<!-- 1. In both versions, the copy below the ‘Select and customize’ CTA may be overlooked.
 1. In both versions, it takes users more steps and taps to customize their rooms.
 1. “Based on availability” message is more prominent than before and may be one of the reasons for the decrease in booking.
 1. Users are missing bed dimensions.
 1. After choosing preferences, single-room bookers (95% of users) have to return to the room list to Reserve, instead of being able to do it from the Room Preferences.
-Change may have been too disruptive.
+-->
 
-After the analysis was completed, I organized a session to discuss it with the team. Together we estimate the impact and effort of each pain point. Data also helped us decided which pain-point to attack first:
-We had 15% more users tapping in the ‘Select and customize’ CTA.
+After the analysis was completed, I organized a session to discuss it with the team. Together we estimate the impact and effort of each pain point.
 
 
 ### Second experiment

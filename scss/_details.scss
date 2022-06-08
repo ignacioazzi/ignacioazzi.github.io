@@ -21,7 +21,7 @@ header {
 
 section {
 	padding: 128px 0;
-	min-height: 50vh;
+	// min-height: 50vh;
 	box-sizing: content-box;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -36,7 +36,7 @@ ol {
 }
 
 ol li {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 ol li b {

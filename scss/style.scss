@@ -21,6 +21,7 @@ body {
 	overflow-x: hidden;
 	padding-bottom: 6em;
 	padding-top: 55px;
+	width: 100vw;
 }
 
 img {
@@ -30,6 +31,7 @@ img {
 	cursor: pointer;
 	max-width: 100%;
 	display: block;
+	background: transparent!important;
 }
 
 button,

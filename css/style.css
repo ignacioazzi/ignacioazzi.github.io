@@ -250,7 +250,6 @@ header {
 /* line 22, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_details.scss */
 section {
   padding: 128px 0;
-  min-height: 50vh;
   box-sizing: content-box;
   overflow-x: hidden;
   overflow-y: auto;
@@ -266,7 +265,7 @@ ol {
 
 /* line 38, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_details.scss */
 ol li {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 /* line 42, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_details.scss */
@@ -423,7 +422,7 @@ h1, h2, h3, h4, h5, h6, p, ol {
 
 /* line 7, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
 /* line 11, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
@@ -431,118 +430,116 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 600;
   color: #000000;
-  line-height: 1.3em;
   position: relative;
   word-wrap: break-word;
 }
 
-/* line 20, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 19, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 p.lead {
   font-size: 24px;
   line-height: 42px;
   color: black;
 }
 
-/* line 26, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 25, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 p,
 li {
   line-height: 1.6em;
   vertical-align: top;
 }
 
-/* line 32, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 31, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 li {
   margin-bottom: 1em;
 }
 
-/* line 36, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 72, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h1 {
-  font-size: 60px;
-  margin: 0.67em 0;
+  font-size: 2em;
 }
 
-/* line 41, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 76, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+h1,
 h2 {
-  font-size: 55px;
-  line-height: 1m;
+  padding-bottom: .1em;
+  margin-top: 2em;
 }
 
-/* line 46, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
-.h25 {
-  font-size: 40px;
-  font-weight: 400;
+/* line 82, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+h2 {
+  font-size: 1.5em;
 }
 
-/* line 51, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 86, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h3 {
-  font-size: 26px;
-  font-weight: normal;
+  font-size: 1.3em;
 }
 
-/* line 57, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 90, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h4 {
-  font-size: 22px;
-  line-height: 32px;
-  margin: 1.5em 0 1em;
-  font-weight: bold;
+  font-size: 1em;
 }
 
-/* line 64, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 94, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h5 {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  margin: 0 0 1em;
+  font-size: .875em;
 }
 
-/* line 71, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 98, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h6 {
   font-size: 12px;
   line-height: 24px;
   font-weight: 600;
 }
 
-/* line 80, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 107, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 p.leady {
   font-size: 21px;
   margin-bottom: 2em;
 }
 
-/* line 85, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 112, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 u {
   text-decoration: none;
   border-bottom: 2px solid #5669e1;
 }
 
-/* line 91, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 118, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+figcaption {
+  position: relative;
+  bottom: 4px;
+  display: block;
+}
+
+/* line 126, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 p ~ h3 {
   margin-top: 2em;
 }
 
-/* line 95, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 130, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h1 + h3 {
   margin-top: -1em;
 }
 
-/* line 99, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 134, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h2 + h3 {
   margin-top: -.4em;
 }
 
-/* line 103, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 138, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h4 + h5 {
   margin-top: -1em;
 }
 
-/* line 107, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 142, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 h3 + .lead {
   margin-top: -30px;
 }
 
-/* line 111, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 146, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 span.number {
   display: inline-block;
-  font-size: .3em;
+  font-size: .8em;
   width: 35px;
   height: 35px;
   background: #5a6ce3;
@@ -553,7 +550,6 @@ span.number {
   position: absolute;
   color: white;
   margin-right: 13px;
-  top: 10px;
   left: -60px;
   font-weight: bold;
   border: -1px solid white;
@@ -561,35 +557,26 @@ span.number {
 }
 
 /*WEIGHT VARIANTS*/
-/* line 134, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
-.fwb,
-.strong, .fw600 {
+/* line 168, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+.fwb, .strong {
   font-weight: 600;
 }
 
 /*COLOR VARIANTS*/
-/* line 142, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 176, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+.white,
 p.white,
 h3.white,
-.white_text,
-.white_text h1,
-.white_text.leady,
-.white_text.lead,
-.white_text h2,
-.white_text h3,
-.white_text p,
-.white_text p.lead,
-.white_text p.leady,
-.white_text li {
-  color: white;
+.white * {
+  color: white !important;
 }
 
-/* line 157, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 183, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .yellow {
   color: #f4c900;
 }
 
-/* line 161, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 187, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .lan h1,
 .cyan,
 p.cyan {
@@ -597,7 +584,7 @@ p.cyan {
 }
 
 /*SIZE VARIANTS*/
-/* line 170, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 196, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .smaller {
   font-size: .9em;
   line-height: 1.6em;
@@ -605,7 +592,7 @@ p.cyan {
   margin-bottom: 2em;
 }
 
-/* line 177, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 203, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .smallest {
   font-size: .8em;
   line-height: 1.6em;
@@ -613,35 +600,39 @@ p.cyan {
   margin-bottom: 2em;
 }
 
-/* line 185, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 211, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .quiet,
 .quiet p {
   line-height: 2.2em;
   opacity: .95;
 }
 
-/* line 191, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 217, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .quieter {
   opacity: .6;
 }
 
-/* line 195, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 221, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .highlight {
-  padding: 32px 16px 16px 0px;
-  padding-left: -16px;
+  padding: 2em 3em 1em;
   background-color: #fff3cd;
   border-color: #ffeeba;
   border: 1px solid #f8ecc9;
   border-radius: 4px;
 }
 
-/* line 204, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 228, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+.highlight ol {
+  margin: 0;
+}
+
+/* line 233, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .markdown-body h3 {
   margin-top: 3em !important;
 }
 
 /*ALIGNMENT CLASSES*/
-/* line 211, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 240, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .tal,
 .tal h2,
 .tal h3,
@@ -649,7 +640,7 @@ p.cyan {
   text-align: left;
 }
 
-/* line 218, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 247, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .tac,
 .text-center,
 header h2,
@@ -657,18 +648,18 @@ header h3 {
   text-align: center;
 }
 
-/* line 225, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 254, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .taj {
   text-align: justify;
 }
 
-/* line 229, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 258, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .text-center img {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 234, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 263, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 .tac img,
 .taj img,
 img.tac {
@@ -677,12 +668,12 @@ img.tac {
 }
 
 @media (max-width: 991px) {
-  /* line 242, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 271, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .sm_text_left,
   .sm_text_left > * {
     text-align: left !important;
   }
-  /* line 246, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 275, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .sm_text_center,
   .sm_text_center > * {
     text-align: center !important;
@@ -691,19 +682,19 @@ img.tac {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /* line 255, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 284, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-lg-left {
     text-align: left;
   }
-  /* line 258, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 287, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-lg-right {
     text-align: right;
   }
-  /* line 261, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 290, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-lg-center {
     text-align: center;
   }
-  /* line 264, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 293, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-lg-justify {
     text-align: justify;
   }
@@ -711,19 +702,19 @@ img.tac {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  /* line 270, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 299, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-md-left {
     text-align: left;
   }
-  /* line 273, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 302, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-md-right {
     text-align: right;
   }
-  /* line 276, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 305, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-md-center {
     text-align: center;
   }
-  /* line 279, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 308, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-md-justify {
     text-align: justify;
   }
@@ -731,19 +722,19 @@ img.tac {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /* line 285, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 314, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-sm-left {
     text-align: left;
   }
-  /* line 288, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 317, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-sm-right {
     text-align: right;
   }
-  /* line 291, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 320, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-sm-center {
     text-align: center;
   }
-  /* line 294, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 323, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-sm-justify {
     text-align: justify;
   }
@@ -751,30 +742,30 @@ img.tac {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /* line 300, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 329, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-xs-left {
     text-align: left;
   }
-  /* line 303, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 332, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-xs-right {
     text-align: right;
   }
-  /* line 306, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 335, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-xs-center {
     text-align: center;
   }
-  /* line 309, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+  /* line 338, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
   .text-xs-justify {
     text-align: justify;
   }
 }
 
-/* line 314, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 343, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 header {
   margin: 128px 0;
 }
 
-/* line 318, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
+/* line 347, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_type.scss */
 header.mini_header {
   margin: 64px 0px;
 }
@@ -782,22 +773,48 @@ header.mini_header {
 /* line 1, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .full-width {
   background: #f3f4f6;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  margin: 96px 0px 128px 0px;
-  margin-left: -50vw;
-  left: 50%;
-  padding: 6vw;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-/* line 13, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
-.full-width img, .full-width p {
+/* line 17, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.full-width iframe {
+  background: #F3F4F6;
+}
+
+/* line 36, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 24.06%, rgba(0, 0, 0, 0.35) 100%), #271DB8;
+}
+
+/* line 40, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.hero img {
+  margin: 0 auto;
+}
+
+/* line 44, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.hero img {
+  max-width: 33vw;
+  max-height: 70vh;
+}
+
+/* line 49, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.hero-bg {
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-image: url(/img/rc/bg.png);
+}
+
+/* line 56, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.full-width p {
   margin-left: 0;
-  max-width: 80% !important;
   background: transparent !important;
 }
 
-/* line 21, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 64, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .container_iframe {
   position: relative;
   overflow: hidden;
@@ -806,7 +823,7 @@ header.mini_header {
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
-/* line 28, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 71, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .responsive-iframe {
   position: absolute;
   top: 0;
@@ -817,72 +834,122 @@ header.mini_header {
   height: 100%;
 }
 
-/* line 40, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 83, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb0 {
   margin-bottom: 0;
 }
 
-/* line 44, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 87, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb24 {
   margin-bottom: 24px !important;
 }
 
-/* line 48, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 91, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb48 {
   margin-bottom: 48px !important;
 }
 
-/* line 52, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 95, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb96 {
   margin-bottom: 96px !important;
 }
 
-/* line 56, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 99, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb128 {
   margin-bottom: 128px !important;
 }
 
-/* line 60, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 103, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mb256 {
   margin-bottom: 256px !important;
 }
 
-/* line 63, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
-.p0 {
-  padding: 0;
-}
-
-/* line 66, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 107, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .pb0 {
   padding-bottom: 0;
 }
 
-/* line 69, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 111, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pb24 {
+  padding-bottom: 24px !important;
+}
+
+/* line 115, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pb48 {
+  padding-bottom: 48px !important;
+}
+
+/* line 119, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pb96 {
+  padding-bottom: 96px !important;
+}
+
+/* line 123, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pb128 {
+  padding-bottom: 128px !important;
+}
+
+/* line 127, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .pb256 {
   padding-bottom: 256px !important;
 }
 
-/* line 73, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 132, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt0 {
+  padding-top: 0;
+}
+
+/* line 136, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt24 {
+  padding-top: 24px !important;
+}
+
+/* line 140, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt48 {
+  padding-top: 48px !important;
+}
+
+/* line 144, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt64 {
+  padding-top: 64px !important;
+}
+
+/* line 149, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt96 {
+  padding-top: 96px !important;
+}
+
+/* line 153, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt128 {
+  padding-top: 128px !important;
+}
+
+/* line 157, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+.pt256 {
+  padding-top: 256px !important;
+}
+
+/* line 161, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mt0 {
   margin-top: 0;
 }
 
-/* line 77, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 165, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mt24 {
   margin-top: 24px !important;
 }
 
-/* line 81, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 169, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mt96 {
   margin-top: 96px !important;
 }
 
-/* line 85, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 173, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 .mt48 {
   margin-top: 48px !important;
 }
 
-/* line 90, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
+/* line 178, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/_margins.scss */
 :host {
   contain: none;
 }
@@ -1119,9 +1186,10 @@ body {
   overflow-x: hidden;
   padding-bottom: 6em;
   padding-top: 55px;
+  width: 100vw;
 }
 
-/* line 26, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 27, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 img {
   border: 0;
   width: auto;
@@ -1129,9 +1197,10 @@ img {
   cursor: pointer;
   max-width: 100%;
   display: block;
+  background: transparent !important;
 }
 
-/* line 35, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 37, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 button,
 input,
 optgroup,
@@ -1147,7 +1216,7 @@ textarea {
   overflow: visible;
 }
 
-/* line 50, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 52, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .btn,
 .button {
   border: 2px solid #5a6ce3;
@@ -1170,38 +1239,38 @@ textarea {
   font-size: 15px;
 }
 
-/* line 72, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 74, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 ul,
 ol {
   margin: 0 0 1.5em 1em;
   padding-left: 0;
 }
 
-/* line 77, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 79, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 ul {
   margin-top: 2em;
   margin-bottom: 3em;
 }
 
-/* line 81, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 83, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 87, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 89, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 ul.no_disc {
   list-style-type: none;
 }
 
-/* line 90, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 92, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 a:hover,
 a:active {
   outline: 0;
 }
 
-/* line 94, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 96, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 a,
 a:visited,
 a:focus,
@@ -1211,7 +1280,7 @@ a:hover {
   outline: none;
 }
 
-/* line 103, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 105, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .clear:before,
 .clear:after {
   content: "";
@@ -1220,7 +1289,7 @@ a:hover {
   clear: both;
 }
 
-/* line 111, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 113, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .btn:hover,
 .button:hover,
 .btn_active {
@@ -1228,7 +1297,7 @@ a:hover {
   color: #fff;
 }
 
-/* line 117, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 119, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .btn-lg {
   min-width: 200px;
   font-size: 15px;
@@ -1239,7 +1308,7 @@ a:hover {
   margin: 1rem 0;
 }
 
-/* line 126, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 128, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .btn-sm {
   height: 30px;
   font-size: 11px;
@@ -1247,7 +1316,7 @@ a:hover {
   min-width: 0;
 }
 
-/* line 132, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 134, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .summary {
   margin: 6em 0 6em;
   min-height: 80px;
@@ -1256,47 +1325,47 @@ a:hover {
   font-size: 1.1em;
 }
 
-/* line 139, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 141, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .summary .col-sm-3 {
   border-left: 2px solid #cac8c8;
   text-align: center;
 }
 
-/* line 143, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 145, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .summary .col-sm-3:first-of-type {
   border-left: 0px;
 }
 
-/* line 146, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 148, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .summary_subtitle {
   font-size: .9em;
 }
 
-/* line 149, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 151, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .summary_title {
   color: black;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 154, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+  /* line 156, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
   .summary .col-sm-3 {
     border-top: 1px solid #e8e8e8;
     text-align: left;
     padding: 10px 15px;
     border-left: 0px;
   }
-  /* line 161, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+  /* line 163, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
   .summary .col-sm-3:first-of-type {
     border-top: none;
   }
-  /* line 165, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+  /* line 167, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
   .summary_subtitle {
     font-size: 1em;
   }
 }
 
-/* line 169, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 171, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 hr.small {
   width: 50%;
   margin: 3em auto;
@@ -1306,32 +1375,32 @@ hr.small {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 177, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+  /* line 179, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
   .img-text {
     padding-top: 6em;
   }
 }
 
-/* line 181, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 183, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .img-text h3 {
   line-height: 1.4em;
 }
 
 @media (min-width: 1600px) {
-  /* line 185, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+  /* line 187, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
   .container {
     width: 1450px;
   }
 }
 
-/* line 189, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 191, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .vcenter {
   display: inline-block;
   vertical-align: middle;
   float: none;
 }
 
-/* line 194, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 196, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .img_full {
   max-width: 100%;
   height: auto;
@@ -1339,33 +1408,33 @@ hr.small {
   margin: 0 auto;
 }
 
-/* line 200, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 202, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .img_full + .img_full {
   margin-top: 5em;
 }
 
-/* line 204, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 206, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .skew-up {
   clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
   margin: -6% 0 !important;
   padding: 6% 0;
 }
 
-/* line 209, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 211, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .thanks_container {
   margin-top: 18em;
   margin-bottom: 5em;
   text-align: center;
 }
 
-/* line 214, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 216, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 .thanks_container img {
   max-width: 90vw;
   opacity: .5;
   display: inline-block;
 }
 
-/* line 220, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
+/* line 222, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/style.scss */
 hr {
   box-sizing: content-box;
   height: 1px;
