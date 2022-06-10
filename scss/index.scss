@@ -7,10 +7,10 @@
         position: relative;
     }
 
-    a:visited, a:active, a:link{
-        color: #1b1d1f;
+    // a:visited, a:active, a:link{
+    //     color: #1b1d1f;
 
-    }
+    // }
 
     /* Sections */
 
@@ -42,8 +42,13 @@
         margin-bottom: 0;
     }
 
-    .intro_position {
+    .intro_position, .h0{
         font-size: 3.5rem;
+        font-weight: bold;
+
+    }
+
+    .intro_position {
         margin-bottom: 1.8rem;
         font-weight: 800;
         line-height: 1em;
@@ -83,27 +88,27 @@
 
 .project-item {
     transition: .5s all;
-    // border-top: 1px solid #eee;
+    border-top: 1px solid #eee;
     padding: 4rem 2rem;
 
-    a {
+    & > a {
         border: 0px solid #cbcbcb;
         display: block;
         border-radius: 8px;
         height: 100%;
         border-radius: 4px;
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         transition: box-shadow .5s;
 
         &:hover{
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            // box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
             transition: box-shadow .8s;
         }
 
     }
 
-    .project-item:first-of-type {
+    &:first-of-type {
         border-top-width: 0px;
     }
 
@@ -118,24 +123,23 @@
         }
     }
 
+
     p.company-description {
-        font-size: .85em;
+        font-size: 1.1em;
+        font-weight: bold;
     }
 
     p.project-title {
-        font-size: 1.2em;
+        font-size: 30px;
         margin-bottom: 8px;
+        font-weight: bold;
     }
 
+    
+
 }
 
-body, html {
-    margin: 0;
-    font-size: 18px;
-    line-height: 2em;
-    color: #1b1d1f;
-    position: relative;
-}
+
 
 section {
     border-top: 1px solid #eee;
@@ -190,17 +194,6 @@ a.link_container {
     height: 100%;
 }
 
-.project-item {
-    padding: 1em;
-    margin-bottom: 2em;
-}
-
-// .project-item .btn {
-//     width: 100%;
-//     position: absolute;
-//     bottom: 0px;
-//     padding: 12px;
-// }
 
 .project-text {
     padding: 16px;
@@ -226,7 +219,7 @@ a.link_container {
 @media only screen and (max-width: 480px) {
 }
 
-.contact_info:first-of-type {
-    border-right: 1px solid #ccc;
-}
+// .contact_info:first-of-type {
+//     border-right: 1px solid #ccc;
+// }
 

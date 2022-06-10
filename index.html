@@ -36,7 +36,7 @@ The portfolio itself is in beta stage so many things are surely broken but do no
       <div class="row">
         <div class="col-xs-12 col-sm-4 visible-xs">
           <div  style="text-align:center">
-            <img class="img-circle my-photo" alt="" src="img/pp.png"></div>
+            <img class="img-circle my-photo" alt="" src="img/pp_green.jpeg"></div>
           </div>
           <div class="col-sm-6 vcenter">
             <header class="mini_header tal text-sm-center">
@@ -54,7 +54,7 @@ The portfolio itself is in beta stage so many things are surely broken but do no
           </div>
         </div>
         <div class="col-xs-4 col-xs-offset-1 hidden-xs vcenter">
-          <img class="img-circle intro_photo img_full" alt="" src="img/pp.png">
+          <img class="img-circle intro_photo img_full" alt="" src="img/pp_green.jpeg">
         </div>
       </div>
     </div>
@@ -63,36 +63,31 @@ The portfolio itself is in beta stage so many things are surely broken but do no
     <div class="container-fluid">
       <div class="row">
         <header class="col-md-8 col-md-offset-2 tac">
-          <h2 class="fwb">Projects I have worked on</h2>
+          <h1 class="fwb h0">Projects I have worked on</h1>
           <p class="leady">They are eager to be read, analyzed and praised</p>
         </header>
       </div>
       <div id="projects-list" class="row">
         <script type="text/handlebars-template" id="projects-js">
           <div class="container">
-            <div class="row row-flex">
-              <div class="col-sm-12 project-item">
-                <img src="img/covers/covers-02.png" class="img_full project-img col-sm-6">
-                <div class="project-text col-sm-6">
-                  <p class="project-title fwb">Booking: Room Customizer</p>
-                  <p class=" company-description">Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.</p>
-                  <a href="rc.html" class="btn btn-strike">Check use case</a>
+            {{#projects}}
+            <div class="project-item {{company}} " href="{{url}}">
+              <div class="row">
+                <div class="project-text col-sm-5 col-sm-offset-1">
+                  <p class="project-title fwb">{{company}}</p>
+                  <p class="fwb company-description">{{company-description}}</p>
+                  <p class="project-description">My role: {{project-description}}</p>
+                </div>
+                <div class="col-sm-4">
+                  <img src="{{bg_img}}" class="img_full img-rounded project-img">
                 </div>
               </div>
-
-
-              {{#projects}}
-              <a class="link_container" href="{{url}}"> <div class="{{class}} col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0 project-item">
-
-                <img src="{{bg_img}}" class="img_full project-img">
-                <div class="project-text">
-                  <p class="project-title fwb">{{company}}</p>
-                  <p class=" company-description">{{company-description}}</p>
-                  <!--  <p class="project-description">My role: {{project-description}}</p> -->
-
+              <div class="row">
+                <div class="col-sm-offset-1 col-sm-10 text-sm-center mt48">
+                  <a class=" btn btn-strike" href="{{url}}">Check {{company}} project</a>
                 </div>
-              </a> 
-            </div>  
+              </div>
+            </div>
             {{/projects}}
           </div>
         </section>
@@ -105,7 +100,7 @@ The portfolio itself is in beta stage so many things are surely broken but do no
 
     <div class="col-md-8 col-center">
       <header class="tac">
-        <h2 class="fwb">Let's stay in touch :)</h2>
+        <h1 class="fwb h0">Let's stay in touch :)</h1>
         <p class="leady">Write me to
           <a class="strong" target="_blank" href="mailto:ignacioazzi@gmail.com">   
           ignacioazzi@gmail.com</a></p>
