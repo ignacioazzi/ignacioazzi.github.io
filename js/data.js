@@ -6,11 +6,11 @@ projectsData = {
 	{
 		"tag":"Booking",
 		"company": "Room Customizer",
-		"company-description":"Biggest online course e-commerce in Argentina and Latin America",
+		"company-description":"Biggest travel agency in the world",
 		"project-description":"To rethink and optimize the UX to increase ROI, conversion rate and attract new users, both teachers and students. I also worked as a UX/UI/Graphic Designer.",
-		"url":"educabilia.html",
+		"url":"rc.html",
 		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-04.png"
+		"bg_img":"img/covers/covers_rc.png"
 	},
 	{
 		"company": "Educabilia",
@@ -18,15 +18,7 @@ projectsData = {
 		"project-description":"To rethink and optimize the UX to increase ROI, conversion rate and attract new users, both teachers and students. I also worked as a UX/UI/Graphic Designer.",
 		"url":"educabilia.html",
 		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-04.png"
-	},
-	{
-		"company": "Presidio National Park",
-		"company-description":"National Park in San Francisco,  completely redesign its website.",
-		"project-description":" Redesign its digital strategy (set a clear objective, understand the target audience, determine the brand’s voice, and more.) to make the park an attractive place to visit for San Francisco people. I worked at the home, Navigation Menu, Landing Pages and detail pages to raise both metrics",
-		"url":"presidio.html",
-		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-03.jpg"
+		"bg_img":"img/covers/covers_edu.png"
 	},
 	{
 		"company": "Project ARA",
@@ -34,7 +26,7 @@ projectsData = {
 		"project-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
 		"url":"ara.html",
 		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-02.png"
+		"bg_img":"img/covers/covers_ara.png"
 	},
 	{
 		"company": "AutoSave",
@@ -42,7 +34,7 @@ projectsData = {
 		"project-description":"To interview gamers users to decide whether there was a feasible business model where millennials would be encouraged to save and invest. Then, based on the info collected, to help ideate that product.",
 		"url":"autosave.html",
 		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-01.png"
+		"bg_img":"img/covers/covers_auto.png"
 	},
 	{
 		"company": "TeamTask",
@@ -50,7 +42,15 @@ projectsData = {
 		"project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
 		"url":"teamtask.html",
 		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-05.png"
+		"bg_img":"img/covers/covers_team.png"
+	},{
+
+		"company": "Presidio National Park",
+		"company-description":"National Park in San Francisco,  completely redesign its website.",
+		"project-description":" Redesign its digital strategy (set a clear objective, understand the target audience, determine the brand’s voice, and more.) to make the park an attractive place to visit for San Francisco people. I worked at the home, Navigation Menu, Landing Pages and detail pages to raise both metrics",
+		"url":"presidio.html",
+		"tooltip":"Pick me!",
+		"bg_img":"img/covers/covers-03.jpg"
 	}
 
 // {

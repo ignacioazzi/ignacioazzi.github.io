@@ -56,7 +56,9 @@
 }
 
 .edu_bg_blue {
-	background-color: #4D61E1;
+background: #4f07a3; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #4f07a3, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #4f07a3, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .edu_bg_dark_blue {
@@ -144,7 +146,14 @@ section.task_creation {
 	box-shadow: 0px 40px 60px rgb(235, 237, 249)
 }
 
+
+.teal_gra{
+	background: #06496b;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to bottom, #06496b, #023d3e);   Chrome 10-25, Safari 5.1-6 
+// background: linear-gradient(to bottom, #06496b, #023d3e)
+
+}
 .teal {
-	background: #2e3b42;
+	background: #37474e;
 }
 
