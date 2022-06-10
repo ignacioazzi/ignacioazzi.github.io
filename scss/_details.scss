@@ -15,7 +15,7 @@ div {
 }
 
 header {
-	margin: 128px auto;
+	margin: 96px auto;
 	text-align: center;
 }
 
@@ -61,6 +61,9 @@ ol li b {
 	max-width: 100%;
 }
 
+.img-shadow{
+	box-shadow: 0px 20px 40px #00000057;
+}
 .slide_text,
 .img-container {
 	vertical-align: top;
@@ -114,7 +117,7 @@ ol li b {
 	.col-table {
 		float: none;
 		display: table-cell;
-		vertical-align: bottom;
+		vertical-align: top;
 	}
 }
 
