@@ -111,11 +111,6 @@ div#projects {
   }
 }
 
-/* line 115, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
-.project-item .project-description {
-  margin-bottom: 2em;
-}
-
 /* line 119, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item.Booking p.project-title:before {
   content: "Booking.com";
@@ -155,12 +150,7 @@ div#projects {
   padding: 16px;
 }
 
-/* line 153, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
-.project-item .project-img {
-  margin: 0;
-}
-
-/* line 159, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 156, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .row-flex {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +158,7 @@ div#projects {
   justify-content: space-between;
 }
 
-/* line 166, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 163, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .row-flex::after {
   content: "";
   flex: auto;
