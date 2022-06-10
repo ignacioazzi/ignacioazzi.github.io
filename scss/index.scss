@@ -1,5 +1,3 @@
-@import 'type';
-@import 'margins';
 
 body,
 html {
@@ -116,6 +114,19 @@ div#projects {
 
     .project-description {
         margin-bottom: 2em;
+    }
+
+    &.Booking p.project-title:before {
+        content: "Booking.com";
+        display: table;
+        font-size: 12px;
+        font-weight: normal;
+        background: #E4F4FF;
+        clear: both;
+        border-radius: 4px;
+        line-height: 31px;
+        padding: 0px 8px;
+        color: #003580;
     }
 
     p.company-description {
