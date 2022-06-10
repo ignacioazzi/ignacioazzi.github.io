@@ -8,12 +8,13 @@ body, h1, h2, h3, h4, h5, h6{
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h0 {
 	clear: both;
 	font-weight: 600;
 	color: #000000;
 	position: relative;
 	word-wrap: break-word;
+	line-height: 1em;
 }
 
 p.lead {
@@ -32,43 +33,14 @@ li{
 	margin-bottom: 1em,
 }
 
-// h1 {
-// 	font-size: 60px;
-// 	margin: 0.67em 0;
-// }
-
-// h2 {
-// 	font-size: 55px;
-// 	line-height: 1m;
-// }
-
-// .h25 {
-// 	font-size: 40px;
-// 	font-weight: 400;
-// }
-
-// h3 {
-// 	font-size: 26px;
-// 	font-weight: normal;
-// }
-
-
-// h4 {
-// 	font-size: 22px;
-// 	line-height: 32px;
-// 	margin: 1.5em 0 1em;
-// 	font-weight: bold;
-// }
-
-// h5 {
-// 	font-size: 16px;
-// 	line-height: 24px;
-// 	font-weight: 400;
-// 	margin: 0 0 1em;
-// }
-
 
 //Markdown new style
+
+.h0{
+	font-size: 3.5rem;
+	font-weight: bold;
+
+}
 h1 {
 	font-size: 2em;
 }
@@ -238,8 +210,6 @@ p.cyan {
 /*ALIGNMENT CLASSES*/
 
 .tal,
-.tal h2,
-.tal h3,
 .text-left {
 	text-align: left;
 }
