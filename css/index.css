@@ -38,18 +38,20 @@ section.description {
 
 /* line 43, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .intro_name {
+  font-size: 30px;
+  font-weight: 400;
   margin-bottom: 0;
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /* line 53, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+  /* line 54, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
   .my-photo {
     width: 50%;
     min-width: 300px;
     margin: 0 auto 1em;
   }
-  /* line 58, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+  /* line 59, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
   .intro header {
     text-align: center;
     margin: 2em 0;
@@ -57,17 +59,17 @@ section.description {
 }
 
 /* Projects */
-/* line 66, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 67, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 h2 {
   font-weight: 700 !important;
 }
 
-/* line 71, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 72, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 h3.project-title, .project-title.intro_name {
   margin: 8px 0px;
 }
 
-/* line 75, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 76, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 div#projects {
   display: flex;
   -ms-flex-wrap: wrap;
@@ -76,14 +78,14 @@ div#projects {
 }
 
 /* Home page Portfolio */
-/* line 84, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 85, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item {
   transition: .5s all;
   border-top: 1px solid #eee;
   padding: 4rem 2rem;
 }
 
-/* line 89, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 90, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item > a {
   border: 0px solid #cbcbcb;
   display: block;
@@ -94,24 +96,24 @@ div#projects {
   transition: box-shadow .5s;
 }
 
-/* line 99, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 100, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item:hover {
   transition: box-shadow .8s;
 }
 
-/* line 104, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 105, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item:first-of-type {
   border-top-width: 0px;
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 110, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+  /* line 111, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
   .project-item .project btn {
     margin: 0 auto;
   }
 }
 
-/* line 119, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 120, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item.Booking p.project-title:before {
   content: "Booking.com";
   display: table;
@@ -125,32 +127,32 @@ div#projects {
   color: #003580;
 }
 
-/* line 132, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 133, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item p.company-description {
   font-size: 1.1em;
   font-weight: bold;
 }
 
-/* line 137, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 138, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item p.project-title {
   font-size: 30px;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-/* line 143, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 144, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item a.link_container {
   display: block;
   border-radius: 8px;
   height: 100%;
 }
 
-/* line 149, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 150, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .project-item .project-text {
   padding: 16px;
 }
 
-/* line 156, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 157, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .row-flex {
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +160,7 @@ div#projects {
   justify-content: space-between;
 }
 
-/* line 163, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
+/* line 164, ../../../../../Users/iazzi/Documents/GitHub/ignacioazzi.github.io/scss/index.scss */
 .row-flex::after {
   content: "";
   flex: auto;
