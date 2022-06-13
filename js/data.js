@@ -3,10 +3,19 @@ projectsCode = $("#projects-js").html(),
 projectsCompile = Handlebars.compile(projectsCode),
 projectsData = {
 	"projects": [
+		{
+		"tag":"Booking.com",
+		"company": "Pulse Calendar redesign",
+		"company-description":"Redesign of the Availability calendar for Pulse, mobile app for Booking.com's partners. ",
+		"project-description":"Improving room status display, month overview and room management.",
+		"url":"pulse.html",
+		"tooltip":"Pick me!",
+		"bg_img":"img/covers/covers_pulse.png"
+	},
 	{
-		"tag":"Booking",
+		"tag":"Booking.com",
 		"company": "Room Customizer",
-		"company-description":"Biggest travel agency in the world",
+		"company-description":"How to help guests customize their room",
 		"project-description":"To rethink and optimize the UX to increase ROI, conversion rate and attract new users, both teachers and students. I also worked as a UX/UI/Graphic Designer.",
 		"url":"rc.html",
 		"tooltip":"Pick me!",
@@ -14,7 +23,7 @@ projectsData = {
 	},
 	{
 		"company": "Educabilia",
-		"company-description":"Biggest online course e-commerce in Argentina and Latin America",
+		"company-description":"Online learning platform for Argentina and Latin America",
 		"project-description":"To rethink and optimize the UX to increase ROI, conversion rate and attract new users, both teachers and students. I also worked as a UX/UI/Graphic Designer.",
 		"url":"educabilia.html",
 		"tooltip":"Pick me!",
@@ -22,7 +31,7 @@ projectsData = {
 	},
 	{
 		"company": "Project ARA",
-		"company-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
+		"company-description":"Developer console for an ecosystem of modular smartphones",
 		"project-description":"Firstly, to generate an expert review to mark pain points of the existing UI. Next, to propose solutions to create a more standardized, user-friendly platform.",
 		"url":"ara.html",
 		"tooltip":"Pick me!",
@@ -30,7 +39,7 @@ projectsData = {
 	},
 	{
 		"company": "AutoSave",
-		"company-description":"Research and  business model ideation to encourage millennials to improve their saving habits through the aid of gaming.",
+		"company-description":"Research and business model ideation to encourage millennials to improve their saving habits.",
 		"project-description":"To interview gamers users to decide whether there was a feasible business model where millennials would be encouraged to save and invest. Then, based on the info collected, to help ideate that product.",
 		"url":"autosave.html",
 		"tooltip":"Pick me!",
@@ -38,20 +47,21 @@ projectsData = {
 	},
 	{
 		"company": "TeamTask",
-		"company-description":"Task management for small projects made simple in the form of an  Android app.",
+		"company-description":"Task management Android app for small projects.",
 		"project-description":"Developer console for an ecosystem of modular smartphones, a tool by which developers register and manage modules.",
 		"url":"teamtask.html",
 		"tooltip":"Pick me!",
 		"bg_img":"img/covers/covers_team.png"
-	},{
+	},
+	// {
 
-		"company": "Presidio National Park",
-		"company-description":"National Park in San Francisco,  completely redesign its website.",
-		"project-description":" Redesign its digital strategy (set a clear objective, understand the target audience, determine the brand’s voice, and more.) to make the park an attractive place to visit for San Francisco people. I worked at the home, Navigation Menu, Landing Pages and detail pages to raise both metrics",
-		"url":"presidio.html",
-		"tooltip":"Pick me!",
-		"bg_img":"img/covers/covers-03.jpg"
-	}
+	// 	"company": "Presidio National Park",
+	// 	"company-description":"National Park in San Francisco,  completely redesign its website.",
+	// 	"project-description":" Redesign its digital strategy (set a clear objective, understand the target audience, determine the brand’s voice, and more.) to make the park an attractive place to visit for San Francisco people. I worked at the home, Navigation Menu, Landing Pages and detail pages to raise both metrics",
+	// 	"url":"presidio.html",
+	// 	"tooltip":"Pick me!",
+	// 	"bg_img":"img/covers/covers-03.jpg"
+	// }
 
 // {
 // "company": "LAN",

@@ -50,7 +50,7 @@ nav {
 	position: relative;
 }
 
-.nav-bar {
+.nav-bar, .site-title {
 	height: 55px;
 	max-height: 55px;
 	line-height: 53px;
@@ -72,11 +72,11 @@ nav {
 }
 
 
-.nav-bar .module,.nav-bar .module-group {height: 55px;}
+// .nav-bar .module,.nav-bar .module-group {height: 55px;}
 
 .nav-bar a, .nav-bar span, .nav-bar a:visited {
 	display: inline-block;
-	height: 55px;
+	// height: 55px;
 	font-size: .9em;
 	font-weight: bold;
 	color: #222;
@@ -85,11 +85,11 @@ nav {
 
 .site-title {
 	font-weight: normal;
+	margin: 0;
 }
 
 .nav-bar a {
 	display: inline-block;
-	height: 55px;
 	border-bottom: 0px;
 }
 
@@ -143,7 +143,7 @@ ul.dropdown_items li:hover {
 }
 
 span.dropdown {
-	height: 55px;
+	// height: 55px;
 	display: inline-block;
 	padding: 0px 10px;
 	font-size: .9em;

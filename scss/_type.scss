@@ -37,7 +37,7 @@ li{
 //Markdown new style
 
 .h0{
-	font-size: 3.5rem;
+	font-size: 3.5em;
 	font-weight: bold;
 
 }
@@ -136,7 +136,9 @@ span.number {
 
 
 /*WEIGHT VARIANTS*/
-
+.fwn{
+	font-weight: normal;
+}
 .fwb, .strong {
 	font-weight: 600;
 }
