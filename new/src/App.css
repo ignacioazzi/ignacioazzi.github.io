@@ -1,0 +1,100 @@
+HTML {
+  background: #888;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.phone-frame-background {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  background-image: url(src/frame.png);
+  background-size: 91% 91%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header {
+  height: auto;
+}
+
+
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0.95;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0.95;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.page-transition {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9fafb;
+  will-change: transform;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.25s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+.animate-slide-out-right {
+  animation: slideOutRight 0.25s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.preferences{
+      border-radius: 16px;
+      border: 1px solid #80808024;
+      padding: 16px;
+    }
+  
+    .pref-title{
+      font-weight: 600;
+    }
