@@ -1,0 +1,72 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #e8eaf0; }
+.wrap {
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  transform-origin: center top;
+  transform: scale(1.2);
+  text-align: center;
+}
+.rate_card {
+  background: #fff;
+  border: 1px solid #cdd0d8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #111;
+  line-height: 1.35;
+  cursor: pointer;
+  margin-right: 5px;
+  text-align: left;
+  width: 290px;
+  display: inline-flex;
+  vertical-align: top;
+}
+/* .card.selected {
+  border: 2px solid #1a3c6e;
+} */
+ .column
+.row { display: flex; align-items: flex-start; gap: 7px; }
+.row svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  stroke: #000000;
+  stroke-width: 1.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.row svg.green { stroke: #1a6b3a; }
+.row svg.blue { stroke: #1a3c6e; }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
+.radio { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #aaa; flex-shrink: 0; margin-top: 1px; position: relative; transition: border-color 0.15s; }
+.radio.on { border-color: #1a3c6e; }
+.badges { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 2px; }
+.badge { font-size: 10.5px; font-weight: 600; padding: 2px 6px; border-radius: 3px; }
+.badge.off { background: #1a6b3a; color: #fff; }
+.badge.genius { background: #1a3c6e; color: #fff; }
+.badge.deal { background: #1a6b3a; color: #fff; }
+.divider { border: none; border-top: 1px solid #eaecf0; }
+.price-label { font-size: 12px; color: #111; }
+.price-row { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
+.price-old {/* font-size: 12px; *//* color: #c0392b; *//* text-decoration: line-through; */}
+.info-i { width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #1a3c6e; display: inline-flex; align-items: center; justify-content: center; font-size: 8.5px; color: #1a3c6e; font-weight: 700; font-style: normal; flex-shrink: 0; }
+.price-sub { font-size: 10.5px; color: #777; margin-top: 2px; }
+.reserve-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; }
+.reserve-btn { border: 1.5px solid #1a3c6e; background: #fff; color: #1a3c6e; font-size: 12.5px; font-weight: 500; padding: 7px 14px; border-radius: 6px; cursor: pointer; }
+.reserve-btn:hover { background: #e8eef8; }
+.genius-dot { width: 15px; height: 15px; background: #e6a817; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.genius-dot svg { width: 9px; height: 9px; stroke: #fff; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dot-bullet { width: 4px; height: 4px; border-radius: 50%; background: #111; flex-shrink: 0; margin-top: 5px; }
+.occ { display: flex; align-items: center; gap: 0px; }
+.occ svg { width: 13px; height: 13px; stroke: #111; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.occ .sm svg { width: 11px; height: 11px; }
+.price-for { font-size: 12px; color: #111; font-weight: 500; margin-right: 3px; }
+#card1 { aspect-ratio: 1 / 1; }

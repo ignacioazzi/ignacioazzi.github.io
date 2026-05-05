@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Comparison – Case Study</title>
+  <link rel="stylesheet" href="pulse_case_study.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <style>
+    /* ── HC-specific palette ── */
+    :root {
+      --hc-primary: #6B6FD4;
+      --hc-dark: #2D3170;
+      --hc-accent: #F47B4A;
+      --hc-bg: #f0f0f8;
+      --hc-cover-bg: linear-gradient(135deg, #2D3170 0%, #6B6FD4 100%);
+    }
+
+    /* ── Cover ── */
+    .hc-cover {
+      background: var(--hc-cover-bg) !important;
+      min-height: 60vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 2em;
+    }
+
+    .hc-cover h1 {
+      font-size: var(--fs-display);
+      color: rgba(255,255,255,0.95);
+      max-width: 760px;
+    }
+
+    .hc-cover .slide-subtitle {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .hc-cover .label {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .hc-cover .cover-meta-label {
+      color: rgba(255,255,255,0.5);
+    }
+
+    .hc-cover .cover-meta-value {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hc-cover .cover-divider {
+      background: rgba(255,255,255,0.18);
+    }
+
+    /* ── Chapter dividers ── */
+    .hc-chapter {
+      background: var(--hc-dark);
+      padding: 2.5em max(1.5rem, calc((100% - var(--carousel-max-w)) / 2));
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      display: none;
+    }
+
+    .hc-chapter-label {
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .hc-chapter-title {
+      font-size: var(--fs-2xl);
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    /* ── Section slides alternating bg ── */
+    .slide:nth-child(odd) {
+      background: #f5f5fb;
+    }
+
+    .slide:nth-child(even) {
+      background: #ffffff;
+    }
+
+    .case-nav.is-visible {
+      opacity: 1!important
+    }
+    /* Using Pulse summary-grid classes instead */
+
+    /* ── Stat highlights ── */
+    .hc-stat {
+      font-size: var(--fs-3xl);
+      font-weight: 800;
+      color: var(--hc-primary);
+      line-height: 1;
+    }
+
+    .hc-stat-row {
+      display: flex;
+      gap: 48px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .hc-stat-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hc-stat-label {
+      font-size: var(--fs-sm);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── Phase list ── */
+    .hc-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+      max-width: 680px;
+    }
+
+    .hc-phase {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid #e5e5ef;
+    }
+
+    .hc-phase:last-child {
+      border-bottom: none;
+    }
+
+    .hc-phase-num {
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      color: var(--hc-primary);
+      width: 24px;
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+    }
+
+    .hc-phase-title {
+      font-size: var(--fs-body);
+      font-weight: 700;
+      color: var(--text-heading);
+      min-width: 200px;
+    }
+
+    .hc-phase-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Alignment cases ── */
+    .hc-alignment-case {
+      border-left: 3px solid var(--hc-primary);
+      padding: 16px 0 16px 24px;
+      margin-bottom: 24px;
+    }
+
+    .hc-alignment-case:last-child {
+      margin-bottom: 0;
+    }
+
+    .hc-alignment-case-title {
+      font-size: var(--fs-body);
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 8px;
+    }
+
+    .hc-alignment-case p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      margin: 0;
+    }
+
+    /* ── Image placeholder ── */
+    .hc-img-placeholder {
+      width: 100%;
+      max-width: 760px;
+      background: #e8e8f4;
+      border-radius: 12px;
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: var(--fs-md);
+      font-style: italic;
+      border: 2px dashed #c5c5e0;
+    }
+
+    /* ── Prose block ── */
+    .hc-prose {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    .hc-prose p {
+      font-size: var(--fs-body);
+      line-height: 1.7;
+      color: var(--text-heading);
+      margin-bottom: 1.2em;
+    }
+
+    .hc-prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hc-prose ul {
+      margin: 0.5em 0 1.2em 1.5em;
+    }
+
+    .hc-prose li {
+      font-size: var(--fs-body);
+      line-height: 1.6;
+      margin: 0.4em 0;
+    }
+
+    .hc-prose strong {
+      color: var(--text-heading);
+    }
+
+    /* ── Section header ── */
+    /* Section headers use Pulse .header class instead */
+
+    /* ── Subsection ── */
+    .hc-subsection {
+      width: 100%;
+      max-width: 680px;
+    }
+
+    .hc-subsection-title {
+      font-size: var(--fs-body);
+      font-weight: 700;
+      color: var(--hc-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      /* border-bottom: 2px solid var(--hc-primary); */
+      display: inline-block;
+    }
+
+    /* ── Nav active color override ── */
+    .case-nav-link--active {
+      color: var(--hc-primary) !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Left Nav ── -->
+<nav class="case-nav" id="caseNav">
+  <a class="case-nav-link" href="#background">Background</a>
+  <a class="case-nav-link" href="#process">Process</a>
+  <a class="case-nav-link" href="#execution">Execution</a>
+  <a class="case-nav-link" href="#impact">Impact</a>
+  <a class="case-nav-link" href="#reflection">Reflection</a>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- ── COVER ── -->
+  <section class="slide hc-cover">
+    <div class="header">
+      <p class="label">Room Selection Apps · 2024</p>
+      <h1>Horizontal Comparison</h1>
+      <p class="slide-subtitle">Redesigning Room Selection to reduce choice overload and improve comparability</p>
+    </div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Role</span>
+        <span class="cover-meta-value">Senior Product Designer</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Platforms</span>
+        <span class="cover-meta-value">Android · iOS</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Scope</span>
+        <span class="cover-meta-value">Strategy · Design · Experimentation</span>
+      </div>
+      <div class="cover-divider"></div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Timeframe</span>
+        <span class="cover-meta-value">2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SUMMARY ── -->
+  <section class="slide" style="background: #f5f5fb; align-items: center;">
+    <div class="summary-grid mw-760">
+
+      <div class="summary-row">
+        <div class="summary-label">Problem</div>
+        <p>Room Selection on apps presented every room–rate combination as a separate card, creating visual repetition, poor comparability, and choice overload. The Room List had grown to ~100 components across 6+ teams with no clear information architecture governing it.</p>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-label">Approach</div>
+        <p>After a track-wide H1 sprint exploring five Room Selection concepts (including a Horizontal Comparison design created for mobile web by another designer) we converged on HC as the strategic direction. I took ownership of adapting and shipping it on Android and iOS across three phases: Foundation work, MVP experiment, and future iterations.</p>
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-label">Results</div>
+        <ul>
+          <li>IA experiments full-oned: <strong>+629 ±763 PNC Android</strong>, <strong>+375 ±244 PNC iOS</strong></li>
+          <li><strong>12+ low-value components</strong> removed via blockout experiments</li>
+          <li>HC full-oned on Android and iOS: <strong>[X]% increase in booked non-cheapest rate</strong></li>
+          <li><strong>75%+ of Android users</strong> scrolled horizontally, validating discoverability</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       BACKGROUND
+  ════════════════════════════════════ -->
+  <div class="hc-chapter" id="background">
+    <div>
+      <p class="hc-chapter-label">01</p>
+      <p class="hc-chapter-title">Background</p>
+    </div>
+  </div>
+
+  <!-- Context -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Context</h1>
+    </div>
+    <div class="hc-prose">
+      <p>Room Selection on apps had accumulated years of complexity. Each room–rate combination was rendered as a separate card, creating visual repetition and making it hard for users to compare options. By 2024, the Room List hosted components from multiple teams — a system that had grown without a clear information architecture to govern it.</p>
+      <p>During H1, the track ran a design sprint to explore alternative Room Selection approaches. I worked on two concepts (Filters and 2-Step Rate Selection) before the track converged on Horizontal Comparison as the strategic direction for H2.</p>
+      <p>I took over full ownership of Horizontal Comparison for Apps in H2. The mobile web version, which originated with another designer on the team, was still in progress at that point and had not shipped.</p>
+    </div>
+    <div class="hc-img-placeholder">
+      [Image: HC interaction overview — horizontal scroll to compare rates within a room, vertical scroll to browse rooms. Multiple rate selection of the same type was excluded from the first iteration to keep the interaction focused.]
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Problem</h1>
+    </div>
+    <div class="hc-prose">
+      <p>The existing Room List presented every room and rate as an individual card. For properties with multiple rate options per room, this created:</p>
+      <ul>
+        <li><strong>Repeated information</strong> across cards (room photos, amenities, descriptions)</li>
+        <li><strong>No clear hierarchy</strong> between room-level and rate-level content</li>
+        <li><strong>Poor comparability:</strong> users couldn't easily evaluate rates within the same room</li>
+      </ul>
+      <p>Research across the five H1 concepts found no major pain points with Horizontal Comparison specifically, though some users struggled to discover that the rate carousel was horizontally scrollable. We added a tracking metric to the A/B experiment to monitor scrollability adoption.</p>
+      <p>The secondary challenge was scale. Any structural change to the Room List touched ~100 components. A single large experiment would make it nearly impossible to isolate what drove results, or what caused harm.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PROCESS
+  ════════════════════════════════════ -->
+  <div class="hc-chapter" id="process">
+    <div>
+      <p class="hc-chapter-label">02</p>
+      <p class="hc-chapter-title">Process</p>
+    </div>
+  </div>
+
+  <!-- Approach -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Approach</h1>
+    </div>
+    <div class="hc-phases">
+      <div class="hc-phase">
+        <span class="hc-phase-num">01</span>
+        <span class="hc-phase-title">Foundational work</span>
+        <span class="hc-phase-desc">Audit, ownership mapping, blockouts, IA experiments</span>
+      </div>
+      <div class="hc-phase">
+        <span class="hc-phase-num">02</span>
+        <span class="hc-phase-title">MVP experiment</span>
+        <span class="hc-phase-desc">The core horizontal scrolling hypothesis, as clean as possible</span>
+      </div>
+      <div class="hc-phase">
+        <span class="hc-phase-num">03</span>
+        <span class="hc-phase-title">Follow-up iterations</span>
+        <span class="hc-phase-desc">Edge cases, complex components, platform gaps deferred</span>
+      </div>
+    </div>
+    <div class="hc-img-placeholder">
+      [Image: Roadmap diagram — Base → Preparation stories → First experiment → Upcoming experiments]
+    </div>
+    <div class="hc-prose">
+      <p>This structure reduced risk by avoiding simultaneous variable changes and gave the team a framework for deferring complexity rather than letting it block progress. It also meant that even if the core HC hypothesis hadn't worked, the foundational experiments would have still delivered measurable improvements to Base.</p>
+    </div>
+  </section>
+
+  <!-- Laying the Groundwork -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Laying the Groundwork</h1>
+    </div>
+
+    <!-- Component Audit -->
+    <div class="hc-subsection">
+      <p class="hc-subsection-title">Component Audit</p>
+      <div class="hc-prose">
+        <p>I conducted a comprehensive audit of ~100 components across Room List and Room Details. The key question was whether each component was <strong>room-level</strong> (e.g. "Free cot available") or <strong>rate-level</strong> (e.g. "Free cancellation") — a distinction that mattered because Horizontal Comparison groups multiple rates under a single room card.</p>
+        <p>Mapping ownership early allowed me to communicate upcoming changes before decisions were locked, discuss solutions to potential blockers, and work with teams to adapt their in-progress designs to the new flow.</p>
+      </div>
+    </div>
+
+    <div class="hc-img-placeholder">
+      [Image: Component audit screenshot]
+    </div>
+
+    <!-- Block-out Experiments -->
+    <div class="hc-subsection">
+      <p class="hc-subsection-title">Block-out Experiments</p>
+      <div class="hc-prose">
+        <p>Block-out experiments test the removal of an existing feature rather than the introduction of something new. They reveal the real value a component is driving — often invisible until you take it away — and are critical for informing both design and business strategy.</p>
+        <p>Before redesigning every component, I ran blockouts across the Room List to assess which elements were worth keeping. This resulted in removing <strong>12+ components</strong> with no meaningful impact on conversion or user behaviour, including the Secret deal banner, "Tip: this room is bigger than most", Lowest price badge, Just booked, Booked before, and Thai pass, among others.</p>
+        <p>One component that could not be removed was <strong>Jackpot</strong>. Data showed removing it would cost <strong>508 ±219 PNC</strong>. I redesigned it as a compact list item, preserving conversion without occupying disproportionate space in the new Rate Card.</p>
+      </div>
+    </div>
+
+    <!-- IA Experiments -->
+    <div class="hc-subsection">
+      <p class="hc-subsection-title">IA Experiments</p>
+      <div class="hc-prose">
+        <p>I identified a long-standing IA debt: room and rate information lacked a clear order across both platforms, and Android and iOS had diverged over time. I defined experiments to establish a consistent hierarchy and align the two platforms before introducing Horizontal Comparison.</p>
+      </div>
+      <div class="hc-stat-row" style="margin-top: 24px;">
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">Android</span>
+          <span class="hc-stat">+629 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±763 PNC</span></span>
+        </div>
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">iOS</span>
+          <span class="hc-stat">+375 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±244 PNC</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-img-placeholder">
+      [Image: IA before/after — Room Card hierarchy on Android and iOS]
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════
+       EXECUTION
+  ════════════════════════════════════ -->
+  <div class="hc-chapter" id="execution">
+    <div>
+      <p class="hc-chapter-label">03</p>
+      <p class="hc-chapter-title">Execution</p>
+    </div>
+  </div>
+
+  <!-- Cross-Team Alignment -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Cross-Team Alignment</h1>
+      <!-- TODO: Rework intro — convey the complexity of aligning six teams with competing priorities across a major redesign -->
+    </div>
+    <div class="hc-prose">
+      <p>I organized an initial presentation to brief Families, Pricing, Genius, Genius VIP, and Booking Policies on the upcoming changes, then followed up directly with individual designers and PMs. Two alignment cases were particularly consequential:</p>
+    </div>
+
+    <div style="width: 100%; max-width: 680px;">
+      <div class="hc-alignment-case">
+        <p class="hc-alignment-case-title">Genius Free Room Upgrade</p>
+        <p>Adapting this component increased user confusion, developers flagged high complexity, and conversion data showed negative impact. With those three signals aligned, we made the call to exclude it from the first iteration and coordinate partner communication before sunsetting it.</p>
+      </div>
+      <div class="hc-alignment-case">
+        <p class="hc-alignment-case-title">Room Details restructuring</p>
+        <p>Horizontal Comparison introduced a single Room Details screen per room rather than per room–rate combination. Genius agreed to remove their banner, as the information remained accessible in the Rate Carousel. Booking Policies merged their content block into the Rate Carousel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVP Experiment -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Horizontal Comparison: MVP Experiment</h1>
+    </div>
+    <div class="hc-prose">
+      <p>With the foundation in place, the core Horizontal Comparison experiment launched with a clean starting point.</p>
+      <p>The primary metric was <strong>booked non-cheapest rate</strong>. Our hypothesis was that users were defaulting to the cheapest option not out of preference, but because the existing design made it hard to understand the value of more expensive alternatives. A clearer, side-by-side rate view would lead to more informed selections.</p>
+      <p>The experiment full-oned on both Android and iOS. <em>(Primary metric result to be added.)</em></p>
+      <p>Tracking showed over <strong>75% of Android users scrolled horizontally</strong>, addressing the discoverability concern surfaced in research.</p>
+    </div>
+    <div class="hc-img-placeholder">
+      [Image: HC before/after design — Room Card with rate carousel on Android and iOS]
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       IMPACT
+  ════════════════════════════════════ -->
+  <div class="hc-chapter" id="impact">
+    <div>
+      <p class="hc-chapter-label">04</p>
+      <p class="hc-chapter-title">Impact</p>
+    </div>
+  </div>
+
+  <section class="slide" style="align-items: center;">
+    <div class="hc-stat-row" style="justify-content: center; gap: 64px; flex-wrap: wrap;">
+      <div class="hc-stat-block" style="align-items: center;">
+        <span class="hc-stat-label">Booked non-cheapest rate</span>
+        <span class="hc-stat" style="font-size: 56px;">[X]%</span>
+        <span style="font-size: 14px; color: var(--text-muted);">HC experiment · Android + iOS</span>
+      </div>
+      <div class="hc-stat-block" style="align-items: center;">
+        <span class="hc-stat-label">PNC · Android IA</span>
+        <span class="hc-stat" style="font-size: 56px;">+629</span>
+        <span style="font-size: 14px; color: var(--text-muted);">±763</span>
+      </div>
+      <div class="hc-stat-block" style="align-items: center;">
+        <span class="hc-stat-label">PNC · iOS IA</span>
+        <span class="hc-stat" style="font-size: 56px;">+375</span>
+        <span style="font-size: 14px; color: var(--text-muted);">±244</span>
+      </div>
+      <div class="hc-stat-block" style="align-items: center;">
+        <span class="hc-stat-label">Components removed</span>
+        <span class="hc-stat" style="font-size: 56px;">12+</span>
+        <span style="font-size: 14px; color: var(--text-muted);">via blockout experiments</span>
+      </div>
+    </div>
+
+    <div class="hc-prose" style="text-align: center; margin-top: 2em;">
+      <p>Horizontal scrollability — a known discovery risk from research — showed strong adoption, with <strong>75%+ of Android users scrolling</strong> in the first iteration.</p>
+    </div>
+  </section>
+
+  <!-- Parallel Strategies -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Parallel Strategies: How Two Teams Approached the Same Problem</h1>
+    </div>
+    <div class="hc-prose">
+      <p>The phased roadmap turned out to be one of the most important structural decisions of the project — not because it made individual experiments more likely to succeed, but because it made failure easier to learn from. The roadmap wasn't a guarantee. It was a way of staying in control of a project that had every reason to spiral.</p>
+      <p>Having two teams working on the same hypothesis across different platforms allowed for a natural strategic split: Mobile Web could move fast and test HC as a full experience, while Apps could take a more measured approach and collect more isolated learnings. Both approaches have value, as speed of validation and clarity of signal serve different purposes. Throughout the process, both teams stayed in close collaboration, sharing findings and working toward the same goal: helping users find and select the room that best fits their needs.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       REFLECTION
+  ════════════════════════════════════ -->
+  <div class="hc-chapter" id="reflection">
+    <div>
+      <p class="hc-chapter-label">05</p>
+      <p class="hc-chapter-title">Reflection</p>
+    </div>
+  </div>
+
+  <!-- What I'd Tackle Next -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>What I'd Tackle Next</h1>
+    </div>
+    <div class="hc-prose">
+      <p>Horizontal Comparison changed the relationship between Room Details and rate information. With HC, Room Details became rate-agnostic, so rate-specific content that previously lived there now needs a clear home. The next logical step is a cross-platform experiment consolidating rate information into a single, structured location.</p>
+      <p>A parallel priority would be resolving UI inconsistencies across the Room List. Several teams (Genius, B.Home, T. Policies, SEGA) had implemented their own components with differing icon sizes and spacing. Aligning these before the next major iteration would reduce visual noise and improve overall coherence.</p>
+    </div>
+    <div class="hc-img-placeholder">
+      [Image: UI inconsistencies before/after]
+    </div>
+  </section>
+
+  <!-- Reflection -->
+  <section class="slide">
+    <div class="header mw-760">
+      <h1>Reflection</h1>
+    </div>
+    <div class="hc-prose">
+      <p>This project was the most complex stakeholder environment I'd worked in at Booking.com: six teams, two platforms, ~100 components, and a hypothesis that had already struggled to ship elsewhere.</p>
+      <p>The decision to audit and de-risk before experimenting came from recognizing that a failed experiment on a cluttered baseline would tell us almost nothing. The sequencing mattered as much as the design.</p>
+      <p>If I were doing it again, I'd push earlier for a clearer answer on the Families use case. Excluding traffic solves a short-term problem but creates a gap that compounds over iterations.</p>
+      <p>It's easy to underestimate foundational work. IA experiments were initially seen as debt cleanup, and the apps adaptation was regularly referred to in meetings as a port. I was asked more than once whether I was simply copying the web design as closely as possible. Both ended up producing the most concrete results. This project reinforced my belief that foundational decisions, even unglamorous ones, are often where the real impact lives.</p>
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<script>
+  // ── Sidebar nav scroll observer ──
+  const nav = document.getElementById('caseNav');
+  const sections = document.querySelectorAll('[id]');
+  const links = document.querySelectorAll('.case-nav-link');
+
+  // Show nav after scrolling past cover
+  const cover = document.querySelector('.hc-cover');
+  const coverObserver = new IntersectionObserver(([e]) => {
+    nav.classList.toggle('is-visible', !e.isIntersecting);
+  }, { threshold: 0.1 });
+  coverObserver.observe(cover);
+
+  // Active link on scroll
+  const chapters = document.querySelectorAll('.hc-chapter');
+  const chapterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => {
+          l.classList.toggle('case-nav-link--active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  chapters.forEach(c => chapterObserver.observe(c));
+
+  // Smooth scroll
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Scroll animation observer for slides
+  const slides = document.querySelectorAll('.slide');
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  slides.forEach(slide => slideObserver.observe(slide));
+</script>
+
+</body>
+</html>

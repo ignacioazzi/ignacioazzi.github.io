@@ -1,0 +1,146 @@
+<style>
+  .pipeline-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .pipeline-wrap.vertical {
+    flex-direction: column;
+  }
+
+  .pipeline-wrap.horizontal {
+    flex-direction: row;
+  }
+
+  .stage {
+    padding: 18px 40px;
+    border-radius: 12px;
+    background: #c8d3e8;
+    color: #1a2240;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 220px;
+    text-align: center;
+  }
+
+  .stage.active {
+    background: #1a2e6e;
+    color: #ffffff;
+  }
+
+  .connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pipeline-wrap.vertical .connector {
+    flex-direction: column;
+    height: 40px;
+    width: 2px;
+  }
+
+  .pipeline-wrap.horizontal .connector {
+    flex-direction: row;
+    width: 40px;
+    height: 2px;
+  }
+
+  .dot {
+    background: #5a6a99;
+    border-radius: 50%;
+  }
+
+  .pipeline-wrap.vertical .dot {
+    width: 3px;
+    height: 3px;
+    margin: 3px 0;
+  }
+
+  .pipeline-wrap.horizontal .dot {
+    height: 3px;
+    width: 3px;
+    margin: 0 3px;
+  }
+
+  .toggle-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  button.dir-btn {
+    font-size: 13px;
+    padding: 6px 18px;
+    border-radius: 8px;
+    border: 0.5px solid #ccc;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  button.dir-btn.active {
+    background: #eee;
+    color: #111;
+    font-weight: 500;
+  }
+
+  button.dir-btn:hover {
+    background: #eee;
+  }
+</style>
+
+<div class="toggle-wrap">
+  <button class="dir-btn active" id="btn-vertical" onclick="setDir('vertical')">Vertical</button>
+  <button class="dir-btn" id="btn-horizontal" onclick="setDir('horizontal')">Horizontal</button>
+</div>
+
+<div class="pipeline-wrap vertical" id="pipeline">
+
+  <div class="stage">Base</div>
+
+  <div class="connector">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="stage">Preparation stories</div>
+
+  <div class="connector">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="stage active">First experiment</div>
+
+  <div class="connector">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="stage">Upcoming experiments</div>
+
+</div>
+
+<script>
+  function setDir(dir) {
+    const pipeline = document.getElementById('pipeline');
+    pipeline.className = 'pipeline-wrap ' + dir;
+    document.getElementById('btn-vertical').className = 'dir-btn' + (dir === 'vertical' ? ' active' : '');
+    document.getElementById('btn-horizontal').className = 'dir-btn' + (dir === 'horizontal' ? ' active' : '');
+  }
+</script>

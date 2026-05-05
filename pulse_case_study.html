@@ -42,7 +42,7 @@
       </div>
       <div class="cover-divider"></div>
       <div class="cover-meta-item">
-        <span class="cover-meta-label">Scale</span>
+        <span class="cover-meta-label">Audience</span>
         <span class="cover-meta-value">1.25M+ accommodation partners, 228 countries</span>
       </div>
     </div>
@@ -51,8 +51,15 @@
   <!-- ── CONTEXT ── -->
   <section class="slide slide-summary" id="context">
     <div class="header header--left mw-760">
+      <p class="label">Context</p>
+      <h1>What is Pulse?</h1>
+      <p>Pulse is Booking.com's mobile app for accommodation partners, available in 43 languages on Android and iOS. At the time of this project, it served over 1.25 million active partners who used it to manage reservations, respond to guests, and update availability and rates on the go. </p> <p>For many of them, especially smaller property owners, Pulse is their main interface with the platform.</p>
+      <p>The Availability tab was widely regarded as the most complex section of the app.</p>
+    </div>
+<hr>
+    <div class="header header--left mw-760">
       <h1>Summary</h1>
-    
+
     <div class="summary-grid mw-760">
       <div class="summary-row">
         <div class="summary-label">Problem</div>
@@ -64,19 +71,16 @@
       </div>
       <div class="summary-row">
         <div class="summary-label">Impact</div>
-        <p><strong>71% partner satisfaction</strong> (up from 65% baseline). </p><p><strong>75.7% Beta retention</strong> across ~3,900 partners.</p>
-        <p><strong>No negative impact on support tickets, bookings, or app stability.</strong></p>
-      </div>
+     
+      <ul>
+        <li><b>71% partner satisfaction</b>, up from 65% baseline.</li>
+        <li><b>75.7% Beta retention</b> across ~3,900 partners.</li>
+        <li><b>No negative impact</b> on support tickets, bookings, or app stability.</li>
+        <li><b>Design direction validated at scale through A/B testing and rolled out to all segments on both platforms.</b></li>
     </div>
     </div>
+  </div>
 <hr>
-    <div class="header header--left mw-760">
-      <p class="label">Context</p>
-      <h1>What is Pulse?</h1>
-      <p>Pulse is Booking.com's mobile app for accommodation partners, available in 43 languages on Android and iOS. At the time of this project, it served over 1.25 million active partners who used it to manage reservations, respond to guests, and update availability and rates on the go. </p> <p>For many of them, especially smaller property owners , Pulse is their main interface with the platform.</p>
-      <p>The Availability tab was widely regarded as the most complex section of the app.</p>
-    </div>
-
     <!-- <div class="header">
       <h1>The process</h1>
       <p>From problem identification to full rollout</p>
@@ -278,12 +282,24 @@
 
   <!-- ── DESIGN SPRINT ── -->
   <section class="slide text_img" id="approach">
-    <div class="header header--left mw-760">
+    <div class="header  mw-760">
       <h1>Getting the right people in the room to define the direction.</h1>
+    </div>
+    <div class="content">
+      <div class="explanation mw-760">
       <p>The Availability Calendar problem was complex enough that it needed alignment and feedback from people with different backgrounds. With that in mind, I organized a two-day design sprint and invited researchers, PMs, and designers from across Pulse and Extranet teams. </p>
       <p>Day 1 focused on research sharing and problem alignment. Day 2 focused on solution drafting, feedback, and voting.</p>
       <p>My concept proposed a hierarchy based on progressive disclosure (Property > Room overview > Calendar), with color-coded cells replacing dots and guidance messages explaining room status. It was the most voted concept and became the blueprint for all subsequent iterations.</p>
+      <p>Other directions had been proposed and drafted by teammates: a Filter-based
+        approach and a Tab-based navigation. Unfortunately, both approaches had limitations. Filters require
+        active input before partners can see anything useful, which contradicted the
+        goal of surfacing room status immediately. Tabs didn't scale: a property with
+        15+ room types would produce an unnavigable tab bar on mobile.</p>
     </div>
+    <div class="approach-visual"> <img class="" src="img/design_sprint.png" alt=""><p class="caption">Our Creative Cave in Amsterdam for 2 days</p></div>  
+    
+  </div>
+  </div>
   
   </section>
 
@@ -293,34 +309,21 @@
       <h1>Before and after</h1>
       <p>From flat list with dots to structured hierarchy with clear status</p>
     </div>
-    <div class="comparison-layout">
-      <div class="comparison-side">
+    <div class="ba-row">
+      <div class="ba-group">
         <div class="comparison-label comparison-label--before">Before</div>
-        <div class="comparison-phones row-2">
-       
-        <img class="phone w360" src="img/pulse/old_cal_1.png" alt="">
-        <div class="comparison-arrow">→</div>
-        <img class="phone w360" src="img/pulse/old_cal_2.png" alt="">
-        <div class="seg-grid-header">Property Selector</div>
-        <div></div>
-        <div class="seg-grid-header">Room Selector</div>
+        <div class="ba-phones">
+          <img class="phone phone-lg" src="img/pulse/old_cal_1.png" alt="">
+          <img class="phone phone-lg" src="img/pulse/old_cal_2.png" alt="">
+        </div>
       </div>
-      </div>
-   
-      <div class="comparison-side">
+      <div class="ba-divider">→</div>
+      <div class="ba-group">
         <div class="comparison-label comparison-label--after">After</div>
-        <div class="comparison-phones row-3">
-        
-         <img class="phone w360" src="img/pulse/new_cal_1.png" alt="">
-          <div class="comparison-arrow">→</div>
-          <img class="phone w360" src="img/pulse/new_cal_2.png" alt="">
-          <div class="comparison-arrow">→</div>
-          <img class="phone w360" src="img/pulse/new_cal_3.png" alt="">
-          <div class="seg-grid-header">Property Selector</div>
-          <div></div>
-          <div class="seg-grid-header">Room Selector</div>
-          <div></div>
-          <div class="seg-grid-header">Monthly Calendar</div>
+        <div class="ba-phones">
+          <img class="phone phone-lg" src="img/pulse/new_cal_1.png" alt="">
+          <img class="phone phone-lg" src="img/pulse/new_cal_2.png" alt="">
+          <img class="phone phone-lg" src="img/pulse/new_cal_3.png" alt="">
         </div>
       </div>
     </div>
@@ -458,7 +461,7 @@
       <td><strong>Reassurance</strong></td>
       <td>
         <div class="guidance-inline">Ambiguous: Unclear if white or empty space means "available."</div>
-      </td>perf
+      </td>
       <td>
         <div class="guidance-inline">Unambiguous: Green cells confirm rooms are bookable, aligning with desktop.</div>
       </td>
@@ -529,13 +532,33 @@
     </table>
   </section>
 
+  <section class="slide" id="testing">
+    <div class="header header--left mw-760">
+  <h1>Property Switcher: from recurring discussion to testable hypothesis</h1>
+  
+  <p>Designers across Pulse had repeatedly flagged the same need: multi-property partners required a way to switch context
+    between properties without losing their place. No team had the right conditions to test it at scale.</p>
+  
+  <p>I included the Switcher in the calendar redesign. It fit the core principle I was working from: reduce the number of
+    decisions partners need to make per screen by surfacing one property at a time. The AV Calendar gave us a contained
+    environment with a relevant audience and a clean rollback path.</p>
+  
+  <p>I aligned the other Pulse designers, got PM and engineering buy-in, and shipped it as part of the redesign. It was
+    the first time the concept had been tested with a meaningful sample. What had been a shared intuition became evidence.
+    </p>
+  </div>
+  </section>
   <!-- ── VALIDATION ── -->
   <section class="slide" id="testing">
     <div class="header header--left mw-760">
       <p class="label">Process · Validation</p>
-      <h1>From labs to partner visits — testing across 7 months.</h1>
+      <h1>From Labs to partner visits, testing across 7 months.</h1>
       <p>Three rounds of Design Labs and Open Labs ran between January and March 2019. Open Labs were internal sessions with Customer Service agents, who had frontline knowledge of partner pain points. By March, the core concept was stable.</p>
-      <p>In May, I created HTML prototypes for remote usability testing. Working with our UX Researcher, I defined the research questions, interviewed partners directly, and co-facilitated six sessions. Partners preferred colored cells over dots, understood the hierarchy, and valued the guidance messages.</p>
+      <p>In May, I created prototypes for remote usability testing. Prototypes were built in HTML/JS rather than Figma to support real interaction. A lightweight JS file acted as a shared
+      data layer, so any change a partner made to room availability or rate prices would instantly reflect across all screens,
+      keeping the experience consistent end to end.
+         <p>
+         Working with our UX Researcher, I defined the research questions, interviewed partners directly, and co-facilitated six sessions. Partners preferred colored cells over dots, understood the hierarchy, and valued the guidance messages.</p>
       <p>In October, eight partners were visited in Amsterdam. One key tension surfaced: partners couldn't distinguish "fully booked" from "closed." This led to reintroducing a third color (yellow for "sold out") alongside green and red.</p>
     </div>
   </section>
@@ -572,23 +595,26 @@
 
   <!-- ── EXPERIMENTATION STRATEGY ── -->
   <section class="slide visual-slide wide center">
-    <div class="header header-center">
+    <div class="header header--left">
       <p class="label">Experimentation</p>
       <h1>Phased rollout by partner segment.</h1>
-      <p>Segmented by partner type to manage risk</p>
+      <!-- <p>Segmented by partner type to manage risk</p> -->
+      <p>The rollout was sequenced by complexity, not speed — each phase targeting a more operationally demanding partner segment than the last. This was a deliberate risk management choice: by the time the full flow change reached the most complex setups, the concept had already proven stable in simpler environments.</p>
+
+      <p>Before committing to a full A/B test, a Beta program gave the highest-complexity segment a low-pressure entry point — opt-in, with continuous feedback and the freedom to leave at any time. The retention rate from that Beta became the qualitative signal that justified scaling to a full experiment across both platforms.</p>
     </div>
     <div class="phases-layout mw-960">
       <div class="phase-card">
         <div class="phase-number">Phase 1</div>
         <div class="phase-title">1 room type</div>
         <div class="phase-desc">Calendar UI changes only. Colored cells, guidance messages. No navigation change.</div>
-        <div class="phase-result">Full-on</div>
+        <div class="phase-result">Rolled out to all</div>
       </div>
       <div class="phase-card">
         <div class="phase-number">Phase 2</div>
         <div class="phase-title">Multiple rooms</div>
         <div class="phase-desc">Full flow change. Room Selector with Calendar Overview + all UI improvements.</div>
-        <div class="phase-result">Full-on</div>
+        <div class="phase-result">Rolled out to all</div>
       </div>
       <div class="phase-card">
         <div class="phase-number">Phase 3</div>
@@ -598,7 +624,7 @@
       </div>
       <div class="phase-card">
         <div class="phase-number">Phase 4</div>
-        <div class="phase-title">A/B test in both platforms → Full-on.</div>
+        <div class="phase-title">A/B test in both platforms → Rolled out to all.</div>
         <div class="phase-desc">Both platforms. All segments. Design direction validated at scale.</div>
         <div class="phase-result">71% satisfaction</div>
       </div>
