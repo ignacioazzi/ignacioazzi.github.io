@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="pulse_case_study.css">
   <link rel="stylesheet" href="hc_booking_rate_cards_v3.css">
   <link rel="stylesheet" href="room_cards_before_IA.css">
+  <link rel="stylesheet" href="five_solutions.css">
   <style>
     /* ── HC-specific palette ── */
     :root {
@@ -24,7 +26,14 @@
       width: 100vw;
       /* border-radius: 16px; */
       aspect-ratio: 2 / 1.1;
-}
+    }
+
+    .slide_container {
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
 
     /* ── Cover ── */
     .hc-cover {
@@ -38,28 +47,28 @@
 
     .hc-cover h1 {
       font-size: var(--fs-display);
-      color: rgba(255,255,255,0.95);
+      color: rgba(255, 255, 255, 0.95);
       max-width: 760px;
     }
 
     .hc-cover .slide-subtitle {
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .hc-cover .label {
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .hc-cover .cover-meta-label {
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .hc-cover .cover-meta-value {
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hc-cover .cover-divider {
-      background: rgba(255,255,255,0.18);
+      background: rgba(255, 255, 255, 0.18);
     }
 
     /* ── Chapter dividers ── */
@@ -77,7 +86,7 @@
       font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .hc-chapter-title {
@@ -92,7 +101,7 @@
     }
 
     .slide-alt {
-      background: #f5f5fb!important;
+      background: #f5f5fb !important;
     }
 
     .slide:nth-child(even) {
@@ -100,8 +109,9 @@
     }
 
     .case-nav.is-visible {
-      opacity: 1!important
+      opacity: 1 !important
     }
+
     /* Using Pulse summary-grid classes instead */
 
     /* ── Stat highlights ── */
@@ -149,23 +159,23 @@
     }
 
     .hc-phase {
-     display: flex;
-     flex-direction: column;
-     padding: 1.5em;
-     background: #f5f5fb;
-     /* margin: 1em; */
-     border-radius: 16px;
-     counter-increment: phase;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5em;
+      background: #f5f5fb;
+      /* margin: 1em; */
+      border-radius: 16px;
+      counter-increment: phase;
     }
 
     .hc-phase::before {
-     /* content: counter(phase) "."; */
-     font-size: var(--fs-sm);
-     font-weight: 700;
-     color: var(--hc-primary);
-     /* letter-spacing: 0.05em; */
-     /* margin-bottom: 4px; */
-     display: inline-block;
+      /* content: counter(phase) "."; */
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      color: var(--hc-primary);
+      /* letter-spacing: 0.05em; */
+      /* margin-bottom: 4px; */
+      display: inline-block;
     }
 
     .hc-phase:last-child {
@@ -289,62 +299,220 @@
       color: var(--hc-primary) !important;
     }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  /* width: 1600px; */
-  margin: 0 auto;
-  /* align-items: start; */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      /* width: 1600px; */
+      margin: 0 auto;
+      /* align-items: start; */
+    }
+
+    .grid-container .card {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease var(--reveal-delay, 0s), transform 0.6s ease var(--reveal-delay, 0s);
+      will-change: opacity, transform;
+      visibility: hidden;
+    }
+
+    .grid-container .card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+
+    .room_info:before,
+    .rate_info:before,
+    .room_info:after,
+    .rate_info:after {
+      display: none
+    }
+
+    .top-row+div {
+      padding-right: 74px;
+    }
+
+    @media (max-width: 1200px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .img-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #f0f0f5;
+      border-radius: 12px;
+      content: "Image placeholder";
+    }
+
+    .screenshot {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    /* Diagram */
+    .hc-diagram .wrap {display: grid;gap: 80px;grid-template-columns: 1fr 1px 1fr;/* padding: 24px 16px; */justify-content: center;/* padding: 12px 0px; */padding: 2em 0;/* transform-origin: top; *//* transform: scale(1.1); */align-items: flex-start;}
+
+    .hc-diagram .col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: stretch;
+      flex: 1;
+      max-width: 320px;
+      position: relative;
+    }
+
+    .separator {
+      width: 1px;
+    MARGIN:  0%;
+    background: #00000021;
+    content: " ";
+    min-height: 90%;
 }
 
-.room_info:before, .rate_info:before, .room_info:after, .rate_info:after {
-  display:none
-}
+    .hc-diagram .col-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+      color: var(--hc-dark);
+    }
 
-.top-row + div {
-  padding-right: 74px;
-}
+    .hc-diagram .col-sub {
+      font-size: 14px;
+      /* color: var(--color-text-secondary); */
+      margin-bottom: 2em;
+      line-height: 1.4;
+    }
 
-@media (max-width: 1200px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    .hc-diagram .room-card {
+      border: 1px solid #c8c4d4;
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .hc-diagram .room-label-a,
+    .hc-diagram .room-label-b {
+      font-size: 14px;
+      font-weight: 500;
+      color: #3c3580;
+      background: #d4d0f5;
+      border-radius: 6px;
+      padding: 12px 10px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .hc-diagram .room-label-b {
+      color: #065040;
+      background: #a0e8cc;
+
+    }
+
+    .hc-diagram .rate-card {
+      border: 2px dashed #d4a010;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #7a4e00;
+      background: #fef0c0;
+      text-align: center;
+      display: block;
+    }
+
+    .hc-diagram .rate-cards-row {
+      display: block;
+      gap: 5px;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      overflow-x: scroll;
+    }
+
+    .hc-diagram .rate-card-small {
+      border: 2px dashed #d4a010;
+    border-radius: 8px;
+    padding: 16px 8px;
+    font-size: 13px;
+    color: #7a4e00;
+    background: #fef0c0;
+    text-align: center;
+    display: inline-block;
+    width: 43%;
+    }
+
+    .hc-diagram .cta {
+      background: #a8bef8;
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0f1e80;
+      text-align: center;
+    }
+
+    .hc-diagram .arrow-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* padding-top: 80px; */
+      flex-shrink: 0;
+      display: none;
+    }
+
+    .rate-card-small .cta {
+      margin-top: 8px;
+      display: none
+    }
+  .annotation-arrow-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: -148px;
+    top: -2px;
+    white-space: nowrap;
+    pointer-events: none;
   }
-}
 
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
+  .annotation-arrow-rates {
+    right: -176px;
+    top: 50%;
+    transform: translateY(-50%);
   }
-}
 
-.img-placeholder{
-    width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: #f0f0f5;
-  border-radius: 12px;
-  content: "Image placeholder";
-}
-
-.screenshot {
- box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-}
-
-/* Rate cards */
-
+  .annotation-arrow-right span {
+    font-size: 11px;
+    font-weight: 500;
+    color: #E05C2E;
+    font-family: inherit;
+  }
   </style>
 </head>
+
 <body class="hc">
 
-<!-- ── Left Nav ── -->
-<nav class="case-nav" id="caseNav">
-  <a class="case-nav-link" href="#background">Background</a>
-  <a class="case-nav-link" href="#process">Process</a>
-  <a class="case-nav-link" href="#execution">Execution</a>
-  <a class="case-nav-link" href="#impact">Impact</a>
-  <a class="case-nav-link" href="#reflection">Reflection</a>
-</nav>
+  <!-- ── Left Nav ── -->
+  <nav class="case-nav" id="caseNav">
+    <a class="case-nav-link" href="#background">Background</a>
+    <a class="case-nav-link" href="#process">Process</a>
+    <a class="case-nav-link" href="#execution">Execution</a>
+    <a class="case-nav-link" href="#impact">Impact</a>
+    <a class="case-nav-link" href="#reflection">Reflection</a>
+  </nav>
 
 
   <!-- ── COVER ── -->
@@ -375,721 +543,723 @@
         <span class="cover-meta-value">2024</span>
       </div>
     </div>
+    </div>
   </section>
 
-  <section></section>
+  <section>
+    </div>
+  </section>
   <!-- ── SUMMARY ── -->
   <section class="slide" ">
-    <div class="summary-grid mw-760">
-      <h1 class="tal">Summary</h1>
-      <div class="summary-row">
-        <div class="summary-label">Problem</div>
-        <p>Room Selection on Apps presented every room–rate combination as a separate card, creating visual repetition, poor comparability, and choice overload. The Room List had grown to ~100 components across 6+ teams with no clear information architecture governing it.</p>
-      </div>
+    <div class=" summary-grid mw-760">
+    <h1 class="tal">Summary</h1>
+    <div class="summary-row">
+      <div class="summary-label">Problem</div>
+      <p>Room Selection on Apps presented every room–rate combination as a separate card, creating visual repetition,
+        poor comparability, and choice overload. The Room List had grown to ~100 components across 6+ teams with no
+        clear information architecture governing it.</p>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-label">Approach</div>
-        <p>After a track-wide H1 Sprint converging on HC as the strategic direction, I took ownership of adapting and shipping it on Android and iOS across three phases: Foundation work, MVP experiment, and future iterations.</p>
-      </div>
+    <div class="summary-row">
+      <div class="summary-label">Approach</div>
+      <p>After a track-wide H1 Sprint converging on HC as the strategic direction, I took ownership of adapting and
+        shipping it on Android and iOS across three phases: Foundation work, MVP experiment, and future iterations.</p>
+    </div>
 
-      <div class="summary-row">
-        <div class="summary-label">Results</div>
-        <ul>
-          <li>IA experiments full-oned: <strong>+629 ±763 PNC Android</strong>, <strong>+375 ±244 PNC iOS</strong></li>
-          <li><strong>12+ low-value components</strong> removed via blockout experiments</li>
-          <li>HC full-oned on Android and iOS: <strong>[X]% increase in booked non-cheapest rate</strong></li>
-          <li><strong>75%+ of Android users</strong> scrolled horizontally, validating discoverability</li>
-        </ul>
-      </div>
+    <div class="summary-row">
+      <div class="summary-label">Results</div>
+      <ul>
 
+        <li>HC full-oned on Android and iOS: <strong>+4.54% increase in booked non-cheapest rate on Android, +2.91% on iOS</strong></li>
+        <li>IA experiments full-oned: <strong>+629 ±763 PNC Android</strong>, <strong>+375 ±244 PNC iOS</strong></li>
+        <li><strong>12+ low-value components</strong> removed via blockout experiments</li>
+        <li><strong>75%+ of Android users</strong> scrolled horizontally, validating discoverability</li>
+      </ul>
+    </div>
+
+    </div>
     </div>
   </section>
-
-  <!-- ════════════════════════════════════
-       BACKGROUND
-  ════════════════════════════════════ -->
-  <!-- <div class="hc-chapter" id="background">
-    <div>
-      <p class="hc-chapter-label">01</p>
-      <p class="hc-chapter-title">Background</p>
-    </div>
-  </div> -->
-
-  
-
 
 
   <!-- Problem -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Problem</h1>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Problem</h1>
+      </div>
+      <div>
+        <p>Room Selection suffered from two distinct problems:</p>
+        <p><b>The findability problem:</b> Properties offered too many room-rate combinations, each presented as a
+          separate vertical card. With some properties offering over 16 options, most users never explored beyond the
+          first few.</p>
+        <p><b>The comparability problem:</b> Many rooms shared the same amenities and size, giving users no reliable way
+          to understand what differentiated one rate from another. When users could not find meaningful differences
+          between the cheapest option and higher-value rooms, they settled for the first one they saw. Roughly 65% of
+          users defaulted to booking the cheapest option. In post-checkout research, around 30% of users said they
+          believed they had booked a free cancellation rate when they had not.</p>
+      </div>
+<br><br>
+      <h2 class="tac mw-760">Each room-rate combination as a separate card, showing choice overload</h2><br>
     </div>
-    <div class="hc-prose">
-      <p>Room Selection suffered from two distinct problems:</p>
-      <p><b>The findability problem:</b> Properties offered too many room-rate combinations, each presented as a separate vertical card. With some properties offering over 16 options, most users never explored beyond the first few.</p>
-      <p><b>The comparability problem:</b> Many rooms shared the same amenities and size, giving users no reliable way to understand what differentiated one rate from another. When users could not find meaningful differences between the cheapest option and higher-value rooms, they settled for the first one they saw. Roughly 65% of users defaulted to booking the cheapest option. In post-checkout research, around 30% of users said they believed they had booked a free cancellation rate when they had not.</p>
-      <p>During H1 we experimented with 5 design solutions. Horizontal Rate Scrolling was the most successful.</p>
-    </div>
-    <hr class="divider">
-    <h2 class="tac mw-760">Each room-rate combination as a separate card, showing choice overload</h2>    
-      <div class="grid-container">
-        <!-- Card 1 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
-          </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 23:59 on 8 Sep 2022</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast available, pay at the property</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
-          </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
-          </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 649</span>
-              <span class="price-new">€ 356</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
-          </div>
-      
-          <button class="cta-btn">Select</button>
+    <div class="grid-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
         </div>
-      
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 23:59 on 8 Sep 2022</span>
           </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 23:59 on 12 Sep 2022</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast available, pay at the property</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
-          </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
-          </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 683</span>
-              <span class="price-new">€ 378</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
-          </div>
-      
-          <button class="cta-btn">Select</button>
         </div>
-      
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
+
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
           </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 23:59 on 14 Sep 2022</span>
-            </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
           </div>
-      
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast included in the price</span>
-            </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
           </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast available, pay at the property</span>
           </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
-          </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 617</span>
-              <span class="price-new">€ 400</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
-          </div>
-      
-          <button class="cta-btn">Select</button>
         </div>
-      
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
           </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 13:59 on 16 Sep 2022</span>
-            </div>
-          </div>
-      
-          <div class="rate_info">
-            <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
-          </div>
-      
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast included in the price</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
-          </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
-          </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 770</span>
-              <span class="price-new">€ 499</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
-          </div>
-      
-          <button class="cta-btn">Select</button>
         </div>
-      
-        <!-- Card 5 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 649</span>
+            <span class="price-new">€ 356</span>
           </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 23:59 on 12 Sep 2022</span>
-            </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
+        </div>
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 23:59 on 12 Sep 2022</span>
           </div>
-      
-          <div class="rate_info">
-            <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
+        </div>
+
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
           </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast available, pay at the property</span>
+          </div>
+        </div>
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 683</span>
+            <span class="price-new">€ 378</span>
+          </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
+        </div>
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 23:59 on 14 Sep 2022</span>
+          </div>
+        </div>
+
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast included in the price</span>
+          </div>
+        </div>
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 617</span>
+            <span class="price-new">€ 400</span>
+          </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
+        </div>
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 13:59 on 16 Sep 2022</span>
+          </div>
+        </div>
+
+        <div class="rate_info">
+          <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
+        </div>
+
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast included in the price</span>
+          </div>
+        </div>
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 770</span>
+            <span class="price-new">€ 499</span>
+          </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
+        </div>
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 23:59 on 12 Sep 2022</span>
+          </div>
+        </div>
+
+        <div class="rate_info">
+          <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
+        </div>
 
 
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast included in the price</span>
-            </div>
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
           </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
           </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
           </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 654</span>
-              <span class="price-new">€ 424</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast included in the price</span>
           </div>
-      
-          <button class="cta-btn">Select</button>
         </div>
-      
-        <!-- Card 6 -->
-        <div class="card">
-          <div class="top-row">
-            <div class="title">Family Room (2 Adults + 2 Children)</div>
-            <img class="room-img"
-              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
-              alt="Hotel room" />
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
           </div>
-      
-          <div class="rate_info">
-            <div class="check-row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span><strong>Free cancellation</strong> until 23:59 on 14 Sep 2022</span>
-            </div>
-          </div>
-      
-          <div class="rate_info">
-            <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
-          </div>
-      
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg>
-              <span>Price for 2 adults, 1 child (8 years old)</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 double bed, 1 sofa bed</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 17 m²</span>
-            </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="2" x2="6" y2="4" />
-                <line x1="10" y1="2" x2="10" y2="4" />
-                <line x1="14" y1="2" x2="14" y2="4" />
-              </svg>
-              <span>Breakfast available, pay at the property</span>
-            </div>
-          </div>
-      
-          <div class="room_info">
-            <div class="amenities">
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
-                </svg>Free WiFi</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>View</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>Air conditioning</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>Private bathroom</div>
-              <div class="amenity"><svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>Flat-screen TV</div>
-            </div>
-          </div>
-      
-          <div class="badges">
-            <span class="badge genius">10% Genius discount</span>
-            <span class="badge mobile">Mobile-only price</span>
-          </div>
-      
-          <hr class="divider">
-      
-          <div class="price-block">
-            <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
-            <div class="price-row">
-              <span class="price-old">€ 617</span>
-              <span class="price-new">€ 400</span>
-            </div>
-            <div class="price-sub">✓ Includes taxes and charges</div>
-          </div>
-      
-          <button class="cta-btn">Select</button>
         </div>
-      
-        <!-- Card 7 -->
-        <!-- <div class="card">
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 654</span>
+            <span class="price-new">€ 424</span>
+          </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="top-row">
+          <div class="title">Family Room (2 Adults + 2 Children)</div>
+          <img class="room-img"
+            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+            alt="Hotel room" />
+        </div>
+
+        <div class="rate_info">
+          <div class="check-row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span><strong>Free cancellation</strong> until 23:59 on 14 Sep 2022</span>
+          </div>
+        </div>
+
+        <div class="rate_info">
+          <div class="payment-note">PAY AT THE PROPERTY - no prepayment needed</div>
+        </div>
+
+        <div class="room_info">
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <span>Price for 2 adults, 1 child (8 years old)</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+              <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+              <path d="M12 4v6" />
+              <path d="M2 18h20" />
+            </svg>
+            <span>1 double bed, 1 sofa bed</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <polyline points="15 3 21 3 21 9" />
+              <polyline points="9 21 3 21 3 15" />
+              <line x1="21" y1="3" x2="14" y2="10" />
+              <line x1="3" y1="21" x2="10" y2="14" />
+            </svg>
+            <span>Room size: 17 m²</span>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24">
+              <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="2" x2="6" y2="4" />
+              <line x1="10" y1="2" x2="10" y2="4" />
+              <line x1="14" y1="2" x2="14" y2="4" />
+            </svg>
+            <span>Breakfast available, pay at the property</span>
+          </div>
+        </div>
+
+        <div class="room_info">
+          <div class="amenities">
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+              </svg>Free WiFi</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>View</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+              </svg>Air conditioning</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+              </svg>Private bathroom</div>
+            <div class="amenity"><svg viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Flat-screen TV</div>
+          </div>
+        </div>
+
+        <div class="badges">
+          <span class="badge genius">10% Genius discount</span>
+          <span class="badge mobile">Mobile-only price</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="price-block">
+          <div class="price-label">Price for 2 nights (16 Sep – 18 Sep)</div>
+          <div class="price-row">
+            <span class="price-old">€ 617</span>
+            <span class="price-new">€ 400</span>
+          </div>
+          <div class="price-sub">✓ Includes taxes and charges</div>
+        </div>
+
+        <button class="cta-btn">Select</button>
+      </div>
+
+      <!-- Card 7 -->
+      <!-- <div class="card">
           <div class="top-row">
             <div class="title">Family Room (2 Adults + 2 Children)</div>
             <img class="room-img"
@@ -1194,9 +1364,9 @@
       
           <button class="cta-btn">Select</button>
         </div> -->
-      
-        <!-- Card 8 -->
-        <!-- <div class="card">
+
+      <!-- Card 8 -->
+      <!-- <div class="card">
           <div class="top-row">
             <div class="title">Family Room (2 Adults + 2 Children)</div>
             <img class="room-img"
@@ -1301,120 +1471,603 @@
       
           <button class="cta-btn">Select</button>
         </div> -->
-      
-        </div>
+
+    </div>
+    </div>
   </section>
 <section></section>
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Context</h1>
-    </div>
-    <div class="hc-prose">
-      <p>During H1, the track ran a Design Sprint to explore alternative Room Selection approaches. I worked on two
-        concepts (Filters and 2-Step Rate Selection) before the track converged on Horizontal Comparison as the strategic
-        direction for H2.</p>
-      <p>I took over full ownership of Horizontal Comparison for Apps in H2. The mobile Web version, which originated with
-        another designer on the team.</p>
-    </div>
-    <P class="tal hc-subsection-title">A new way of displaying room, rates and details</p>
-    <img class="screenshot" style="width: 100vw;
-    max-width: 100vw" src="img/hc/ia_digram.jpg" alt="Horizontal Comparison IA Diagram">
     
-   </section>
-
-  <section class="slide"> 
-    <div class="header mw-760">
-      <h1 class="tal">Approach</h1>
+    <div class="slide_container">
+    
+      <h1 class="tal">Context</h1>
+      <div>
+        <p>During H1, Room Selection designers were asked to come up with alternative designs:<strong> Filters Android, Filters iOS,
+          Rate Selection, Horizontal Comparison and Multiple Choice. </strong></p>
+        <p>I worked in both Filters solutions, plus continue working in Two Steps Selection. Two other designers worked on the remaining concepts.
+          Horizontal Comparison, tested in Mobile Web emerged as the most promising approach.</p>
+        <p> <strong>During H2 I was asked to make a plan to implement the chosen solution in both Android and iOS.</strong></p>
+        <!-- <p>During H1, the track ran a Design Sprint to explore alternative Room Selection approaches. I worked on two
+          concepts (Filters and 2-Step Rate Selection) before the track converged on Horizontal Comparison as the
+          strategic
+          direction for H2.</p>
+        <p>I took over full ownership of Horizontal Comparison for Apps in H2. The mobile Web version, which originated
+          with
+          another designer on the team.</p> -->
+      </div>
     </div>
-    <p class="hc-prose">The PM asked me to define a UX roadmap for the next 6 months. Rather than running a single high-risk experiment, I
-    structured the work in three phases:</p>
-    <div type="1" class="hc-phases">
-      <div class="hc-phase">
+    
+        <div class="scene">
+          <h2 class="tac mw-760">Five initial solutions to choice overload</h2>      
+          <div class="solutions">
+  <div class="owner">
+    <p class="solution-label owner-label">Involved in the design</p>
+    <div class="solution_group">
+            <div class="solution">
+              <span class="solution-label">1. Filters Android</span>
+              <div class="filter-scroll-wrap">
+                <div class="filter-scroll">
+                  <div class="chip-row">
+                    <div class="chip dark"><span>2 adults</span><i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+                    <div class="chip active"><span>Free cancellation</span><i class="ti ti-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="chip"><span>Breakfast included</span><i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+                  </div>
+                </div>
+              </div>
+              <span class="solution-label">2. Filters iOS</span>
+              <div class="ios-wrap">
+                <div class="ios-row">
+                  <div class="chip"><span>1 adult</span></div>
+                  <div class="chip active"><span>2 adults</span><i class="ti ti-x" aria-hidden="true"></i></div>
+                  <div class="chip"><span>3 adults</span></div>
+                </div>
+                <div class="ios-row">
+                  <div class="chip active"><span>Free cancellation</span><i class="ti ti-x" aria-hidden="true"></i></div>
+                  <div class="chip"><span>Non refundable</span></div>
+                </div>
+                <div class="ios-row">
+                  <div class="chip"><span>Breakfast included</span></div>
+                  <div class="chip"><span>Breakfast available</span></div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="solution">
+              <span class="solution-label">3. Two-step selection</span>
+              <div class="two-step-wrap">
+                <div class="room-stack">
+                  <div class="room-card-sm">
+                    <div class="room-img-sm"></div>
+                    <div class="room-body-sm">
+                      <div class="skel" style="width:80%"></div>
+                      <div class="skel light" style="width:55%"></div>
+                      <div class="skel light" style="width:40%"></div>
+                    </div>
+                  </div>
+                  <div class="room-card-sm">
+                    <div class="room-img-sm"></div>
+                    <div class="room-body-sm">
+                      <div class="skel" style="width:70%"></div>
+                      <div class="skel light" style="width:60%"></div>
+                      <div class="skel light" style="width:35%"></div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ti ti-arrow-right arrow" aria-hidden="true"></i>
+                <div class="rate-cards">
+                  <div class="rate-card selected">
+                    <div class="radio checked" style="margin-top:1px"></div>
+                    <div class="rate-content">
+                      <span class="rate-title">Free cancellation</span>
+                      <span class="rate-desc">Cancel anytime</span>
+                      <span class="rate-price active">€112 / night</span>
+                    </div>
+                  </div>
+                  <div class="rate-card">
+                    <div class="radio" style="margin-top:1px"></div>
+                    <div class="rate-content">
+                      <span class="rate-title">Non refundable</span>
+                      <span class="rate-desc">No refund</span>
+                      <span class="rate-price">€130 / night</span>
+                    </div>
+                  </div>
+                  <div class="rate-card">
+                    <div class="radio" style="margin-top:1px"></div>
+                    <div class="rate-content">
+                      <span class="rate-title">Breakfast incl.</span>
+                      <span class="rate-desc">Free cancel</span>
+                      <span class="rate-price">€136 / night</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div><div class="owner">
+              <p class="solution-label owner-label">Not involved in the design</p>
+              <div class="solution_group">
+
+            <div class="solution">
+              <span class="solution-label">4. Multiple choice</span>
+              <div class="room-card">
+                <div class="room-img"></div>
+                <div class="room-body">
+                  <div class="skel" style="width:75%"></div>
+                  <div class="skel light" style="width:50%"></div>
+                  <div class="skel light" style="width:40%"></div>
+                </div>
+                <div class="section-group">
+                  <span class="section-title">Cancellation policy</span>
+                  <div class="radio-row">
+                    <div class="radio checked"></div><span class="radio-label active">Free cancellation</span>
+                  </div>
+                  <div class="radio-row">
+                    <div class="radio"></div><span class="radio-label">Non refundable</span>
+                  </div>
+                </div>
+                <div class="section-group">
+                  <span class="section-title">Meals</span>
+                  <div class="radio-row">
+                    <div class="radio"></div><span class="radio-label">Add breakfast <span class="hint">· $12 per
+                        guest</span></span>
+                  </div>
+                </div>
+                <div class="price-block">
+                  <div class="price-from">from</div>
+                  <div class="price-amount">€112</div>
+                  <div class="price-night">per night</div>
+                </div>
+                <div class="select-btn"><span>Select</span></div>
+              </div>
+            </div>
+        
+        
+        
+            <div class="solution">
+              <span><span class="solution-label">5. Horizontal comparison</span><span
+                  class="solution-label solution-winner">Chosen</span></span>
+              <div class="carousel-room-card">
+                <div class="room-img"></div>
+                <div class="room-body">
+                  <div class="skel" style="width:75%"></div>
+                  <div class="skel light" style="width:50%"></div>
+                  <div class="skel light" style="width:40%"></div>
+                </div>
+                <div class="carousel-divider"></div>
+                <div class="carousel-wrap">
+                  <div class="carousel-track">
+        
+                    <div class="c-rate selected">
+                      <div class="c-rate-header">
+                        <div class="c-rate-skels">
+                          <div class="skel" style="width:80px"></div>
+                          <div class="skel light" style="width:60px"></div>
+                        </div>
+                        <div class="radio checked"></div>
+                      </div>
+                      <div>
+                        <div class="c-price">€112</div>
+                        <div class="c-price-night">per night</div>
+                      </div>
+                      <div class="c-rate-btn"><span>Select</span></div>
+                    </div>
+        
+                    <div class="c-rate">
+                      <div class="c-rate-header">
+                        <div class="c-rate-skels">
+                          <div class="skel" style="width:75px"></div>
+                          <div class="skel light" style="width:55px"></div>
+                        </div>
+                        <div class="radio"></div>
+                      </div>
+                      <div>
+                        <div class="c-price">€130</div>
+                        <div class="c-price-night">per night</div>
+                      </div>
+                      <div class="c-rate-btn"><span>Select</span></div>
+                    </div>
+        
+                    <div class="c-rate">
+                      <div class="c-rate-header">
+                        <div class="c-rate-skels">
+                          <div class="skel" style="width:70px"></div>
+                          <div class="skel light" style="width:58px"></div>
+                        </div>
+                        <div class="radio"></div>
+                      </div>
+                      <div>
+                        <div class="c-price">€136</div>
+                        <div class="c-price-night">per night</div>
+                      </div>
+                      <div class="c-rate-btn"><span>Select</span></div>
+
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>  
+  </section>
+<section> </section>
+  <section class="slide">
+    <div class="slide_container">
+      <h1 class="tal">Horizontal Comparison</h1>
+      <p>Horizontal Comparison fundamentally reorganised the Room Selection IA. <BR> Where the base experience showed room
+        information and rates together in a single card, HC separates them: Room information at the card level, rates
+        inside a horizontal carousel.</p>
+      
+      <div class="hc-diagram">
+        <h2>A new way for users to discover rooms and compare rates</h2>
+        <div class="wrap">
+          <div class="col">
+            
+            <div class="col-sub">
+              <div class="col-title">Before</div>
+              Each room/rate has its own room card. Information is repeated and differences hard to
+              find.</div>
+              <div class="room-card-sm room-card-lg">
+                <div class="room-img"></div>
+                <div class="room-body-sm">
+                  <div  style="width:80%">Room 1 | Rate A</div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                    <div class="carousel-divider"></div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                    <div>
+                        <div class="c-price">€112</div>
+                        <div class="c-price-night">per night</div>
+                      </div>
+                      <div class="c-rate-btn"><span>Select</span></div>
+              </div>
+            </div>
+            <div class="room-card-sm room-card-lg">
+              <div class="room-img"></div>
+              <div class="room-body-sm">
+                <div  style="width:80%">Room 2 | Rate A</div>
+                <div class="skel light" style="width:75%"></div>
+                <div class="skel light" style="width:80%"></div>
+                <div class="skel light" style="width:75%"></div>
+                <div class="skel light" style="width:80%"></div>
+                <div class="carousel-divider"></div>
+                <div class="skel light" style="width:75%"></div>
+                <div class="skel light" style="width:80%"></div>
+                <div>
+                  <div class="c-price">€130</div>
+                  <div class="c-price-night">per night</div>
+                </div>
+                <div class="c-rate-btn"><span>Select</span></div>
+              </div>
+            </div>
+              <div class="room-card-sm room-card-lg">
+                <div class="room-img"></div>
+                <div class="room-body-sm">
+                  <div  style="width:80%">Room 1 | Rate B</div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                  <div class="carousel-divider"></div>
+                  <div class="skel light" style="width:75%"></div>
+                  <div class="skel light" style="width:80%"></div>
+                  <div>
+                    <div class="c-price">€145</div>
+                    <div class="c-price-night">per night</div>
+                  </div>
+                  <div class="c-rate-btn"><span>Select</span></div>
+                  </div>
+            </div>
+            <!-- <div class="room-card">
+              <div class="room-label-a">Room A</div>
+              <div class="rate-card">Rate 1</div>
+              <div class="cta">CTA</div>
+            </div>
+            <div class="room-card">
+              <div class="room-label-a">Room A</div>
+              <div class="rate-card">Rate 2</div>
+              <div class="cta">CTA</div>
+            </div>
+            <div class="room-card">
+              <div class="room-label-b">Room B</div>
+              <div class="rate-card">Rate 1</div>
+              <div class="cta">CTA</div>
+            </div> -->
+
+          </div>
+<div class="separator"></div>
+  
+          <div class="col">
+            <div class="col-sub">
+            <div class="col-title">After</div>
+            
+              Rooms are easier to discover as information is not repeated in each card. 
+              Rates are easier to compare as they are presented side by side.
+             
+            </div>
+            <div class="carousel-room-card" style="position:relative;">
+              <div class="room-img"></div>
+              <div class="room-body" style="position:relative;">
+                <div style="width:80%">Room 1</div>
+            
+                <div class="skel light" style="width:50%"></div>
+                <div class="skel light" style="width:40%"></div>
+              </div>
+              <div class="carousel-divider"></div>
+              <div class="carousel-wrap" style="position:relative;">
+           
+                <div class="carousel-track">
+            
+                  <div class="c-rate selected">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                        <div class="rate-title" style="width:80px">Rate 1A</div>
+                        <div class="skel light" style="width:60px"></div>
+                      </div>
+                      <div class="radio checked"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€112</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>1 selected</span></div>
+                  </div>
+            
+                  <div class="c-rate">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                          <div class="rate-title" style="width:75px">Rate 1B</div>
+                        <div class="skel light" style="width:55px"></div>
+                      </div>
+                      <div class="radio"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€145</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>Select</span></div>
+                  </div>
+            
+                  <div class="c-rate">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                        <div  style="width:70px">Rate 1C</div>
+                        <div class="skel light" style="width:58px"></div>
+                      </div>
+                      <div class="radio"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€160</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>Select</span></div>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-room-card">
+              <div class="room-img"></div>
+              <div class="room-body">
+                <div  style="width:80%">Room 2</div>
+                <div class="skel light" style="width:50%"></div>
+                <div class="skel light" style="width:40%"></div>
+              </div>
+              <div class="carousel-divider"></div>
+              <div class="carousel-wrap">
+                <div class="carousel-track">
+            
+                  <div class="c-rate">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                        <div class="rate-title" style="width:80px">Rate 2A </div>
+                        <div class="skel light" style="width:60px"></div>
+                      </div>
+                      <div class="radio"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€130</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>Select</span></div>
+                  </div>
+            
+                  <div class="c-rate">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                        <div class="rate-title" style="width:75px">Rate 2B</div>
+                        <div class="skel light" style="width:55px"></div>
+                      </div>
+                      <div class="radio"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€160</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>Select</span></div>
+                  </div>
+            
+                  <div class="c-rate">
+                    <div class="c-rate-header">
+                      <div class="c-rate-skels">
+                        <div class="rate-title" style="width:70px">Rate 2C</div>
+                        <div class="skel light" style="width:58px"></div>
+                      </div>
+                      <div class="radio"></div>
+                    </div>
+                    <div>
+                      <div class="c-price">€170</div>
+                      <div class="c-price-night">per night</div>
+                    </div>
+                    <div class="c-rate-btn"><span>Select</span></div>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="room-card">
+              <div class="room-label-a">Room A</div>
+              <div class="rate-cards-row">
+                <div class="rate-card-small">Rate 1
+                  <div class="cta">CTA</div>
+                </div>
+                <div class="rate-card-small">Rate 2
+                  <div class="cta">CTA</div>
+                </div>
+                <div class="rate-card-small">Rate 3
+                  <div class="cta">CTA</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="room-card">
+              <div class="room-label-b">Room B</div>
+              <div class="rate-cards-row">
+                <div class="rate-card-small">Rate 1
+                  <div class="cta">CTA</div>
+                </div>
+                <div class="rate-card-small">Rate 2
+                  <div class="cta">CTA</div>
+                </div>
+                <div class="rate-card-small">Rate 3
+                  <div class="cta">CTA</div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <img src="img/hc/image.png"
+        alt="HC concept graph showing rooms list with horizontal rate carousel and selection details"
+        style="width: 100%; border-radius: 12px; margin-top: 8px;"> -->
+
+    </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="slide_container">
+      <h1 class="tal">Approach</h1>
+      <p>After the first positive results of HC in Mobile Web, I was asked to define an Apps UX Roadmap for the next 6
+        months. Rather than running a single A/B experiments with major changes, I structured the work in three phases:
+      </p>
+      <div type="1" class="hc-phases">
+        <div class="hc-phase">
           <span class="hc-phase-title">1. Foundational work</span>
           <span class="hc-phase-desc">Audit, ownership mapping, blockouts, IA experiments</span>
-      </div>
-      <div class="hc-phase">
+        </div>
+        <div class="hc-phase">
           <span class="hc-phase-title">2. MVP experiment</span>
           <span class="hc-phase-desc">The core horizontal scrolling hypothesis, as clean as possible</span>
-      </div>
-      <div class="hc-phase">
+        </div>
+        <div class="hc-phase">
           <span class="hc-phase-title">3. Follow-up iterations</span>
           <span class="hc-phase-desc">Edge cases, complex components, platform gaps deferred</span>
+        </div>
       </div>
-    </div>
-   
-   
-    <!-- <img src="img/hc/9. Presentation for some team.jpg" alt="Roadmap: Base, Preparation stories, First experiment, Upcoming experiments" style="width: 100%; border-radius: 12px; margin-top: 8px;"> -->
-    <div class="hc-prose">
-      <p>This structure reduced risk by avoiding simultaneous variable changes and gave the team a framework for deferring complexity rather than letting it block progress.</br> It also meant that even if the core HC hypothesis hadn't worked, the foundational experiments would have still delivered measurable improvements to Base.</p>
+
+
+      <!-- <img src="img/hc/9. Presentation for some team.jpg" alt="Roadmap: Base, Preparation stories, First experiment, Upcoming experiments" style="width: 100%; border-radius: 12px; margin-top: 8px;"> -->
+      <div>
+        <p>This structure reduced risk by avoiding simultaneous variable changes and gave the team a framework for
+          deferring complexity rather than letting it block progress.</p>
+        <p> It also meant that even if the core HC
+          hypothesis hadn't worked, the foundational experiments would have still delivered measurable improvements to
+          Base.</p>
+      </div>
     </div>
   </section>
 
   <!-- Laying the Groundwork -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">1. Foundational Work</h1>
-    </div>
-
-    <!-- Component Audit -->
-    <div class="hc-subsection">
-      <p class="hc-subsection-title">1.1 Component Audit</p>
-      <div class="hc-prose">
-        <p>Horizontal Comparison fundamentally reorganised the Room Selection IA. Where the base experience showed room
-          information and rates together in a single card, HC separates them: <strong>Room information at the card level, rates
-            inside a horizontal carousel</strong>. This raised a critical question for every existing component: Was it
-          <strong>room-level</strong> (e.g. "Free cot available") or <strong>rate-level</strong> (e.g. "Free cancellation")? </p><p> The
-          answer determined where each component would live, who owned the decision, and what needed redesigning. My first step
-          was a <strong>comprehensive audit of ~100 components</strong> across Room List and Room Details.</p>
-        <p>Mapping ownership early also allowed me to communicate upcoming changes before decisions were locked, discuss solutions to potential blockers, and work with teams to adapt their in-progress designs to the new flow.</p>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">1. Foundational Work</h1>
       </div>
-    </div>
-    
-     <figure>
-      <img class="screenshot" src="img/hc/component_audit.jpg">
-    <figcaption class="caption">Excerpt from the component audit output, mapping ~100 components by room/rate level.</figcaption>
-</figure>
-    <!-- Block-out Experiments -->
-    <div class="hc-subsection">
-      <p class="hc-subsection-title">1.2 Block-out Experiments</p>
-      <div class="hc-prose">
-        <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier. </p>
-        <p> As owner of
-          the component database, I identified candidates for removal. Anything we didn't have to redesign or migrate to the
-          new tech stack was a win before the main experiment even ran. This resulted in removing <strong>12+
-            components</strong> with no meaningful impact on conversion, including: Secret deal banner, Lowest price badge,
-          Just booked, and Booked before, among others.</p>
+
+      <!-- Component Audit -->
+      <div class="hc-subsection">
+        <p class="hc-subsection-title">1.1 Component Audit</p>
+        <div>
+          <p>Horizontal Comparison fundamentally reorganised the Room Selection IA. Where the base experience showed
+            room
+            information and rates together in a single card, HC separates them: <strong>Room information at the card
+              level, rates
+              inside a horizontal carousel</strong>. This raised a critical question for every existing component: Was
+            it
+            <strong>room-level</strong> (e.g. "Free cot available") or <strong>rate-level</strong> (e.g. "Free
+            cancellation")?
+          </p>
+          <p> The
+            answer determined where each component would live, who owned the decision, and what needed redesigning. My
+            first step
+            was a <strong>comprehensive audit of ~100 components</strong> across Room List and Room Details.</p>
+          <p>Mapping ownership early also allowed me to communicate upcoming changes before decisions were locked,
+            discuss solutions to potential blockers, and work with teams to adapt their in-progress designs to the new
+            flow.</p>
+        </div>
+      </div>
+
+      <figure>
+        <img class="screenshot" style="max-width: none;" src="img/hc/component_audit.jpg">
+        <figcaption class="caption">Excerpt from the component audit output, mapping ~100 components by room/rate level.
+        </figcaption>
+      </figure>
+      <!-- Block-out Experiments -->
+      <div class="hc-subsection">
+        <p class="hc-subsection-title">1.2 Block-out Experiments</p>
+        <div>
+          <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier. </p>
+          <p> As owner of
+            the component database, I identified candidates for removal. Anything we didn't have to redesign or migrate
+            to the
+            new tech stack was a win before the main experiment even ran. This resulted in removing <strong>12+
+              components</strong> with no meaningful impact on conversion, including: Secret deal banner, Lowest price
+            badge,
+            Just booked, and Booked before, among others.</p>
           <figure>
             <div class="img-placeholder">
             </div>
-            <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item</figcaption>
+            <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item
+            </figcaption>
           </figure>
-        <p>One component that could not be removed was <strong>Jackpot</strong>. Data showed removing it would cost
-          <strong>508±219 PNC</strong>. I redesigned it as a compact list item, preserving conversion without occupying
-          disproportionate space in the new Rate Card.</p> 
-       
-    </div>
-  </div>
-    <!-- IA Experiments -->
-    <div class="hc-subsection">
-      <p class="hc-subsection-title">1.2 Information Architecture improvements</p>
-      
-   
-     
-        
+          <p>One component that could not be removed was <strong>Jackpot</strong>. Data showed removing it would cost
+            <strong>508±219 PNC</strong>. I redesigned it as a compact list item, preserving conversion without
+            occupying
+            disproportionate space in the new Rate Card.
+          </p>
 
-      <div class="hc-prose">
-        <p>Room and rate information lacked a clear order across both platforms, and Android and iOS had diverged over time. I defined experiments to establish a consistent hierarchy before introducing Horizontal Comparison. The room list was reorganised at the macro level, and element order within each room card was aligned at the micro level. A clearer information hierarchy proved its value: +629±763 PNC on Android and +375±244 PNC on iOS, confirming that IA improvements alone, without visual redesign, could move conversion.</p>
-
-        <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
+        </div>
       </div>
-      
-      <figure>
-        <img src="img/hc/rate_card_comparison.jpg" alt="Rate card comparison between Web and Apps">
-        <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item</figcaption>
-      </figure>
+      <!-- IA Experiments -->
+      <div class="hc-subsection">
+        <p class="hc-subsection-title">1.2 Information Architecture improvements</p>
 
-      <!-- <div class="fifty_fifty mw-760">
+
+
+
+
+        <div>
+          <p>Room and rate information lacked a clear order across both platforms, and Android and iOS had diverged over
+            time. I defined experiments to establish a consistent hierarchy before introducing Horizontal Comparison.
+            The room list was reorganised at the macro level, and element order within each room card was aligned at the
+            micro level. A clearer information hierarchy proved its value: +629±763 PNC on Android and +375±244 PNC on
+            iOS, confirming that IA improvements alone, without visual redesign, could move conversion.</p>
+
+          <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
+        </div>
+
+        <figure>
+          <img src="img/hc/rate_card_comparison.jpg" alt="Rate card comparison between Web and Apps">
+          <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item</figcaption>
+        </figure>
+
+        <!-- <div class="fifty_fifty mw-760">
         <div class="column">
           <div id="room_card1" class="card android-card">
             <div class="title">Queen Studio Suite Gold</div>
@@ -1513,7 +2166,7 @@
                 </div>
       
                 <div class="row">
-                  <svg viewBox="0 0 24 24" class="">
+                  <svg viewBox="0 0 24 24" >
                     <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
                     <path d="M21 3v4h-4"></path>
                     <path d="m9 12 2 2 4-4"></path>
@@ -1739,7 +2392,7 @@
                 </div>
       
                 <div class="row">
-                  <svg viewBox="0 0 24 24" class="">
+                  <svg viewBox="0 0 24 24" >
                     <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
                     <path d="M21 3v4h-4"></path>
                     <path d="m9 12 2 2 4-4"></path>
@@ -1868,599 +2521,654 @@
           <p class="caption">V2. Tappable area</p>
         </div>
         </div> -->
-        
-      <div class="hc-stat-row" style="margin-top: 24px;">
-        <div class="hc-stat-block">
-          <span class="hc-stat-label">Android</span>
-          <span class="hc-stat">+629 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±763 PNC</span></span>
-        </div>
-        <div class="hc-stat-block">
-          <span class="hc-stat-label">iOS</span>
-          <span class="hc-stat">+375 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±244 PNC</span></span>
+
+        <div class="hc-stat-row" style="margin-top: 24px;">
+          <div class="hc-stat-block">
+            <span class="hc-stat-label">Android</span>
+            <span class="hc-stat">+629 <span
+                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±763 PNC</span></span>
+          </div>
+          <div class="hc-stat-block">
+            <span class="hc-stat-label">iOS</span>
+            <span class="hc-stat">+375 <span
+                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±244 PNC</span></span>
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="hc-subsection">
-      <p class="hc-subsection-title">1.3 Color Alignment</p>
-      <div class="hc-prose">
-        <p>Breakfast "included" and "available" used different color logic across platforms — green on one, black on the
-          other. Before testing HC, I proposed aligning them for two reasons: avoid confounded results between platforms,
-          and reduce unnecessary green usage. Teams had been running multivariate tests where green almost always won — so
-          everything became green. If everything signals value, nothing does. I aligned the colors before HC shipped,
-          confirmed no revenue impact, and established a reusable principle for what green should mean in Room Selection.
-        </p>
+      <div class="hc-subsection">
+        <p class="hc-subsection-title">1.3 Color Alignment</p>
+        <div>
+          <p>Breakfast "included" and "available" used different color logic across platforms — green on one, black on
+            the
+            other. Before testing HC, I proposed aligning them for two reasons: avoid confounded results between
+            platforms,
+            and reduce unnecessary green usage. Teams had been running multivariate tests where green almost always won
+            — so
+            everything became green. If everything signals value, nothing does. I aligned the colors before HC shipped,
+            confirmed no revenue impact, and established a reusable principle for what green should mean in Room
+            Selection.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- <img src="img/hc/ia_digram.jpg" alt="IA before/after showing Base vs HC room card structure including room details" style="width: 100%; border-radius: 12px; margin-top: 16px;"> -->
+      <!-- <img src="img/hc/ia_digram.jpg" alt="IA before/after showing Base vs HC room card structure including room details" style="width: 100%; border-radius: 12px; margin-top: 16px;"> -->
 
-  <!-- ════════════════════════════════════
+      <!-- ════════════════════════════════════
        EXECUTION
   ════════════════════════════════════ -->
-  <div class="hc-chapter" id="execution">
-    <div>
-      <p class="hc-chapter-label">03</p>
-      <p class="hc-chapter-title">Execution</p>
+      <div class="hc-chapter" id="execution">
+        <div>
+          <p class="hc-chapter-label">03</p>
+          <p class="hc-chapter-title">Execution</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- Cross-Team Alignment -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Cross-Team Alignment</h1>
-      <!-- TODO: Rework intro — convey the complexity of aligning six teams with competing priorities across a major redesign -->
-    </div>
-    <div class="hc-prose">
-      <p>Six teams were affected by the redesign. Two alignment cases were particularly consequential:</p>
-    </div>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Cross-Team Alignment</h1>
+        <!-- TODO: Rework intro — convey the complexity of aligning six teams with competing priorities across a major redesign -->
+      </div>
+      <div>
+        <p>Six teams were affected by the redesign. Two alignment cases were particularly consequential:</p>
+      </div>
 
-    <div style="width: 100%; max-width: 680px;">
-      <div class="hc-alignment-case">
-        <p class="hc-alignment-case-title">Families and Policies</p>
-        <p>Family traffic was excluded from the first iteration after I couldn't reach alignment with Families and Policies teams on where to surface family rate details in the new IA. I worked on two tracks in parallel: a short-term solution to unblock iteration 2, and ongoing discussions toward a longer-term vision of consolidating all rate details into the Booking Conditions screen. The short-term solution landed for iteration 2. The longer-term vision had gained support from both teams and from Web by the time I left.</p>
-      </div>
-      <div class="hc-alignment-case">
-        <p class="hc-alignment-case-title">Jackpot</p>
-        <p>The component audit identified Jackpot as rate-level. A blockout experiment confirmed it was driving real value: removing it cost -508±219 PNC. I redesigned it as a compact list item that pSelectd conversion without occupying disproportionate space in the new Rate Card.</p>
-      </div>
-      <div class="hc-alignment-case">
-        <p class="hc-alignment-case-title">Room Details restructuring</p>
-        <p>Horizontal Comparison introduced a single Room Details screen per room rather than per room–rate combination. Genius agreed to remove their banner, as the information remained accessible in the Rate Carousel. Booking Policies merged their content block into the Rate Carousel.</p>
+      <div style="width: 100%; max-width: 680px;">
+        <div class="hc-alignment-case">
+          <p class="hc-alignment-case-title">Families and Policies</p>
+          <p>Family traffic was excluded from the first iteration after I couldn't reach alignment with Families and
+            Policies teams on where to surface family rate details in the new IA. I worked on two tracks in parallel: a
+            short-term solution to unblock iteration 2, and ongoing discussions toward a longer-term vision of
+            consolidating all rate details into the Booking Conditions screen. The short-term solution landed for
+            iteration 2. The longer-term vision had gained support from both teams and from Web by the time I left.</p>
+        </div>
+        <div class="hc-alignment-case">
+          <p class="hc-alignment-case-title">Jackpot</p>
+          <p>The component audit identified Jackpot as rate-level. A blockout experiment confirmed it was driving real
+            value: removing it cost -508±219 PNC. I redesigned it as a compact list item that pSelectd conversion
+            without occupying disproportionate space in the new Rate Card.</p>
+        </div>
+        <div class="hc-alignment-case">
+          <p class="hc-alignment-case-title">Room Details restructuring</p>
+          <p>Horizontal Comparison introduced a single Room Details screen per room rather than per room–rate
+            combination. Genius agreed to remove their banner, as the information remained accessible in the Rate
+            Carousel. Booking Policies merged their content block into the Rate Carousel.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- MVP Experiment -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Horizontal Comparison: MVP Experiment</h1>
-    </div>
-    <div class="hc-prose">
-      <p>Horizontal Comparison restructured the room selection experience around a single principle: split the room from the rate. Instead of presenting every room-rate combination as a separate vertical card, each room card now contained its rates in a horizontally scrollable carousel. Users could first find and compare rooms by scrolling vertically, then compare rates within a room by scrolling horizontally. A dedicated selection details screen consolidated customisation choices — meals, cancellation policies, beds — and future value-add options like spa or tours.</p>
-    </div>
-    <img src="img/hc/4. HC Concept Graph.png" alt="HC concept graph showing rooms list with horizontal rate carousel and selection details" style="width: 100%; border-radius: 12px; margin-top: 8px;">
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Horizontal Comparison: MVP Experiment</h1>
+      </div>
+      <div>
+        <p>Horizontal Comparison restructured the room selection experience around a single principle: split the room
+          from the rate. Instead of presenting every room-rate combination as a separate vertical card, each room card
+          now contained its rates in a horizontally scrollable carousel. Users could first find and compare rooms by
+          scrolling vertically, then compare rates within a room by scrolling horizontally. A dedicated selection
+          details screen consolidated customisation choices — meals, cancellation policies, beds — and future value-add
+          options like spa or tours.</p>
+      </div>
+      <div style="margin-top: 32px;">
+        <p>iOS followed the Web interaction model: the entire rate card was tappable, with the exception of some info
+          elements and minimal badges. On Android, I took the opportunity to also test a more conservative variant where
+          only the CTA and radio button were tappable, closer to how the previous room card had behaved. Testing both
+          was deliberate: the fully tappable card had already proven itself on Web, but since it was a departure from
+          the existing app interaction, shipping it without testing would have meant introducing two changes at once.
+          The fully tappable card won on both Android and iOS, confirming the Web behaviour translated to Apps.</p>
+      </div>
 
-    <div class="hc-prose" style="margin-top: 32px;">
-      <p>iOS followed the Web interaction model: the entire rate card was tappable, with the exception of some info elements and minimal badges. On Android, I took the opportunity to also test a more conservative variant where only the CTA and radio button were tappable, closer to how the previous room card had behaved. Testing both was deliberate: the fully tappable card had already proven itself on Web, but since it was a departure from the existing app interaction, shipping it without testing would have meant introducing two changes at once. The fully tappable card won on both Android and iOS, confirming the Web behaviour translated to Apps.</p>
-    </div>
+      <h2 class="tal mw-760"> Tappable area variations</h2>
+      <div class="fifty_fifty mw-760">
+        <div class="column">
+          <div id="room_card1" class="card android-card">
+            <div class="title">Queen Studio Suite Gold</div>
 
-    <h2 class="tal mw-760"> Tappable area variations</h2>
-    <div class="fifty_fifty mw-760">
-      <div class="column">
-        <div id="room_card1" class="card android-card">
-          <div class="title">Queen Studio Suite Gold</div>
-    
-    
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 large double bed</span>
+
+            <div class="room_info">
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                  <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                  <path d="M12 4v6" />
+                  <path d="M2 18h20" />
+                </svg>
+                <span>1 large double bed</span>
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="15 3 21 3 21 9" />
+                  <polyline points="9 21 3 21 3 15" />
+                  <line x1="21" y1="3" x2="14" y2="10" />
+                  <line x1="3" y1="21" x2="10" y2="14" />
+                </svg>
+                <span>Room size: 37 m²</span>
+              </div>
+              <div class="amenities">
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <circle cx="12" cy="20" r="1" fill="#444" stroke="none" />
+                  </svg>
+                  Free WiFi
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                    <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                  </svg>
+                  Air conditioning
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+                  </svg>
+                  Private bathroom
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                  Flat-screen TV
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Minibar
+                </div>
+              </div>
             </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 37 m²</span>
-            </div>
-            <div class="amenities">
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#444" stroke="none" />
-                </svg>
-                Free WiFi
+
+            <div class="rate_card_carousel">
+              <div class="rate_card" id="rate_card1" onclick="select(1)">
+                <div class="card-top">
+                  <div class="row" style="flex:1;">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="4"></circle>
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
+                    </svg>
+                    <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
+                  </div>
+                  <div class="radio on" id="r1"></div>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="8" width="20" height="13" rx="2"></rect>
+                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                  <span>1 free cot available upon request</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M5 21c0-4 3-7 7-7"></path>
+                    <circle cx="17.5" cy="16.5" r="3.5"></circle>
+                    <path d="M15.5 16.5h4M17.5 14.5v4"></path>
+                  </svg>
+                  <span>Free stay for your child</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24" >
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
+                    <path d="M21 3v4h-4"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Flexible to reschedule if plans change</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.9 4.9 14.2 14.2"></path>
+                  </svg>
+                  <span><strong>Non-refundable</strong></span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                  </svg>
+                  <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
+                </div>
+
+                <hr class="divider">
+
+                <div class="badges">
+                  <span class="badge off">27% off</span>
+                  <span class="badge genius">Genius discount</span>
+                  <span class="badge deal">Getaway Deal</span>
+                </div>
+
+                <div>
+                  <div class="price-label">Price for 1 night</div>
+                  <div class="price-row">
+                    <span class="price-old">€ 233</span>
+                    <span class="price-new">€ 171</span>
+                    <i class="info-i">i</i>
+                  </div>
+                  <div class="price-sub">Includes taxes and charges</div>
+                </div>
+                <button class="cta-btn">Select</button>
+
               </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>
-                Air conditioning
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>
-                Private bathroom
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-                Flat-screen TV
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Minibar
+              <div class="rate_card" id="rate_card2" onclick="select(1)">
+                <div class="card-top">
+                  <div class="row" style="flex:1;">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="4"></circle>
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
+                    </svg>
+                    <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
+                  </div>
+                  <div class="radio on" id="r1"></div>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="8" width="20" height="13" rx="2"></rect>
+                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                  <span>1 free cot available upon request</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M5 21c0-4 3-7 7-7"></path>
+                    <circle cx="17.5" cy="16.5" r="3.5"></circle>
+                    <path d="M15.5 16.5h4M17.5 14.5v4"></path>
+                  </svg>
+                  <span>Free stay for your child</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24" class="green">
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
+                    <path d="M21 3v4h-4"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Flexible to reschedule if plans change</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.9 4.9 14.2 14.2"></path>
+                  </svg>
+                  <span><strong>Non-refundable</strong></span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                  </svg>
+                  <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
+                </div>
+
+                <hr class="divider">
+
+                <div class="badges">
+                  <span class="badge off">27% off</span>
+                  <span class="badge genius">Genius discount</span>
+                  <span class="badge deal">Getaway Deal</span>
+                </div>
+
+                <div>
+                  <div class="price-label">Price for 1 night</div>
+                  <div class="price-row">
+                    <span class="price-old">€ 233</span>
+                    <span class="price-new">€ 171</span>
+                    <i class="info-i">i</i>
+                  </div>
+                  <div class="price-sub">Includes taxes and charges</div>
+                </div>
+                <button class="cta-btn">Select</button>
               </div>
             </div>
           </div>
-    
-          <div class="rate_card_carousel">
-            <div class="rate_card" id="rate_card1" onclick="select(1)">
-              <div class="card-top">
-                <div class="row" style="flex:1;">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
-                  </svg>
-                  <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
-                </div>
-                <div class="radio on" id="r1"></div>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="8" width="20" height="13" rx="2"></rect>
-                  <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                </svg>
-                <span>1 free cot available upon request</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="7" r="4"></circle>
-                  <path d="M5 21c0-4 3-7 7-7"></path>
-                  <circle cx="17.5" cy="16.5" r="3.5"></circle>
-                  <path d="M15.5 16.5h4M17.5 14.5v4"></path>
-                </svg>
-                <span>Free stay for your child</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24" class="">
-                  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
-                  <path d="M21 3v4h-4"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                <span>Flexible to reschedule if plans change</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="m4.9 4.9 14.2 14.2"></path>
-                </svg>
-                <span><strong>Non-refundable</strong></span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="2" x2="6" y2="4"></line>
-                  <line x1="10" y1="2" x2="10" y2="4"></line>
-                  <line x1="14" y1="2" x2="14" y2="4"></line>
-                </svg>
-                <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
-              </div>
-    
-              <hr class="divider">
-    
-              <div class="badges">
-                <span class="badge off">27% off</span>
-                <span class="badge genius">Genius discount</span>
-                <span class="badge deal">Getaway Deal</span>
-              </div>
-    
-              <div>
-                <div class="price-label">Price for 1 night</div>
-                <div class="price-row">
-                  <span class="price-old">€ 233</span>
-                  <span class="price-new">€ 171</span>
-                  <i class="info-i">i</i>
-                </div>
-                <div class="price-sub">Includes taxes and charges</div>
-              </div>
-              <button class="cta-btn">Select</button>
-    
-            </div>
-            <div class="rate_card" id="rate_card2" onclick="select(1)">
-              <div class="card-top">
-                <div class="row" style="flex:1;">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
-                  </svg>
-                  <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
-                </div>
-                <div class="radio on" id="r1"></div>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="8" width="20" height="13" rx="2"></rect>
-                  <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                </svg>
-                <span>1 free cot available upon request</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="7" r="4"></circle>
-                  <path d="M5 21c0-4 3-7 7-7"></path>
-                  <circle cx="17.5" cy="16.5" r="3.5"></circle>
-                  <path d="M15.5 16.5h4M17.5 14.5v4"></path>
-                </svg>
-                <span>Free stay for your child</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24" class="green">
-                  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
-                  <path d="M21 3v4h-4"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                <span>Flexible to reschedule if plans change</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="m4.9 4.9 14.2 14.2"></path>
-                </svg>
-                <span><strong>Non-refundable</strong></span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="2" x2="6" y2="4"></line>
-                  <line x1="10" y1="2" x2="10" y2="4"></line>
-                  <line x1="14" y1="2" x2="14" y2="4"></line>
-                </svg>
-                <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
-              </div>
-    
-              <hr class="divider">
-    
-              <div class="badges">
-                <span class="badge off">27% off</span>
-                <span class="badge genius">Genius discount</span>
-                <span class="badge deal">Getaway Deal</span>
-              </div>
-    
-              <div>
-                <div class="price-label">Price for 1 night</div>
-                <div class="price-row">
-                  <span class="price-old">€ 233</span>
-                  <span class="price-new">€ 171</span>
-                  <i class="info-i">i</i>
-                </div>
-                <div class="price-sub">Includes taxes and charges</div>
-              </div>
-              <button class="cta-btn">Select</button>
-            </div>
-          </div>
+          <p class="caption">V1. Tappable area</p>
         </div>
-        <p class="caption">V1. Tappable area</p>
-      </div>
-      <div class="column">
-        <div id="room_card2" class="card android-card">
-          <div class="title">Queen Studio Suite Gold</div>
-    
-    
-          <div class="room_info">
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                <path d="M12 4v6" />
-                <path d="M2 18h20" />
-              </svg>
-              <span>1 large double bed</span>
+        <div class="column">
+          <div id="room_card2" class="card android-card">
+            <div class="title">Queen Studio Suite Gold</div>
+
+
+            <div class="room_info">
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                  <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                  <path d="M12 4v6" />
+                  <path d="M2 18h20" />
+                </svg>
+                <span>1 large double bed</span>
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="15 3 21 3 21 9" />
+                  <polyline points="9 21 3 21 3 15" />
+                  <line x1="21" y1="3" x2="14" y2="10" />
+                  <line x1="3" y1="21" x2="10" y2="14" />
+                </svg>
+                <span>Room size: 37 m²</span>
+              </div>
+              <div class="amenities">
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <circle cx="12" cy="20" r="1" fill="#444" stroke="none" />
+                  </svg>
+                  Free WiFi
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                    <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                  </svg>
+                  Air conditioning
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+                  </svg>
+                  Private bathroom
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                  Flat-screen TV
+                </div>
+                <div class="amenity">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Minibar
+                </div>
+              </div>
             </div>
-            <div class="row">
-              <svg viewBox="0 0 24 24">
-                <polyline points="15 3 21 3 21 9" />
-                <polyline points="9 21 3 21 3 15" />
-                <line x1="21" y1="3" x2="14" y2="10" />
-                <line x1="3" y1="21" x2="10" y2="14" />
-              </svg>
-              <span>Room size: 37 m²</span>
-            </div>
-            <div class="amenities">
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                  <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                  <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                  <circle cx="12" cy="20" r="1" fill="#444" stroke="none" />
-                </svg>
-                Free WiFi
+
+            <div class="rate_card_carousel">
+              <div class="rate_card" id="rate_card1" onclick="select(1)">
+                <div class="card-top">
+                  <div class="row" style="flex:1;">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="4"></circle>
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
+                    </svg>
+                    <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
+                  </div>
+                  <div class="radio on" id="r1"></div>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="8" width="20" height="13" rx="2"></rect>
+                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                  <span>1 free cot available upon request</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M5 21c0-4 3-7 7-7"></path>
+                    <circle cx="17.5" cy="16.5" r="3.5"></circle>
+                    <path d="M15.5 16.5h4M17.5 14.5v4"></path>
+                  </svg>
+                  <span>Free stay for your child</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24" >
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
+                    <path d="M21 3v4h-4"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Flexible to reschedule if plans change</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.9 4.9 14.2 14.2"></path>
+                  </svg>
+                  <span><strong>Non-refundable</strong></span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                  </svg>
+                  <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
+                </div>
+
+                <hr class="divider">
+
+                <div class="badges">
+                  <span class="badge off">27% off</span>
+                  <span class="badge genius">Genius discount</span>
+                  <span class="badge deal">Getaway Deal</span>
+                </div>
+
+                <div>
+                  <div class="price-label">Price for 1 night</div>
+                  <div class="price-row">
+                    <span class="price-old">€ 233</span>
+                    <span class="price-new">€ 171</span>
+                    <i class="info-i">i</i>
+                  </div>
+                  <div class="price-sub">Includes taxes and charges</div>
+                </div>
+                <button class="cta-btn">Select</button>
+
               </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                  <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
-                </svg>
-                Air conditioning
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
-                </svg>
-                Private bathroom
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-                Flat-screen TV
-              </div>
-              <div class="amenity">
-                <svg viewBox="0 0 24 24">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Minibar
+              <div class="rate_card" id="rate_card2" onclick="select(1)">
+                <div class="card-top">
+                  <div class="row" style="flex:1;">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="8" r="4"></circle>
+                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
+                    </svg>
+                    <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
+                  </div>
+                  <div class="radio on" id="r1"></div>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="8" width="20" height="13" rx="2"></rect>
+                    <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                  </svg>
+                  <span>1 free cot available upon request</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M5 21c0-4 3-7 7-7"></path>
+                    <circle cx="17.5" cy="16.5" r="3.5"></circle>
+                    <path d="M15.5 16.5h4M17.5 14.5v4"></path>
+                  </svg>
+                  <span>Free stay for your child</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24" class="green">
+                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
+                    <path d="M21 3v4h-4"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Flexible to reschedule if plans change</span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.9 4.9 14.2 14.2"></path>
+                  </svg>
+                  <span><strong>Non-refundable</strong></span>
+                </div>
+
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="2" x2="6" y2="4"></line>
+                    <line x1="10" y1="2" x2="10" y2="4"></line>
+                    <line x1="14" y1="2" x2="14" y2="4"></line>
+                  </svg>
+                  <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
+                </div>
+
+                <hr class="divider">
+
+                <div class="badges">
+                  <span class="badge off">27% off</span>
+                  <span class="badge genius">Genius discount</span>
+                  <span class="badge deal">Getaway Deal</span>
+                </div>
+
+                <div>
+                  <div class="price-label">Price for 1 night</div>
+                  <div class="price-row">
+                    <span class="price-old">€ 233</span>
+                    <span class="price-new">€ 171</span>
+                    <i class="info-i">i</i>
+                  </div>
+                  <div class="price-sub">Includes taxes and charges</div>
+                </div>
+                <button class="cta-btn">Select</button>
               </div>
             </div>
           </div>
-    
-          <div class="rate_card_carousel">
-            <div class="rate_card" id="rate_card1" onclick="select(1)">
-              <div class="card-top">
-                <div class="row" style="flex:1;">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
-                  </svg>
-                  <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
-                </div>
-                <div class="radio on" id="r1"></div>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="8" width="20" height="13" rx="2"></rect>
-                  <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                </svg>
-                <span>1 free cot available upon request</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="7" r="4"></circle>
-                  <path d="M5 21c0-4 3-7 7-7"></path>
-                  <circle cx="17.5" cy="16.5" r="3.5"></circle>
-                  <path d="M15.5 16.5h4M17.5 14.5v4"></path>
-                </svg>
-                <span>Free stay for your child</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24" class="">
-                  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
-                  <path d="M21 3v4h-4"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                <span>Flexible to reschedule if plans change</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="m4.9 4.9 14.2 14.2"></path>
-                </svg>
-                <span><strong>Non-refundable</strong></span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="2" x2="6" y2="4"></line>
-                  <line x1="10" y1="2" x2="10" y2="4"></line>
-                  <line x1="14" y1="2" x2="14" y2="4"></line>
-                </svg>
-                <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
-              </div>
-    
-              <hr class="divider">
-    
-              <div class="badges">
-                <span class="badge off">27% off</span>
-                <span class="badge genius">Genius discount</span>
-                <span class="badge deal">Getaway Deal</span>
-              </div>
-    
-              <div>
-                <div class="price-label">Price for 1 night</div>
-                <div class="price-row">
-                  <span class="price-old">€ 233</span>
-                  <span class="price-new">€ 171</span>
-                  <i class="info-i">i</i>
-                </div>
-                <div class="price-sub">Includes taxes and charges</div>
-              </div>
-              <button class="cta-btn">Select</button>
-    
-            </div>
-            <div class="rate_card" id="rate_card2" onclick="select(1)">
-              <div class="card-top">
-                <div class="row" style="flex:1;">
-                  <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
-                  </svg>
-                  <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
-                </div>
-                <div class="radio on" id="r1"></div>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="8" width="20" height="13" rx="2"></rect>
-                  <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                </svg>
-                <span>1 free cot available upon request</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="7" r="4"></circle>
-                  <path d="M5 21c0-4 3-7 7-7"></path>
-                  <circle cx="17.5" cy="16.5" r="3.5"></circle>
-                  <path d="M15.5 16.5h4M17.5 14.5v4"></path>
-                </svg>
-                <span>Free stay for your child</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24" class="green">
-                  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74"></path>
-                  <path d="M21 3v4h-4"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                <span>Flexible to reschedule if plans change</span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="m4.9 4.9 14.2 14.2"></path>
-                </svg>
-                <span><strong>Non-refundable</strong></span>
-              </div>
-    
-              <div class="row">
-                <svg viewBox="0 0 24 24">
-                  <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
-                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
-                  <line x1="6" y1="2" x2="6" y2="4"></line>
-                  <line x1="10" y1="2" x2="10" y2="4"></line>
-                  <line x1="14" y1="2" x2="14" y2="4"></line>
-                </svg>
-                <span><strong>Breakfast available, pay at the property (€&nbsp;12)</strong></span>
-              </div>
-    
-              <hr class="divider">
-    
-              <div class="badges">
-                <span class="badge off">27% off</span>
-                <span class="badge genius">Genius discount</span>
-                <span class="badge deal">Getaway Deal</span>
-              </div>
-    
-              <div>
-                <div class="price-label">Price for 1 night</div>
-                <div class="price-row">
-                  <span class="price-old">€ 233</span>
-                  <span class="price-new">€ 171</span>
-                  <i class="info-i">i</i>
-                </div>
-                <div class="price-sub">Includes taxes and charges</div>
-              </div>
-              <button class="cta-btn">Select</button>
-            </div>
-          </div>
+          <p class="caption">V2. Tappable area</p>
         </div>
-        <p class="caption">V2. Tappable area</p>
-      </div>
       </div>
 
-    
-    <!-- <img src="img/hc/7. Tappable variations.jpg" alt="Tappable whole card vs CTA-only variant on Android" style="width: 100%; border-radius: 12px; margin-top: 8px;">
+
+      <!-- <img src="img/hc/7. Tappable variations.jpg" alt="Tappable whole card vs CTA-only variant on Android" style="width: 100%; border-radius: 12px; margin-top: 8px;">
     <img src="img/hc/7. Tappable variations b.jpg" alt="Tappable variations detail" style="width: 100%; border-radius: 12px; margin-top: 16px;"> -->
+    </div>
   </section>
 
   <!-- iOS Iterations -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Getting to Fullon: Four iOS Iterations</h1>
-    </div>
-    <div class="hc-prose">
-      <p>iOS required four iterations before fullon. Family traffic was identified as a risk early. During the component audit and prework phase, I drafted multiple ways we could incorporate Families content into the new Room details IA.</p>
-      <p>I presented the alternatives to Families and Policies teams, but couldn't reach alignment. I had proposed consolidating all rate details into the Booking Conditions screen, which Families team supported. Policies pushed back. They owned the screen, had run their own experiments optimizing it, and adding family content risked competing for attention with theirs. Without agreement, we excluded family traffic from the first iteration, our MVP, to avoid delaying the core hypothesis test.</p>
-      <p>In parallel, I worked on two fronts: a short-term solution to unblock iteration 2, and ongoing discussions to align on a longer-term IA vision. The short-term solution, a one-line summary with an info icon, landed for iteration 2. The longer-term vision had gained support from Policies, Families, and Web by the time I left. Subsequent iterations refined tap targets, thumbnail size, and performance before meeting fullon criteria on iteration 4.</p>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Getting to Fullon: Four iOS Iterations</h1>
+      </div>
+      <div>
+        <p>iOS required four iterations before fullon. Family traffic was identified as a risk early. During the
+          component audit and prework phase, I drafted multiple ways we could incorporate Families content into the new
+          Room details IA.</p>
+        <p>I presented the alternatives to Families and Policies teams, but couldn't reach alignment. I had proposed
+          consolidating all rate details into the Booking Conditions screen, which Families team supported. Policies
+          pushed back. They owned the screen, had run their own experiments optimizing it, and adding family content
+          risked competing for attention with theirs. Without agreement, we excluded family traffic from the first
+          iteration, our MVP, to avoid delaying the core hypothesis test.</p>
+        <p>In parallel, I worked on two fronts: a short-term solution to unblock iteration 2, and ongoing discussions to
+          align on a longer-term IA vision. The short-term solution, a one-line summary with an info icon, landed for
+          iteration 2. The longer-term vision had gained support from Policies, Families, and Web by the time I left.
+          Subsequent iterations refined tap targets, thumbnail size, and performance before meeting fullon criteria on
+          iteration 4.</p>
+      </div>
     </div>
   </section>
 
   <!-- Results -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Results: Android</h1>
-    </div>
-    <div class="hc-prose">
-      <p>The Android experiment full-oned after 9 days. The primary metric, booked non-cheapest rate, increased by +4.54% (V1) and +4.82% (V2), representing +3,118±415 additional bookings per day. PNC was non-inferior.</p>
-      <p>Over 86% of Android users scrolled horizontally, validating the core discoverability hypothesis that had been flagged as a risk in research. Traffic to the room details screen increased by over 20%, suggesting users were exploring more before booking rather than defaulting to the first option they saw.</p>
-      <p>One known trade-off: as we deprioritised multi-room bookings with different rates, that use case dropped 8.29% — acknowledged and flagged as a future iteration.</p>
-    </div>
-    <div class="hc-stat-row" style="margin-top: 24px;">
-      <div class="hc-stat-block">
-        <span class="hc-stat-label">Booked non-cheapest rate</span>
-        <span class="hc-stat">+4.54% <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">V1</span></span>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Results: Android</h1>
       </div>
-      <div class="hc-stat-block">
-        <span class="hc-stat-label">NCB bookings/day</span>
-        <span class="hc-stat">+3,118 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±415</span></span>
+      <div>
+        <p>The Android experiment full-oned after 9 days. The primary metric, booked non-cheapest rate, increased by
+          +4.54% (V1) and +4.82% (V2), representing +3,118±415 additional bookings per day. PNC was non-inferior.</p>
+        <p>Over 86% of Android users scrolled horizontally, validating the core discoverability hypothesis that had been
+          flagged as a risk in research. Traffic to the room details screen increased by over 20%, suggesting users were
+          exploring more before booking rather than defaulting to the first option they saw.</p>
+        <p>One known trade-off: as we deprioritised multi-room bookings with different rates, that use case dropped
+          8.29% — acknowledged and flagged as a future iteration.</p>
       </div>
-      <div class="hc-stat-block">
-        <span class="hc-stat-label">Horizontal scroll adoption</span>
-        <span class="hc-stat">86%+</span>
+      <div class="hc-stat-row" style="margin-top: 24px;">
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">Booked non-cheapest rate</span>
+          <span class="hc-stat">+4.54% <span
+              style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">V1</span></span>
+        </div>
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">NCB bookings/day</span>
+          <span class="hc-stat">+3,118 <span
+              style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±415</span></span>
+        </div>
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">Horizontal scroll adoption</span>
+          <span class="hc-stat">86%+</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Results: iOS</h1>
-    </div>
-    <div class="hc-prose">
-      <p>The iOS experiment required five weeks of runtime plus a two-week measurement period before going fullon. The primary metric, booked non-cheapest rate, increased by +2.91%±0.22%, representing +5,614±415 additional bookings per day. PNC was non-inferior, with a small overrun on the accepted cost threshold reviewed and approved by leadership given the opportunity cost of further delay.</p>
-      <p>As with Android, business metrics improved across multiple levels — a win for customers, Booking.com, and partners.</p>
-    </div>
-    <div class="hc-stat-row" style="margin-top: 24px;">
-      <div class="hc-stat-block">
-        <span class="hc-stat-label">Booked non-cheapest rate</span>
-        <span class="hc-stat">+2.91% <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±0.22%</span></span>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Results: iOS</h1>
       </div>
-      <div class="hc-stat-block">
-        <span class="hc-stat-label">NCB bookings/day</span>
-        <span class="hc-stat">+5,614 <span style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±415</span></span>
+      <div>
+        <p>The iOS experiment required five weeks of runtime plus a two-week measurement period before going fullon. The
+          primary metric, booked non-cheapest rate, increased by +2.91%±0.22%, representing +5,614±415 additional
+          bookings per day. PNC was non-inferior, with a small overrun on the accepted cost threshold reviewed and
+          approved by leadership given the opportunity cost of further delay.</p>
+        <p>As with Android, business metrics improved across multiple levels — a win for customers, Booking.com, and
+          partners.</p>
+      </div>
+      <div class="hc-stat-row" style="margin-top: 24px;">
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">Booked non-cheapest rate</span>
+          <span class="hc-stat">+2.91% <span
+              style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±0.22%</span></span>
+        </div>
+        <div class="hc-stat-block">
+          <span class="hc-stat-label">NCB bookings/day</span>
+          <span class="hc-stat">+5,614 <span
+              style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±415</span></span>
+        </div>
       </div>
     </div>
   </section>
@@ -2503,17 +3211,28 @@
         <span style="font-size: 14px; color: var(--text-muted);">via blockout experiments</span>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Combined Impact Narrative -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">Combined Impact</h1>
-    </div>
-    <div class="hc-prose">
-      <p>The three phases of work built on each other deliberately. Foundational work, including the component audit, blockout experiments, and color alignment, created a clean baseline. Without it, any experiment result would have been harder to interpret and any negative signal harder to isolate.</p>
-      <p>The IA experiments came next, establishing a consistent information hierarchy across both platforms before the main hypothesis was tested. They delivered measurable value independently: +629±763 PNC on Android and +375±244 PNC on iOS, confirming that IA improvements alone, without visual redesign, could move conversion.</p>
-      <p>With the foundation in place and the IA validated, the core Horizontal Comparison experiment launched with the clearest possible signal. It full-oned on both platforms, increasing the rate of users booking non-cheapest options by +4.54% on Android and +2.91% on iOS. Users were no longer defaulting to the first and cheapest option, but finding and selecting the room that actually fit their needs.</p>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">Combined Impact</h1>
+      </div>
+      <div>
+        <p>The three phases of work built on each other deliberately. Foundational work, including the component audit,
+          blockout experiments, and color alignment, created a clean baseline. Without it, any experiment result would
+          have been harder to interpret and any negative signal harder to isolate.</p>
+        <p>The IA experiments came next, establishing a consistent information hierarchy across both platforms before
+          the main hypothesis was tested. They delivered measurable value independently: +629±763 PNC on Android and
+          +375±244 PNC on iOS, confirming that IA improvements alone, without visual redesign, could move conversion.
+        </p>
+        <p>With the foundation in place and the IA validated, the core Horizontal Comparison experiment launched with
+          the clearest possible signal. It full-oned on both platforms, increasing the rate of users booking
+          non-cheapest options by +4.54% on Android and +2.91% on iOS. Users were no longer defaulting to the first and
+          cheapest option, but finding and selecting the room that actually fit their needs.</p>
+      </div>
     </div>
   </section>
 
@@ -2531,82 +3250,115 @@
 
   <!-- What I'd Tackle Next -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1 class="tal">What I'd Tackle Next</h1>
-    </div>
-    <div class="hc-prose">
-      <p>Horizontal Comparison changed the relationship between Room Details and rate information. With HC, Room Details became rate-agnostic, so rate-specific content that previously lived there now needs a clear home. The next logical step is a cross-platform experiment consolidating rate information into a single, structured location.</p>
-      <p>Family information on the room details screen also needs revisiting — the interim solution that unblocked iteration 2 was never meant to be permanent. And the no-fit room problem surfaced during the experiment needs investigation: HC may be making it easier to find and select rooms that don't fit the party size, which could increase cancellations over time.</p>
-    </div>
-    <div class="hc-img-placeholder">
-      [Image: UI inconsistencies before/after]
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1 class="tal">What I'd Tackle Next</h1>
+      </div>
+      <div>
+        <p>Horizontal Comparison changed the relationship between Room Details and rate information. With HC, Room
+          Details became rate-agnostic, so rate-specific content that previously lived there now needs a clear home. The
+          next logical step is a cross-platform experiment consolidating rate information into a single, structured
+          location.</p>
+        <p>Family information on the room details screen also needs revisiting — the interim solution that unblocked
+          iteration 2 was never meant to be permanent. And the no-fit room problem surfaced during the experiment needs
+          investigation: HC may be making it easier to find and select rooms that don't fit the party size, which could
+          increase cancellations over time.</p>
+      </div>
+      <div class="hc-img-placeholder">
+        [Image: UI inconsistencies before/after]
+      </div>
     </div>
   </section>
 
   <!-- Reflection -->
   <section class="slide">
-    <div class="header mw-760">
-      <h1>Reflection</h1>
-    </div>
-    <div class="hc-prose">
-      <p>This project was the most complex stakeholder environment I'd worked in at Booking.com: six teams, two platforms, ~100 components, and a hypothesis that had already struggled to ship elsewhere.</p>
-      <p>The decision to audit and de-risk before experimenting came from recognizing that a failed experiment on a cluttered baseline would tell us almost nothing. The sequencing mattered as much as the design.</p>
-      <p>If I were doing it again, I'd push earlier for a clearer answer on the Families use case. Excluding traffic solves a short-term problem but creates a gap that compounds over iterations.</p>
-      <p>It's easy to underestimate foundational work. IA experiments were initially seen as debt cleanup, and the Apps adaptation was regularly referred to in meetings as a port. I was asked more than once whether I was simply copying the Web design as closely as possible. Both ended up producing the most concrete results. This project reinforced my belief that foundational decisions, even unglamorous ones, are often where the real impact lives.</p>
-    </div>
+    <div class="slide_container">
+      <div class="header mw-760">
+        <h1>Reflection</h1>
+      </div>
+      <div>
+        <p>This project was the most complex stakeholder environment I'd worked in at Booking.com: six teams, two
+          platforms, ~100 components, and a hypothesis that had already struggled to ship elsewhere.</p>
+        <p>The decision to audit and de-risk before experimenting came from recognizing that a failed experiment on a
+          cluttered baseline would tell us almost nothing. The sequencing mattered as much as the design.</p>
+        <p>If I were doing it again, I'd push earlier for a clearer answer on the Families use case. Excluding traffic
+          solves a short-term problem but creates a gap that compounds over iterations.</p>
+        <p>It's easy to underestimate foundational work. IA experiments were initially seen as debt cleanup, and the
+          Apps adaptation was regularly referred to in meetings as a port. I was asked more than once whether I was
+          simply copying the Web design as closely as possible. Both ended up producing the most concrete results. This
+          project reinforced my belief that foundational decisions, even unglamorous ones, are often where the real
+          impact lives.</p>
+      </div>
   </section>
 
 
 
-<script>
-  // ── Sidebar nav scroll observer ──
-  const nav = document.getElementById('caseNav');
-  const sections = document.querySelectorAll('[id]');
-  const links = document.querySelectorAll('.case-nav-link');
+  <script>
+    // ── Sidebar nav scroll observer ──
+    const nav = document.getElementById('caseNav');
+    const sections = document.querySelectorAll('[id]');
+    const links = document.querySelectorAll('.case-nav-link');
 
-  // Show nav after scrolling past cover
-  const cover = document.querySelector('.hc-cover');
-  const coverObserver = new IntersectionObserver(([e]) => {
-    nav.classList.toggle('is-visible', !e.isIntersecting);
-  }, { threshold: 0.1 });
-  coverObserver.observe(cover);
+    // Show nav after scrolling past cover
+    const cover = document.querySelector('.hc-cover');
+    const coverObserver = new IntersectionObserver(([e]) => {
+      nav.classList.toggle('is-visible', !e.isIntersecting);
+    }, { threshold: 0.1 });
+    coverObserver.observe(cover);
 
-  // Active link on scroll
-  const chapters = document.querySelectorAll('.hc-chapter');
-  const chapterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        links.forEach(l => {
-          l.classList.toggle('case-nav-link--active', l.getAttribute('href') === '#' + id);
-        });
-      }
+    // Active link on scroll
+    const chapters = document.querySelectorAll('.hc-chapter');
+    const chapterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          links.forEach(l => {
+            l.classList.toggle('case-nav-link--active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    chapters.forEach(c => chapterObserver.observe(c));
+
+    // Smooth scroll
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
-  }, { rootMargin: '-20% 0px -70% 0px' });
 
-  chapters.forEach(c => chapterObserver.observe(c));
+    // Scroll animation observer for slides
+    const slides = document.querySelectorAll('.slide');
+    const slideObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
 
-  // Smooth scroll
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    slides.forEach(slide => slideObserver.observe(slide));
+
+    // Reveal grid cards one by one when they enter the viewport
+    const gridCards = document.querySelectorAll('.grid-container .card');
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    gridCards.forEach((card, index) => {
+      card.style.setProperty('--reveal-delay', `${index * 0.12}s`);
+      cardObserver.observe(card);
     });
-  });
-
-  // Scroll animation observer for slides
-  const slides = document.querySelectorAll('.slide');
-  const slideObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  slides.forEach(slide => slideObserver.observe(slide));
-</script>
+  </script>
 
 </body>
+
 </html>

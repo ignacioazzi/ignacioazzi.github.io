@@ -1,0 +1,163 @@
+```html
+<style>
+  .hc-diagram .wrap {
+    display: flex;
+    gap: 32px;
+    padding: 24px 16px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hc-diagram .col {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    flex: 1;
+    max-width: 260px;
+  }
+
+  .hc-diagram .col-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+  }
+
+  .hc-diagram .col-sub {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .hc-diagram .room-card {
+    border: 1px solid #d0cec8;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #ffffff;
+  }
+
+  .hc-diagram .room-label-a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #3d3d3a;
+    background: #e8e6f0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .hc-diagram .room-label-b {
+    font-size: 12px;
+    font-weight: 500;
+    color: #085041;
+    background: #c8ece0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .hc-diagram .rate-card {
+    border: 2px dashed #e0b84a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #7a5820;
+    background: #fdf5e0;
+    text-align: center;
+  }
+
+  .hc-diagram .rate-cards-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+
+  .hc-diagram .rate-card-small {
+    border: 2px dashed #e0b84a;
+    border-radius: 8px;
+    padding: 8px 2px;
+    font-size: 11px;
+    color: #7a5820;
+    background: #fdf5e0;
+    text-align: center;
+    flex: 1;
+  }
+
+  .hc-diagram .cta {
+    background: #c8d4f0;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #1a2a6c;
+    text-align: center;
+  }
+
+  .hc-diagram .arrow-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    flex-shrink: 0;
+  }
+</style>
+<div class="hc-diagram">
+  <div class="wrap">
+    <div class="col">
+      <div class="col-title">Base</div>
+      <div class="col-sub">Each room/rate has its own room card...</div>
+      <div class="room-card">
+        <div class="room-label-a">Room A</div>
+        <div class="rate-card">Rate 1</div>
+        <div class="cta">CTA</div>
+      </div>
+      <div class="room-card">
+        <div class="room-label-a">Room A</div>
+        <div class="rate-card">Rate 2</div>
+        <div class="cta">CTA</div>
+      </div>
+      <div class="room-card">
+        <div class="room-label-b">Room B</div>
+        <div class="rate-card">Rate 1</div>
+        <div class="cta">CTA</div>
+      </div>
+    </div>
+    <div class="arrow-wrap">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 24 L36 24" stroke="#b0bcd8" stroke-width="3" stroke-linecap="round" />
+        <path d="M28 14 L40 24 L28 34" stroke="#b0bcd8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+          fill="none" />
+      </svg>
+    </div>
+    <div class="col">
+      <div class="col-title">Horizontal Comparison</div>
+      <div class="col-sub">Rates are presented as a part of a room, reducing repetition and overload.</div>
+      <div class="room-card">
+        <div class="room-label-a">Room A</div>
+        <div class="rate-cards-row">
+          <div class="rate-card-small">Rate 1</div>
+          <div class="rate-card-small">Rate 2</div>
+          <div class="rate-card-small">Rate 3</div>
+        </div>
+        <div class="cta">CTA</div>
+      </div>
+      <div class="room-card">
+        <div class="room-label-b">Room B</div>
+        <div class="rate-cards-row">
+          <div class="rate-card-small">Rate 1</div>
+          <div class="rate-card-small">Rate 2</div>
+          <div class="rate-card-small">Rate 3</div>
+        </div>
+        <div class="cta">CTA</div>
+      </div>
+    </div>
+  </div>
+</div>
+```

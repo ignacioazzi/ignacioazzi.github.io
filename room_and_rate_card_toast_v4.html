@@ -1,0 +1,338 @@
+<style>
+  .rc5 .wrap {
+  display: flex;
+    gap: 3em;
+    padding: 24px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .rc5 .card {
+    background: #ffffff;
+    border: 1px solid #d0cec8;
+    border-radius: 12px;
+    padding: 14px;
+    max-width: 260px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    flex: 1;
+  }
+
+
+
+  .rc5 .line {
+    height: 10px;
+    border-radius: 99px;
+    background: #e8e6e0;
+    margin-bottom: 8px;
+  }
+
+  .rc5 .line.short {
+    width: 45%;
+  }
+
+  .rc5 .line.medium {
+    width: 70%;
+  }
+
+  .rc5 .line.full {
+    width: 100%;
+  }
+
+  .rc5 .line.thin {
+    height: 8px;
+    background: #f0eeec;
+  }
+
+  .rc5 .spacer {
+    height: 10px;
+  }
+
+  .rc5 .icon-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  .rc5 .icon-circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e8e6e0;
+    flex-shrink: 0;
+  }
+
+  .rc5 .icon-line {
+    height: 8px;
+    border-radius: 99px;
+    background: #f0eeec;
+    flex: 1;
+  }
+
+  .rc5 .rate-cards-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+
+  .rc5 .rate-card {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #dcd9d3;
+    background: #fcfcfc57;
+    /* flex: 1; */
+    display: flex;
+    min-width: 175px;
+    /* min-width: 0; */
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rc5 .toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #eaf7f0;
+    border: 1px solid #a0dcc0;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .rc5 .toast-inline {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .rc5 .toast-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: #2e9e6e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .rc5 .toast-inline .toast-icon{
+    width: 12px;
+    height: 12px;
+    background: transparent;
+  }
+
+  .rc5 .toast-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .rc5 .msg {
+    font-size: 14px;
+    color: #1a4a32;
+    line-height: 1.4;
+  }
+
+  .rc5 .cta {
+ border: 2px solid #016ce4;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #016ce4;
+    border: 2px solid #016ce4;
+    text-align: center;
+  }
+
+  .rc5 {
+    font-family: sans-serif;
+  }
+
+  .spacer-v {
+    height: 100%;
+  }
+
+  .card > .line:first-of-type {
+    height: 13px;
+    border-radius: 4px !important;
+    background: #cac8c2;
+    width: 65%;
+}
+
+</style>
+<div class="rc5">
+  <div class="wrap">
+    <div class="card">
+      <div class="line full"></div>
+      <div class="line medium thin"></div>
+      <div class="spacer"></div>
+      <div class="icon-row">
+        <div class="icon-circle"></div>
+        <div class="icon-line" style="width:40%"></div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle"></div>
+        <div class="icon-line" style="width:60%"></div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle"></div>
+        <div class="icon-line" style="width:50%"></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="line full thin"></div>
+      <div class="line medium thin"></div>
+      <div class="spacer"></div>
+      <div class="cta">Select</div>
+      <div class="spacer"></div>
+
+      <div class="toast">
+        <div class="toast-icon"><svg viewBox="0 0 12 12" fill="none">
+            <path d="M2 6L5 9L10 3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg></div>
+        <div class="msg">You selected the last 5 rooms like this left on Booking.com!</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="line full thin"></div>
+      <div class="line medium thin"></div>
+      <div class="spacer"></div>
+      <div class="rate-cards-row">
+        <div class="rate-card">
+          <div class="line full"></div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="toast">
+            <div class="toast-icon"><svg viewBox="0 0 12 12" fill="none">
+                <path d="M2 6L5 9L10 3" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <div class="msg">You selected the last 5 rooms like this left on Booking.com!</div>
+          </div>
+          <div class="cta">Select</div>
+
+        </div>
+        <div class="rate-card">
+          <div class="line full"></div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="spacer-v"></div>
+
+          <div class="cta">Select</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="line full thin"></div>
+      <div class="line medium thin"></div>
+      <div class="spacer"></div>
+      <div class="rate-cards-row">
+        <div class="rate-card">
+          <div class="line full"></div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="toast-inline">
+            <div class="toast-icon">
+            <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2 6L5 9L10 3" stroke="#1a4a32" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="msg">You selected the last 5 rooms like this left on Booking.com!</div>
+          </div>
+          <div class="cta">Select</div>
+
+        </div>
+        <div class="rate-card">
+          <div class="line full"></div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="icon-row">
+            <div class="icon-circle"></div>
+            <div class="icon-line"></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="spacer-v"></div>
+
+          <div class="cta">Select</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

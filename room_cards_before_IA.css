@@ -26,10 +26,31 @@
   grid-area: auto;
   padding: 16px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
-.price-block {
+.rate_card {
+    min-width: 260px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.card-top {
+    position: relative;
+    padding-right: 34px;
+}
+
+.radio {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.card .price-block {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -86,7 +107,7 @@
   line-height: 1.3;
 }
 
-.room-img {
+.card .room-img {
   width: 64px;
   height: 64px;
   border-radius: 5px;
@@ -274,7 +295,7 @@ section > .divider {
   background: #eef1fb;
 }
 
-strong {
+.card strong {
   color: #1a6b3a;
 }
 
@@ -291,7 +312,7 @@ strong {
   text-align: left;
 }
 
-.room-img {
+.card .room-img {
   width: 64px;
   height: 64px;
   border-radius: 5px;
@@ -337,15 +358,16 @@ strong {
 }
 
 .rate_card_carousel {
-  display: block;
+  display: flex;
   white-space: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   width: calc(100% + 16px);
   padding: 8px 16px 0 0;
   flex-direction: row;
+  gap: 15px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
