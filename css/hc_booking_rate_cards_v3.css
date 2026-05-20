@@ -158,7 +158,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-bottom: 0.5px solid var(--color-border-tertiary);
 }
 
 .section-title {

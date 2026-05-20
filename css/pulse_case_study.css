@@ -65,10 +65,10 @@ body {
 .fifty_fifty {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4em;
+    gap: 6em;
     padding: 2em 0;
-    /* WIDTH: 120%; */
-    /* transform: translateX(-10%); */
+    WIDTH: 120%;
+    transform: translateX(-10%);
     /* MARGIN: 0 AUTO; */
 }
 

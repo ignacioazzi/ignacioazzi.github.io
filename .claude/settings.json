@@ -18,7 +18,10 @@
       "Bash(do)",
       "Bash(echo -n \"$f: \")",
       "Bash(python3 -c \":*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(grep -n \"^\\\\s*h[1-6]\\\\s*{\\\\|^\\\\s*\\\\..*title\\\\|font-size.*px\\\\|font-weight.*[67]00\" /Users/ignacio/Desktop/Work/Portfolio/horizontal_comparison_case_study_13k.html)",
+      "Bash(grep -n \"^\\\\s*h2\\\\s*{\\\\|^\\\\s*h2,\" /Users/ignacio/Desktop/Work/Portfolio/horizontal_comparison_case_study_13k.html)",
+      "Bash(grep -v \"^[<>] *$\")"
     ],
     "additionalDirectories": [
       "/Users/ignacio/SwiftBar Plugins",

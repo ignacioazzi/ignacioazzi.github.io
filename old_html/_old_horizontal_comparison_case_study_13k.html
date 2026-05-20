@@ -8,499 +8,10 @@
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="stylesheet" href="pulse_case_study.css">
+  <link rel="stylesheet" href="horizontal_comparison_case_study.css">
   <link rel="stylesheet" href="hc_booking_rate_cards_v3.css">
   <link rel="stylesheet" href="room_cards_before_IA.css">
   <link rel="stylesheet" href="five_solutions.css">
-  <style>
-    /* ── HC-specific palette ── */
-    :root {
-      --hc-primary: #6B6FD4;
-      --hc-dark: #2D3170;
-      --hc-accent: #F47B4A;
-      --hc-bg: #f0f0f8;
-      --hc-cover-bg: linear-gradient(135deg, #2D3170 0%, #6B6FD4 100%);
-    }
-
-    iframe {
-      display: block;
-      width: 100vw;
-      /* border-radius: 16px; */
-      aspect-ratio: 2 / 1.1;
-    }
-
-    .slide_container {
-      max-width: 680px;
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-
-    /* ── Cover ── */
-    .hc-cover {
-      background: var(--hc-cover-bg) !important;
-      min-height: 60vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 2em;
-    }
-
-    .hc-cover h1 {
-      font-size: var(--fs-display);
-      color: rgba(255, 255, 255, 0.95);
-      max-width: 760px;
-    }
-
-    .hc-cover .slide-subtitle {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .hc-cover .label {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-cover .cover-meta-label {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-cover .cover-meta-value {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .hc-cover .cover-divider {
-      background: rgba(255, 255, 255, 0.18);
-    }
-
-    /* ── Chapter dividers ── */
-    .hc-chapter {
-      background: var(--hc-dark);
-      padding: 2.5em max(1.5rem, calc((100% - var(--carousel-max-w)) / 2));
-      display: flex;
-      align-items: center;
-      gap: 1em;
-      display: none;
-    }
-
-    .hc-chapter-label {
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-chapter-title {
-      font-size: var(--fs-2xl);
-      font-weight: 800;
-      color: #ffffff;
-    }
-
-    /* ── Section slides alternating bg ── */
-    .slide:nth-child(odd) {
-      background: #f5f5fb;
-    }
-
-    .slide-alt {
-      background: #f5f5fb !important;
-    }
-
-    .slide:nth-child(even) {
-      background: #ffffff;
-    }
-
-    .case-nav.is-visible {
-      opacity: 1 !important
-    }
-
-    /* Using Pulse summary-grid classes instead */
-
-    /* ── Stat highlights ── */
-    .hc-stat {
-      font-size: var(--fs-3xl);
-      font-weight: 800;
-      color: var(--hc-primary);
-      line-height: 1;
-    }
-
-    .hc-stat-row {
-      display: flex;
-      gap: 48px;
-      align-items: flex-end;
-      flex-wrap: wrap;
-    }
-
-    .hc-stat-block {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .hc-stat-label {
-      font-size: var(--fs-sm);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    /* ── Phase list ── */
-    .hc-phases {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      padding-left: 2em;
-      padding-right: 4em;
-      width: 100%;
-      /* width: calc(100% - 2em); */
-      box-sizing: border-box;
-      max-width: 680px;
-      margin: 1em 0;
-      counter-reset: phase;
-    }
-
-    .hc-phase {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5em;
-      background: #f5f5fb;
-      /* margin: 1em; */
-      border-radius: 16px;
-      counter-increment: phase;
-    }
-
-    .hc-phase::before {
-      /* content: counter(phase) "."; */
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      color: var(--hc-primary);
-      /* letter-spacing: 0.05em; */
-      /* margin-bottom: 4px; */
-      display: inline-block;
-    }
-
-    .hc-phase:last-child {
-      border-bottom: none;
-    }
-
-    .hc-phase-num {
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      color: var(--hc-primary);
-      width: 24px;
-      flex-shrink: 0;
-      letter-spacing: 0.05em;
-    }
-
-    .hc-phase-title {
-      font-size: var(--fs-lg);
-      font-weight: 700;
-      color: var(--text-heading);
-      min-width: 200px;
-      display: inline-block;
-    }
-
-    .hc-phase-desc {
-      font-size: 16px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* ── Alignment cases ── */
-    .hc-alignment-case {
-      border-left: 3px solid var(--hc-primary);
-      padding: 16px 0 16px 24px;
-      margin-bottom: 24px;
-    }
-
-    .hc-alignment-case:last-child {
-      margin-bottom: 0;
-    }
-
-    .hc-alignment-case-title {
-      font-size: var(--fs-body);
-      font-weight: 700;
-      color: var(--text-heading);
-      margin-bottom: 8px;
-    }
-
-    .hc-alignment-case p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text);
-      margin: 0;
-    }
-
-    /* ── Image placeholder ── */
-    .hc-img-placeholder {
-      width: 100%;
-      max-width: 760px;
-      background: #e8e8f4;
-      border-radius: 12px;
-      padding: 48px 24px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: var(--fs-md);
-      font-style: italic;
-      border: 2px dashed #c5c5e0;
-    }
-
-    /* ── Prose block ── */
-    .hc-prose {
-      max-width: 680px;
-      width: 100%;
-    }
-
-    .hc-prose p {
-      font-size: var(--fs-body);
-      line-height: 1.7;
-      color: var(--text-heading);
-      margin-bottom: 1.5em;
-    }
-
-    .hc-prose p:last-child {
-      margin-bottom: 0;
-    }
-
-    .hc-prose ul {
-      margin: 0.5em 0 1.2em 1.5em;
-    }
-
-    .hc-prose li {
-      font-size: var(--fs-body);
-      line-height: 1.6;
-      margin: 0.4em 0;
-    }
-
-    .hc-prose strong {
-      color: var(--text-heading);
-    }
-
-    /* ── Section header ── */
-    /* Section headers use Pulse .header class instead */
-
-    /* ── Subsection ── */
-    .hc-subsection {
-      width: 100%;
-      max-width: 680px;
-    }
-
-    .hc-subsection-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--hc-dark);
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      /* border-bottom: 2px solid var(--hc-primary); */
-      display: inline-block;
-    }
-
-    /* ── Nav active color override ── */
-    .case-nav-link--active {
-      color: var(--hc-primary) !important;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      /* width: 1600px; */
-      margin: 0 auto;
-      /* align-items: start; */
-    }
-
-    .grid-container .card {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease var(--reveal-delay, 0s), transform 0.6s ease var(--reveal-delay, 0s);
-      will-change: opacity, transform;
-      visibility: hidden;
-    }
-
-    .grid-container .card.in-view {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
-
-    .room_info:before,
-    .rate_info:before,
-    .room_info:after,
-    .rate_info:after {
-      display: none
-    }
-
-    .top-row+div {
-      padding-right: 74px;
-    }
-
-    @media (max-width: 1200px) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .img-placeholder {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #f0f0f5;
-      border-radius: 12px;
-      content: "Image placeholder";
-    }
-
-    .screenshot {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-
-    /* Diagram */
-    .hc-diagram .wrap {display: grid;gap: 80px;grid-template-columns: 1fr 1px 1fr;/* padding: 24px 16px; */justify-content: center;/* padding: 12px 0px; */padding: 2em 0;/* transform-origin: top; *//* transform: scale(1.1); */align-items: flex-start;}
-
-    .hc-diagram .col {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      align-items: stretch;
-      flex: 1;
-      max-width: 320px;
-      position: relative;
-    }
-
-    .separator {
-      width: 1px;
-    MARGIN:  0%;
-    background: #00000021;
-    content: " ";
-    min-height: 90%;
-}
-
-    .hc-diagram .col-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--color-text-primary);
-      margin-bottom: 4px;
-      color: var(--hc-dark);
-    }
-
-    .hc-diagram .col-sub {
-      font-size: 14px;
-      /* color: var(--color-text-secondary); */
-      margin-bottom: 2em;
-      line-height: 1.4;
-    }
-
-    .hc-diagram .room-card {
-      border: 1px solid #c8c4d4;
-      border-radius: 12px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background: #ffffff;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    }
-
-    .hc-diagram .room-label-a,
-    .hc-diagram .room-label-b {
-      font-size: 14px;
-      font-weight: 500;
-      color: #3c3580;
-      background: #d4d0f5;
-      border-radius: 6px;
-      padding: 12px 10px;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
-    .hc-diagram .room-label-b {
-      color: #065040;
-      background: #a0e8cc;
-
-    }
-
-    .hc-diagram .rate-card {
-      border: 2px dashed #d4a010;
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 8px;
-      font-size: 14px;
-      color: #7a4e00;
-      background: #fef0c0;
-      text-align: center;
-      display: block;
-    }
-
-    .hc-diagram .rate-cards-row {
-      display: block;
-      gap: 5px;
-      margin-bottom: 8px;
-      white-space: nowrap;
-      overflow-x: scroll;
-    }
-
-    .hc-diagram .rate-card-small {
-      border: 2px dashed #d4a010;
-    border-radius: 8px;
-    padding: 16px 8px;
-    font-size: 13px;
-    color: #7a4e00;
-    background: #fef0c0;
-    text-align: center;
-    display: inline-block;
-    width: 43%;
-    }
-
-    .hc-diagram .cta {
-      background: #a8bef8;
-      border-radius: 6px;
-      padding: 7px 10px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #0f1e80;
-      text-align: center;
-    }
-
-    .hc-diagram .arrow-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* padding-top: 80px; */
-      flex-shrink: 0;
-      display: none;
-    }
-
-    .rate-card-small .cta {
-      margin-top: 8px;
-      display: none
-    }
-  .annotation-arrow-right {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    position: absolute;
-    right: -148px;
-    top: -2px;
-    white-space: nowrap;
-    pointer-events: none;
-  }
-
-  .annotation-arrow-rates {
-    right: -176px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .annotation-arrow-right span {
-    font-size: 11px;
-    font-weight: 500;
-    color: #E05C2E;
-    font-family: inherit;
-  }
-  </style>
 </head>
 
 <body class="hc">
@@ -1606,6 +1117,7 @@
                     <div class="radio"></div><span class="radio-label">Non refundable</span>
                   </div>
                 </div>
+                <div class="carousel-divider"></div>
                 <div class="section-group">
                   <span class="section-title">Meals</span>
                   <div class="radio-row">
@@ -1613,6 +1125,7 @@
                         guest</span></span>
                   </div>
                 </div>
+                <div class="carousel-divider"></div>
                 <div class="price-block">
                   <div class="price-from">from</div>
                   <div class="price-amount">€112</div>
@@ -1634,7 +1147,7 @@
                   <div class="skel light" style="width:50%"></div>
                   <div class="skel light" style="width:40%"></div>
                 </div>
-                <div class="carousel-divider"></div>
+                <div class="room-body"><div class="carousel-divider"></div></div>
                 <div class="carousel-wrap">
                   <div class="carousel-track">
         
@@ -1716,7 +1229,7 @@
                   <div class="skel light" style="width:80%"></div>
                   <div class="skel light" style="width:75%"></div>
                   <div class="skel light" style="width:80%"></div>
-                    <div class="carousel-divider"></div>
+                    <div class="room-body" style="padding-left: 0px; padding-right: 0px;"><div class="carousel-divider" "></div></div>
                   <div class="skel light" style="width:75%"></div>
                   <div class="skel light" style="width:80%"></div>
                     <div>
@@ -1734,7 +1247,7 @@
                 <div class="skel light" style="width:80%"></div>
                 <div class="skel light" style="width:75%"></div>
                 <div class="skel light" style="width:80%"></div>
-                <div class="carousel-divider"></div>
+                <div class="room-body" style="padding-left: 0px; padding-right: 0px;"><div class="carousel-divider" "></div></div>
                 <div class="skel light" style="width:75%"></div>
                 <div class="skel light" style="width:80%"></div>
                 <div>
@@ -1752,7 +1265,7 @@
                   <div class="skel light" style="width:80%"></div>
                   <div class="skel light" style="width:75%"></div>
                   <div class="skel light" style="width:80%"></div>
-                  <div class="carousel-divider"></div>
+                  <div class="room-body" style="padding-left: 0px; padding-right: 0px;"><div class="carousel-divider"></div></div>
                   <div class="skel light" style="width:75%"></div>
                   <div class="skel light" style="width:80%"></div>
                   <div>
@@ -1797,7 +1310,7 @@
                 <div class="skel light" style="width:50%"></div>
                 <div class="skel light" style="width:40%"></div>
               </div>
-              <div class="carousel-divider"></div>
+              <div class="room-body"><div class="carousel-divider"></div></div>
               <div class="carousel-wrap" style="position:relative;">
            
                 <div class="carousel-track">
@@ -1857,7 +1370,7 @@
                 <div class="skel light" style="width:50%"></div>
                 <div class="skel light" style="width:40%"></div>
               </div>
-              <div class="carousel-divider"></div>
+              <div class="room-body"><div class="carousel-divider"></div></div>
               <div class="carousel-wrap">
                 <div class="carousel-track">
             
@@ -1991,7 +1504,7 @@
       </div>
 
       <!-- Component Audit -->
-      <div class="hc-subsection">
+      <div class="">
         <p class="hc-subsection-title">1.1 Component Audit</p>
         <div>
           <p>Horizontal Comparison fundamentally reorganised the Room Selection IA. Where the base experience showed
@@ -2014,12 +1527,12 @@
       </div>
 
       <figure>
-        <img class="screenshot" style="max-width: none;" src="img/hc/component_audit.jpg">
+        <img class="screenshot" src="img/hc/component_audit.jpg">
         <figcaption class="caption">Excerpt from the component audit output, mapping ~100 components by room/rate level.
         </figcaption>
       </figure>
       <!-- Block-out Experiments -->
-      <div class="hc-subsection">
+      <div class="">
         <p class="hc-subsection-title">1.2 Block-out Experiments</p>
         <div>
           <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier. </p>
@@ -2045,10 +1558,8 @@
         </div>
       </div>
       <!-- IA Experiments -->
-      <div class="hc-subsection">
+      <div class="">
         <p class="hc-subsection-title">1.2 Information Architecture improvements</p>
-
-
 
 
 
@@ -2062,10 +1573,316 @@
           <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
         </div>
 
-        <figure>
-          <img src="img/hc/rate_card_comparison.jpg" alt="Rate card comparison between Web and Apps">
-          <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item</figcaption>
-        </figure>
+     
+        <div class="fifty_fifty">
+          <div class="column">
+            <div class="caption">Before: Unclear categorization</div>
+            <div class="card card-ia">
+              <div class="top-row">
+                <div class="title">Nhow Premium Room with Sunrise View</div>
+                <img class="room-img"
+                  src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+                  alt="Hotel room" />
+              </div>
+        
+              <div class="rate_info">
+                <div class="row">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-users-icon lucide-users">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <circle cx="9" cy="7" r="4" />
+                  </svg>
+                  <span>Price for 2 adults</span>
+                </div>
+                <div class="row">
+                  <svg class="green" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m4.9 4.9 14.2 14.2" />
+                  </svg>
+                  <span><strong class="green">Non-refundable</strong></span>
+                </div>
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <span>Pay securely online with Booking.com</span>
+                </div>
+        
+              </div>
+        
+              <div class="room_info">
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="15 3 21 3 21 9" />
+                    <polyline points="9 21 3 21 3 15" />
+                    <line x1="21" y1="3" x2="14" y2="10" />
+                    <line x1="3" y1="21" x2="10" y2="14" />
+                  </svg>
+                  <span>Room size: 291 ft²</span>
+                </div>
+        
+                <div class="row">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-bed-double-icon lucide-bed-double">
+                    <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                    <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                    <path d="M12 4v6" />
+                    <path d="M2 18h20" />
+                  </svg>
+                  <div>
+                    <div><strong>Option 1:</strong> 1 full bed</div>
+                    <div><strong>Option 2:</strong> 2 twin beds</div>
+                  </div>
+                </div>
+        
+              </div>
+        
+              <div class="rate_info">
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="2" x2="6" y2="4" />
+                    <line x1="10" y1="2" x2="10" y2="4" />
+                    <line x1="14" y1="2" x2="14" y2="4" />
+                  </svg>
+                  <span>Breakfast available, pay at the property</span>
+                </div>
+              </div>
+        
+              <div class="room_info">
+                <div class="amenities">
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                      <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+                    </svg>
+                    Free WiFi
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
+                    View
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                      <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    </svg>
+                    Air conditioning
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+                    </svg>
+                    Attached bathroom
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                    Flat-screen TV
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                      <line x1="23" y1="9" x2="17" y2="15" />
+                      <line x1="17" y1="9" x2="23" y2="15" />
+                    </svg>
+                    Soundproof
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Coffee machine
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Minibar
+                  </div>
+                </div>
+              </div>
+        
+              <hr class="divider">
+        
+              <div class="price-block">
+                <div class="price-label">Price for 1 night (Oct 10 – Oct 11)</div>
+                <div class="price-big">US$266</div>
+                <div class="price-sub">Includes taxes and fees</div>
+              </div>
+        
+              <button class="cta-btn">Select and customize</button>
+            </div>
+          </div>
+        
+          <div class="column">
+            <div class="caption">After: Elements are grouped by category</div>
+            <div class="card card-ia">
+              <div class="top-row">
+                <div class="title">Nhow Premium Room with Sunrise View</div>
+                <img class="room-img"
+                  src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=200&auto=format&fit=crop&q=60"
+                  alt="Hotel room" />
+              </div>
+        
+        
+              <div class="room_info">
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="15 3 21 3 21 9" />
+                    <polyline points="9 21 3 21 3 15" />
+                    <line x1="21" y1="3" x2="14" y2="10" />
+                    <line x1="3" y1="21" x2="10" y2="14" />
+                  </svg>
+                  <span>Room size: 291 ft²</span>
+                </div>
+        
+                <div class="row">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-bed-double-icon lucide-bed-double">
+                    <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                    <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                    <path d="M12 4v6" />
+                    <path d="M2 18h20" />
+                  </svg>
+                  <div>
+                    <div><strong>Option 1:</strong> 1 full bed</div>
+                    <div><strong>Option 2:</strong> 2 twin beds</div>
+                  </div>
+                </div>
+        
+        
+                <div class="amenities">
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                      <circle cx="12" cy="20" r="1" fill="#1a6b3a" stroke="none" />
+                    </svg>
+                    Free WiFi
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
+                    View
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                      <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    </svg>
+                    Air conditioning
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+                    </svg>
+                    Attached bathroom
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                    Flat-screen TV
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                      <line x1="23" y1="9" x2="17" y2="15" />
+                      <line x1="17" y1="9" x2="23" y2="15" />
+                    </svg>
+                    Soundproof
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Coffee machine
+                  </div>
+                  <div class="amenity">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Minibar
+                  </div>
+                </div>
+              </div>
+        
+              <div class="rate_info">
+                <div class="row">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-users-icon lucide-users">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <circle cx="9" cy="7" r="4" />
+                  </svg>
+                  <span>Price for 2 adults</span>
+                </div>
+                <div class="row">
+                  <svg class="green" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m4.9 4.9 14.2 14.2" />
+                  </svg>
+                  <span class="green"><strong>Non-refundable</strong></span>
+                </div>
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <span>Pay securely online with Booking.com</span>
+                </div>
+                <div class="row">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M17 8h1a4 4 0 0 1 0 8h-1" />
+                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z" />
+                    <line x1="6" y1="2" x2="6" y2="4" />
+                    <line x1="10" y1="2" x2="10" y2="4" />
+                    <line x1="14" y1="2" x2="14" y2="4" />
+                  </svg>
+                  <span>Breakfast available, pay at the property</span>
+                </div>
+              </div>
+        
+              <hr class="divider">
+        
+              <div class="price-block">
+                <div class="price-label">Price for 1 night (Oct 10 – Oct 11)</div>
+                <div class="price-big">US$266</div>
+                <div class="price-sub">Includes taxes and fees</div>
+              </div>
+        
+              <button class="cta-btn">Select and customize</button>
+            </div>
+          </div></div>
 
         <!-- <div class="fifty_fifty mw-760">
         <div class="column">
@@ -2537,7 +2354,7 @@
       </div>
 
 
-      <div class="hc-subsection">
+      <div class="">
         <p class="hc-subsection-title">1.3 Color Alignment</p>
         <div>
           <p>Breakfast "included" and "available" used different color logic across platforms — green on one, black on

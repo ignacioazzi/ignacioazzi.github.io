@@ -10,17 +10,21 @@
   align-items: flex-start;
 }
 
+span.solution-desc {
+    font-size: 14px;
+}
+
 .card {
   background: #fff;
   sceot
   padding: 16px;
-  max-width: 360px;
+  width: 360px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 14px;
   color: #111;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   transform-origin: center top;
   /* transform: scale(1.1); */
   grid-area: auto;
@@ -53,12 +57,12 @@
 .card .price-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0px;
   height: 100%;
 }
 
 .rate_info, .room_info {
-  gap: 8px;
+  gap: 6px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -71,7 +75,7 @@
   position: absolute;
   left: -32px;
   border-radius: 2px;
-  background-color: #757575;
+  background-color: #016ce4;
 }
 
 .card-ia .rate_info:before,  .card-ia .room_info:before {
@@ -86,7 +90,7 @@
 
 .card-ia .room_info:before {
   content: "Room";
-  color: #757575;
+  color: #016ce4;
 }
 
 .card-ia .rate_info:after {
@@ -139,7 +143,11 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 12px;
-  row-gap: 5px;
+  row-gap: 1px;
+}
+
+.card-ia .amenities{
+  width: 360px;
 }
 
 .amenity {
@@ -223,7 +231,7 @@
   font-size: 20px;
   font-weight: 700;
   color: #111;
-  margin: 2px 0 1px;
+  /* margin: 2px 0 1px; */
 }
 
 .price-sub {
@@ -295,8 +303,9 @@ section > .divider {
   background: #eef1fb;
 }
 
-.card strong {
+.card .green, svg .green {
   color: #1a6b3a;
+  stroke: #1a6b3a
 }
 
 .android-card .rate_info:after,
