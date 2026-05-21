@@ -12,6 +12,11 @@
 
 span.solution-desc {
     font-size: 14px;
+    margin: .1em 0 2em;
+}
+
+.solution > span {
+    display: block;
 }
 
 .card {
@@ -24,7 +29,7 @@ span.solution-desc {
   color: #111;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transform-origin: center top;
   /* transform: scale(1.1); */
   grid-area: auto;
@@ -62,10 +67,11 @@ span.solution-desc {
 }
 
 .rate_info, .room_info {
-  gap: 6px;
+  gap: 4px;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 
 .card-ia .rate_info:after, .card-ia .room_info:after {
@@ -73,7 +79,7 @@ span.solution-desc {
   width: 3px;
   height: 100%;
   position: absolute;
-  left: -32px;
+  right: -32px;
   border-radius: 2px;
   background-color: #016ce4;
 }
@@ -83,8 +89,8 @@ span.solution-desc {
   width: 100px;
   height: 100%;
   position: absolute;
-  left: -142px;
-  text-align: right;
+  right: -142px;
+  /* text-align: right; */
   top: -2px;
 }
 

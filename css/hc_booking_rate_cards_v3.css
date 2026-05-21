@@ -20,20 +20,6 @@
   align-items: flex-start;
 }
 
-.solution {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.solution-label {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px 4PX;
-  color: #65707a;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 .filter-scroll-wrap {
   background: var(--color-background-primary);

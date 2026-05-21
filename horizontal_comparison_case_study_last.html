@@ -8,508 +8,13 @@
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="stylesheet" href="css/pulse_case_study.css">
+  <link rel="stylesheet" href="css/room_customiser_case_study.css">
   <link rel="stylesheet" href="css/horizontal_comparison_case_study.css">
   <link rel="stylesheet" href="css/hc_booking_rate_cards_v3.css">
   <link rel="stylesheet" href="css/room_cards_before_IA.css">
   <link rel="stylesheet" href="css/five_solutions.css">
-  <!-- <style>
-    /* ── HC-specific palette ── */
-    :root {
-      --hc-primary: #6B6FD4;
-      --hc-dark: #2D3170;
-      --hc-accent: #F47B4A;
-      --hc-bg: #f0f0f8;
-      --hc-cover-bg: linear-gradient(135deg, #2D3170 0%, #6B6FD4 100%);
-    }
 
-    iframe {
-      display: block;
-      width: 100vw;
-      /* border-radius: 16px; */
-      aspect-ratio: 2 / 1.1;
-    }
-
-    .slide_container {
-      max-width: 680px;
-      display: flex;
-      flex-direction: column;
-      gap: 2em;
-    }
-
-    /* ── Cover ── */
-    .hc-cover {
-      background: var(--hc-cover-bg) !important;
-      min-height: 60vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 2em;
-    }
-
-    .hc-cover h1 {
-      font-size: var(--fs-display);
-      color: rgba(255, 255, 255, 0.95);
-      max-width: 760px;
-    }
-
-    .hc-cover .slide-subtitle {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .hc-cover .label {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-cover .cover-meta-label {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-cover .cover-meta-value {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .hc-cover .cover-divider {
-      background: rgba(255, 255, 255, 0.18);
-    }
-
-    /* ── Chapter dividers ── */
-    .hc-chapter {
-      background: var(--hc-dark);
-      padding: 2.5em max(1.5rem, calc((100% - var(--carousel-max-w)) / 2));
-      display: flex;
-      align-items: center;
-      gap: 1em;
-      display: none;
-    }
-
-    .hc-chapter-label {
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .hc-chapter-title {
-      font-size: var(--fs-2xl);
-      font-weight: 800;
-      color: #ffffff;
-    }
-
-    /* ── Section slides alternating bg ── */
-    .slide:nth-child(odd) {
-      background: #f5f5fb;
-    }
-
-    .slide-alt {
-      background: #f5f5fb !important;
-    }
-
-    .slide:nth-child(even) {
-      background: #ffffff;
-    }
-
-    .case-nav.is-visible {
-      opacity: 1 !important
-    }
-
-    /* Using Pulse summary-grid classes instead */
-
-    /* ── Stat highlights ── */
-    .hc-stat {
-      font-size: var(--fs-3xl);
-      font-weight: 800;
-      color: var(--hc-primary);
-      line-height: 1;
-    }
-
-    .hc-stat-row {
-      display: flex;
-      gap: 48px;
-      align-items: flex-end;
-      flex-wrap: wrap;
-    }
-
-    .hc-stat-block {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .hc-stat-label {
-      font-size: var(--fs-sm);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    /* ── Phase list ── */
-    .hc-phases {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      padding-left: 2em;
-      padding-right: 4em;
-      width: 100%;
-      /* width: calc(100% - 2em); */
-      box-sizing: border-box;
-      max-width: 680px;
-      margin: 1em 0;
-      counter-reset: phase;
-    }
-
-    .hc-phase {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5em;
-      background: #f5f5fb;
-      /* margin: 1em; */
-      border-radius: 16px;
-      counter-increment: phase;
-    }
-
-    .hc-phase::before {
-      /* content: counter(phase) "."; */
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      color: var(--hc-primary);
-      /* letter-spacing: 0.05em; */
-      /* margin-bottom: 4px; */
-      display: inline-block;
-    }
-
-    .hc-phase:last-child {
-      border-bottom: none;
-    }
-
-    .hc-phase-num {
-      font-size: var(--fs-sm);
-      font-weight: 700;
-      color: var(--hc-primary);
-      width: 24px;
-      flex-shrink: 0;
-      letter-spacing: 0.05em;
-    }
-
-    .hc-phase-title {
-      font-size: var(--fs-lg);
-      font-weight: 700;
-      color: var(--text-heading);
-      min-width: 200px;
-      display: inline-block;
-    }
-
-    .hc-phase-desc {
-      font-size: 16px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* ── Alignment cases ── */
-    .hc-alignment-case {
-      border-left: 3px solid var(--hc-primary);
-      padding: 16px 0 16px 24px;
-      margin-bottom: 24px;
-    }
-
-    .hc-alignment-case:last-child {
-      margin-bottom: 0;
-    }
-
-    .hc-alignment-case-title {
-      font-size: var(--fs-body);
-      font-weight: 700;
-      color: var(--text-heading);
-      margin-bottom: 8px;
-    }
-
-    .hc-alignment-case p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text);
-      margin: 0;
-    }
-
-    /* ── Image placeholder ── */
-    .hc-img-placeholder {
-      width: 100%;
-      max-width: 760px;
-      background: #e8e8f4;
-      border-radius: 12px;
-      padding: 48px 24px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: var(--fs-md);
-      font-style: italic;
-      border: 2px dashed #c5c5e0;
-    }
-
-    .solution-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.4;
-      display: block;
-      margin-top: 4px;
-    }
-
-    /* ── Prose block ── */
-    .hc-prose {
-      max-width: 680px;
-      width: 100%;
-    }
-
-    .hc-prose p {
-      font-size: var(--fs-body);
-      line-height: 1.7;
-      color: var(--text-heading);
-      margin-bottom: 1.5em;
-    }
-
-    .hc-prose p:last-child {
-      margin-bottom: 0;
-    }
-
-    .hc-prose ul {
-      margin: 0.5em 0 1.2em 1.5em;
-    }
-
-    .hc-prose li {
-      font-size: var(--fs-body);
-      line-height: 1.6;
-      margin: 0.4em 0;
-    }
-
-    .hc-prose strong {
-      color: var(--text-heading);
-    }
-
-    /* ── Section header ── */
-    /* Section headers use Pulse .header class instead */
-
-    /* ── Subsection ── */
-    .hc-subsection {
-      width: 100%;
-      max-width: 680px;
-    }
-
-    .hc-subsection-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--hc-dark);
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      /* border-bottom: 2px solid var(--hc-primary); */
-      display: inline-block;
-    }
-
-    /* ── Nav active color override ── */
-    .case-nav-link--active {
-      color: var(--hc-primary) !important;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      /* width: 1600px; */
-      margin: 0 auto;
-      /* align-items: start; */
-    }
-
-    .grid-container .card {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease var(--reveal-delay, 0s), transform 0.6s ease var(--reveal-delay, 0s);
-      will-change: opacity, transform;
-      visibility: hidden;
-    }
-
-    .grid-container .card.in-view {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
-
-    .room_info:before,
-    .rate_info:before,
-    .room_info:after,
-    .rate_info:after {
-      display: none
-    }
-
-    .top-row+div {
-      padding-right: 74px;
-    }
-
-    @media (max-width: 1200px) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .img-placeholder {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #f0f0f5;
-      border-radius: 12px;
-      content: "Image placeholder";
-    }
-
-    .screenshot {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-
-    /* Diagram */
-    .hc-diagram .wrap {display: grid;gap: 80px;grid-template-columns: 1fr 1px 1fr;/* padding: 24px 16px; */justify-content: center;/* padding: 12px 0px; */padding: 2em 0;/* transform-origin: top; *//* transform: scale(1.1); */align-items: flex-start;}
-
-    .hc-diagram .col {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      align-items: stretch;
-      flex: 1;
-      max-width: 320px;
-      position: relative;
-    }
-
-    .separator {
-      width: 1px;
-    MARGIN:  0%;
-    background: #00000021;
-    content: " ";
-    min-height: 90%;
-}
-
-    .hc-diagram .col-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--color-text-primary);
-      margin-bottom: 4px;
-      color: var(--hc-dark);
-    }
-
-    .hc-diagram .col-sub {
-      font-size: 14px;
-      /* color: var(--color-text-secondary); */
-      margin-bottom: 2em;
-      line-height: 1.4;
-    }
-
-    .hc-diagram .room-card {
-      border: 1px solid #c8c4d4;
-      border-radius: 12px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background: #ffffff;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    }
-
-    .hc-diagram .room-label-a,
-    .hc-diagram .room-label-b {
-      font-size: 14px;
-      font-weight: 500;
-      color: #3c3580;
-      background: #d4d0f5;
-      border-radius: 6px;
-      padding: 12px 10px;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
-    .hc-diagram .room-label-b {
-      color: #065040;
-      background: #a0e8cc;
-
-    }
-
-    .hc-diagram .rate-card {
-      border: 2px dashed #d4a010;
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 8px;
-      font-size: 14px;
-      color: #7a4e00;
-      background: #fef0c0;
-      text-align: center;
-      display: block;
-    }
-
-    .hc-diagram .rate-cards-row {
-      display: block;
-      gap: 5px;
-      margin-bottom: 8px;
-      white-space: nowrap;
-      overflow-x: scroll;
-    }
-
-    .hc-diagram .rate-card-small {
-      border: 2px dashed #d4a010;
-    border-radius: 8px;
-    padding: 16px 8px;
-    font-size: 13px;
-    color: #7a4e00;
-    background: #fef0c0;
-    text-align: center;
-    display: inline-block;
-    width: 43%;
-    }
-
-    .hc-diagram .cta {
-      background: #a8bef8;
-      border-radius: 6px;
-      padding: 7px 10px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #0f1e80;
-      text-align: center;
-    }
-
-    .hc-diagram .arrow-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* padding-top: 80px; */
-      flex-shrink: 0;
-      display: none;
-    }
-
-    .rate-card-small .cta {
-      margin-top: 8px;
-      display: none
-    }
-  .annotation-arrow-right {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    position: absolute;
-    right: -148px;
-    top: -2px;
-    white-space: nowrap;
-    pointer-events: none;
-  }
-
-  .annotation-arrow-rates {
-    right: -176px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .annotation-arrow-right span {
-    font-size: 11px;
-    font-weight: 500;
-    color: #E05C2E;
-    font-family: inherit;
-  }
-  </style> -->
+  </style> 
 </head>
 
 <body class="hc">
@@ -2054,7 +1559,7 @@
           <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
         </div>
 
-        <div class="fifty_fifty">
+        <div class="col-2 my-4 " style="gap:6em">
           <div class="column">
             <div class="caption">Before: Unclear categorization</div>
             <div class="card card-ia">
@@ -2368,7 +1873,7 @@
         </div>
 
        
-        <div class="hc-stat-row" style="margin-top: 24px;">
+        <!-- <div class="hc-stat-row" style="margin-top: 24px;">
           <div class="hc-stat-block">
             <span class="hc-stat-label">Android</span>
             <span class="hc-stat">+629 <span
@@ -2379,7 +1884,7 @@
             <span class="hc-stat">+375 <span
                 style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±244 PNC</span></span>
           </div>
-        </div>
+        </div> -->
       </div>
 
 
@@ -2416,21 +1921,60 @@
   <section class="slide">
     <div class="slide_container">
       <div class="header mw-760">
-        <h1 class="tal">Families and Policies: an example of cross-team alignment</h1>
+        <h1 class="tal">Where will my child sleep?<br>Example of cross team alignment</h1>
       </div>
       <div>
         <p>Six teams were affected by the redesign. The Families and Policies case was one of the most consequential:</p>
       </div>
 
-      <div style="width: 100%; max-width: 680px;">
-        <div class="hc-alignment-case">
-          <p class="hc-alignment-case-title">Families and Policies</p>
-          <p>Family traffic was excluded from the first iteration after I couldn't reach alignment with Families and
-            Policies teams on where to surface family rate details in the new IA. I worked on two tracks in parallel: a
-            short-term solution to unblock iteration 2, and ongoing discussions toward a longer-term vision of
-            consolidating all rate details into the Booking Conditions screen. The short-term solution landed for
-            iteration 2. The longer-term vision had gained support from both teams and from Web by the time I left.</p>
+      <div class="exp-steps">
+
+        <div class="exp-step">
+          <div class="exp-step-num">1</div>
+          <div class="exp-step-body">
+            <div class="exp-step-title">Original design</div>
+            <p>In original design, each Room Details page showed information about each unique room/rate pair, so teams were free to
+            add the rate specific information wherever they thought it was best.</p>
+            <div class="img-placeholder"></div>
+          </div>
         </div>
+
+        <div class="exp-step">
+          <div class="exp-step-num">2</div>
+          <div class="exp-step-body">
+            <div class="exp-step-title">Vision for Horizontal Comparison</div>
+            <p>In Horizontal Comparison: rate information and details were only showned inside the Rate Card. The Designer Vision was to consolidate then all Rate Details in a separate screen: Meals, Cancellation and Payment Policies, Included Extras, Genius, Occupancy and others  </p>
+            <div class="img-placeholder"></div>
+          </div>
+        </div>
+
+        <div class="exp-step">
+          <div class="exp-step-num">3</div>
+          <div class="exp-step-body">
+            <div class="exp-step-title">Compromise for MVP</div>
+            <p>Family traffic was excluded from the first iteration after we couldn't reach an agreement with Families and Policies teams on where to surface family rate details in the new IA. Then, I worked on two tracks in parallel: A short-term solution to unblock iteration 2, and ongoing discussions toward the longer-term vision.</p>
+            <div class="img-placeholder"></div>
+          </div>
+        </div>
+
+        <div class="exp-step">
+          <div class="exp-step-num">4</div>
+          <div class="exp-step-body">
+            <div class="exp-step-title">Short-term solution to include Families traffic</div>
+            <p>I made 'Where will my child sleep' details accessible after the tap of an 'info' icon. That way, we were able to include Families traffic to Horizontal Comparison without hiding relevant information. The downside is that we were making the UI  more complex by adding more elements and small tappable areas. Previous experiments also showed that info icons had a low click-through rate.</p>
+            <div class="img-placeholder"></div>
+          </div>
+        </div>
+
+        <div class="exp-step">
+          <div class="exp-step-num">5</div>
+          <div class="exp-step-body">
+            <div class="exp-step-title">Resume work on the vision</div>
+            <p>The longer-term vision had gained support from both teams and from Web by the time I left.</p>
+            <div class="img-placeholder"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -2441,25 +1985,24 @@
       <div class="header mw-760">
         <h1 class="tal">Horizontal Comparison: MVP Experiment</h1>
       </div>
-      <div>
+ 
         <p>Horizontal Comparison restructured the room selection experience around a single principle: split the room
           from the rate. Instead of presenting every room-rate combination as a separate vertical card, each room card
           now contained its rates in a horizontally scrollable carousel. Users could first find and compare rooms by
           scrolling vertically, then compare rates within a room by scrolling horizontally. A dedicated selection
           details screen consolidated customisation choices — meals, cancellation policies, beds — and future value-add
           options like spa or tours.</p>
-      </div>
-      <div style="margin-top: 32px;">
+  
         <p>iOS followed the Web interaction model: the entire rate card was tappable, with the exception of some info
           elements and minimal badges. On Android, I took the opportunity to also test a more conservative variant where
           only the CTA and radio button were tappable, closer to how the previous room card had behaved. Testing both
           was deliberate: the fully tappable card had already proven itself on Web, but since it was a departure from
           the existing app interaction, shipping it without testing would have meant introducing two changes at once.
           The fully tappable card won on both Android and iOS, confirming the Web behaviour translated to Apps.</p>
-      </div>
+     
 
       <h2 class="tal mw-760"> Tappable area variations</h2>
-      <div class="fifty_fifty mw-760">
+      <div  class="col-2 w120 mw-760">
         <div class="column">
           <div id="room_card1" class="card android-card">
             <div class="title">Queen Studio Suite Gold</div>
@@ -3190,6 +2733,11 @@
       card.style.setProperty('--reveal-delay', `${index * 0.12}s`);
       cardObserver.observe(card);
     });
+
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('seen'); stepObserver.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.exp-step').forEach(el => stepObserver.observe(el));
   </script>
 
 </body>

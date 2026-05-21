@@ -43,33 +43,20 @@ div#align-tool-list {
     --fs-display: 70px;
 }
 
-.slide {
-    /* min-height: unset!important; */
-    /* padding-top: 4em!important; */
-    /* padding-bottom: 4em !important; */
-}
-
-.summary-grid {
-    /* margin-top: -24px!important; */
-}
-
 body {
     font-family: 'DM Sans', sans-serif;
     font-size: var(--fs-base);
     font-weight: 400;
     color: var(--text-heading);
     line-height: 1.6;
-    /* background: var(--bg); */
 }
 
-.fifty_fifty {
+.col-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 6em;
-    padding: 2em 0;
-    WIDTH: 120%;
-    transform: translateX(-10%);
-    /* MARGIN: 0 AUTO; */
+    gap: 3em;
+    /* WIDTH: 120%; */
+    /* transform: translateX(-10%); */
 }
 
 .column {
@@ -78,10 +65,6 @@ body {
     gap: 8px;
 }
 
-p {
-    /* max-width: 680px; */
-    /* text-wrap: balance; */
-}
 
 p + p {
     margin-top:1em;
@@ -92,10 +75,8 @@ h1 {
     font-weight: 800;
     color: #27284c;
     line-height: 1.15;
-    /* text-align: center; */
     max-width: 680px;
     text-wrap: balance;
-    /* margin-bottom: .5EM; */
 }
 
 h2 {
@@ -111,13 +92,10 @@ h2 {
 
 .caption{
     font-size: 14px;
-    /* font-weight: 500; */
-    /* letter-spacing: 2px; */
     color: #595c62;
     padding: 12px 0px;
     font-family: 'DM Sans', sans-serif;
-    /* text-transform: capitalize; */
-    text-align: center;
+    /* text-align: center; */
 }
 
 ul {
@@ -143,7 +121,7 @@ img {
     /* background: white; */
 }
 
-/* ── SPRINT ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SPRINT Ã¢â€â‚¬Ã¢â€â‚¬ */
 .content {
     DISPLAY: GRID;
     grid-template-columns: 1fr 1fr;
@@ -157,7 +135,7 @@ img {
     object-position: bottom;
 }
 
-/* ── LAYOUT ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ LAYOUT Ã¢â€â‚¬Ã¢â€â‚¬ */
 .mw-760, .visual-slide .v-header {
     max-width: 680px;
 }
@@ -219,7 +197,7 @@ video {
     padding: 6em 0;
     padding-inline: unset!important; }
 
-/* ── HEADER ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ HEADER Ã¢â€â‚¬Ã¢â€â‚¬ */
 .header {
     display: flex;
     width: 100%;
@@ -269,7 +247,7 @@ video {
     text-align: left;
 }
 
-/* ── COVER ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ COVER Ã¢â€â‚¬Ã¢â€â‚¬ */
 .blue-bg {
     background: #333458!important;
     align-items: center;
@@ -375,7 +353,7 @@ video {
     }
 }
 
-/* ── SUMMARY GRID ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SUMMARY GRID Ã¢â€â‚¬Ã¢â€â‚¬ */
 .summary-grid {
     display: flex;
     flex-direction: column;
@@ -401,7 +379,7 @@ video {
     max-width: none;
 }
 
-/* ── CONTEXT / INSIGHT CARDS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CONTEXT / INSIGHT CARDS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .context-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -461,7 +439,7 @@ video {
     gap: 10px;
 }
 
-/* ── STATEMENT SLIDE (big centered quote) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ STATEMENT SLIDE (big centered quote) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .slide-statement {
     min-height: 40vh;
     background: #fff;
@@ -475,7 +453,7 @@ video {
     font-weight: 700;
 }
 
-/* ── EXPERIMENT STEPS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ EXPERIMENT STEPS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .exp-steps {
     /* flex-direction: row; */
     gap: 4em;
@@ -573,12 +551,12 @@ video {
     color: #1d4ed8;
 }
 
-/* ── FOUNDATION COMPARISON ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ FOUNDATION COMPARISON Ã¢â€â‚¬Ã¢â€â‚¬ */
 .foundation {
     background: #edf4f0;
 }
 
-/* ── VARIANT COMPARISON ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ VARIANT COMPARISON Ã¢â€â‚¬Ã¢â€â‚¬ */
 .variant-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1FR;
@@ -651,7 +629,7 @@ video {
     color: var(--down);
 }
 
-/* ── IMPACT METRICS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ IMPACT METRICS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -705,7 +683,7 @@ video {
     line-height: 1.5;
 }
 
-/* ── DRAFT GRID ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ DRAFT GRID Ã¢â€â‚¬Ã¢â€â‚¬ */
 .draft-grid {
     display: flex;
     gap: 2em;
@@ -909,7 +887,7 @@ video {
     color: var(--text-subtle);
 }
 
-/* ── REFLECTION ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ REFLECTION Ã¢â€â‚¬Ã¢â€â‚¬ */
 .reflection-list {
     display: flex;
     flex-direction: column;
@@ -945,7 +923,7 @@ video {
     TEXT-WRAP: unset;
 }
 
-/* ── COLLAB ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ COLLAB Ã¢â€â‚¬Ã¢â€â‚¬ */
 .collab-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1035,7 +1013,7 @@ video {
     color: var(--down);
 }
 
-/* ── DISCOVERY ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ DISCOVERY Ã¢â€â‚¬Ã¢â€â‚¬ */
 .discovery-layout {
     display: flex;
     grid-template-columns: 1fr 1fr;
@@ -1096,7 +1074,7 @@ video {
     border-bottom: none;
 }
 
-/* ── CHAPTER DIVIDER ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CHAPTER DIVIDER Ã¢â€â‚¬Ã¢â€â‚¬ */
 .slide-chapter {
     background: #ffffff;
     font-size: var(--fs-body);
@@ -1166,7 +1144,7 @@ video {
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* ── SCROLL ANIMATIONS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SCROLL ANIMATIONS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .slide .header .label, .slide .slide-subtitle {
     opacity: 0;
     transform: translateY(14px);
@@ -1209,10 +1187,10 @@ video {
 .slide.in-view .header>p {
     opacity: 1;
     transform: translateY(0);
-    /* font-size: 20px; */
+    font-size: 20px;
 }
 
-/* Body elements — only when anim-all is active */
+/* Body elements Ã¢â‚¬â€ only when anim-all is active */
 body.anim-all .slide .context-layout, body.anim-all .slide .slider-section {
     opacity: 0;
     transform: translateY(20px);
@@ -1224,7 +1202,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     transform: translateY(0);
 }
 
-/* ── EXP-STEP STAGGER ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ EXP-STEP STAGGER Ã¢â€â‚¬Ã¢â€â‚¬ */
 .exp-step {
     opacity: 0;
     transform: translateY(14px);
@@ -1256,7 +1234,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     transition-delay: 0.56s;
 }
 
-/* ── ANIM TOGGLE ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ ANIM TOGGLE Ã¢â€â‚¬Ã¢â€â‚¬ */
 .anim-control {
     position: fixed;
     bottom: 28px;
@@ -1322,7 +1300,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     transform: translateX(14px);
 }
 
-/* ── CONTAINER ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CONTAINER Ã¢â€â‚¬Ã¢â€â‚¬ */
 .container {
     display: flex;
     width: 100%;
@@ -1336,7 +1314,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     width: auto;
 }
 
-/* ── SLIDER SECTION ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SLIDER SECTION Ã¢â€â‚¬Ã¢â€â‚¬ */
 .slider-section {
     position: relative;
 }
@@ -1368,7 +1346,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     padding: 62px 0px 24px;
 }
 
-/* ── CARD ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CARD Ã¢â€â‚¬Ã¢â€â‚¬ */
 .card {
     grid-area: 1 / 1;
     display: flex;
@@ -1384,7 +1362,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     pointer-events: none;
 }
 
-/* ── PHONE ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ PHONE Ã¢â€â‚¬Ã¢â€â‚¬ */
 .phone-wrap {
     position: relative;
     /* width: var(--phone-width); */
@@ -1409,7 +1387,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     width: var(--phone-width-bigger);
     min-height: calc(var(--phone-width-bigger) * 2);
 }
-/* ── WIN BADGE ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ WIN BADGE Ã¢â€â‚¬Ã¢â€â‚¬ */
 .win-badge {
     position: absolute;
     top: -30px;
@@ -1454,7 +1432,7 @@ body.anim-all .slide.in-view .context-layout, body.anim-all .slide.in-view .slid
     }
 }
 
-/* ── CARD LABEL ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CARD LABEL Ã¢â€â‚¬Ã¢â€â‚¬ */
 .card-label {
     font-size: var(--fs-md);
     letter-spacing: 0.03em;
@@ -1481,7 +1459,7 @@ p.card-title {
     font-weight: 700;
 }
 
-/* ── METRICS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ METRICS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .metrics {
     margin-top: 28px;
     display: flex;
@@ -1568,7 +1546,7 @@ p.card-title {
     display: none;
 }
 
-/* ── CONTROLS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ CONTROLS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .controls {
     display: flex;
     gap: 28px;
@@ -1624,7 +1602,7 @@ p.card-title {
     opacity: .3 !important;
 }
 
-/* ── SIDE-BY-SIDE LAYOUTS ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SIDE-BY-SIDE LAYOUTS Ã¢â€â‚¬Ã¢â€â‚¬ */
 .w50-50 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1632,7 +1610,7 @@ p.card-title {
     width: 100%;
 }
 
-/* ── SUMMARY LABEL ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ SUMMARY LABEL Ã¢â€â‚¬Ã¢â€â‚¬ */
 .summary-label {
     font-size: var(--fs-md);
     font-weight: 700;
@@ -1702,10 +1680,10 @@ div#last_num::before {
     background: var(--bg);
     ; }
 
-/* ══════════════════════════════════════════════════
-   PULSE VISUAL SLIDES — scoped styles
-   ══════════════════════════════════════════════════ */
-/* ── Visual slide variables ── */
+/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
+   PULSE VISUAL SLIDES Ã¢â‚¬â€ scoped styles
+   Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Visual slide variables Ã¢â€â‚¬Ã¢â€â‚¬ */
 .visual-slide {
     --accent: #0057B8;
     --green: #34A853;
@@ -1750,7 +1728,7 @@ div#last_num::before {
     text-wrap: balance;
 }
 
-/* ── Phone mockups (v-prefixed) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Phone mockups (v-prefixed) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .v-phone {
     ss width: 220px;
     /* border-radius: 20px; */
@@ -1824,7 +1802,7 @@ div#last_num::before {
     font-size: 7px;
 }
 
-/* ── Badges (v-prefixed) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Badges (v-prefixed) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .v-badge {
     font-size: 8px;
     font-weight: 600;
@@ -1841,7 +1819,7 @@ div#last_num::before {
     background: #D93025;
 }
 
-/* ── Room items (v-prefixed) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Room items (v-prefixed) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .v-room-item {
     border-top: 1px solid #E5E5E5;
     padding: 10px 0;
@@ -1873,7 +1851,7 @@ div#last_num::before {
     margin-top: 4px;
 }
 
-/* ── Cal grid ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Cal grid Ã¢â€â‚¬Ã¢â€â‚¬ */
 .cal-grid {
     position:relative;
     display: grid;
@@ -1939,7 +1917,7 @@ div#last_num::before {
     color: #1B2336;
 }
 
-/* ── Color cells ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Color cells Ã¢â€â‚¬Ã¢â€â‚¬ */
 .cell {
     display: inline-block;
     width: 100%;
@@ -1967,7 +1945,7 @@ div#last_num::before {
     color: #CCC;
 }
 
-/* ── Old Calendar Layout ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Old Calendar Layout Ã¢â€â‚¬Ã¢â€â‚¬ */
 .old-cal-layout {
     display: flex;
     gap: 56px;
@@ -2027,7 +2005,7 @@ div#last_num::before {
     text-wrap: balance;
 }
 
-/* ── Before/After single row ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Before/After single row Ã¢â€â‚¬Ã¢â€â‚¬ */
 .ba-row {
     display: flex;
     align-items: flex-start;
@@ -2060,7 +2038,7 @@ div#last_num::before {
     margin-top: 40px;
 }
 
-/* ── Comparison layout ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Comparison layout Ã¢â€â‚¬Ã¢â€â‚¬ */
 .comparison-layout {
     display: flex;
     gap: 6EM 10em;
@@ -2127,7 +2105,7 @@ div#last_num::before {
     grid-template-columns: 1fr 48px 1fr;
 }
 
-/* ── Property items ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Property items Ã¢â€â‚¬Ã¢â€â‚¬ */
 .property-item {
     display: flex;
     align-items: center;
@@ -2153,7 +2131,7 @@ div#last_num::before {
     color: #6B7280;
 }
 
-/* ── Timeline ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Timeline Ã¢â€â‚¬Ã¢â€â‚¬ */
 .timeline-wrapper {
     flex: 1;
     display: flex;
@@ -2271,7 +2249,7 @@ div#last_num::before {
     animation-delay: calc(var(--line-delay) * 0.3s + 1.0s);
 }
 
-/* Dotted line — parent pseudo growing */
+/* Dotted line Ã¢â‚¬â€ parent pseudo growing */
 .timeline-row-nodes--dotted {
     align-items: flex-start;
     position: relative;
@@ -2300,7 +2278,7 @@ div#last_num::before {
     }
 }
 
-/* ── Color table (Visual 05) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Color table (Visual 05) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .color-table {
     width: 100%;
     border-collapse: collapse;
@@ -2379,7 +2357,7 @@ div#last_num::before {
     margin-top: 6px;
 }
 
-/* ── Segment Grid (Visual 04) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Segment Grid (Visual 04) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .seg-grid {
     display: grid;
     grid-template-columns: 220px 1fr 1fr 1fr;
@@ -2449,7 +2427,7 @@ div#last_num::before {
 }
 
 .seg-grid-cell + .seg-grid-cell::after {
-    content: '→';
+    content: 'Ã¢â€ â€™';
     position: absolute;
     left: -4px;
     top: 50%;
@@ -2485,7 +2463,7 @@ div#last_num::before {
     max-width: 140px;
 }
 
-/* ── Phased Rollout (Visual 06) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Phased Rollout (Visual 06) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .phases-layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2508,7 +2486,7 @@ div#last_num::before {
 }
 
 .phase-card::after {
-    content: '→';
+    content: 'Ã¢â€ â€™';
     position: absolute;
     right: -27px;
     top: 50%;
@@ -2561,7 +2539,7 @@ div#last_num::before {
     letter-spacing: -0.1px;
 }
 
-/* ── Metrics Grid (Visual 07) ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Metrics Grid (Visual 07) Ã¢â€â‚¬Ã¢â€â‚¬ */
 .metrics-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2630,7 +2608,7 @@ div#last_num::before {
     text-wrap: balance;
 }
 
-/* ── Toggle Controller ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Toggle Controller Ã¢â€â‚¬Ã¢â€â‚¬ */
 .slide-toggle-control {
     position: fixed;
     top: 20px;
@@ -2674,7 +2652,7 @@ div#last_num::before {
     padding: 50px 30px;
 }
 
-/* ── TIMELINE V2 ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ TIMELINE V2 Ã¢â€â‚¬Ã¢â€â‚¬ */
 .tl2-wrapper {
   margin-top: 40px;
   display: flex;
@@ -2750,7 +2728,7 @@ div#last_num::before {
   color: #4a515e;
 }
 
-/* ── Lightbox ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Lightbox Ã¢â€â‚¬Ã¢â€â‚¬ */
 #lightbox {
   display: none;
   position: fixed;
@@ -2774,7 +2752,7 @@ div#last_num::before {
   cursor: default;
 }
 
-/* ── Case Study Nav ── */
+/* Ã¢â€â‚¬Ã¢â€â‚¬ Case Study Nav Ã¢â€â‚¬Ã¢â€â‚¬ */
 html {
   scroll-behavior: auto;
 }
