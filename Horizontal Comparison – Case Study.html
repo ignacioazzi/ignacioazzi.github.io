@@ -1505,7 +1505,7 @@
 
       <!-- Component Audit -->
       <div class="hc-subsection">
-        <p class="hc-phase-title">1.1 Component Audit</p>
+        <p class="hc-subsection-title">1.1 Component Audit</p>
         <div>
           <p>Horizontal Comparison fundamentally reorganised the Room Selection IA. Where the base experience showed
             room information and rates together in a single card, HC separates them: <strong>room information at the card
@@ -1523,15 +1523,11 @@
       </figure>
       <!-- Block-out Experiments -->
       <div class="hc-subsection">
-        <p class="hc-phase-title">1.2 Block-out Experiments</p>
+        <p class="hc-subsection-title">1.2 Block-out Experiments</p>
         <div>
           <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier.</p>
           <p>Each A/B experiment that ships leaves components in the codebase. The more that accumulate, the larger the maintenance burden for both UX and engineering. As the person responsible for the audit, I identified candidates for blockout experiments to test whether those components were still relevant.</p>
           <p>The ones that weren't could be removed, saving the team from having to redesign or maintain them as part of the HC rollout. This resulted in removing <strong>12+ components</strong> with no meaningful impact on conversion, including: Secret deal banner, Lowest price badge, Just booked, and Booked before, among others.</p>
-        </div>
-      </div>
-      <div class="hc-subsection">
-        <p class="hc-phase-title">1.3 Example of redesign: Jackpot component</p>
           <figure>
             <div class="img-placeholder">
             </div>
@@ -1540,10 +1536,11 @@
           </figure>
           <p>Jackpot is a component shown after a user selects their last room or rate. Its bulky design didn't work within the narrower rate card. I first tried removing it entirely, but that showed a drop of 508±219 PNC (predicted net customers). Instead, I redesigned it using the inline variant, preserving conversion without occupying disproportionate space in the new Rate Card.</p>
 
+        </div>
       </div>
       <!-- IA Experiments -->
       <div class="hc-subsection">
-        <p class="hc-phase-title">1.4 Information Architecture improvements</p>
+        <p class="hc-subsection-title">1.2 Information Architecture improvements</p>
 
 
 
@@ -1553,7 +1550,7 @@
 
         <div>
           <p>One of the main objectives of the Foundational Work was to test the Horizontal Comparison hypothesis in the most isolated way possible, by avoiding pushing multiple changes into the same A/B experiment. The fewer changes, the easier to interpret the results.</p>
-          <p>In this case, it meant grouping the elements of the room card by room and rate within the current design. <b>A clearer information hierarchy proved its value on its own: +629±763 PNC on Android and +375±244 PNC on iOS.</b></p>
+          <p>In this case, it meant grouping the elements of the room card by room and rate within the current design. A clearer information hierarchy proved its value on its own: +629±763 PNC on Android and +375±244 PNC on iOS.</p>
           <p>The positive results helped convince Product that a larger Information Architecture initiative could benefit the business, and were shared in monthly Product presentations as examples of what the track could deliver.</p>
 
           <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
@@ -1889,7 +1886,7 @@
 
 
       <div class="hc-subsection">
-        <p class="hc-phase-title">1.3 Color Alignment</p>
+        <p class="hc-subsection-title">1.3 Color Alignment</p>
         <div>
           <p>Breakfast "included" and "available" used different color logic across platforms — green on one, black on
             the
@@ -1918,191 +1915,38 @@
     </div>
   </section>
   <!-- Cross-Team Alignment -->
-
-    
-<section class="slide in-view">
-  <div class="slide_container">
-    <h1 class="section-heading">Cross-team alignment: where will my child sleep?</h1>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">How Room Details content was structured</h3>
-      <p>The Room Details screen served as the detailed view for each room/rate combination. Content fell into two tiers:</p>
-      <div class="tbl-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Tier</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowspan="2" class="group-label">Room</td>
-              <td>
-                <div class="tier-label">Overview</div>
-                <div class="tier-sub">Single line</div>
-              </td>
-              <td>Free WiFi</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="tier-label">Details block</div>
-                <div class="tier-sub">Expanded description</div>
-              </td>
-              <td>Superb WiFi, rated 9.3 - based on 7 ratings. WiFi is available in all areas and is free of charge.</td>
-            </tr>
-            <tr>
-              <td rowspan="2" class="group-label">Rate</td>
-              <td>
-                <div class="tier-label">Overview</div>
-                <div class="tier-sub">Single line</div>
-              </td>
-              <td>Non-refundable</td>
-            </tr>
-            <tr>
-              <td>
-                <div class="tier-label">Details block</div>
-                <div class="tier-sub">Expanded description</div>
-              </td>
-              <td>Non-refundable: if cancelled, modified or in case of no-show, the total price of the reservation will be charged.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">A fragmented baseline with no shared standard</h3>
-      <p>Each product team had historically placed their Details blocks wherever they saw fit. Despite several IA audit initiatives being proposed over the years, none had translated into action. The audit surfaced three competing approaches in production:</p>
-      <ol>
-        <li>Directly in the Room Details screen</li>
-        <li>In a bottom sheet triggered by an info icon</li>
-        <li>Inside the Booking Conditions screen, owned by the Policies team</li>
-      </ol>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">The IA challenge Horizontal Comparison introduced</h3>
-      <p>The structural split between room and rate created a new content placement problem. Room and rate overviews had a clear home. The problem was rate-level detail blocks:</p>
-      <div class="tbl-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Content type</th>
-              <th>Location in HC</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Room overview</td>
-              <td>Room Card</td>
-            </tr>
-    
-            <tr>
-              <td>Room Details</td>
-              <td>Room Details screen</td>
-            </tr>
-            <tr>
-              <td>Rate Overview</td>
-              <td>Rate Card</td>
-            </tr>
-            <tr>
-              <td>Rate Details blocks</td>
-              <td><span class="tag-missing">No defined location</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">A concrete example: Where will my child sleep?</h3>
-      <p>"Where will my child sleep?" was one of those Rate Details blocks, owned by the Families team, backed by extensive research and experimentation, and therefore not removable.</p>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">MVP: first proposal</h3>
-      <p>Our first proposal was to merge Families content into the Booking Conditions screen, owned by the Policies team. After discussion, the Policies team preferred to keep the screen scoped to their own content, and we could not reach an agreement. My PM and I decided to exclude Families traffic from the first iteration rather than block the experiment launch.</p>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">Short-term fix: unblocking Families traffic</h3>
-      <p>But we did not want to go to full-on without Families traffic. To unblock it, I made "Where will my child sleep?" and "Free Stay for your child" accessible via an info icon, keeping the information reachable without disrupting the rate card layout. It was not a clean solution: it added UI complexity, introduced small tappable targets, and previous experiments had shown info icons had low click-through rates. But it got Families traffic into the experiment.</p>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">Long-term fix: a broader IA initiative</h3>
-      <p>In parallel, the Room Selection Web designer and I kept working on the proper fix. The goal was a dedicated Rate Details screen, owned by Room Selection rather than Policies, where all rate-specific detail blocks could live. This was not just a solution for Families. It was part of a broader IA initiative to bring structure to how every team surfaced detailed content in the room selection flow.</p>
-    </div>
-    <div class="hc-subsection">
-      <h3 class="hc-phase-title">Content mapped to screen</h3>
-      <div class="tbl-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Content type</th>
-              <th>Screen</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Room overview</td>
-              <td>Room Card</td>
-            </tr>
-            <tr>
-              <td>Rate overview</td>
-              <td>Rate Card</td>
-            </tr>
-            <tr>
-              <td>Room details</td>
-              <td>Room Details screen</td>
-            </tr>
-            <tr>
-              <td>Rate details</td>
-              <td><span class="tag-interim">Info icon (interim)</span> &rarr; <span class="tag-new">Rate Details screen</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>This gave the Families team a stable, logical location for their content, critical given that family search was a company priority and had been excluded from early HC iterations until this placement was resolved.</p>
-    </div>
-  </div>
-</section>
-  <!-- <section class="slide in-view">
+  <section class="slide">
     <div class="slide_container">
-  
-      <h1 class="tal">Where will my child sleep?<br>Example of cross team alignment</h1>
-  
+      
+        <h1 class="tal">Where will my child sleep?<br>Example of cross team alignment</h1>
+     
       <div>
         <p>Six teams were affected by the redesign. The Families and Policies case was one of the most consequential:</p>
       </div>
-  
-      <div class="exp-steps scene horizontal">
-  
-        <div class="exp-step seen">
-                    <div class="exp-step-body">
-            <div class="exp-step-num">1</div>
+
+      <div class="exp-steps scene">
+      
+        <div class="exp-step">
+          <div class="exp-step-num">1</div>
+          <div class="exp-step-body">
             <div class="exp-step-title">Original design</div>
-            <p>In original design, each Room Details page showed information about each unique room/rate pair, so teams
-              were
+            <p>In original design, each Room Details page showed information about each unique room/rate pair, so teams were
               free to
               add the rate specific information wherever they thought it was best.</p>
           </div>
           <div class="img-placeholder square"></div>
         </div>
-  
+      
         <div class="exp-step seen">
-                    <div class="exp-step-body">
-            <div class="exp-step-num">2</div>
+          <div class="exp-step-num">2</div>
+          <div class="exp-step-body">
             <div class="exp-step-title">Vision for Horizontal Comparison</div>
             <p>In Horizontal Comparison: rate information and details were only showned inside the Rate Card. The Designer
-              Vision was to consolidate then all Rate Details in a separate screen: Meals, Cancellation and Payment
-              Policies,
+              Vision was to consolidate then all Rate Details in a separate screen: Meals, Cancellation and Payment Policies,
               Included Extras, Genius, Occupancy and others </p>
           </div>
-          <div class="mockup-pair" id="bc-step3-pair" style="position: relative;">
-            <svg id="bc-arrow-step3" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible;z-index:10;" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arr-bc3" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-                  <polygon points="0 0, 6 2.5, 0 5" fill="#016ce4"/>
-                </marker>
-              </defs>
-              <path fill="none" stroke="#016ce4" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr-bc3)"/>
-            </svg>
+          <div class="mockup-pair">
+            <!-- Rate card: focal on "See all booking conditions" -->
             <div class="rate_card rate_card--focal rate_card--skeleton">
               <div class="card-top">
                 <div class="row" style="flex:1;">
@@ -2182,9 +2026,9 @@
                   <path d="M12 8h.01"></path>
                 </svg>
               </div>
-              <a id="bc-link-step3" class="focal-row"
+              <a class="focal-row"
                 style="font-size: 14px; color: #016ce4; text-decoration: none; margin: .5em 0 0; font-weight: 600; display: block;">See
-                all rate details</a>
+                all booking conditions</a>
               <hr class="divider">
               <div class="badges">
                 <span class="badge off">41% off</span>
@@ -2207,10 +2051,11 @@
               </div>
               <button class="cta-btn">Select</button>
             </div>
-  
-            <div id="bc-screen-step3" style="position: relative; flex-shrink: 0; width: 360px;">
+      
+            <!-- Booking conditions sheet, annotations positioned outside overflow:hidden -->
+            <div style="position: relative; flex-shrink: 0; width: 360px;">
               <div class="bottom-sheet"
-                style="width: 360px;aspect-ratio: 9/17;border-radius: 12px;overflow: hidden;display: flex;flex-direction: column;">
+                style="width: 360px; aspect-ratio: 9/18; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
                 <div class="bc-header">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -2244,8 +2089,7 @@
                     </svg>
                     <div class="bc-item-content">
                       <strong>Non-refundable</strong>
-                      <p>Please note, if cancelled, modified or in case of no-show, the total price of the reservation
-                        will be
+                      <p>Please note, if cancelled, modified or in case of no-show, the total price of the reservation will be
                         charged.</p>
                     </div>
                   </div>
@@ -2273,14 +2117,11 @@
                     </svg>
                     <div class="bc-item-content">
                       <strong>Children and extra beds</strong>
-                      <p><span class="bc-sub-title">Child policies</span><br>Children of any age are welcome. To see
-                        correct
-                        prices and occupancy information, please add the number of children in your group and their ages
-                        to
+                      <p><span class="bc-sub-title">Child policies</span><br>Children of any age are welcome. To see correct
+                        prices and occupancy information, please add the number of children in your group and their ages to
                         your
                         search.</p>
-                      <p><span class="bc-sub-title">Cot and extra bed policies</span><br>There is no capacity for extra
-                        beds
+                      <p><span class="bc-sub-title">Cot and extra bed policies</span><br>There is no capacity for extra beds
                         or
                         cots.</p>
                     </div>
@@ -2304,54 +2145,43 @@
                   </div>
                 </div>
               </div>
+              <!-- Blue annotation: attached to existing items (top of items → end of 4th item) -->
               <div
-                style="position: absolute;left: calc(100% + 12px);top: 54px;bottom: 192px;display: flex;align-items: flex-start;gap: 8px;font-size: 11px;font-family: monospace;color: #555;">
+                style="position: absolute;left: calc(100% + 12px);top: 54px;bottom: 122px;display: flex;align-items: flex-start;gap: 8px;font-size: 11px;font-family: monospace;color: #555;">
                 <div style="width: 2px; background: #1a3c8e; border-radius: 1px; align-self: stretch;"></div>
-                <p class="annotation" style="padding-top: 4px;">Some information was already present in Booking Conditions
-                </p>
+                <p class="annotation" style="padding-top: 4px;">Some information was already present in Booking Conditions</p>
               </div>
+         <!-- Gold annotation: attached to child sleep section -->
               <div
-                style="position: absolute;left: calc(100% + 12px);top: 548px;bottom: 42px;display: flex;align-items: flex-start;gap: 8px;font-size: 11px;font-family: monospace;color: #555;">
+                style="position: absolute;left: calc(100% + 12px);top: 538px;bottom: 2px;display: flex;align-items: flex-start;gap: 8px;font-size: 11px;font-family: monospace;color: #555;">
                 <div style="width: 2px; background: #c8960c; border-radius: 1px; align-self: stretch;"></div>
                 <p class="annotation" style="padding-top: 4px;">Other has to<br>be added</p>
               </div>
             </div>
           </div>
         </div>
-  
+      
         <div class="exp-step seen">
-                    <div class="exp-step-body">
-            <div class="exp-step-num">3</div>
+          <div class="exp-step-num">3</div>
+          <div class="exp-step-body">
             <div class="exp-step-title">Compromise for MVP</div>
             <p>Family traffic was excluded from the first iteration after we couldn't reach an agreement with Families and
-              Policies teams on where to surface family rate details in the new IA. Then, I worked on two tracks in
-              parallel:<BR>
+              Policies teams on where to surface family rate details in the new IA. Then, I worked on two tracks in parallel:
               A short-term solution to unblock iteration 2, and ongoing discussions toward the longer-term vision.</p>
           </div>
-  
+      
         </div>
-  
+      
         <div class="exp-step seen">
-                    <div class="exp-step-body">
-            <div class="exp-step-num">4</div>
+          <div class="exp-step-num">4</div>
+          <div class="exp-step-body">
             <div class="exp-step-title">Short-term solution to include Families traffic</div>
-            <p>I made 'Where will my child sleep' details accessible after the tap of an 'info' icon. That way, we were
-              able
-              to include Families traffic to Horizontal Comparison without hiding relevant information. The downside is
-              that
-              we were making the UI more complex by adding more elements and small tappable areas. Previous experiments
-              also
+            <p>I made 'Where will my child sleep' details accessible after the tap of an 'info' icon. That way, we were able
+              to include Families traffic to Horizontal Comparison without hiding relevant information. The downside is that
+              we were making the UI more complex by adding more elements and small tappable areas. Previous experiments also
               showed that info icons had a low click-through rate.</p>
           </div>
-          <div class="mockup-pair" id="bc-step4-pair" style="position: relative;">
-            <svg id="bc-arrow-step4" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible;z-index:10;" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arr-bc4" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
-                  <polygon points="0 0, 6 2.5, 0 5" fill="#016ce4"/>
-                </marker>
-              </defs>
-              <path fill="none" stroke="#016ce4" stroke-width="3.5" stroke-dasharray="9 4" marker-end="url(#arr-bc4)"/>
-            </svg>
+          <div class="mockup-pair">
             <div class="rate_card rate_card--focal rate_card--skeleton">
               <div class="card-top">
                 <div class="row" style="flex:1;">
@@ -2367,7 +2197,7 @@
                 </div>
                 <div class="radio"></div>
               </div>
-              <div id="bc-link-step4" class="row focal-row">
+              <div class="row focal-row">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="lucide lucide-bed-double">
@@ -2432,9 +2262,9 @@
                 </svg>
               </div>
               <a style="font-size: 14px;
-                      color: #016ce4;
-                      text-decoration: none;
-                      margin: .5em 0 0;">See all rate details</a>
+                    color: #016ce4;
+                    text-decoration: none;
+                    margin: .5em 0 0;">See all booking conditions</a>
               <hr class="divider">
               <div class="badges">
                 <span class="badge off">41% off</span>
@@ -2457,8 +2287,8 @@
               </div>
               <button class="cta-btn">Select</button>
             </div>
-  
-            <div id="bc-screen-step4" class="bottom-sheet">
+      
+            <div class="bottom-sheet">
               <div class="bottom-sheet-img"></div>
               <div class="bottom-sheet-handle"></div>
               <div class="bottom-sheet-body">
@@ -2491,16 +2321,16 @@
             </div>
           </div>
         </div>
-  
-        <div class="exp-step seen">
-                    <div class="exp-step-body">
-            <div class="exp-step-num">5</div>
+      
+        <div class="exp-step">
+          <div class="exp-step-num">5</div>
+          <div class="exp-step-body">
             <div class="exp-step-title">Resume work on the vision</div>
             <p>The longer-term vision had gained support from both teams and from Web by the time I left.</p>
           </div>
           <!-- <div class="img-placeholder square"></div> -->
         </div>
-  
+      
       </div>
     </div>
   </section>
@@ -2596,7 +2426,7 @@
             </div>
 
             <div class="rate_card_carousel">
-              <div class="rate_card tap-highlight" id="rate_card1" onclick="select(1)">
+              <div class="rate_card" id="rate_card1" onclick="select(1)">
                 <div class="card-top">
                   <div class="row" style="flex:1;">
                     <svg viewBox="0 0 24 24">
@@ -2831,7 +2661,7 @@
                     </svg>
                     <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
                   </div>
-                  <div class="radio on tap-highlight" id="r1"></div>
+                  <div class="radio on" id="r1"></div>
                 </div>
 
                 <div class="row">
@@ -2897,7 +2727,7 @@
                   </div>
                   <div class="price-sub">Includes taxes and charges</div>
                 </div>
-                <button class="cta-btn tap-highlight">Select</button>
+                <button class="cta-btn">Select</button>
 
               </div>
               <div class="rate_card" id="rate_card2" onclick="select(1)">
@@ -2909,7 +2739,7 @@
                     </svg>
                     <span>Price for 2 adults, 1 child (&lt;&nbsp;1 year old)</span>
                   </div>
-                  <div class="radio on tap-highlight" id="r1"></div>
+                  <div class="radio on" id="r1"></div>
                 </div>
 
                 <div class="row">
@@ -3246,147 +3076,6 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('seen'); stepObserver.unobserve(e.target); } });
     }, { threshold: 0.15 });
     document.querySelectorAll('.exp-step').forEach(el => stepObserver.observe(el));
-  </script>
-
-  <script>
-    (function () {
-      var P = {
-        startX: 0.58, startY: 0.50,
-        endX:   0.02, endY:   0.32,
-        cp1X:   0.52, cp1Y:    2,
-        cp2X:  -92,   cp2Y:   44,
-        strokeW: 3,   dashOn: 9, dashOff: 4
-      };
-
-      function draw() {
-        var link   = document.getElementById('bc-link-step4');
-        var screen = document.getElementById('bc-screen-step4');
-        var pair   = document.getElementById('bc-step4-pair');
-        var svg    = document.getElementById('bc-arrow-step4');
-        if (!link || !screen || !pair || !svg) return;
-        var pR = pair.getBoundingClientRect();
-        var lR = link.getBoundingClientRect();
-        var sR = screen.getBoundingClientRect();
-
-        var x1 = lR.left + lR.width  * P.startX - pR.left;
-        var y1 = lR.top  + lR.height * P.startY - pR.top;
-        var x2 = sR.left + sR.width  * P.endX   - pR.left;
-        var y2 = sR.top  + sR.height * P.endY   - pR.top;
-        var dx = x2 - x1;
-        var cx1 = x1 + dx * P.cp1X, cy1 = y1 + P.cp1Y;
-        var cx2 = x2 + P.cp2X,      cy2 = y2 + P.cp2Y;
-        var tdx = x2-cx2, tdy = y2-cy2, tl = Math.sqrt(tdx*tdx+tdy*tdy)||1, gap=20;
-        var ex = x2 - gap*tdx/tl, ey = y2 - gap*tdy/tl;
-
-        svg.setAttribute('width',  pR.width);
-        svg.setAttribute('height', pR.height);
-        var path = svg.querySelector('path');
-        path.setAttribute('d', 'M '+x1+' '+y1+' C '+cx1+' '+cy1+', '+cx2+' '+cy2+', '+ex+' '+ey);
-        path.setAttribute('stroke-width',    P.strokeW);
-        path.setAttribute('stroke-dasharray', P.dashOn + ' ' + P.dashOff);
-      }
-
-      function buildPanel() {
-        var panel = document.createElement('div');
-        panel.style.cssText = [
-          'position:fixed', 'bottom:24px', 'right:24px', 'z-index:99999',
-          'background:#fff', 'border:1px solid #e0e0e0', 'border-radius:12px',
-          'padding:16px 18px', 'width:270px',
-          'box-shadow:0 6px 24px rgba(0,0,0,0.13)',
-          'font-family:monospace', 'font-size:12px', 'color:#111'
-        ].join(';');
-
-        var rows = [
-          ['startX', 'Start X',  0,   1,   0.01],
-          ['startY', 'Start Y',  0,   5,   0.01],
-          ['endX',   'End X',   -1,   2,   0.01],
-          ['endY',   'End Y',    0,   1,   0.01],
-          ['cp1X',   'CP1 X',   -1,   2,   0.01],
-          ['cp1Y',   'CP1 Y', -300, 300,   1   ],
-          ['cp2X',   'CP2 X', -300, 300,   1   ],
-          ['cp2Y',   'CP2 Y+', -300, 500,  1   ],
-          ['strokeW','Width',    1,   6,   0.5 ],
-          ['dashOn', 'Dash —',   0,  20,   1   ],
-          ['dashOff','Dash ·',   0,  20,   1   ],
-        ];
-
-        var html = '<div style="font-weight:700;font-size:13px;margin-bottom:12px;">↗ Arrow editor</div>';
-        rows.forEach(function(r) {
-          var key = r[0], label = r[1], min = r[2], max = r[3], step = r[4];
-          html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">'
-                + '<span style="width:56px;color:#777;flex-shrink:0;">' + label + '</span>'
-                + '<input type="range" data-key="'+key+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+P[key]+'" style="flex:1;accent-color:#016ce4;">'
-                + '<span id="av-'+key+'" style="width:38px;text-align:right;">' + P[key] + '</span>'
-                + '</div>';
-        });
-        html += '<button id="arrow-copy-btn" style="margin-top:10px;width:100%;padding:8px 0;background:#016ce4;color:#fff;border:none;border-radius:7px;cursor:pointer;font-family:monospace;font-size:12px;font-weight:600;">Copy values</button>'
-              + '<div id="arrow-copy-ok" style="text-align:center;margin-top:6px;color:#1a6b3a;font-size:11px;height:14px;"></div>';
-
-        panel.innerHTML = html;
-        document.body.appendChild(panel);
-
-        panel.querySelectorAll('input[type=range]').forEach(function(el) {
-          el.addEventListener('input', function() {
-            var k = this.dataset.key;
-            P[k] = parseFloat(this.value);
-            document.getElementById('av-' + k).textContent = P[k];
-            draw();
-          });
-        });
-
-        document.getElementById('arrow-copy-btn').addEventListener('click', function() {
-          var txt = 'startX:'+P.startX+' startY:'+P.startY
-                  + ' endX:'+P.endX+' endY:'+P.endY
-                  + ' cp1X:'+P.cp1X+' cp1Y:'+P.cp1Y
-                  + ' cp2X:'+P.cp2X+' cp2Y:'+P.cp2Y
-                  + ' strokeW:'+P.strokeW+' dashOn:'+P.dashOn+' dashOff:'+P.dashOff;
-          navigator.clipboard.writeText(txt).then(function() {
-            var ok = document.getElementById('arrow-copy-ok');
-            ok.textContent = 'Copied!';
-            setTimeout(function() { ok.textContent = ''; }, 2000);
-          });
-        });
-      }
-
-      window.addEventListener('load', function() { draw(); /* buildPanel(); */ });
-      window.addEventListener('resize', draw);
-    })();
-
-    /* Step 3 arrow — fixed values */
-    (function () {
-      var P = { startX:0.58, startY:0.5, endX:0.02, endY:0.32,
-                cp1X:0.52, cp1Y:2, cp2X:-92, cp2Y:44,
-                strokeW:3, dashOn:9, dashOff:4 };
-
-      function draw() {
-        var link   = document.getElementById('bc-link-step3');
-        var screen = document.getElementById('bc-screen-step3');
-        var pair   = document.getElementById('bc-step3-pair');
-        var svg    = document.getElementById('bc-arrow-step3');
-        if (!link || !screen || !pair || !svg) return;
-        var pR = pair.getBoundingClientRect();
-        var lR = link.getBoundingClientRect();
-        var sR = screen.getBoundingClientRect();
-        var x1 = lR.left + lR.width  * P.startX - pR.left;
-        var y1 = lR.top  + lR.height * P.startY - pR.top;
-        var x2 = sR.left + sR.width  * P.endX   - pR.left;
-        var y2 = sR.top  + sR.height * P.endY   - pR.top;
-        var dx = x2 - x1;
-        var cx1 = x1 + dx * P.cp1X, cy1 = y1 + P.cp1Y;
-        var cx2 = x2 + P.cp2X,      cy2 = y2 + P.cp2Y;
-        var tdx = x2-cx2, tdy = y2-cy2, tl = Math.sqrt(tdx*tdx+tdy*tdy)||1, gap=20;
-        var ex = x2 - gap*tdx/tl, ey = y2 - gap*tdy/tl;
-        svg.setAttribute('width',  pR.width);
-        svg.setAttribute('height', pR.height);
-        var path = svg.querySelector('path');
-        path.setAttribute('d', 'M '+x1+' '+y1+' C '+cx1+' '+cy1+', '+cx2+' '+cy2+', '+ex+' '+ey);
-        path.setAttribute('stroke-width',    P.strokeW);
-        path.setAttribute('stroke-dasharray', P.dashOn + ' ' + P.dashOff);
-      }
-
-      window.addEventListener('load', draw);
-      window.addEventListener('resize', draw);
-    })();
   </script>
 
 </body>
