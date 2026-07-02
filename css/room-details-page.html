@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room details page</title>
+<style>
+  :root {
+    --surface-page: #f2f2f0;
+    --surface-card: #ffffff;
+    --text-primary: #262626;
+    --text-secondary: #6b6b6b;
+    --text-muted: #8e8e8e;
+    --border: #e7e7e5;
+    --accent: #0071c2;
+    --bg-accent: #e6f2fa;
+    --success: #008009;
+    --bg-success: #e6f4e6;
+    --warning: #F4C04E;
+    --danger: #cc0000;
+    --header-blue: #0a3d91;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-sans); }
+  body { background: var(--surface-page); padding: 32px 0; display: flex; justify-content: center; }
+
+  .phone {
+    width: 375px;
+    background: var(--surface-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 0.5px solid var(--border);
+    height: 1150px;
+  }
+
+  .header {
+    background: var(--header-blue);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+  }
+  .header .title { font-size: 15px; font-weight: 500; text-align: center; }
+  .header .dates { font-size: 12px; opacity: 0.85; text-align: center; }
+  .header i { width: 20px; height: 20px; }
+
+  .gallery { position: relative; }
+  .gallery img { width: 100%; height: 210px; object-fit: cover; display: block; }
+  .dots { position: absolute; bottom: 10px; left: 0; right: 0; display: flex; justify-content: center; gap: 5px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+  .dot.active { background: #ffffff; }
+
+  .section { padding: 16px; }
+  .divider { border-top: 8px solid var(--surface-page); }
+
+  .room-title { font-size: 18px; font-weight: 500; margin-bottom: 10px; }
+  .row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .row.start { align-items: flex-start; }
+  .row i { width: 16px; height: 16px; flex-shrink: 0; }
+  .muted { color: var(--text-secondary); }
+  .fw500 { font-weight: 500; }
+svg{width:16px;height:16px;flex-shrink:0;}
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 4px; }
+  .badge.success { background: var(--bg-success); color: var(--success); }
+  .badge.accent { background: var(--bg-accent); color: var(--accent); }
+
+  .price-label { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; }
+  .price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 2px; }
+  .price-old { font-size: 13px; color: var(--danger); text-decoration: line-through; }
+  .price-new { font-size: 20px; font-weight: 500; }
+  .price-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+
+  .rooms-left { border-top: 0.5px solid var(--border); padding-top: 12px; margin-bottom: 12px; font-size: 13px; color: var(--text-secondary); }
+
+  .btn-outline {
+    width: 100%;
+    padding: 10px 16px;
+    background: transparent;
+    color: var(--accent);
+    border: 0.5px solid var(--accent);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .section-title { font-size: 15px; font-weight: 500; margin-bottom: 12px; }
+  a { color: var(--accent); font-size: 14px; font-weight: 500; text-decoration: none; }
+
+  .genius-item { margin-bottom: 10px; }
+  .genius-item .label { font-size: 14px; font-weight: 500; }
+  .genius-item .sub { font-size: 13px; color: var(--text-muted); }
+  .genius-footer { display: flex; align-items: center; justify-content: space-between; border-top: 0.5px solid var(--border); padding-top: 10px; }
+  .genius-footer .brand { font-size: 12px; color: var(--text-muted); }
+  .genius-footer .logo { font-size: 15px; font-weight: 500; color: var(--header-blue); }
+
+  .meals-row { margin-bottom: 14px; }
+  .room-size { font-size: 14px; margin-bottom: 14px; border-top: 0.5px solid var(--border); padding-top: 12px; }
+  .description { border-top: 0.5px solid var(--border); padding-top: 12px; }
+  .description .label { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+  .description p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+  .text-14 { font-size: 14px; }
+  .text-14.leading { line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="header">
+    <i data-lucide="arrow-left"></i>
+    <div>
+      <div class="title">Room information</div>
+      <div class="dates">Jul 30 - Aug 1</div>
+    </div>
+    <i data-lucide="share-2" style="width:18px; height:18px;"></i>
+  </div>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" alt="Hotel bathroom with walk-in shower and dark vanity">
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="room-title">Standard city view</p>
+
+    <div class="row">
+      <i data-lucide="user" class=""></i>
+      <span class="text-14">Price for 2 adults, 1 child (2 years old)</span>
+    </div>
+    <div class="row">
+      <i data-lucide="check"></i>
+      <span class="text-14">Includes 15-min massage</span>
+      <i data-lucide="info" style="width:14px; height:14px; color: var(--accent);"></i>
+    </div>
+    <div class="row" style="margin-bottom: 14px;">
+      <i data-lucide="bath" class=""></i>
+      <span class="text-14">Private bathroom with shower</span>
+    </div>
+
+    <div class="badges">
+      <span class="badge success">42% off</span>
+      <span class="badge accent">Genius discount</span>
+      <span class="badge accent">Free breakfast</span>
+      <span class="badge success">Mobile-only price</span>
+      <span class="badge success">Secret deal</span>
+    </div>
+
+    <p class="price-label">Price for 2 nights, 2 adults, 1 child</p>
+    <div class="price-row">
+      <span class="price-old">US$170</span>
+      <span class="price-new">US$100</span>
+      <i data-lucide="info" style="width:14px; height:14px; color: var(--accent);"></i>
+    </div>
+    <p class="price-sub">Includes taxes and fees</p>
+
+    <div class="rooms-left">Only 1 room left on Booking.com</div>
+
+    <button class="btn-outline">Select and customize</button>
+  </div>
+
+  <div class="section divider">
+    <p class="section-title">Booking conditions</p>
+    <div class="row">
+      <i data-lucide="baby" style="color: var(--success);"></i>
+      <span class="text-14 fw500" style="color: var(--success);">Free stay for your child</span>
+    </div>
+    <div class="row">
+      <i data-lucide="check" Style="color: var(--success);"></i>
+      <span class="text-14"><span class="fw500" style="color: var(--success);">Free cancellation</span> before July 27, 2024</span>
+    </div>
+    <div class="row">
+      <i data-lucide="clock"></i>
+      <span class="text-14">Pay nothing until July 24, 2024</span>
+    </div>
+
+    <a href="#">More details</a>
+  </div>
+
+  <div class="section divider">
+    <div class="row" style="margin-bottom: 8px;">
+      <i data-lucide="baby" style="color: var(--success);"></i>
+      <span style="font-size: 15px; font-weight: 500; color: var(--success);">Free stay for your child</span>
+    </div>
+    <p class="text-14 leading">Your child (&lt;1 year old) can sleep here for no additional charge.</p>
+  </div>
+
+  <div class="section divider">
+    <p class="section-title">Where will my child sleep?</p>
+    <div class="row start">
+      <i data-lucide="bed"></i>
+      <span class="text-14 leading">Your child can sleep in a bed included in the total price of this booking.</span>
+    </div>
+    <div class="row start" style="margin-bottom: 0;">
+      <i data-lucide="baby-buggy"></i>
+      <span class="text-14 leading">If you also want a cot, you can request one in the next step.</span>
+    </div>
+  </div>
+
+  <div class="section divider">
+    <p class="section-title">Genius benefits available for this room rate</p>
+    <div class="row start genius-item">
+      <svg width="16" height="16" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#F4C04E" />
+        <path d="M8 12.5l2.5 2.5 5.5-6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          fill="none" /></svg>
+      <div>
+        <p class="label">22% discount</p>
+        <p class="sub">Applied to the price before taxes and fees</p>
+      </div>
+    </div>
+    <div class="row genius-item">
+      <svg width="16" height="16" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#F4C04E" />
+        <path d="M8 12.5l2.5 2.5 5.5-6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          fill="none" /></svg>
+      <span class="label">Free Genius breakfast</span>
+    </div>
+    <div class="genius-footer">
+      <span class="brand">Booking.com's loyalty program</span>
+      <span class="logo">Genius</span>
+    </div>
+  </div>
+
+  <div class="section divider">
+    <p class="section-title">Meals</p>
+    <div class="row meals-row">
+      <i data-lucide="coffee" class=""></i>
+      <span class="text-14">Breakfast included (Continental, Buffet, À la carte, Breakfast to go)</span>
+    </div>
+    <p class="room-size">Room size: 247 ft<sup>2</sup></p>
+    <div class="description">
+      <p class="label">Room description</p>
+      <p>Featuring free toiletries, this double room includes a private bathroom with a walk-in shower, a hairdryer and slippers. The air-conditioned double room features a flat-screen TV.</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

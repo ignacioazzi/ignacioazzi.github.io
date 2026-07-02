@@ -175,6 +175,11 @@ iframe {
   color: var(--text-heading);
   min-width: 200px;
   display: inline-block;
+  margin-bottom: 1e;
+}
+
+p+h3 {
+    margin-top: 1em;
 }
 
 .hc-phase-desc {
