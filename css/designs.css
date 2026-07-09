@@ -426,6 +426,9 @@ section > .divider {
   border: 1.5px solid var(--color-border-secondary);
   background: TRANSPARENT;
   flex-shrink: 0;
+  left: -.3px;
+  top: 0.7px;
+  position: relative;
 }
 
 .radio.checked {
@@ -610,7 +613,7 @@ section > .divider {
     width: 6px;
     height: 6px;
     position: relative;
-    bottom: 0;
+    bottom: .2PX;
 }
 
 .price-block {

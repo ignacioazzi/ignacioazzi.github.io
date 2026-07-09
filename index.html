@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--
+***GREETINGS FRIEND!***
+
+Thank you for taking your time to check my source code.
+I hope you find something useful. 
+
+This humble website was hand coded after the realization that using Wordpress for the sole purpose of creating my portfolio was a total overkill.
+
+The portfolio itself is in beta stage so many things are surely broken but do not dispair, everything will be fixed someday.
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ignacio Azzi - Product Designer</title>
+  <link rel=stylesheet href='css/bootstrap-min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --ink-soft: #59564f;
+      --paper: #ffffff;
+      --image-bg: #e9e4da;
+      --image-label: #8f8b80;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      font-family: -apple-system, "Inter", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      padding: 56px 64px;
+    }
+
+    .grid {
+      flex-direction: column;
+      display: grid;
+      gap: 1.2em;
+      max-width: 1010px;
+      margin: 0 auto;
+      align-items: start;
+      line-height: normal;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 429px auto;
+      gap: 30px;
+      align-items: start;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+
+    @media (max-width: 860px) {
+      .project {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .project-image {
+      aspect-ratio: 143 / 100;
+      max-width: 429px;
+      background: #f5f5fb;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      overflow: hidden;
+    }
+
+    .project:hover {
+      transform: translateX(-10px) scale(1.01);
+      /*     box-shadow: 0 16px 32px rgba(0,0,0,0.05); */
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .project-image span {
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: var(--image-label);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /*   .project-content {
+    padding-top: 8px;
+  } */
+    .project-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    .project-subtitle {
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--ink-soft);
+      margin-bottom: 2em;
+    }
+
+    .project-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .metric-val {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      /* line-height: normal; */
+    }
+
+    .metric-label {
+      display: block;
+      font-size: 16px;
+      color: var(--ink-soft);
+      /* margin-top: 2px; */
+    }
+
+    hr {
+      border-top: 2px dotted black;
+      opacity: 5%;
+      width: 90%;
+      margin: 0;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <section id="intro" class="aligner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 visible-xs">
+          <div style="text-align:center">
+            <img class="img-circle my-photo" alt="" src="img/pp_green.jpeg">
+          </div>
+        </div>
+        <div class="col-sm-6 col-sm-offset-1 vcenter">
+          <div class="mt64 mb48 tal text-sm-center">
+            <p class="intro_name">I'm Ignacio Azzi,</p>
+            <p class="intro_position h0 mt0">Product Designer</p>
+          </div>
+          <div class="intro_text">
+            <p>My passion is to design the best way for users to fulfill their needs through their interaction with
+              digital touch points. </p>
+            <p>
+              I have been working for more than 8 years in User Experience (UX) and have solid knowledge of mobile
+              platforms, UX and design.
+            </p>
+            <p>
+              <a id="havealook" class="btn btn-lg">Lets have a look!</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-4 col-lg-3  hidden-xs vcenter">
+          <img class="img-circle intro_photo img_full" alt="" src="img/pp_green.jpeg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="container-fluid">
+      <div class="row">
+        <header class="col-md-8 col-md-offset-2 tac">
+          <h1 class="h0">Projects I have worked on</h1>
+          <p class="leady">They are eager to be read, analyzed and praised</p>
+        </header>
+      </div>
+      <div class="grid" id="cardGrid">
+        <a class="project" href="pulse_case_study.html">
+          <div class="project-image">
+            <img src="img/covers_pulse.png" alt="Pulse Calendar">
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Pulse Calendar</h2>
+            <p class="project-subtitle">Redesigned the Availability Partner Calendar, now in Beta, tailoring structured
+              availability data to three distinct user profiles.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-val">75.7%</span>
+                <span class="metric-label">Beta Retention</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">71%</span>
+                <span class="metric-label">Partner Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <hr>
+        <a class="project" href="room_customiser_case_study_v3.html">
+          <div class="project-image">
+            <img src="img/covers_rc.png" alt="Room Customiser">
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Room Customiser</h2>
+            <p class="project-subtitle">Designed the Room Customiser, turning 234K daily free-text requests into
+              structured
+              room preferences.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-val">+50%</span>
+                <span class="metric-label">Cot &amp; Extra Bed Requests</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">~500</span>
+                <span class="metric-label">Bookings / Night</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <hr>
+        <a class="project" href="horizontal_comparison_case_study_last.html">
+          <div class="project-image">
+            <img src="img/covers_hc.png" alt="Horizontal Comparison"></span>
+          </div>
+          <div class="project-content">
+            <h2 class="project-title">Horizontal Comparison</h2>
+            <p class="project-subtitle">Owned the Apps rollout of Horizontal Comparison at Booking.com, letting
+              travelers
+              compare rates without endless scrolling through mixed room and rate details.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-val">+4.82%</span>
+                <span class="metric-label">Best-Rate Bookings</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">+3,118</span>
+                <span class="metric-label">Bookings / Day</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="row">
+
+      <div class="col-md-8 col-center">
+        <header class="tac">
+          <h1 class="h0">Let's stay in touch :)</h1>
+          <p class="leady">Write me at
+            <a class="strong" target="_blank" href="mailto:ignacioazzi@gmail.com">
+              ignacioazzi@gmail.com</a>
+          </p>
+        </header>
+      </div>
+    </div>
+  </section>
+  <!-- Homepage portfolio -->
+  <script type="text/handlebars-template" id="handlebars-template">
+    <section class="mini-section">
+      <div class="container">
+        <header class="col-md-12 tac">
+          <h2 class="fwb"> </h2>
+          <h4> </h4>
+        </header>
+      </div>
+    </section>
+
+    {{#sections}}
+    <section class="description" id="{{title}}">
+      <div class="container">
+
+        <div class="col-sm-8 col-sm-offset-2">
+          <header class="mini-header">
+            <h3 class="fwb">{{{title}}}</h3>
+            <h4 >{{subtitle}}</h4>
+          </header class="mini-header">
+          {{{text}}}
+        </p>
+      </div>
+    </div>
+  </section>
+  {{/sections}}
+</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="js/script.js"></script>
+  <script src='js/handlebars.min.js'></script>
+  <script src="js/data.js"></script>
+  <script>
+
+
+
+    $("#havealook").click(function () {
+      $('html, body').animate({
+        scrollTop: $(".projects").offset().top * 1
+      }, 600);
+    });
+
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-91032335-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

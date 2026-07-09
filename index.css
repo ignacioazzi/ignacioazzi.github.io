@@ -1,0 +1,168 @@
+body,
+html {
+  margin: 0;
+  font-size: 18px;
+  line-height: 2em;
+  color: #1b1d1f;
+  position: relative;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+  line-height: 1.4em;
+}
+
+section.mini_section {
+  padding: 2rem 0;
+}
+
+header.mini-header {
+  margin: 3rem 0 2rem;
+}
+
+section.description {
+  border-top: 0px;
+}
+
+/* Home Intro */
+.intro_text p {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.intro_name {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+
+  .my-photo {
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto 1em;
+  }
+
+  .intro header {
+    text-align: center;
+    margin: 2em 0;
+  }
+}
+
+/* Projects */
+h2 {
+  font-weight: 700 !important;
+}
+
+div#projects {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Home page Portfolio */
+.project-item {
+  transition: .5s all;
+  padding: .8em 1.4em;
+}
+
+.project-item img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.project-item img:hover {
+  -webkit-filter: brightness(60%);
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.project-item .project-text {
+  padding: 16px 0PX;
+}
+
+.project-item .project-text p.company-description {
+  font-size: .85EM;
+  font-weight: NORMAL;
+}
+
+.project-item .project-text p.project-title {
+  font-size: 1EM;
+  margin-bottom: 2px;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.project-item>a {
+  border: 0px solid #cbcbcb;
+  display: block;
+  border-radius: 8px;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow .5s;
+}
+
+.project-item:hover {
+  transition: box-shadow .8s;
+}
+
+.project-item:first-of-type {
+  border-top-width: 0px;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .project-item .project btn {
+    margin: 0 auto;
+  }
+}
+
+.project-item .img_container {
+  position: relative;
+}
+
+.project-item .tags {
+  font-size: 11px;
+  font-weight: normal;
+  background: #0000005c;
+  /* border: 1px solid #003580; */
+  border-radius: 4px;
+  line-height: 24px;
+  padding: 0px 6px;
+  color: #ffffff;
+  MARGIN-BOTTOM: 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.project-item a.link_container {
+  display: block;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.row-flex::after {
+  content: "";
+  flex: auto;
+}
+
+/*# sourceMappingURL=index.css.map */
