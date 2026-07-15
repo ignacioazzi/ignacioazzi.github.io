@@ -9,7 +9,7 @@ html {
 
 /* Sections */
 section {
-  padding: 0;
+  padding: 3rem 0;
   line-height: 1.4em;
 }
 
@@ -35,10 +35,6 @@ section.description {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 0;
-}
-
-.intro_position {
-  margin-bottom: 0px;
 }
 
 /* Small Devices, Tablets */
