@@ -1279,7 +1279,7 @@ hr {
 
 
 
-/* Live Resize ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â exported CSS */
+/* Live Resize ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â exported CSS */
 
 .skill-tags-eyebrow {
   padding-bottom: 0px;
@@ -1304,7 +1304,9 @@ hr {
 @media (min-width: 768px) {
   .flex1 {
     grid-auto-flow: column;
-    grid-auto-columns: 57% 40%;
+    grid-auto-columns: 57% 38%;
+    
+    
     
     .flex2 {
       padding-top: 104px;

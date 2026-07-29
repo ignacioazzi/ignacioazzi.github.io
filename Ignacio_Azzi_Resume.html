@@ -50,6 +50,7 @@ d
     .page {
       width: 210mm;
       min-height: 297mm;
+      margin: 0 auto;
       padding: var(--page-padding);
       background: white;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
@@ -57,16 +58,12 @@ d
 
     /* Header */
     .header {
-      display: grid;
-      grid-template-columns: 2.9fr 1fr;
-      column-gap: 32px;
-      align-items: flex-start;
+      overflow: hidden;
     }
 
     .header-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      float: left;
+      width: 74%;
     }
 
     .photo {
@@ -74,6 +71,13 @@ d
       height: 0.85in;
       border-radius: 50%;
       object-fit: cover;
+      float: left;
+      margin-right: 16px;
+    }
+
+    .header-left-text {
+      overflow: hidden;
+      padding-top: 2px;
     }
 
     .name {
@@ -93,6 +97,8 @@ d
     }
 
     .contact {
+      float: right;
+      width: 24%;
       text-align: left;
       font-size: 9pt;
       color: var(--color-meta);
@@ -127,9 +133,17 @@ d
 
     /* Layout columns */
     .columns {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      column-gap: 32px;
+      overflow: hidden;
+    }
+
+    .col-main {
+      float: left;
+      width: 74%;
+    }
+
+    .col-side {
+      float: right;
+      width: 21%;
     }
 
     h2.section-header {
@@ -246,6 +260,16 @@ d
       ul.bullets li {
         break-inside: avoid;
       }
+
+      .header,
+      .profile {
+        break-after: avoid;
+        break-inside: avoid;
+      }
+
+      .columns {
+        break-before: avoid;
+      }
     }
   </style>
 </head>
@@ -258,7 +282,7 @@ d
         <div class="header">
           <div class="header-left">
             <img class="photo" src="img/pp_green.jpeg" alt="">
-            <div>
+            <div class="header-left-text">
               <p class="name">Ignacio Azzi</p>
               <div class="title">PRODUCT DESIGNER</div>
             </div>
@@ -341,12 +365,14 @@ d
             <div class="side-block">
               <h2 class="section-header">Skills</h2>
               <ul class="plain">
-                <li>Research-Led Design</li>
                 <li>Data-Informed Design</li>
+                <li>Research-Led Design</li>
                 <li>Problem Framing</li>
                 <li>Experimentation &amp; A/B Testing</li>
                 <li>Interaction Design</li>
+                <li>Mobile Design</li>
                 <li>Prototyping</li>
+                <li>AI Design</li>
                 <li>Design Systems</li>
                 <li>Cross-Functional Collaboration</li>
                 <li>Product Thinking</li>
@@ -360,7 +386,8 @@ d
                 <li>Figma</li>
                 <li>Miro</li>
                 <li>Jira</li>
-                <li>Notion</li>
+                <li>Claude Code</li>
+                <li>Visual Studio Code</li>
                 <li>HTML/CSS/JS</li>
               </ul>
             </div>
@@ -368,8 +395,7 @@ d
             <div class="side-block">
               <h2 class="section-header">Education</h2>
               <div class="edu-entry">
-                <div class="edu-degree"><strong>Graphic Designer</strong> <br> University of Buenos Aires</div>
-                <div class="edu-meta">2013</div>
+                <div class="edu-degree"><strong>Graphic Designer</strong> <br> University of Buenos Aires · 2013</div>
               </div>
             </div>
           </div>
