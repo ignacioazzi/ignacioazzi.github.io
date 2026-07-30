@@ -203,7 +203,7 @@ export default function RoomCustomization() {
           <div
             className="phone-frame-background"
           />
-          <div style={{ width: '390px', aspectRatio: '1 / 2.13', transform: 'scale(0.9)', zIndex: 2, overflow: 'hidden' }}
+          <div style={{ width: '390px', aspectRatio: '1 / 2.13', transform: 'scale(0.9)', zIndex: 2, overflow: 'hidden', borderRadius: '35px' }}
             className="bg-gray-50 shadow-2xl flex flex-col mx-auto relative overflow-hidden">
             {/* iOS Header */}
             <div className="header" style={{ height: 'auto' }}>

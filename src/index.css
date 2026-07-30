@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source "./**/*.{js,jsx}";
+@source "../prototypes/**/*.{js,jsx}";
 
 h1 {
   line-height: 1.1;

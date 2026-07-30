@@ -220,6 +220,7 @@ export default function BookingFlowCustomizer() {
                             aspectRatio: "1 / 2.13",
                             transform: "scale(0.9)",
                             zIndex: 2,
+                            borderRadius: "35px",
                         }}
                     >
 

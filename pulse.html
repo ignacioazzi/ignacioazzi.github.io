@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pulse Availability Calendar — Booking.com</title>
-  <link rel="stylesheet" href="pulse_case_study.css">
+  <link rel="stylesheet" href="css/pulse_case_study.css">
   <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
   <link rel="icon" href="favicon/apple-touch-icon.png">
 </head>
@@ -746,25 +746,7 @@
 
 </div>
 
-<!-- ── TOGGLE CONTROLLER ── -->
-<div class="slide-toggle-control">
-  <label><input type="checkbox" id="toggle-text" checked> <span>Text</span></label>
-  <label><input type="checkbox" id="toggle-visuals" checked> <span>Visuals</span></label>
-</div>
-
 <script>
-  // Toggle visibility
-  document.getElementById('toggle-text').addEventListener('change', e => {
-    document.querySelectorAll('.slide:not([data-visual])').forEach(s => {
-      s.style.display = e.target.checked ? '' : 'none';
-    });
-  });
-  document.getElementById('toggle-visuals').addEventListener('change', e => {
-    document.querySelectorAll('.slide[data-visual]').forEach(s => {
-      s.style.display = e.target.checked ? '' : 'none';
-    });
-  });
-
   // Scroll animations
   const slideObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

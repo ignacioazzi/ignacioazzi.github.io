@@ -124,8 +124,11 @@ section.slide.bg-designs {
     BACKGROUND-COLOR: #f0f0f4;
 }
 
-video{
-  box-shadow: inset 5em 1em gold;
+.proto-frame {
+  width: 100%;
+  aspect-ratio: 420 / 860;
+  border: none;
+  border-radius: 35px;
 }
 
 .slide.slide-flow {
@@ -168,6 +171,7 @@ video{
   gap: 1.5em;
   width: 100%;
   flex-direction: column;
+  align-items: center;
 }
 
 .header p {
@@ -784,7 +788,7 @@ video{
   transform: translateY(0);
 }
 
-/* Body elements â€” only when anim-all is active */
+/* Body elements ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â only when anim-all is active */
 body.anim-all .slide .context-layout,
 body.anim-all .slide .slider-section {
   opacity: 0;
@@ -1264,7 +1268,7 @@ p.card-title {
   margin-bottom: 0!important;
 }
 
-#4A7FF8 Â· #FF7648 Â· #FFC757 Â· #F0EFEB Â· #FFFFFF Â· #202020
+#4A7FF8 Ãƒâ€šÃ‚Â· #FF7648 Ãƒâ€šÃ‚Â· #FFC757 Ãƒâ€šÃ‚Â· #F0EFEB Ãƒâ€šÃ‚Â· #FFFFFF Ãƒâ€šÃ‚Â· #202020
 
 .mt-0 {
   margin-top: 0 !important;
@@ -1302,4 +1306,164 @@ div#last_num::before {
 
 .light-bg{
   background: #f0f0f4;
+}
+
+/* Impact grid (metric-card style) */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  background: #f5f5f8;
+}
+
+.impact-cell {
+  padding: 28px 28px;
+  border-bottom: 1px solid #d8d8df;
+  border-right: 1px solid #d8d8df;
+  background: #ececf9;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.impact-cell:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.impact-cell-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.impact-cell-val {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333458;
+  line-height: 1;
+}
+
+.impact-cell-val.positive {
+  color: #333458;
+}
+
+.impact-cell-val.pending {
+  color: var(--text-subtle);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.impact-cell p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  color: var(--text);
+  max-width: none;
+  margin-top: 8px;
+}
+
+/* Case study framework */
+.exp-steps {
+  gap: 4em;
+  margin: 0 auto;
+  display: grid;
+  padding: 2em 0;
+}
+
+.exp-step {
+  display: grid;
+  grid-template-columns: 60px 1fr 400px;
+  align-items: center;
+  gap: 3em;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.exp-steps-wide .exp-step {
+  grid-template-columns: 60px 1fr 400px !important;
+}
+
+.exp-step.seen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-steps .exp-step:nth-child(1).seen { transition-delay: 0.08s; }
+.exp-steps .exp-step:nth-child(2).seen { transition-delay: 0.2s; }
+.exp-steps .exp-step:nth-child(3).seen { transition-delay: 0.32s; }
+.exp-steps .exp-step:nth-child(4).seen { transition-delay: 0.44s; }
+.exp-steps .exp-step:nth-child(5).seen { transition-delay: 0.56s; }
+
+.exp-step-num {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--text-subtle);
+  position: relative;
+  min-width: 24px;
+  text-align: center;
+}
+
+.exp-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 90%;
+  margin-right: 22px;
+}
+
+.exp-step-title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--text-heading);
+}
+
+.exp-step-body p+p {
+  margin-top: 0.8em;
+}
+
+/* Arc 2 flow comparison â€” scoped so it doesn't affect the other .exp-step blocks */
+.exp-steps-compare .exp-step {
+  grid-template-columns: 24px 1fr;
+  grid-template-areas:
+    "num body"
+    "img img";
+  gap: 1em;
+}
+
+.exp-steps-compare .exp-step-num {
+  grid-area: num;
+  text-align: left;
+}
+
+.exp-steps-compare .exp-step-body {
+  grid-area: body;
+  margin-right: 0;
+}
+
+.exp-steps-compare .flow_container {
+  grid-area: img;
+}
+
+.exp-steps-compare .flow_container img {
+  max-width: 100%;
+  width: auto;
+}
+
+.exp-steps.exp-steps-compare {
+    /* MAX-WIDTH: 600PX; */
+    max-width: 680px;
+}
+
+section.slide.foundation {
+    background: #f0f0f46b;
 }

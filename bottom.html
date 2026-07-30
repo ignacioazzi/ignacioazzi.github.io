@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Sheet — Room Customiser Prototype</title>
+  <link rel="stylesheet" href="css/prototype.css">
+</head>
+<body>
+
+<div class="proto-phone">
+
+  <!-- Header -->
+  <div class="proto-header">
+    <div class="proto-statusbar">
+      <span class="proto-statusbar-time">9:41</span>
+      <div class="proto-statusbar-icons">
+        <svg class="proto-icon" width="17" height="12" viewBox="0 0 17 12" fill="white"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5.5" width="3" height="6.5" rx="0.5"/><rect x="9" y="3" width="3" height="9" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+        <svg class="proto-icon" width="16" height="12" viewBox="0 0 16 12" fill="none"><circle cx="8" cy="11" r="1.5" fill="white"/><path d="M4.8 7.8C5.9 6.7 6.9 6.2 8 6.2s2.1.5 3.2 1.6" stroke="white" stroke-width="1.4" stroke-linecap="round"/><path d="M2 5C3.8 3.1 5.8 2 8 2s4.2 1.1 6 3" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <svg class="proto-icon" width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="white" stroke-opacity="0.4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="white"/><path d="M23 4.5v3a1.5 1.5 0 000-3z" fill="white" fill-opacity="0.45"/></svg>
+      </div>
+    </div>
+    <div class="proto-nav">
+      <button id="backBtn" aria-label="Back">
+        <svg class="proto-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <h1 class="proto-nav-title" id="navTitle">Choose your stay</h1>
+    </div>
+  </div>
+
+  <!-- Room list page -->
+  <div class="proto-page" id="roomsPage">
+
+    <div class="room-card">
+      <h2>Double or Twin Room</h2>
+      <div class="room-card-row">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Price for 2 adults</span>
+      </div>
+      <div class="room-card-row">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <span>Option 1: 2 single beds</span>
+      </div>
+      <div class="room-card-row" style="margin-bottom:12px;">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"/><path d="M4 12V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg>
+        <span>Option 2: 1 extra-large double bed</span>
+      </div>
+      <div class="room-card-row">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+        <span>Size: 25m²</span>
+      </div>
+      <div class="room-card-amenities">
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>Free WiFi</span>
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5v-2a2 2 0 0 0-2-2H7"/><line x1="10" x2="8" y1="5" y2="7"/></svg>Bath</span>
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Air conditioning</span>
+      </div>
+      <div class="room-card-benefits">
+        <div class="room-card-benefit positive">
+          <svg class="proto-icon" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+          <span>Free cancellation at any time</span>
+        </div>
+        <div class="room-card-benefit positive">
+          <svg class="proto-icon" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+          <span>Pay at the property</span>
+        </div>
+        <div class="room-card-benefit neutral">
+          <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+          <span>Breakfast available at additional cost (€ 19.50)</span>
+        </div>
+      </div>
+      <div class="room-card-price-label">Price for 1 night</div>
+      <div class="room-card-price-row"><span class="room-card-price">€ 45</span></div>
+      <p class="room-card-price-note">Includes taxes and charges</p>
+      <button class="room-card-cta" data-room-id="1" data-room-name="Double or Twin Room" data-price="45">Select and customize</button>
+    </div>
+
+    <div class="room-card">
+      <h2>Ruyschen Suite with Can</h2>
+      <div class="room-card-row">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>Price for 2 adults</span>
+      </div>
+      <div class="room-card-row" style="margin-bottom:12px;">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"/><path d="M4 12V8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg>
+        <span>1 extra large double bed, 1 sofa bed</span>
+      </div>
+      <div class="room-card-row">
+        <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+        <span>Size: 25m²</span>
+      </div>
+      <div class="room-card-amenities">
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>Free WiFi</span>
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5v-2a2 2 0 0 0-2-2H7"/><line x1="10" x2="8" y1="5" y2="7"/></svg>Bath</span>
+        <span class="room-card-amenity"><svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Air conditioning</span>
+      </div>
+      <div class="room-card-benefits">
+        <div class="room-card-benefit positive">
+          <svg class="proto-icon" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+          <span>Free cancellation at any time</span>
+        </div>
+      </div>
+      <div class="room-card-price-label">Price for 1 night</div>
+      <div class="room-card-price-row"><span class="room-card-price">€ 45</span></div>
+      <p class="room-card-price-note">Includes taxes and charges</p>
+      <button class="room-card-cta" data-room-id="2" data-room-name="Ruyschen Suite with Can" data-price="45">Select and customize</button>
+    </div>
+
+    <div class="proto-bottombar" id="reserveBar">
+      <div class="proto-bottombar-total" id="reserveBarTotal"></div>
+      <button class="proto-btn-primary" id="reserveBtn">Reserve</button>
+    </div>
+  </div>
+
+  <!-- Room detail (bed preferences) page -->
+  <div class="proto-slide" id="detailPage">
+    <div class="proto-slide-content">
+      <h2>Choose your bed</h2>
+      <p class="proto-slide-note">Subject to availability at the property</p>
+      <div class="proto-radio-list" id="bedOptionsList">
+        <label class="proto-radio-row"><span>No preference</span><input type="radio" name="bed-type" value="no-preference" checked></label>
+        <label class="proto-radio-row"><span>1 double bed</span><input type="radio" name="bed-type" value="double"></label>
+        <label class="proto-radio-row"><span>2 single beds</span><input type="radio" name="bed-type" value="single"></label>
+      </div>
+    </div>
+    <div class="proto-sheet-footer" style="position:absolute; left:0; right:0; bottom:0;">
+      <button class="proto-btn-primary" id="confirmDetailBtn">Confirm</button>
+    </div>
+  </div>
+
+  <!-- Checkout page -->
+  <div class="proto-slide" id="checkoutPage">
+    <div class="proto-slide-content">
+      <div class="summary-card">
+        <h2>Booking Summary</h2>
+        <div id="summaryRows"></div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="summaryTotal">€ 0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom sheet -->
+  <div class="proto-sheet-overlay" id="sheetOverlay"></div>
+  <div class="proto-sheet" id="sheet">
+    <div class="proto-sheet-handle"><span></span></div>
+    <div class="proto-sheet-body">
+      <h2 id="sheetRoomName"></h2>
+      <div class="proto-stepper">
+        <span class="proto-stepper-label">Number of rooms</span>
+        <div class="proto-stepper-controls">
+          <button class="proto-stepper-btn" id="stepperMinus" aria-label="Decrease rooms">
+            <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </button>
+          <span class="proto-stepper-count" id="stepperCount">1</span>
+          <button class="proto-stepper-btn" id="stepperPlus" aria-label="Increase rooms">
+            <svg class="proto-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="proto-room-list" id="sheetRoomList"></div>
+    </div>
+    <div class="proto-sheet-footer">
+      <div class="proto-sheet-footer-total" id="sheetTotal"></div>
+      <button class="proto-btn-primary" id="confirmSheetBtn">Confirm</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var bedLabels = { 'no-preference': 'No preference', 'double': '1 double bed', 'single': '2 single beds' };
+
+  var state = {
+    page: 'rooms', // rooms | room-detail | checkout
+    selectedRoomType: null, // { id, name, price }
+    isSheetOpen: false,
+    numberOfRooms: 1,
+    editingRoomIndex: null,
+    rooms: [{ id: 1, bedType: 'no-preference' }],
+    confirmedSelections: {} // { [roomId]: { numberOfRooms, rooms } }
+  };
+
+  var backBtn = document.getElementById('backBtn');
+  var navTitle = document.getElementById('navTitle');
+  var roomsPage = document.getElementById('roomsPage');
+  var detailPage = document.getElementById('detailPage');
+  var checkoutPage = document.getElementById('checkoutPage');
+  var sheetOverlay = document.getElementById('sheetOverlay');
+  var sheet = document.getElementById('sheet');
+  var sheetRoomName = document.getElementById('sheetRoomName');
+  var stepperCount = document.getElementById('stepperCount');
+  var stepperMinus = document.getElementById('stepperMinus');
+  var stepperPlus = document.getElementById('stepperPlus');
+  var sheetRoomList = document.getElementById('sheetRoomList');
+  var sheetTotal = document.getElementById('sheetTotal');
+  var reserveBar = document.getElementById('reserveBar');
+  var reserveBarTotal = document.getElementById('reserveBarTotal');
+  var bedOptionsList = document.getElementById('bedOptionsList');
+  var summaryRows = document.getElementById('summaryRows');
+  var summaryTotal = document.getElementById('summaryTotal');
+
+  function totalRoomsSelected() {
+    var sum = 0;
+    Object.keys(state.confirmedSelections).forEach(function (id) {
+      sum += state.confirmedSelections[id].numberOfRooms;
+    });
+    return sum;
+  }
+
+  function grandTotal() {
+    var sum = 0;
+    Object.keys(state.confirmedSelections).forEach(function (id) {
+      var sel = state.confirmedSelections[id];
+      var btn = document.querySelector('.room-card-cta[data-room-id="' + id + '"]');
+      var price = btn ? parseInt(btn.getAttribute('data-price'), 10) : 0;
+      sum += price * sel.numberOfRooms;
+    });
+    return sum;
+  }
+
+  function render() {
+    navTitle.textContent = state.page === 'checkout' ? 'Checkout' : state.page === 'room-detail' ? 'Room requests' : 'Choose your stay';
+
+    roomsPage.hidden = state.page !== 'rooms';
+    detailPage.classList.toggle('is-open', state.page === 'room-detail');
+    checkoutPage.classList.toggle('is-open', state.page === 'checkout');
+
+    document.querySelectorAll('.room-card-cta').forEach(function (btn) {
+      var id = btn.getAttribute('data-room-id');
+      var sel = state.confirmedSelections[id];
+      if (sel) {
+        btn.textContent = sel.numberOfRooms + (sel.numberOfRooms > 1 ? ' rooms' : ' room') + ' selected';
+        btn.classList.add('selected');
+      } else {
+        btn.textContent = 'Select and customize';
+        btn.classList.remove('selected');
+      }
+    });
+
+    var total = totalRoomsSelected();
+    if (total > 0 && state.page === 'rooms') {
+      reserveBar.classList.add('is-visible');
+      reserveBarTotal.innerHTML = '<strong>' + total + '</strong> <strong>' + (total === 1 ? 'room' : 'rooms') + '</strong> · <strong>€ ' + grandTotal() + '</strong>';
+    } else {
+      reserveBar.classList.remove('is-visible');
+    }
+
+    sheetOverlay.classList.toggle('is-open', state.isSheetOpen);
+    sheet.classList.toggle('is-open', state.isSheetOpen);
+    if (state.selectedRoomType) {
+      sheetRoomName.textContent = state.selectedRoomType.name;
+    }
+    stepperCount.textContent = state.numberOfRooms;
+    stepperPlus.disabled = state.numberOfRooms === 5;
+
+    sheetRoomList.innerHTML = '';
+    state.rooms.forEach(function (room, index) {
+      var entry = document.createElement('div');
+      entry.className = 'proto-room-entry';
+      entry.innerHTML =
+        '<h3>Room ' + room.id + '</h3>' +
+        '<button class="proto-room-entry-edit" data-index="' + index + '">Edit bed preferences' +
+        '<svg class="proto-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>' +
+        '<p>' + bedLabels[room.bedType] + '</p>';
+      sheetRoomList.appendChild(entry);
+    });
+    sheetRoomList.querySelectorAll('.proto-room-entry-edit').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        editRoom(parseInt(btn.getAttribute('data-index'), 10));
+      });
+    });
+
+    var sheetPrice = state.selectedRoomType ? state.selectedRoomType.price * state.numberOfRooms : 0;
+    sheetTotal.innerHTML = '<strong>' + state.numberOfRooms + '</strong> <strong>' + (state.numberOfRooms === 1 ? 'room' : 'rooms') + '</strong> · <strong>€ ' + sheetPrice + '</strong>';
+
+    if (state.editingRoomIndex !== null && state.rooms[state.editingRoomIndex]) {
+      var current = state.rooms[state.editingRoomIndex].bedType;
+      bedOptionsList.querySelectorAll('input[name="bed-type"]').forEach(function (input) {
+        input.checked = input.value === current;
+      });
+    }
+
+    summaryRows.innerHTML = '';
+    Object.keys(state.confirmedSelections).forEach(function (id) {
+      var sel = state.confirmedSelections[id];
+      var btn = document.querySelector('.room-card-cta[data-room-id="' + id + '"]');
+      var name = btn ? btn.getAttribute('data-room-name') : '';
+      var price = btn ? parseInt(btn.getAttribute('data-price'), 10) : 0;
+      var row = document.createElement('div');
+      row.className = 'summary-row';
+      row.innerHTML =
+        '<div><div class="summary-row-name">' + name + '</div>' +
+        '<div class="summary-row-count">' + sel.numberOfRooms + (sel.numberOfRooms === 1 ? ' room' : ' rooms') + '</div></div>' +
+        '<div class="summary-row-price">€ ' + (price * sel.numberOfRooms) + '</div>';
+      summaryRows.appendChild(row);
+    });
+    summaryTotal.textContent = '€ ' + grandTotal();
+  }
+
+  function openCustomize(id, name, price) {
+    var existing = state.confirmedSelections[id];
+    state.selectedRoomType = { id: id, name: name, price: price };
+    if (existing) {
+      state.numberOfRooms = existing.numberOfRooms;
+      state.rooms = existing.rooms.map(function (r) { return { id: r.id, bedType: r.bedType }; });
+    } else {
+      state.numberOfRooms = 1;
+      state.rooms = [{ id: 1, bedType: 'no-preference' }];
+    }
+    state.isSheetOpen = true;
+    render();
+  }
+
+  function changeRoomCount(delta) {
+    var newCount = Math.max(0, Math.min(5, state.numberOfRooms + delta));
+    state.numberOfRooms = newCount;
+
+    if (newCount === 0) {
+      state.isSheetOpen = false;
+      state.rooms = [];
+      delete state.confirmedSelections[state.selectedRoomType.id];
+      render();
+      return;
+    }
+
+    if (delta > 0) {
+      state.rooms.push({ id: newCount, bedType: 'no-preference' });
+    } else if (delta < 0 && state.rooms.length > 0) {
+      state.rooms.pop();
+    }
+    render();
+  }
+
+  function editRoom(index) {
+    state.editingRoomIndex = index;
+    state.page = 'room-detail';
+    render();
+  }
+
+  function backFromDetail() {
+    state.page = 'rooms';
+    state.editingRoomIndex = null;
+    render();
+  }
+
+  function confirmSheet() {
+    state.isSheetOpen = false;
+    state.confirmedSelections[state.selectedRoomType.id] = {
+      numberOfRooms: state.numberOfRooms,
+      rooms: state.rooms.map(function (r) { return { id: r.id, bedType: r.bedType }; })
+    };
+    render();
+  }
+
+  document.querySelectorAll('.room-card-cta').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openCustomize(btn.getAttribute('data-room-id'), btn.getAttribute('data-room-name'), parseInt(btn.getAttribute('data-price'), 10));
+    });
+  });
+
+  stepperMinus.addEventListener('click', function () { changeRoomCount(-1); });
+  stepperPlus.addEventListener('click', function () { changeRoomCount(1); });
+  sheetOverlay.addEventListener('click', function () { state.isSheetOpen = false; render(); });
+  document.getElementById('confirmSheetBtn').addEventListener('click', confirmSheet);
+  document.getElementById('confirmDetailBtn').addEventListener('click', backFromDetail);
+  bedOptionsList.querySelectorAll('input[name="bed-type"]').forEach(function (input) {
+    input.addEventListener('change', function () {
+      if (state.editingRoomIndex !== null) {
+        state.rooms[state.editingRoomIndex].bedType = input.value;
+      }
+    });
+  });
+  document.getElementById('reserveBtn').addEventListener('click', function () {
+    state.page = 'checkout';
+    render();
+  });
+  backBtn.addEventListener('click', function () {
+    if (state.page === 'checkout') { state.page = 'rooms'; render(); }
+    else if (state.page === 'room-detail') { backFromDetail(); }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
