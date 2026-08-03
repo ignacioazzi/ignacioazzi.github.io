@@ -1375,6 +1375,8 @@ div#last_num::before {
   margin: 0 auto;
   display: grid;
   padding: 2em 0;
+  align-items: start;
+  justify-content: start;
 }
 
 .exp-step {
@@ -1397,7 +1399,7 @@ div#last_num::before {
   transform: translateY(0);
 }
 
-.exp-steps .exp-step:nth-child(1).seen { transition-delay: 0.08s; }
+.exp-steps .exp-step:nth-child(1).seen {transition-delay: 0.08s;width: 100%;}
 .exp-steps .exp-step:nth-child(2).seen { transition-delay: 0.2s; }
 .exp-steps .exp-step:nth-child(3).seen { transition-delay: 0.32s; }
 .exp-steps .exp-step:nth-child(4).seen { transition-delay: 0.44s; }
