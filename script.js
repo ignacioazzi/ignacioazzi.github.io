@@ -32,7 +32,7 @@ Ignacio Azzi ·
 document.body.insertAdjacentHTML("afterbegin", navbar);
 var hamIcon = document.querySelector(".ham_icon");
 var menuContent = document.querySelector(".menu_content");
-var nav = document.querySelector("nav");
+var siteNav = document.querySelector("#site-navigation");
 var homeLink = document.querySelector("a[href$='index.html']");
 
 if (hamIcon && menuContent) {
@@ -54,14 +54,14 @@ if (name === "" || name.includes("index")) {
     });
 }
 
-if (nav) {
+if (siteNav) {
     window.addEventListener("wheel", function (event) {
         if (event.deltaY <= 0) {
-            nav.classList.add("nav-visible");
-            nav.classList.remove("nav-hidden");
+            siteNav.classList.add("nav-visible");
+            siteNav.classList.remove("nav-hidden");
         } else {
-            nav.classList.add("nav-hidden");
-            nav.classList.remove("nav-visible");
+            siteNav.classList.add("nav-hidden");
+            siteNav.classList.remove("nav-visible");
         }
     });
 }

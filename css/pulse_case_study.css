@@ -133,7 +133,7 @@ img {
 
 /* LAYOUT */
 .mw-760, .visual-slide .v-header {
-    max-width: 680px;
+    max-width: 760px;
 }
 
 .mw-960{
@@ -185,7 +185,7 @@ video {
 
 .slide.wide {
     padding-inline: max(4rem, calc((100% - 1500px) / 2));
-    PADDING: 7REM 0;
+    PADDING: 11REM 0;
 }
 
 .slide_100 {
@@ -198,7 +198,7 @@ video {
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 680px;
+    max-width: 760px;
     text-align: CENTER;
     margin: 0 auto;
     gap: .5em;

@@ -83,17 +83,20 @@ The portfolio itself is in beta stage so many things are surely broken but do no
       line-height: normal;
       grid-auto-flow: column;
     }
-
-    .project {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      /* grid-template-columns: 429px auto; */
-      gap: 24px;
-      align-items: start;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
+    
+   .project {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* grid-template-columns: 429px auto; */
+    gap: 24px;
+    padding: 30px;
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 26px;
+    /* background: var(--project-image-bg); */
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
 
 
     @media (max-width: 860px) {
@@ -122,11 +125,12 @@ The portfolio itself is in beta stage so many things are surely broken but do no
       object-fit: cover;
     }
 
-    .project:hover {
-      transform: translateY(-10px) scale(1.01);
-      /*     box-shadow: 0 16px 32px rgba(0,0,0,0.05); */
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
+.project:hover {
+  transform: translateY(-10px) scale(1.01);
+  transition: all 0.3s ease;
+  BACKGROUND: #f1f1f7;
+  border-radius: 26px;
+}
 
     .project-image span {
       font-size: 12px;
