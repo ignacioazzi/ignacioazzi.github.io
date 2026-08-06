@@ -90,7 +90,7 @@ iframe {
 }
 
 .slide:nth-child(even) {
-  background: #ffffff;
+  background: #f5f5fb21;
 }
 
 .case-nav.is-visible {

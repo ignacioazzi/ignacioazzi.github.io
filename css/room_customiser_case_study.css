@@ -775,6 +775,7 @@ section.slide.bg-designs {
 .slide.in-view .slide-subtitle {
   opacity: 1;
   transform: translateY(0);
+  font-size: 14px;
 }
 
 .slide.in-view .header h1,
@@ -788,7 +789,7 @@ section.slide.bg-designs {
   transform: translateY(0);
 }
 
-/* Body elements ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â only when anim-all is active */
+/* Body elements ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â only when anim-all is active */
 body.anim-all .slide .context-layout,
 body.anim-all .slide .slider-section {
   opacity: 0;
@@ -1268,7 +1269,7 @@ p.card-title {
   margin-bottom: 0!important;
 }
 
-#4A7FF8 Ãƒâ€šÃ‚Â· #FF7648 Ãƒâ€šÃ‚Â· #FFC757 Ãƒâ€šÃ‚Â· #F0EFEB Ãƒâ€šÃ‚Â· #FFFFFF Ãƒâ€šÃ‚Â· #202020
+#4A7FF8 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· #FF7648 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· #FFC757 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· #F0EFEB ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· #FFFFFF ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· #202020
 
 .mt-0 {
   margin-top: 0 !important;
@@ -1433,7 +1434,7 @@ div#last_num::before {
   margin-top: 0.8em;
 }
 
-/* Arc 2 flow comparison â€” scoped so it doesn't affect the other .exp-step blocks */
+/* Arc 2 flow comparison Ã¢â‚¬â€ scoped so it doesn't affect the other .exp-step blocks */
 .exp-steps-compare .exp-step {
   grid-template-columns: 24px 1fr;
   grid-template-areas:

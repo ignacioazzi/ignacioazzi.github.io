@@ -370,7 +370,7 @@ ol li b {
 .arrow {
   margin: 3em 0px 3em 14%;
   margin-left: 14%;
-  width: 60%;
+  /* width: 60%; */
   opacity: .2;
 }
 
@@ -927,7 +927,7 @@ header.mini_header {
 }
 
 .green {
-  background: #075e48;
+  /* background: #075e48; */
 }
 
 .lan {
@@ -1079,7 +1079,7 @@ body {
   font-size: 18px;
   background: #fff;
   overflow-x: hidden;
-  padding-bottom: 6em;
+  /* padding-bottom: 6em; */
   padding-top: 55px;
   width: 100vw;
 }
@@ -1358,4 +1358,10 @@ hr {
 
 .flex2 {
   gap: 16px;
+}
+
+
+.slide.in-view .header .label,
+.slide.in-view .slide-subtitle {
+  font-size: 14px!important;
 }
