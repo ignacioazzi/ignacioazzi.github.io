@@ -87,10 +87,10 @@
       <div class="summary-label">Results</div>
       <ul>
 
-        <li>HC full-oned on Android and iOS: <strong>+4.54% increase in booked non-cheapest rate on Android, +2.91% on iOS</strong></li>
-        <li>IA experiments full-oned: <strong>+629 ±763 PNC Android</strong>, <strong>+375 ±244 PNC iOS</strong></li>
-        <li><strong>12+ low-value components</strong> removed via blockout experiments</li>
-        <li><strong>75%+ of Android users</strong> scrolled horizontally, validating discoverability</li>
+        <li>HC shipped on Android and iOS: <strong>an increase of around 5% in bookings of non-cheapest rates</strong> on both platforms</li>
+        <li>Follow-up IA experiments: <strong>hundreds of additional bookings of non-cheapest rates</strong> on both Android and iOS</li>
+        <li><strong>A dozen low-value components</strong> removed via blockout experiments</li>
+        <li><strong>Most Android users</strong> scrolled horizontally, validating discoverability</li>
       </ul>
     </div>
 
@@ -109,9 +109,9 @@
           separate vertical card. With some properties offering over 16 options, most users never explored beyond the
           first few.</p>
         <p><b>The comparability problem:</b> Many rooms shared the same amenities and size, giving users no reliable way
-          to understand what differentiated one rate from another. When users could not find meaningful differences
-          between the cheapest option and higher-value rooms, they settled for the first one they saw. The property shown below, for example, offers the same Family Room 8 different times, with minimal differences between options. Roughly 65% of
-          users defaulted to booking the cheapest option. In post-checkout research, around 30% of users said they
+          to understand what differentiated one rate from another. When users could not find significant differences
+          between the cheapest option and higher-value rooms, they settled for the first one they saw. The property shown below, for example, offers the same Family Room 8 different times, with minimal differences between options. Around two-thirds of
+          users defaulted to booking the cheapest option. In post-checkout research, around a third of users said they
           believed they had booked a free cancellation rate when they had not.</p>
       </div>
         <br>
@@ -1319,7 +1319,7 @@
         <div>
           <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier.</p>
           <p>Each A/B experiment that ships leaves components in the codebase. The more that accumulate, the larger the maintenance burden for both UX and engineering. As the person responsible for the audit, I identified candidates for blockout experiments to test whether those components were still relevant.</p>
-          <p>The ones that weren't could be removed, saving the team from having to redesign or maintain them as part of the HC rollout. This resulted in removing <strong>12+ components</strong> with no meaningful impact on conversion, including: Secret deal banner, Lowest price badge, Just booked, and Booked before, among others.</p>
+          <p>The ones that weren't could be removed, saving the team from having to redesign or maintain them as part of the HC rollout. This resulted in removing <strong>12+ components</strong> with no significant impact on conversion, including: Secret deal banner, Lowest price badge, Just booked, and Booked before, among others.</p>
         </div>
       </div>
       <!-- <div class="hc-subsection">
@@ -1330,7 +1330,7 @@
             <figcaption class="caption">Jackpot component redesign from a large banner to a compact list item
             </figcaption>
           </figure>
-          <p>Jackpot is a component shown after a user selects their last room or rate. Its bulky design didn't work within the narrower rate card. I first tried removing it entirely, but that showed a drop of 508±219 PNC (predicted net customers). Instead, I redesigned it using the inline variant, preserving conversion without occupying disproportionate space in the new Rate Card.</p>
+          <p>Jackpot is a component shown after a user selects their last room or rate. Its bulky design didn't work within the narrower rate card. I first tried removing it entirely, but that showed a significant drop in bookings of non-cheapest rates. Instead, I redesigned it using the inline variant, preserving conversion without occupying disproportionate space in the new Rate Card.</p>
 
       </div> -->
       <!-- IA Experiments -->
@@ -1339,7 +1339,7 @@
 
         <div>
           <p>One of the main objectives of the Foundational Work was to test the Horizontal Comparison hypothesis in the most isolated way possible, by avoiding pushing multiple changes into the same A/B experiment. The fewer changes, the easier to interpret the results.</p>
-          <p>In this case, it meant grouping the elements of the room card by room and rate within the current design. <b>A clearer information hierarchy proved its value on its own: +629±763 PNC on Android and +375±244 PNC on iOS.</b></p>
+          <p>In this case, it meant grouping the elements of the room card by room and rate within the current design. <b>A clearer information hierarchy proved its value on its own, driving hundreds of additional bookings of non-cheapest rates on both Android and iOS.</b></p>
           <p>The positive results helped convince Product that a larger Information Architecture initiative could benefit the business, and were shared in monthly Product presentations as examples of what the track could deliver.</p>
 
           <!-- <p>The rate card was scoped out deliberately. Ownership was fragmented across teams with no agreed prioritisation logic. We flagged it as a future iteration post-fullon.</p> -->
@@ -1662,13 +1662,13 @@
         <!-- <div class="hc-stat-row" style="margin-top: 24px;">
           <div class="hc-stat-block">
             <span class="hc-stat-label">Android</span>
-            <span class="hc-stat">+629 <span
-                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±763 PNC</span></span>
+            <span class="hc-stat">Hundreds <span
+                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">additional bookings</span></span>
           </div>
           <div class="hc-stat-block">
             <span class="hc-stat-label">iOS</span>
-            <span class="hc-stat">+375 <span
-                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">±244 PNC</span></span>
+            <span class="hc-stat">Hundreds <span
+                style="font-size: var(--fs-lg); font-weight: 500; color: var(--text-muted);">additional bookings</span></span>
           </div>
         </div> -->
       </div>
@@ -3067,40 +3067,40 @@
 
       <div>
         <h2 class="tal" style="font-size: 1.6rem; margin-top: 0.8em;">Android</h2>
-        <p><strong>The Android experiment reached full traffic after 9 days. The primary metric, booked non-cheapest rate,
-            increased by +4.54% (V1) and +4.82% (V2), representing +3,118±120 additional bookings per day. PNC, our
+        <p><strong>The Android experiment reached full traffic within about a week and a half. The primary metric, booked non-cheapest rate,
+            increased by around 5% across both test versions, representing hundreds of additional bookings per day. PNC, our
             property-net-conversion guardrail, was non-inferior.</strong></p>
-        <p>Over <strong>86%</strong> of Android users scrolled horizontally, validating the core discoverability hypothesis
-          that had been flagged as a risk in research. Traffic to the room details screen increased by over 20%, suggesting
+        <p>Most Android users scrolled horizontally, validating the core discoverability hypothesis
+          that had been flagged as a risk in research. Traffic to the room details screen increased significantly, suggesting
           users were exploring more before booking rather than defaulting to the first option they saw.</p>
-        <p>One known trade-off: multi-room bookings with different rates were deprioritised, and that use case dropped 8.29% —
+        <p>One known trade-off: multi-room bookings with different rates were deprioritised, and that use case declined by around 8% —
           acknowledged and flagged as a future iteration.</p>
       </div>
       <div class="metrics-grid" style="margin-top: 24px;">
         <div class="metric-card">
           <div class="metric-category">Booked non-cheapest rate</div>
-          <div class="metric-value">+4.54%</div>
+          <div class="metric-value">Around 5%</div>
           <div class="metric-context">V1 primary metric improvement.</div>
         </div>
         <div class="metric-card">
           <div class="metric-category">Non-cheapest<br>bookings per day</div>
-          <div class="metric-value">+3,118</div>
-          <div class="metric-context">±120 additional bookings per day.</div>
+          <div class="metric-value">Hundreds</div>
+          <div class="metric-context">Additional bookings per day.</div>
         </div>
         <div class="metric-card">
           <div class="metric-category">Horizontal scroll adoption</div>
-          <div class="metric-value">86%+</div>
+          <div class="metric-value">Most Android users</div>
           <div class="metric-context">Users who scrolled horizontally.</div>
         </div>
       </div>
       
       <div style="margin-top: 48px;">
         <h2 class="tal" style="font-size: 1.6rem; margin-top: 0.8em;">iOS</h2>
-        <p>The iOS experiment ran for five weeks plus a two-week measurement period before reaching full traffic. <strong>The
-            primary metric, booked non-cheapest rate, increased by +2.91%±0.22%, representing +5,614 additional bookings per
+        <p>The iOS experiment ran for several weeks before reaching full traffic. <strong>The
+            primary metric, booked non-cheapest rate, saw a significant increase, representing thousands of additional bookings per
             day. PNC was non-inferior, with a small overrun on the accepted cost threshold that leadership reviewed and
             approved given the opportunity cost of further delay.</strong></p>
-        <p>Over <strong>80%</strong> of iOS users scrolled horizontally, consistent with Android and confirming the
+        <p>Most iOS users scrolled horizontally, consistent with Android and confirming the
           discoverability behaviour held across platforms.</p>
         <p>iOS initially shipped with multi-room support. The copywriter and I flagged that the interaction was error-prone
           and made the case to remove it; the PM agreed and we dropped it in a later iteration.</p>
@@ -3108,17 +3108,17 @@
       <div class="metrics-grid" style="margin-top: 24px;">
         <div class="metric-card">
           <div class="metric-category">Booked non-cheapest rate</div>
-          <div class="metric-value">+2.91%</div>
+          <div class="metric-value">Significant increase</div>
           <div class="metric-context">Primary metric improvement in iOS experiment.</div>
         </div>
         <div class="metric-card">
           <div class="metric-category">Non-cheapest<br>bookings per day</div>
-          <div class="metric-value">+5,614</div>
-          <div class="metric-context">±415 additional bookings per day.</div>
+          <div class="metric-value">Thousands</div>
+          <div class="metric-context">Additional bookings per day.</div>
         </div>
         <div class="metric-card">
           <div class="metric-category">Horizontal scroll adoption</div>
-          <div class="metric-value">80%+</div>
+          <div class="metric-value">Most iOS users</div>
           <div class="metric-context">Users who scrolled horizontally.</div>
         </div></div>
   </section>
@@ -3131,27 +3131,27 @@
     <div class="hc-stat-row" style="justify-content: center; gap: 64px; flex-wrap: wrap;">
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">NCB · Android</span>
-        <span class="hc-stat" style="font-size: 56px;">+4.54%</span>
+        <span class="hc-stat" style="font-size: 56px;">Around 5%</span>
         <span style="font-size: 14px; color: var(--text-muted);">booked non-cheapest rate</span>
       </div>
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">NCB · iOS</span>
-        <span class="hc-stat" style="font-size: 56px;">+2.91%</span>
+        <span class="hc-stat" style="font-size: 56px;">Around 5%</span>
         <span style="font-size: 14px; color: var(--text-muted);">booked non-cheapest rate</span>
       </div>
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">PNC · Android IA</span>
-        <span class="hc-stat" style="font-size: 56px;">+629</span>
-        <span style="font-size: 14px; color: var(--text-muted);">±763</span>
+        <span class="hc-stat" style="font-size: 56px;">Hundreds</span>
+        <span style="font-size: 14px; color: var(--text-muted);">additional bookings</span>
       </div>
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">PNC · iOS IA</span>
-        <span class="hc-stat" style="font-size: 56px;">+375</span>
-        <span style="font-size: 14px; color: var(--text-muted);">±244</span>
+        <span class="hc-stat" style="font-size: 56px;">Hundreds</span>
+        <span style="font-size: 14px; color: var(--text-muted);">additional bookings</span>
       </div>
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">Components removed</span>
-        <span class="hc-stat" style="font-size: 56px;">12+</span>
+        <span class="hc-stat" style="font-size: 56px;">A dozen</span>
         <span style="font-size: 14px; color: var(--text-muted);">via blockout experiments</span>
       </div>
     </div>
