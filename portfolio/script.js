@@ -56,23 +56,7 @@ if (name === "" || name.includes("index")) {
 
 if (siteNav) {
     var introEl = document.getElementById("intro");
-    if (introEl) {
-        siteNav.classList.add("nav-hidden");
-        siteNav.classList.remove("nav-visible");
-
-        var introObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    siteNav.classList.add("nav-hidden");
-                    siteNav.classList.remove("nav-visible");
-                } else {
-                    siteNav.classList.add("nav-visible");
-                    siteNav.classList.remove("nav-hidden");
-                }
-            });
-        }, { threshold: 0.15 });
-        introObserver.observe(introEl);
-    } else {
+    if (!introEl) {
         window.addEventListener("wheel", function (event) {
             if (event.deltaY <= 0) {
                 siteNav.classList.add("nav-visible");

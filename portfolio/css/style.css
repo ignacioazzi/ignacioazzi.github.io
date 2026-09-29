@@ -49,9 +49,9 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0 40px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0px;
   box-sizing: border-box;
   gap: 0;
 }
@@ -61,7 +61,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: 0;
   gap: 0;
+}
+
+#site-navigation .row:before,
+#site-navigation .row:after {
+  display: none;
 }
 
 #site-navigation .module.left,
