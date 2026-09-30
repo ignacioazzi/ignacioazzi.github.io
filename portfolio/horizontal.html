@@ -79,7 +79,7 @@
 
     <div class="summary-row">
       <div class="summary-label">Approach</div>
-      <p>After a track-wide H1 Sprint converging on HC as the strategic direction, I took ownership of adapting and
+      <p>After a sprint across the whole track (a group of product teams) converging on Horizontal Comparison (HC), a layout that lets travelers compare rates side by side, as the strategic direction, I took ownership of adapting and
         shipping it on Android and iOS across three phases: Foundation work, MVP experiment, and future iterations.</p>
     </div>
 
@@ -87,9 +87,9 @@
       <div class="summary-label">Results</div>
       <ul>
 
-        <li>HC shipped on Android and iOS: <strong>an increase of around 5% in bookings of non-cheapest rates</strong> on both platforms</li>
-        <li>Follow-up IA experiments: <strong>hundreds of additional bookings of non-cheapest rates</strong> on both Android and iOS</li>
-        <li><strong>A dozen low-value components</strong> removed via blockout experiments</li>
+        <li>HC shipped on Android and iOS: <strong>an increase of around 5% in bookings of non-cheapest rates (any rate above the cheapest option)</strong> on both platforms</li>
+        <li>Follow-up information architecture (IA) experiments: <strong>hundreds of additional bookings of non-cheapest rates</strong> on both Android and iOS</li>
+        <li><strong>A dozen low-value components</strong> cut after removal experiments</li>
         <li><strong>Most Android users</strong> scrolled horizontally, validating discoverability</li>
       </ul>
     </div>
@@ -786,11 +786,11 @@
       <h1 class="tal">Context</h1>
       <div>
         <p>Choice overload in Room Selection had been a known problem for years, with multiple attempts to address it that never proved successful.</p>
-        <p>During H1, Room Selection designers were asked to come up with alternative designs:<strong> Filters Android, Filters iOS,
+        <p>During the first half of the year, Room Selection designers (the team behind the room booking screens) were asked to come up with alternative designs:<strong> Filters Android, Filters iOS,
           Rate Selection, Horizontal Comparison and Multiple Choice. </strong></p>
         <p>I worked on both Filters concepts and continued into Two-Step Selection. Two other designers worked on the remaining concepts.
           Horizontal Comparison, tested in Mobile Web, emerged as the most promising approach.</p>
-        <p> <strong>During H2 I was asked to make a plan to implement the chosen solution in both Android and iOS.</strong></p>
+        <p> <strong>During the second half of the year I was asked to make a plan to implement the chosen solution in both Android and iOS.</strong></p>
         <!-- <p>During H1, the track ran a Design Sprint to explore alternative Room Selection approaches. I worked on two
           concepts (Filters and 2-Step Rate Selection) before the track converged on Horizontal Comparison as the
           strategic
@@ -1261,12 +1261,12 @@
   <section class="slide id="process">
     <div class="slide_container">
       <h1 class="tal">Approach</h1>
-      <p>After the first positive results of HC in Mobile Web, I had the space to take a more structured approach to the Apps implementation. Rather than running a single A/B experiment with multiple changes at once, I defined a three-phase roadmap:
+      <p>After the first positive results of HC in Mobile Web, I had the space to take a more structured approach to the app implementation. Rather than running a single A/B experiment with multiple changes at once, I defined a three-phase roadmap:
       </p>
       <div type="1" class="hc-phases">
         <div class="hc-phase">
           <span class="hc-phase-title">1. Foundational work</span>
-          <span class="hc-phase-desc">Audit, ownership mapping, blockouts, IA experiments</span>
+          <span class="hc-phase-desc">Audit, ownership mapping, removal experiments, IA experiments</span>
         </div>
         <div class="hc-phase">
           <span class="hc-phase-title">2. MVP experiment</span>
@@ -1315,10 +1315,10 @@
       </figure>
       <!-- Block-out Experiments -->
       <div class="hc-subsection">
-        <p class="hc-phase-title">1.2 Block-out Experiments</p>
+        <p class="hc-phase-title">1.2 Removal Experiments</p>
         <div>
           <p>The audit also revealed an opportunity to clean up Room Selection from components added years earlier.</p>
-          <p>Each A/B experiment that ships leaves components in the codebase. The more that accumulate, the larger the maintenance burden for both UX and engineering. As the person responsible for the audit, I identified candidates for blockout experiments to test whether those components were still relevant.</p>
+          <p>Each A/B experiment that ships leaves components in the codebase. The more that accumulate, the larger the maintenance burden for both UX and engineering. As the person responsible for the audit, I identified candidates for removal experiments to test whether those components were still relevant.</p>
           <p>The ones that weren't could be removed, saving the team from having to redesign or maintain them as part of the HC rollout. This resulted in removing <strong>12+ components</strong> with no significant impact on conversion, including: Secret deal banner, Lowest price badge, Just booked, and Booked before, among others.</p>
         </div>
       </div>
@@ -1704,7 +1704,7 @@
   <div class="slide_container">
     <h1 class="section-heading">Cross-team alignment: Where will my child sleep?</h1>
     <div class="hc-subsection">
-      <p>‘Where will my child sleep?’ was a component owned by Families team, present only in Apps, meaning that we didn’t have
+      <p>‘Where will my child sleep?’ was a component owned by Families team, present only in the apps, meaning that we didn’t have
       to consider how it fit in Horizontal Comparison redesign until I ran our Component Audit. To understand the issue I ran
       into, we first have to consider the Content structure of Room Details, the screen where it lived.</p>
       </div>
@@ -2571,7 +2571,7 @@
           only the CTA and radio button were tappable, closer to how the previous room card had behaved. Testing both
           was deliberate: the fully tappable card had already proven itself on Web, but since it was a departure from
           the existing app interaction, shipping it without testing would have meant introducing two changes at once.
-          The fully tappable card won on both Android and iOS, confirming the Web behaviour translated to Apps.</p>
+          The fully tappable card won on both Android and iOS, confirming the web behaviour translated to the apps.</p>
      
 
       <h2 class="tal mw-760"> Tappable area variations</h2>
@@ -3040,10 +3040,10 @@
   <section class="slide">
     <div class="slide_container">
       
-        <h1 class="tal">Getting to Fullon: Four iOS Iterations</h1>
+        <h1 class="tal">Getting to a Full Rollout: Four iOS Iterations</h1>
     
       <div>
-        <p>iOS required four iterations before fullon. Family traffic was identified as a risk early. During the
+        <p>iOS required four iterations before the full rollout. Family traffic was identified as a risk early. During the
           component audit and prework phase, I drafted multiple ways we could incorporate Families content into the new
           Room details IA.</p>
         <p>I presented the alternatives to Families and Policies teams, but couldn't reach alignment. I had proposed
@@ -3054,7 +3054,7 @@
         <p>In parallel, I worked on two fronts: a short-term solution to unblock iteration 2, and ongoing discussions to
           align on a longer-term IA vision. The short-term solution, a one-line summary with an info icon, landed for
           iteration 2. The longer-term vision had gained support from Policies, Families, and Web by the time I left.
-          Subsequent iterations refined tap targets, thumbnail size, and performance before meeting fullon criteria on
+          Subsequent iterations refined tap targets, thumbnail size, and performance before meeting the criteria for a full rollout on
           iteration 4.</p>
       </div>
     </div>
@@ -3152,7 +3152,7 @@
       <div class="hc-stat-block" style="align-items: center;">
         <span class="hc-stat-label">Components removed</span>
         <span class="hc-stat" style="font-size: 56px;">A dozen</span>
-        <span style="font-size: 14px; color: var(--text-muted);">via blockout experiments</span>
+        <span style="font-size: 14px; color: var(--text-muted);">cut after removal experiments</span>
       </div>
     </div>
     </div>
@@ -3167,7 +3167,7 @@
         <div class="hc-phases">
           <div class="hc-subsection hc-phase">
             <p class="hc-phase-title">1. Foundational work</p>
-            <span>Audit work, blockout experiments, and color alignment created a clean baseline for testing.</span>
+            <span>Audit work, removal experiments, and color alignment created a clean baseline for testing.</span>
           </div>
           <div class="hc-subsection hc-phase">
             <p class="hc-phase-title">2. MVP experiment</p>
@@ -3175,7 +3175,7 @@
           </div>
           <div class="hc-subsection hc-phase">
             <p class="hc-phase-title">3. Follow-up iterations</p>
-            <span>With the foundation in place, the core HC experiment full-oned and increased non-cheapest bookings on both platforms.</span>
+            <span>With the foundation in place, the core HC experiment rolled out to all users and increased non-cheapest bookings on both platforms.</span>
           </div>
         </div>
       </div>
@@ -3195,7 +3195,7 @@
       <div>
         <h3 class="hc-phase-title">Consolidate rate details into a single screen</h3>
         <p>Travelers shouldn't have to bounce between views to piece together what a rate
-          actually includes. A short-term version shipped during fullon, but that was a patch, 
+          actually includes. A short-term version shipped during the full rollout, but that was a patch, 
           the lasting fix was to bring everything that defines a rate into one structured place.</p>
         
           <h3 class="hc-phase-title">Extract common rate information to make rates comparable</h3>
@@ -3231,7 +3231,7 @@
         <p>If I were doing it again, I'd push earlier for a clearer answer on the Families use case. Excluding traffic
           solves a short-term problem but creates a gap that compounds over iterations.</p>
         <p>Finally,  it's easy to underestimate Foundational work. IA experiments were initially seen as design debt cleanup, and the
-          Apps adaptation was regularly referred to in meetings as a port. I was asked more than once whether I was
+          app adaptation was regularly referred to in meetings as a port. I was asked more than once whether I was
           simply copying the Web design as closely as possible. Both initiatives ended up producing the most concrete results. This
           project reinforced my belief that foundational decisions, even unglamorous ones, are often where the real
           impact lives.</p>

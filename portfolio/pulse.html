@@ -56,8 +56,8 @@
   <section class="slide slide-summary" id="context">
     <div class="header header--left mw-760">
       <p class="label">Context</p>
-      <h1>What is Pulse?</h1>
-      <p>Pulse is Booking.com's mobile app for accommodation partners, available in 43 languages on Android and iOS. At the time of this project, it served over 1.25 million active partners who used it to manage reservations, respond to guests, and update availability and rates on the go. </p> <p>For many of them, especially smaller property owners, Pulse is their main interface with the platform.</p>
+      <h1>What is the Pulse partner app?</h1>
+      <p>The Pulse partner app is Booking.com's mobile app for partners, the property owners (B2B) who list their hotels, B&amp;Bs and apartments on the platform. Available in 43 languages on Android and iOS, it served over a million active partners at the time of this project, who used it to manage reservations, respond to travelers, and update availability and rates on the go. </p> <p>For many of them, especially smaller property owners, Pulse is their main interface with the platform.</p>
       <p>The Availability tab was widely regarded as the most complex section of the app.</p>
     </div>
 <hr>
@@ -71,7 +71,7 @@
       </div>
       <div class="summary-row">
         <div class="summary-label">My role</div>
-        <p>Sole designer on the AV Pulse team. I redesigned the Availability Calendar across Android and iOS, owning the project from design sprint through Beta launch — 7 months of iterative research, design decisions, and cross-team collaboration.</p>
+        <p>Sole designer on the AV Pulse team. I redesigned the Availability Calendar across Android and iOS, owning the project from design sprint through Beta launch, including research, design decisions, and cross-team collaboration.</p>
       </div>
       <div class="summary-row">
         <div class="summary-label">Impact</div>
@@ -130,7 +130,7 @@
       <div class="tl2-step tl2-step--outcome">
         <div class="tl2-num">6</div>
         <div class="tl2-content">
-          <div class="tl2-title">A/B → Full-on</div>
+          <div class="tl2-title">A/B → Full rollout</div>
           <div class="tl2-desc">Satisfaction validated. No negative impact.</div>
         </div>
       </div>
@@ -180,7 +180,7 @@
           </div>
           <div class="timeline-node tl-anim">
             <div class="timeline-dot timeline-dot--outcome">6</div>
-            <div class="timeline-phase">A/B → Full-on</div>
+            <div class="timeline-phase">A/B → Full rollout</div>
             <div class="timeline-insight">Satisfaction validated.<br>No negative impact.</div>
           </div>
         </div>
@@ -278,7 +278,7 @@
     <div class="header header-center">
     <span class="chapter-eyebrow">Process</span>
     <h1 class="chapter-title">Defining our approach</h1>
-    <p class="chapter-desc">The redesign was shaped by continuous partner research across 7 months, followed by validation through a Beta program, partner visits, and multiple A/B experiments divided in phases.</p>
+    <p class="chapter-desc">The redesign was shaped by continuous partner research, followed by validation through a Beta program, partner visits, and multiple A/B experiments divided in phases.</p>
   </div>
   </section>
 
@@ -292,7 +292,7 @@
     </div>
     <div class="content">
       <div class="explanation mw-760">
-      <p>The Availability Calendar problem was complex enough that it needed alignment and feedback from people with different backgrounds. With that in mind, I organized a two-day design sprint and invited researchers, PMs, and designers from across Pulse and Extranet teams. </p>
+      <p>The Availability Calendar problem was complex enough that it needed alignment and feedback from people with different backgrounds. With that in mind, I organized a two-day design sprint and invited researchers, PMs, and designers from across the Pulse app and Extranet (partner web) teams. </p>
       <p>Day 1 focused on research sharing and problem alignment. Day 2 focused on solution drafting, feedback, and voting.</p>
       <p>My concept proposed a hierarchy based on progressive disclosure (Property > Room overview > Calendar), with color-coded cells replacing dots and guidance messages explaining room status. It was the most voted concept and became the blueprint for all subsequent iterations.</p>
       <p>Other directions had been proposed and drafted by teammates: a Filter-based
@@ -496,7 +496,7 @@
               <div class="color-swatch color-swatch--green"></div>
               <div class="color-status-text">
                 <h4>Bookable</h4>
-                <p>Room is open and available for guests to book.</p>
+                <p>Room is open and available for travelers to book.</p>
               </div>
             </div>
           </td>
@@ -545,7 +545,7 @@
     between properties without losing their place. No team had the right conditions to test it at scale.</p>
   
   <p>I included the Switcher in the calendar redesign. It fit the core principle I was working from: reduce the number of
-    decisions partners need to make per screen by surfacing one property at a time. The AV Calendar gave us a contained
+    decisions partners need to make per screen by surfacing one property at a time. The new calendar gave us a contained
     environment with a relevant audience and a clean rollback path.</p>
   
   <p>I aligned the other Pulse designers, got PM and engineering buy-in, and shipped it as part of the redesign. It was
@@ -557,8 +557,8 @@
   <section class="slide" id="testing">
     <div class="header header--left mw-760">
       <p class="label">Process · Validation</p>
-      <h1>From Labs to partner visits, testing across 7 months</h1>
-      <p>Three rounds of Design Labs and Open Labs ran between January and March 2019. Open Labs were internal sessions with Customer Service agents, who had frontline knowledge of partner pain points. By March, the core concept was stable.</p>
+      <h1>From Labs to partner visits, testing the redesign</h1>
+      <p>Three rounds of Labs ran between January and March 2019. Labs were internal user-testing sessions: instead of interviewing partners directly, we spoke to the Customer Service agents who took their calls and had frontline knowledge of partner pain points. By March, the core concept was stable.</p>
       <p>In May, I created prototypes for remote usability testing. Prototypes were built in HTML/JS rather than Figma to support real interaction. A lightweight JS file acted as a shared
       data layer, so any change a partner made to room availability or rate prices would instantly reflect across all screens,
       keeping the experience consistent end to end.
@@ -579,7 +579,7 @@
     </div>
     <div class="discovery-col--prose mw-760">
       <div class="discovery-prose-block">
-        <p><strong>Property Selector (MPPs only).</strong> Partners select a property first, with the selected name confirmed in the header of the next screen.</p>
+        <p><strong>Property Selector (multi-property partners only).</strong> Partners select a property first, with the selected name confirmed in the header of the next screen.</p>
       </div>
       <div class="discovery-prose-block">
         <p><strong>Room Selector with Calendar Overview.</strong> Each room type gets its own mini calendar showing status at a glance, replacing the flat scrolling list. A toggle between Calendar and List view was added after Beta data showed partners also needed the list format for editing.</p>
@@ -641,14 +641,14 @@
   <!-- <section class="slide slide-chapter mb-0">
     <span class="chapter-eyebrow">Outcome</span>
     <h2 class="chapter-title">Results</h2>
-    <p class="chapter-desc">Satisfaction improved across all segments. The design direction I established carried through to full-on on both platforms.</p>
+    <p class="chapter-desc">Satisfaction improved across all segments. The design direction I established carried through to a full rollout on both platforms.</p>
   </section> -->
 
   <!-- ── RESULTS TEXT ── -->
   <!-- <section class="slide">
     <div class="header mw-760">
       <p class="label">Results</p>
-      <h1>From Beta to full-on across both platforms</h1>
+      <h1>From Beta to full rollout across both platforms</h1>
    
 
   </div>
@@ -672,12 +672,12 @@
       </div>
    
       <div class="metric-card">
-        <div class="metric-category">MUP satisfaction · Beta</div>
+        <div class="metric-category">Multi-unit partner satisfaction · Beta</div>
         <div class="metric-value">~75%</div>
         <div class="metric-context">Up from baseline. Strongest improvement across segments.</div>
       </div>
       <div class="metric-card">
-        <div class="metric-category">MPP satisfaction · Beta</div>
+        <div class="metric-category">Multi-property partner satisfaction · Beta</div>
         <div class="metric-value">~60%</div>
         <div class="metric-context">Up from baseline.</div>
       </div>
@@ -697,7 +697,7 @@
         <div class="metric-context">More partners acting on rooms with a guidance message.</div>
       </div>
       <div class="metric-card">
-        <div class="metric-category">CS ticket impact</div>
+        <div class="metric-category">Customer support ticket impact</div>
         <div class="metric-value metric-value--muted">None</div>
         <div class="metric-context">No increase in availability-related support calls.</div>
       </div>
@@ -742,7 +742,7 @@
       <div class="summary-row"><div class="summary-label">Company</div><p>Booking.com</p></div>
       <div class="summary-row"><div class="summary-label">Team</div><p>PM, 2 engineers (Android, iOS), UX Researcher</p></div>
       <div class="summary-row"><div class="summary-label">Platform</div><p>Android and iOS (Pulse app)</p></div>
-      <div class="summary-row"><div class="summary-label">Timeline</div><p>Oct 2018 – early 2020. Design direction carried through to full-on by Feb 2022.</p></div>
+      <div class="summary-row"><div class="summary-label">Timeline</div><p>Oct 2018 – early 2020. Design direction carried through to a full rollout by Feb 2022.</p></div>
       <div class="summary-row"><div class="summary-label">Scale</div><p>Serving over a million accommodation partners across 228 countries</p></div>
     </div>
   </section> -->
